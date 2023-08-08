@@ -86,6 +86,15 @@ namespace PresentationLayer.GeneralScreens
             lblError.Visible = true;
         }
 
+        private void LimpiarPantallaInicio(object sender, FormClosedEventArgs e)
+        {
+            txtClave.Clear();
+            txtUsuario.Clear();
+            lblError.Visible = false;
+            this.Show();
+            txtUsuario.Focus();
+        }
+
         #endregion
 
     }
