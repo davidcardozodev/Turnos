@@ -118,7 +118,7 @@ namespace CapaDePresentacion.PantallasGenerales
             }
             catch (Exception)
             {
-                MessageBox.Show("Error: No se encontro la base de datos");
+                MessageBox.Show("Error: No se encontro la base de datos o el procedimiento almacenado");
             }
         }
 
