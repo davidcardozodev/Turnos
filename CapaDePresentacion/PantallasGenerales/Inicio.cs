@@ -123,7 +123,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CrearInterfazUsuario()
         {
-            PantallaUsuario interfazUsuario = new PantallaUsuario();
+            PantallaGeneralUsuario interfazUsuario = new PantallaGeneralUsuario();
             interfazUsuario.Show();
             interfazUsuario.FormClosed += LimpiarPantallaInicio;
         }
