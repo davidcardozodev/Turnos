@@ -65,7 +65,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private void CargarPantallaUsuario()
         {
             if (DatosUsuario.Rol == Roles.rolCliente)
-                AbrirFormulario<Cliente>();
+                AbrirFormulario<ClientePrincipal>();
         }
 
         #endregion

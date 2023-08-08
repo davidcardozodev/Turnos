@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.PantallasUsuario
+namespace CapaDePresentacion.PantallasUsuario.Cliente
 {
-    public partial class Cliente : Form
+    public partial class ClienteTurnosVista : Form
     {
-        public Cliente()
+        public ClienteTurnosVista()
         {
             InitializeComponent();
         }
