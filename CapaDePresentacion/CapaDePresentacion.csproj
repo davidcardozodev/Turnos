@@ -52,8 +52,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasGenerales\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallasGenerales\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,13 +86,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaComun\CapaComun.csproj">
+      <Project>{e3171447-1571-4dc8-83be-3bbccc9d8dec}</Project>
+      <Name>CapaComun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaDeEntidades\CapaDeEntidades.csproj">
+      <Project>{08f710b3-ed54-4a24-826b-736d61031ea6}</Project>
+      <Name>CapaDeEntidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDeNegocio\CapaDeNegocio.csproj">
       <Project>{6dddbcc4-3003-428a-ad33-6e617b518dac}</Project>
       <Name>CapaDeNegocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PantallasGenerales\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
