@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasGenerales
 {
-    partial class PantallaUsuario
+    partial class PantallaGeneralUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -134,12 +134,12 @@
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Tienda";
             // 
-            // PantallaUsuario
+            // PantallaGeneralUsuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1509, 586);
             this.Controls.Add(this.panelcontainer);
-            this.Name = "PantallaUsuario";
+            this.Name = "PantallaGeneralUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Turnapp";
             this.panelcontainer.ResumeLayout(false);

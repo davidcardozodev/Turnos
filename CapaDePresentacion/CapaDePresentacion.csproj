@@ -52,19 +52,28 @@
     <Compile Include="PantallasGenerales\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasGenerales\PantallaUsuario.cs">
+    <Compile Include="PantallasGenerales\PantallaGeneralUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasGenerales\PantallaUsuario.Designer.cs">
-      <DependentUpon>PantallaUsuario.cs</DependentUpon>
+    <Compile Include="PantallasGenerales\PantallaGeneralUsuario.Designer.cs">
+      <DependentUpon>PantallaGeneralUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasGenerales\Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasGenerales\Perfil.Designer.cs">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="PantallasGenerales\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasGenerales\PantallaUsuario.resx">
-      <DependentUpon>PantallaUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasGenerales\PantallaGeneralUsuario.resx">
+      <DependentUpon>PantallaGeneralUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasGenerales\Perfil.resx">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +111,8 @@
       <Name>CapaDeNegocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PantallasUsuario\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

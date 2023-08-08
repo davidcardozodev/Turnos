@@ -2,9 +2,9 @@
 
 namespace CapaDePresentacion.PantallasGenerales
 {
-    public partial class PantallaUsuario : Form
+    public partial class PantallaGeneralUsuario : Form
     {
-        public PantallaUsuario()
+        public PantallaGeneralUsuario()
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
