@@ -167,7 +167,7 @@
             this.lblPrimerNombreCategoria.TabIndex = 29;
             this.lblPrimerNombreCategoria.Text = "PrimerNombre";
             // 
-            // PerfilUsuario
+            // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,9 +185,9 @@
             this.Controls.Add(this.lblPrimerNombreCategoria);
             this.Controls.Add(this.tituloProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PerfilUsuario";
+            this.Name = "Perfil";
             this.Text = "UserProfile";
-           // this.Load += new System.EventHandler(this.UserProfile_Load);
+            this.Load += new System.EventHandler(this.Perfil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
