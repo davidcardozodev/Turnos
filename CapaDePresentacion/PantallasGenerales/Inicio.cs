@@ -1,4 +1,6 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace PresentationLayer.GeneralScreens
@@ -23,6 +25,48 @@ namespace PresentationLayer.GeneralScreens
         [DllImport("Usuario32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         #endregion
+
+
+        #region "Campos de inicio de sesion"
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "Usuario")
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void txtClave_Enter(object sender, EventArgs e)
+        {
+            if (txtClave.Text == "Clave")
+            {
+                txtClave.Text = "";
+                txtClave.ForeColor = Color.Black;
+                txtClave.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtClave_Leave(object sender, EventArgs e)
+        {
+            if (txtClave.Text == "")
+            {
+                txtClave.Text = "Clave";
+                txtClave.ForeColor = Color.DimGray;
+                txtClave.UseSystemPasswordChar = false;
+            }
+        }
+        #endregion
+
 
     }
 }
