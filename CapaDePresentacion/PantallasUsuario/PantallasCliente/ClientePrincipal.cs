@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using CapaDePresentacion.PantallasUsuario.PantallasCliente;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario
@@ -48,5 +49,19 @@ namespace CapaDePresentacion.PantallasUsuario
 
         #endregion
 
+
+        #region "Botones"
+
+        private void btnMisTurnos_Click(object sender, System.EventArgs e)
+        {
+            AbrirFormulario<ClienteTurnosVista>();
+        }
+
+        private void btnCrearTurno_Click(object sender, System.EventArgs e)
+        {
+            AbrirFormulario<ClienteCreacionTurno>();
+        }
+
+        #endregion
     }
 }
