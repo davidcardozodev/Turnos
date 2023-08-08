@@ -118,7 +118,7 @@ namespace CapaDePresentacion.PantallasGenerales
             }
             catch (Exception)
             {
-                MessageBox.Show("Error: Database not found");
+                MessageBox.Show("Error: No se encontro la base de datos");
             }
         }
 
