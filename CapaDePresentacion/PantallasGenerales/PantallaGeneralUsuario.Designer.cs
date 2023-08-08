@@ -86,6 +86,7 @@
             this.linkCerrarSesion.TabIndex = 5;
             this.linkCerrarSesion.TabStop = true;
             this.linkCerrarSesion.Text = "Cerrar sesion";
+            this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
             // linkPerfil
             // 
@@ -98,6 +99,7 @@
             this.linkPerfil.TabIndex = 0;
             this.linkPerfil.TabStop = true;
             this.linkPerfil.Text = "Mi perfil";
+            this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
             // 
             // lblPrimerNombre
             // 
@@ -142,6 +144,7 @@
             this.Name = "PantallaGeneralUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Turnapp";
+            this.Load += new System.EventHandler(this.PantallaGeneralUsuario_Load);
             this.panelcontainer.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();

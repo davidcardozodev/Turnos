@@ -56,7 +56,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         #region "Cargar datos principales"
 
-        private void InterfazUser_Load(object sender, EventArgs e)
+        private void PantallaGeneralUsuario_Load(object sender, EventArgs e)
         {
             CargarNombreUsuario();
             CargarPantallaUsuario();
@@ -72,7 +72,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         #region "Cargar pantalla generica"
 
-        private void linkProfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (!_perfil)
                 CargarPantallaPerfil();
@@ -99,7 +99,7 @@ namespace CapaDePresentacion.PantallasGenerales
             lblPrimerNombre.Text = DatosUsuario.PrimerNombre;
         }
 
-        private void linkLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             CerrarForm();
         }
@@ -109,6 +109,10 @@ namespace CapaDePresentacion.PantallasGenerales
             this.Close();
         }
 
+
+
         #endregion
+
+
     }
 }
