@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDeNegocio;
+using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -67,6 +68,25 @@ namespace PresentationLayer.GeneralScreens
         }
         #endregion
 
+        #region "Campos"
+
+        private void VerificarCampos()
+        {
+            Campo campo = new Campo();
+            var Result = campo.VerificarCamposIndividuales(txtUsuario.Text);
+            Result = campo.VerificarCamposIndividuales(txtClave.Text);
+            Result = campo.VerficarTodosCampos(txtUsuario.Text, txtClave.Text);
+
+            MensajeError(Result);
+        }
+
+        private void MensajeError(string Mensaje)
+        {
+            lblError.Text = "Error: " + Mensaje;
+            lblError.Visible = true;
+        }
+
+        #endregion
 
     }
 }
