@@ -1,4 +1,8 @@
-﻿using System.Linq;
+﻿using CapaComun;
+using CapaDePresentacion.PantallaGenerales;
+using CapaDePresentacion.PantallasUsuario;
+using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasGenerales
@@ -44,6 +48,65 @@ namespace CapaDePresentacion.PantallasGenerales
             Formulario.BringToFront();
 
             return Formulario;
+        }
+
+        #endregion
+
+        private bool _perfil = false;
+
+        #region "Cargar datos principales"
+
+        private void InterfazUser_Load(object sender, EventArgs e)
+        {
+            CargarNombreUsuario();
+            CargarPantallaUsuario();
+        }
+
+        private void CargarPantallaUsuario()
+        {
+            if (DatosUsuario.Rol == Roles.rolCliente)
+                AbrirFormulario<Cliente>();
+        }
+
+        #endregion
+
+        #region "Cargar pantalla generica"
+
+        private void linkProfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!_perfil)
+                CargarPantallaPerfil();
+            else
+                CerrarPantallaPerfil();
+        }
+
+        private void CargarPantallaPerfil()
+        {
+            AbrirFormulario<Perfil>();
+            linkPerfil.Text = "Cerrar perfil";
+            _perfil = true;
+        }
+
+        private void CerrarPantallaPerfil()
+        {
+            CargarPantallaUsuario();
+            linkPerfil.Text = "Mi perfil";
+            _perfil = false;
+        }
+
+        private void CargarNombreUsuario()
+        {
+            lblPrimerNombre.Text = DatosUsuario.PrimerNombre;
+        }
+
+        private void linkLogOut_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CerrarForm();
+        }
+
+        private void CerrarForm()
+        {
+            this.Close();
         }
 
         #endregion
