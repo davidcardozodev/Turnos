@@ -52,7 +52,7 @@
             this.btnCrearTurno.TabIndex = 1;
             this.btnCrearTurno.Text = "Crear turno";
             this.btnCrearTurno.UseVisualStyleBackColor = true;
-            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
+//            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
             // 
             // btnMisTurnos
             // 
@@ -63,7 +63,7 @@
             this.btnMisTurnos.TabIndex = 0;
             this.btnMisTurnos.Text = "Mis turnos";
             this.btnMisTurnos.UseVisualStyleBackColor = true;
-            this.btnMisTurnos.Click += new System.EventHandler(this.btnMisTurnos_Click);
+          //  this.btnMisTurnos.Click += new System.EventHandler(this.btnMisTurnos_Click);
             // 
             // ClientePrincipal
             // 

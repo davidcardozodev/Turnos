@@ -64,23 +64,29 @@
     <Compile Include="PantallasGenerales\Perfil.Designer.cs">
       <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuario\Cliente\ClienteCreacionTurno.cs">
+    <Compile Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuario\Cliente\ClienteCreacionTurno.Designer.cs">
+    <Compile Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.Designer.cs">
       <DependentUpon>ClienteCreacionTurno.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuario\Cliente\ClientePrincipal.cs">
+    <Compile Include="PantallasUsuario\PantallasCliente\ClientePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuario\Cliente\ClientePrincipal.Designer.cs">
+    <Compile Include="PantallasUsuario\PantallasCliente\ClientePrincipal.Designer.cs">
       <DependentUpon>ClientePrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuario\Cliente\ClienteTurnosVista.cs">
+    <Compile Include="PantallasUsuario\PantallasCliente\ClienteTurnosVista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallasUsuario\Cliente\ClienteTurnosVista.Designer.cs">
+    <Compile Include="PantallasUsuario\PantallasCliente\ClienteTurnosVista.Designer.cs">
       <DependentUpon>ClienteTurnosVista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasCliente\Componentes\ClienteTurnoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasCliente\Componentes\ClienteTurnoItem.Designer.cs">
+      <DependentUpon>ClienteTurnoItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,14 +99,17 @@
     <EmbeddedResource Include="PantallasGenerales\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\Cliente\ClienteCreacionTurno.resx">
+    <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.resx">
       <DependentUpon>ClienteCreacionTurno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\Cliente\ClientePrincipal.resx">
+    <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClientePrincipal.resx">
       <DependentUpon>ClientePrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\Cliente\ClienteTurnosVista.resx">
+    <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteTurnosVista.resx">
       <DependentUpon>ClienteTurnosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasCliente\Componentes\ClienteTurnoItem.resx">
+      <DependentUpon>ClienteTurnoItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

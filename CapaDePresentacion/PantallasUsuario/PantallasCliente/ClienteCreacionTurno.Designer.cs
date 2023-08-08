@@ -1,6 +1,6 @@
-﻿namespace CapaDePresentacion.PantallasUsuario.Cliente
+﻿namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 {
-    partial class ClienteTurnosVista
+    partial class ClienteCreacionTurno
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 30);
+            this.label1.Location = new System.Drawing.Point(45, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Turnos agendados";
+            this.label1.Size = new System.Drawing.Size(180, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Crear turno";
             // 
-            // ClienteTurnosVista
+            // ClienteCreacionTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ClienteTurnosVista";
-            this.Text = "ClienteTurnosVista";
+            this.Name = "ClienteCreacionTurno";
+            this.Text = "ClienteCreacionTurno";
             this.ResumeLayout(false);
             this.PerformLayout();
 
