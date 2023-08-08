@@ -47,7 +47,6 @@
             this.panelLateral.Name = "panelLateral";
             this.panelLateral.Size = new System.Drawing.Size(200, 450);
             this.panelLateral.TabIndex = 0;
-           // this.panelLateral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
             // 
             // lblLogin
             // 
@@ -109,6 +108,7 @@
             this.btnEntrar.TabIndex = 1;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // lblError
             // 
@@ -138,7 +138,6 @@
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Turnapp";
-            //this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
             this.panelLateral.ResumeLayout(false);
             this.panelLateral.PerformLayout();
             this.ResumeLayout(false);
