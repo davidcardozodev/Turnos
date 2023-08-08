@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelSide = new System.Windows.Forms.Panel();
+            this.panelLateral = new System.Windows.Forms.Panel();
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
-            this.panelSide.SuspendLayout();
+            this.panelLateral.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelSide
+            // panelLateral
             // 
-            this.panelSide.BackColor = System.Drawing.Color.Black;
-            this.panelSide.Controls.Add(this.lblLogin);
-            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 0);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(200, 450);
-            this.panelSide.TabIndex = 0;
-            this.panelSide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
+            this.panelLateral.BackColor = System.Drawing.Color.Black;
+            this.panelLateral.Controls.Add(this.lblLogin);
+            this.panelLateral.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLateral.Location = new System.Drawing.Point(0, 0);
+            this.panelLateral.Name = "panelLateral";
+            this.panelLateral.Size = new System.Drawing.Size(200, 450);
+            this.panelLateral.TabIndex = 0;
+            this.panelLateral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
             // 
             // lblLogin
             // 
@@ -73,15 +73,15 @@
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
-            // lblTitle
+            // lblTitulo
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(372, 31);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(210, 32);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Inicio de sesion";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(372, 31);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(210, 32);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Inicio de sesion";
             // 
             // txtClave
             // 
@@ -95,21 +95,20 @@
             this.txtClave.Enter += new System.EventHandler(this.txtClave_Enter);
             this.txtClave.Leave += new System.EventHandler(this.txtClave_Leave);
             // 
-            // btnLogin
+            // btnEntrar
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Black;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(283, 339);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(423, 57);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Entrar";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.botonAcceder_Click);
+            this.btnEntrar.BackColor = System.Drawing.Color.Black;
+            this.btnEntrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(283, 339);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(423, 57);
+            this.btnEntrar.TabIndex = 1;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = false;
             // 
             // lblError
             // 
@@ -130,18 +129,18 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblError);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtClave);
-            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.panelSide);
+            this.Controls.Add(this.panelLateral);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
-            this.panelSide.ResumeLayout(false);
-            this.panelSide.PerformLayout();
+            this.panelLateral.ResumeLayout(false);
+            this.panelLateral.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,11 +148,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.Panel panelLateral;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtClave;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblLogin;
     }
