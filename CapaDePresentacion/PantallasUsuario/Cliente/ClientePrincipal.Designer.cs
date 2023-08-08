@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMisTurnos = new System.Windows.Forms.Button();
             this.btnCrearTurno = new System.Windows.Forms.Button();
+            this.btnMisTurnos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,16 +43,6 @@
             this.panel1.Size = new System.Drawing.Size(776, 402);
             this.panel1.TabIndex = 0;
             // 
-            // btnMisTurnos
-            // 
-            this.btnMisTurnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMisTurnos.Location = new System.Drawing.Point(78, 138);
-            this.btnMisTurnos.Name = "btnMisTurnos";
-            this.btnMisTurnos.Size = new System.Drawing.Size(209, 89);
-            this.btnMisTurnos.TabIndex = 0;
-            this.btnMisTurnos.Text = "Mis turnos";
-            this.btnMisTurnos.UseVisualStyleBackColor = true;
-            // 
             // btnCrearTurno
             // 
             this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,6 +52,18 @@
             this.btnCrearTurno.TabIndex = 1;
             this.btnCrearTurno.Text = "Crear turno";
             this.btnCrearTurno.UseVisualStyleBackColor = true;
+            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
+            // 
+            // btnMisTurnos
+            // 
+            this.btnMisTurnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMisTurnos.Location = new System.Drawing.Point(78, 138);
+            this.btnMisTurnos.Name = "btnMisTurnos";
+            this.btnMisTurnos.Size = new System.Drawing.Size(209, 89);
+            this.btnMisTurnos.TabIndex = 0;
+            this.btnMisTurnos.Text = "Mis turnos";
+            this.btnMisTurnos.UseVisualStyleBackColor = true;
+            this.btnMisTurnos.Click += new System.EventHandler(this.btnMisTurnos_Click);
             // 
             // ClientePrincipal
             // 

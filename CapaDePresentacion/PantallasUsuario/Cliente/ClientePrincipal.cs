@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using CapaDePresentacion.PantallasUsuario.Cliente;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario
@@ -43,6 +44,20 @@ namespace CapaDePresentacion.PantallasUsuario
             Formulario.BringToFront();
 
             return Formulario;
+        }
+
+        #endregion
+
+        #region "Botones"
+
+        private void btnMisTurnos_Click(object sender, System.EventArgs e)
+        {
+            AbrirFormulario<ClienteTurnosVista>();
+        }
+
+        private void btnCrearTurno_Click(object sender, System.EventArgs e)
+        {
+            AbrirFormulario<ClienteCreacionTurno>();
         }
 
         #endregion
