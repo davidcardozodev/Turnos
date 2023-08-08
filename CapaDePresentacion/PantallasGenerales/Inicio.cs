@@ -101,6 +101,7 @@ namespace CapaDePresentacion.PantallasGenerales
             if (inicioSesionValidado)
             {
                 this.Hide();
+                CrearInterfazUsuario();
             }
             else
                 MensajeError("Usuario o Clave incorrecta");
@@ -135,6 +136,14 @@ namespace CapaDePresentacion.PantallasGenerales
                 MessageBox.Show("Error: Database not found");
             }
         }
+
+        private void CrearInterfazUsuario()
+        {
+            PantallaUsuario interfazUsuario = new PantallaUsuario();
+            interfazUsuario.Show();
+            interfazUsuario.FormClosed += LimpiarPantallaInicio;
+        }
+
 
         #endregion
     }
