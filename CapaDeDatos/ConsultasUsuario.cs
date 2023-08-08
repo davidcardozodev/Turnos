@@ -1,4 +1,5 @@
 ﻿using CapaComun;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -12,6 +13,7 @@ namespace CapaDeDatos
         private SqlDataReader _Lector;
         private DataTable _Tabla = new DataTable();
         private SqlCommand _Comando = new SqlCommand();
+        private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
 
         #endregion
 
@@ -57,6 +59,40 @@ namespace CapaDeDatos
             DatosUsuario.Email = Reader.GetString(5);
             DatosUsuario.Rol = Reader.GetString(6);
         }
+
+        public List<FormatoTurnos> CargarTurno()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "CargarTurno";
+            _Comando.CommandType = CommandType.StoredProcedure;
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Hora = _Lector["Hora"].ToString();
+                string Descripcion = _Lector["Descripcion"].ToString();
+                string Estado = _Lector["Estado"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = Id,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Hora = Hora,
+                    Descripcion = Descripcion,
+                    Estado = Estado,
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
 
     }
 }
