@@ -1,10 +1,11 @@
-﻿using CapaDeNegocio;
+﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace PresentationLayer.GeneralScreens
+namespace CapaDePresentacion.PantallasGenerales
 {
     public partial class Inicio : Form
     {
@@ -95,7 +96,46 @@ namespace PresentationLayer.GeneralScreens
             txtUsuario.Focus();
         }
 
+        private void InicioSesionValidado(bool inicioSesionValidado)
+        {
+            if (inicioSesionValidado)
+            {
+                this.Hide();
+            }
+            else
+                MensajeError("Usuario o Clave incorrecta");
+        }
+
         #endregion
 
+        #region "Acceder"
+        private void botonAcceder_Click(object sender, EventArgs e)
+        {
+            VerificarCampos();
+            IniciarSesion();
+        }
+
+        private void IniciarSesion()
+        {
+            if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
+                BusquedaUsuario();
+        }
+
+        private void BusquedaUsuario()
+        {
+            Usuario usuario = new Usuario();
+
+            try
+            {
+                var loginValido = usuario.IniciarSesion(txtUsuario.Text, txtClave.Text);
+                InicioSesionValidado(loginValido);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error: Database not found");
+            }
+        }
+
+        #endregion
     }
 }

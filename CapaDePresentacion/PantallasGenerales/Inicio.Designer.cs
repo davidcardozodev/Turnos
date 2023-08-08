@@ -1,4 +1,4 @@
-﻿namespace PresentationLayer.GeneralScreens
+﻿namespace CapaDePresentacion.PantallasGenerales
 {
     partial class Inicio
     {
@@ -137,7 +137,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tienda";
+            this.Text = "Turnapp";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoverVentana_MouseDown);
             this.panelLateral.ResumeLayout(false);
             this.panelLateral.PerformLayout();
