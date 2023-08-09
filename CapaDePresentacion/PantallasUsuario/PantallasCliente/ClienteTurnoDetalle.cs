@@ -9,6 +9,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             InitializeComponent();
         }
 
+        public int Id { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
         public string Mes { get; set; }

@@ -9,6 +9,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             InitializeComponent();
         }
 
+        public int Id { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
         public string Mes { get; set; }
@@ -35,6 +36,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             ClienteTurnoDetalle clienteTurnoDetalle = new ClienteTurnoDetalle();
 
+            clienteTurnoDetalle.Id = Id;
             clienteTurnoDetalle.DiaNombre = DiaNombre;
             clienteTurnoDetalle.DiaNumero = DiaNumero;
             clienteTurnoDetalle.Mes = Mes;

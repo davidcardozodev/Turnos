@@ -29,6 +29,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             {
                 ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
 
+                clienteTurnoItem.Id = Turno.Id;
                 clienteTurnoItem.DiaNombre = Turno.DiaNombre;
                 clienteTurnoItem.DiaNumero = Turno.DiaNumero;
                 clienteTurnoItem.Mes = Turno.Mes;
