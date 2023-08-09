@@ -14,5 +14,10 @@ namespace CapaDeEntidades
         {
             return _ConsultasAdmin.TurnoCargarAdmin();
         }
+
+        public List<DatosUsuarioItem> AdminCargarUsuario()
+        {
+            return _ConsultasAdmin.AdminCargarUsuario();
+        }
     }
 }
