@@ -13,7 +13,7 @@ namespace CapaDeDatos
         private SqlDataReader _Lector;
         private DataTable _Tabla = new DataTable();
         private SqlCommand _Comando = new SqlCommand();
-        private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
+        private List<FormatoTurnosAdmin> _Valores = new List<FormatoTurnosAdmin>();
         private List<DatosUsuarioItem> _Usuarios = new List<DatosUsuarioItem>();
 
         #endregion
@@ -53,7 +53,7 @@ namespace CapaDeDatos
             return _Usuarios;
         }
 
-        public List<FormatoTurnos> TurnoCargarAdmin()
+        public List<FormatoTurnosAdmin> TurnoCargarAdmin()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarAdmin";
@@ -72,8 +72,11 @@ namespace CapaDeDatos
                 string Hora = _Lector["Hora"].ToString();
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
+                string Usuario = _Lector["Usuario"].ToString();
+                string PrimerNombre = _Lector["PrimerNombre"].ToString();
+                string SegundoNombre = _Lector["SegundoNombre"].ToString();
 
-                _Valores.Add(new FormatoTurnos
+                _Valores.Add(new FormatoTurnosAdmin
                 {
                     Id = Id,
                     IdCliente = IdCliente,
@@ -84,6 +87,9 @@ namespace CapaDeDatos
                     Hora = Hora,
                     Descripcion = Descripcion,
                     Estado = Estado,
+                    Usuario = Usuario,
+                    PrimerNombre = PrimerNombre,
+                    SegundoNombre = SegundoNombre
                 });
             }
 

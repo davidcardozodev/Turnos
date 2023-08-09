@@ -10,7 +10,7 @@ namespace CapaDeEntidades
 
         ConsultasAdmin _ConsultasAdmin = new ConsultasAdmin();
 
-        public List<FormatoTurnos> TurnoCargarAdmin()
+        public List<FormatoTurnosAdmin> TurnoCargarAdmin()
         {
             return _ConsultasAdmin.TurnoCargarAdmin();
         }

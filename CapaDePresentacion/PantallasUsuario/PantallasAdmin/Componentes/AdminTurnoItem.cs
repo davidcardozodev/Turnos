@@ -1,5 +1,4 @@
-﻿using CapaDePresentacion.PantallasUsuario.PantallasCliente;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 {
@@ -18,6 +17,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public string Hora { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
+        public string Usuario { get; set; }
+        public string PrimerNombre { get; set; }
+        public string SegundoNombre { get; set; }
 
         private void AdminTurnoItem_Load(object sender, System.EventArgs e)
         {
@@ -34,18 +36,21 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
         private void picOpciones_Click(object sender, System.EventArgs e)
         {
-            ClienteTurnoDetalle clienteTurnoDetalle = new ClienteTurnoDetalle();
+            AdminTurnoDetalle adminTurnoDetalle = new AdminTurnoDetalle();
 
-            clienteTurnoDetalle.Id = Id;
-            clienteTurnoDetalle.DiaNombre = DiaNombre;
-            clienteTurnoDetalle.DiaNumero = DiaNumero;
-            clienteTurnoDetalle.Mes = Mes;
-            clienteTurnoDetalle.Anio = Anio;
-            clienteTurnoDetalle.Hora = Hora;
-            clienteTurnoDetalle.Descripcion = Descripcion;
-            clienteTurnoDetalle.Estado = Estado;
+            adminTurnoDetalle.Id = Id;
+            adminTurnoDetalle.DiaNombre = DiaNombre;
+            adminTurnoDetalle.DiaNumero = DiaNumero;
+            adminTurnoDetalle.Mes = Mes;
+            adminTurnoDetalle.Anio = Anio;
+            adminTurnoDetalle.Hora = Hora;
+            adminTurnoDetalle.Descripcion = Descripcion;
+            adminTurnoDetalle.Estado = Estado;
+            adminTurnoDetalle.Usuario = Usuario;
+            adminTurnoDetalle.PrimerNombre = PrimerNombre;
+            adminTurnoDetalle.SegundoNombre = SegundoNombre;
 
-            clienteTurnoDetalle.Show();
+            adminTurnoDetalle.Show();
         }
     }
 }

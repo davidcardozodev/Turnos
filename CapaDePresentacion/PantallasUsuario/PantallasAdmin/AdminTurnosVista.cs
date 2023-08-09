@@ -22,11 +22,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+            List<FormatoTurnosAdmin> ListaTurnos = new List<FormatoTurnosAdmin>();
 
             ListaTurnos = admin.TurnoCargarAdmin();
 
-            foreach (FormatoTurnos Turno in ListaTurnos)
+            foreach (FormatoTurnosAdmin Turno in ListaTurnos)
             {
                 AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
 
@@ -38,6 +38,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 adminTurnoItem.Hora = Turno.Hora;
                 adminTurnoItem.Descripcion = Turno.Descripcion;
                 adminTurnoItem.Estado = Turno.Estado;
+                adminTurnoItem.Usuario = Turno.Usuario;
+                adminTurnoItem.PrimerNombre = Turno.PrimerNombre;
+                adminTurnoItem.SegundoNombre = Turno.SegundoNombre;
 
                 flowLayoutPanel1.Controls.Add(adminTurnoItem);
             }
