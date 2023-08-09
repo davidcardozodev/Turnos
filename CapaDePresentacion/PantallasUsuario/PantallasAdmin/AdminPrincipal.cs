@@ -57,5 +57,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         #endregion
 
+        private void btnListaUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminVistaUsuarios>();
+        }
     }
 }
