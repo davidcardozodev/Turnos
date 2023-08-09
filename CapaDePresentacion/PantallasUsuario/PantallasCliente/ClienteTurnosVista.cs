@@ -38,5 +38,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
                 flowLayoutPanel1.Controls.Add(clienteTurnoItem);
             }
         }
+
+        private void btnVolverAtras_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

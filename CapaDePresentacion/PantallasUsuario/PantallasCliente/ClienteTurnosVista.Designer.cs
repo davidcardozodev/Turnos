@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,11 +50,23 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(668, 252);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverAtras.Location = new System.Drawing.Point(464, 30);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
+            this.btnVolverAtras.TabIndex = 2;
+            this.btnVolverAtras.Text = "Volver atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
+            // 
             // ClienteTurnosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -69,5 +82,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnVolverAtras;
     }
 }
