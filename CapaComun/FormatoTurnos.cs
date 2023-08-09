@@ -3,6 +3,7 @@
     public class FormatoTurnos
     {
         public int Id { get; set; }
+        public int IdCliente { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
         public string Mes { get; set; }
