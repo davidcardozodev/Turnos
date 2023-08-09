@@ -23,7 +23,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = cliente.CargarTurno();
+            ListaTurnos = cliente.CargarTurno(DatosUsuario.Id);
 
             foreach (FormatoTurnos Turno in ListaTurnos)
             {

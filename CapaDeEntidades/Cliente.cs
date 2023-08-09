@@ -10,9 +10,9 @@ namespace CapaDeEntidades
 
         private ConsultasUsuario _ConsultasUsuario = new ConsultasUsuario();
 
-        public List<FormatoTurnos> CargarTurno()
+        public List<FormatoTurnos> CargarTurno(int idCliente)
         {
-            return _ConsultasUsuario.CargarTurno();
+            return _ConsultasUsuario.CargarTurno(idCliente);
         }
     }
 }

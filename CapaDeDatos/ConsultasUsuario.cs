@@ -60,17 +60,17 @@ namespace CapaDeDatos
             DatosUsuario.Rol = Reader.GetString(6);
         }
 
-        public List<FormatoTurnos> CargarTurno()
+        public List<FormatoTurnos> CargarTurno(int idCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "CargarTurno";
             _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
 
             _Lector = _Comando.ExecuteReader();
 
             while (_Lector.Read())
             {
-                int Id = int.Parse(_Lector["Id"].ToString());
                 string DiaNombre = _Lector["DiaNombre"].ToString();
                 string DiaNumero = _Lector["DiaNumero"].ToString();
                 string Hora = _Lector["Hora"].ToString();
@@ -79,7 +79,6 @@ namespace CapaDeDatos
 
                 _Valores.Add(new FormatoTurnos
                 {
-                    Id = Id,
                     DiaNombre = DiaNombre,
                     DiaNumero = DiaNumero,
                     Hora = Hora,
