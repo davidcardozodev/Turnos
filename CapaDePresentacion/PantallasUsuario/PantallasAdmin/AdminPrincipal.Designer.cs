@@ -45,13 +45,13 @@
             // btnTurnosClientes
             // 
             this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosClientes.Location = new System.Drawing.Point(256, 167);
+            this.btnTurnosClientes.Location = new System.Drawing.Point(231, 161);
             this.btnTurnosClientes.Name = "btnTurnosClientes";
-            this.btnTurnosClientes.Size = new System.Drawing.Size(209, 89);
+            this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
             this.btnTurnosClientes.TabIndex = 0;
             this.btnTurnosClientes.Text = "Turnos de los clientes";
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
-//            this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
+            this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
             // 
             // AdminPrincipal
             // 

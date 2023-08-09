@@ -70,6 +70,12 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.Designer.cs">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.Designer.cs">
+      <DependentUpon>AdminTurnosVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.resx">
+      <DependentUpon>AdminTurnosVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.resx">
       <DependentUpon>ClienteCreacionTurno.cs</DependentUpon>
