@@ -67,7 +67,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             GuardarHoraDescripcion();
             GuardarFecha();
 
-            cliente.CrearTurno(DatosUsuario.Id, diaNombre, diaNumero, mes, anio, hora, descripcion);
+            cliente.TurnoCrear(DatosUsuario.Id, diaNombre, diaNumero, mes, anio, hora, descripcion);
 
             MessageBox.Show("Turno guardado");
         }

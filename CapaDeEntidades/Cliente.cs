@@ -10,19 +10,19 @@ namespace CapaDeEntidades
 
         private ConsultasUsuario _ConsultasUsuario = new ConsultasUsuario();
 
-        public List<FormatoTurnos> CargarTurno(int idCliente)
+        public List<FormatoTurnos> TurnoCargar(int idCliente)
         {
-            return _ConsultasUsuario.CargarTurno(idCliente);
+            return _ConsultasUsuario.TurnoCargar(idCliente);
         }
 
-        public void CrearTurno(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
         {
-            _ConsultasUsuario.CrearTurno(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
+            _ConsultasUsuario.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
         }
 
-        public void DarBajaTurno(int idTurno)
+        public void TurnoDarBaja(int idTurno)
         {
-            _ConsultasUsuario.DarBajaTurno(idTurno);
+            _ConsultasUsuario.TurnoDarBaja(idTurno);
         }
     }
 }

@@ -60,10 +60,10 @@ namespace CapaDeDatos
             DatosUsuario.Rol = Reader.GetString(6);
         }
 
-        public List<FormatoTurnos> CargarTurno(int idCliente)
+        public List<FormatoTurnos> TurnoCargar(int idCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "CargarTurno";
+            _Comando.CommandText = "TurnoCargar";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idCliente", idCliente);
 
@@ -98,10 +98,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public void CrearTurno(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "CrearTurno";
+            _Comando.CommandText = "TurnoCrear";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idCliente", idCliente);
             _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
@@ -114,10 +114,10 @@ namespace CapaDeDatos
             _Comando.Parameters.Clear();
         }
 
-        public void DarBajaTurno(int idTurno)
+        public void TurnoDarBaja(int idTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "DarBajaTurno";
+            _Comando.CommandText = "TurnoDarBaja";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idTurno", idTurno);
             _Comando.ExecuteNonQuery();

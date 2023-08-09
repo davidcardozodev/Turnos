@@ -36,7 +36,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            cliente.DarBajaTurno(Id);
+            cliente.TurnoDarBaja(Id);
         }
     }
 }
