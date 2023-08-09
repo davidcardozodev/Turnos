@@ -40,5 +40,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 flowLayoutPanel1.Controls.Add(usuarioItem);
             }
         }
+
+        private void btnVolverAtras_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

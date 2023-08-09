@@ -43,5 +43,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             }
         }
 
+        private void btnVolverAtras_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
