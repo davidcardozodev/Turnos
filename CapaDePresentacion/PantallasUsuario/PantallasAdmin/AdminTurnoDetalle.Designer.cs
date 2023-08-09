@@ -31,6 +31,8 @@
             this.btnDarDeBaja = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblUsuarioCategoria = new System.Windows.Forms.Label();
             this.rtxtDecripcion = new System.Windows.Forms.RichTextBox();
             this.lblFechaCategoria = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblHoraCategoria = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.lblUsuarioCategoria = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             this.btnDarDeBaja.TabIndex = 21;
             this.btnDarDeBaja.Text = "Dar de baja";
             this.btnDarDeBaja.UseVisualStyleBackColor = true;
+            this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
             // 
             // label5
             // 
@@ -81,6 +82,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 396);
             this.panel1.TabIndex = 19;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.lblUsuario.Location = new System.Drawing.Point(206, 94);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(112, 32);
+            this.lblUsuario.TabIndex = 16;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // lblUsuarioCategoria
+            // 
+            this.lblUsuarioCategoria.AutoSize = true;
+            this.lblUsuarioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarioCategoria.Location = new System.Drawing.Point(75, 94);
+            this.lblUsuarioCategoria.Name = "lblUsuarioCategoria";
+            this.lblUsuarioCategoria.Size = new System.Drawing.Size(112, 32);
+            this.lblUsuarioCategoria.TabIndex = 15;
+            this.lblUsuarioCategoria.Text = "Usuario";
             // 
             // rtxtDecripcion
             // 
@@ -164,27 +186,6 @@
             this.lblFecha.Size = new System.Drawing.Size(93, 32);
             this.lblFecha.TabIndex = 10;
             this.lblFecha.Text = "Fecha";
-            // 
-            // lblUsuarioCategoria
-            // 
-            this.lblUsuarioCategoria.AutoSize = true;
-            this.lblUsuarioCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioCategoria.Location = new System.Drawing.Point(75, 94);
-            this.lblUsuarioCategoria.Name = "lblUsuarioCategoria";
-            this.lblUsuarioCategoria.Size = new System.Drawing.Size(112, 32);
-            this.lblUsuarioCategoria.TabIndex = 15;
-            this.lblUsuarioCategoria.Text = "Usuario";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsuario.Location = new System.Drawing.Point(206, 94);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(112, 32);
-            this.lblUsuario.TabIndex = 16;
-            this.lblUsuario.Text = "Usuario";
             // 
             // AdminTurnoDetalle
             // 

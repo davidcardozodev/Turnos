@@ -19,5 +19,10 @@ namespace CapaDeEntidades
         {
             return _ConsultasAdmin.AdminCargarUsuario();
         }
+
+        public void TurnoDarBaja(int idTurno)
+        {
+            _ConsultasAdmin.TurnoDarBaja(idTurno);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using CapaDeEntidades;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 {
@@ -33,6 +34,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             lblHora.Text = Hora;
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
+        }
+
+        private void btnDarDeBaja_Click(object sender, System.EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            admin.TurnoDarBaja(Id);
         }
     }
 }
