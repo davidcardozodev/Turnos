@@ -76,6 +76,18 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.Designer.cs">
       <DependentUpon>AdminTurnosVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminVistaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminVistaUsuarios.Designer.cs">
+      <DependentUpon>AdminVistaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.Designer.cs">
+      <DependentUpon>UsuarioItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.resx">
       <DependentUpon>AdminTurnosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminVistaUsuarios.resx">
+      <DependentUpon>AdminVistaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.resx">
+      <DependentUpon>UsuarioItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.resx">
       <DependentUpon>ClienteCreacionTurno.cs</DependentUpon>
