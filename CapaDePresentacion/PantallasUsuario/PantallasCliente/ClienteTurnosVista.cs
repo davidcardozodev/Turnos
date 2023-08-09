@@ -31,6 +31,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
                 clienteTurnoItem.DiaNombre = Turno.DiaNombre;
                 clienteTurnoItem.DiaNumero = Turno.DiaNumero;
+                clienteTurnoItem.Mes = Turno.Mes;
+                clienteTurnoItem.Anio = Turno.Anio;
                 clienteTurnoItem.Hora = Turno.Hora;
                 clienteTurnoItem.Descripcion = Turno.Descripcion;
                 clienteTurnoItem.Estado = Turno.Estado;
