@@ -21,7 +21,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void AdminVistaUsuarioDetalle_Load(object sender, EventArgs e)
         {
             CargarRoles();
+            CargarDatosUsuario();
+        }
 
+        private void CargarDatosUsuario()
+        {
             lblUsuario.Text = PrimerNombre + " " + SegundoNombre + " (" + Usuario + ")";
             lblEmail.Text = Email;
             lblRol.Text = Rol;
