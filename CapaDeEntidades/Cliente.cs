@@ -14,5 +14,10 @@ namespace CapaDeEntidades
         {
             return _ConsultasUsuario.CargarTurno(idCliente);
         }
+
+        public void CrearTurno(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        {
+            _ConsultasUsuario.CrearTurno(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
+        }
     }
 }

@@ -38,9 +38,10 @@
             // 
             this.panel1.Controls.Add(this.btnCrearTurno);
             this.panel1.Controls.Add(this.btnMisTurnos);
-            this.panel1.Location = new System.Drawing.Point(81, 129);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 402);
+            this.panel1.Size = new System.Drawing.Size(1019, 654);
             this.panel1.TabIndex = 0;
             // 
             // btnCrearTurno

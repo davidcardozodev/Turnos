@@ -96,6 +96,20 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-
+        public void CrearTurno(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "CrearTurno";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
+            _Comando.Parameters.AddWithValue("@diaNumero", diaNumero);
+            _Comando.Parameters.AddWithValue("@mes", mes);
+            _Comando.Parameters.AddWithValue("@anio", anio);
+            _Comando.Parameters.AddWithValue("@hora", hora);
+            _Comando.Parameters.AddWithValue("@descripcion", descripcion);
+            _Comando.ExecuteNonQuery();
+            _Comando.Parameters.Clear();
+        }
     }
 }
