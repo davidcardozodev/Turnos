@@ -73,6 +73,8 @@ namespace CapaDeDatos
             {
                 string DiaNombre = _Lector["DiaNombre"].ToString();
                 string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
                 string Hora = _Lector["Hora"].ToString();
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
@@ -81,6 +83,8 @@ namespace CapaDeDatos
                 {
                     DiaNombre = DiaNombre,
                     DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
                     Hora = Hora,
                     Descripcion = Descripcion,
                     Estado = Estado,
