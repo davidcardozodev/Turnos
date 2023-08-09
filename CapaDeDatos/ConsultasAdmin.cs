@@ -118,5 +118,17 @@ namespace CapaDeDatos
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
+
+        public void AdminGuardarDisponibilidad(int idUsuario, int horarioInicio, int horarioFin)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminGuardarDisponibilidad";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
+            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
     }
 }

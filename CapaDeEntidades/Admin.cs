@@ -29,5 +29,10 @@ namespace CapaDeEntidades
         {
             _ConsultasAdmin.AdminModicarUsuario(idUsuario, rol);
         }
+
+        public void AdminGuardarDisponibilidad(int idUsuario, int horarioInicio, int horarioFin)
+        {
+            _ConsultasAdmin.AdminGuardarDisponibilidad(idUsuario, horarioInicio, horarioFin);
+        }
     }
 }

@@ -78,6 +78,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             admin.AdminModicarUsuario(Id, comboRol.Text);
 
+            Admin adminDisponibilidad = new Admin();
+
+            adminDisponibilidad.AdminGuardarDisponibilidad(Id, int.Parse(comboInicio.Text), int.Parse(comboFin.Text));
+
             MessageBox.Show("Cambios guardados");
         }
     }
