@@ -35,8 +35,10 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelEstado = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDiaNombre
@@ -83,7 +85,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(217, 16);
+            this.lblEstado.Location = new System.Drawing.Point(18, 9);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 4;
@@ -91,6 +93,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.lblDiaNombre);
             this.panel1.Controls.Add(this.lblDiaNumero);
             this.panel1.Location = new System.Drawing.Point(20, 19);
@@ -100,27 +103,40 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.panelEstado);
             this.panel2.Controls.Add(this.lblHora);
             this.panel2.Controls.Add(this.lblDescripcion);
-            this.panel2.Controls.Add(this.lblEstado);
             this.panel2.Location = new System.Drawing.Point(238, 19);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(398, 140);
+            this.panel2.Size = new System.Drawing.Size(519, 140);
             this.panel2.TabIndex = 6;
+            // 
+            // panelEstado
+            // 
+            this.panelEstado.BackColor = System.Drawing.Color.White;
+            this.panelEstado.Controls.Add(this.lblEstado);
+            this.panelEstado.Location = new System.Drawing.Point(204, 16);
+            this.panelEstado.Name = "panelEstado";
+            this.panelEstado.Size = new System.Drawing.Size(295, 51);
+            this.panelEstado.TabIndex = 5;
             // 
             // ClienteTurnoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ClienteTurnoItem";
-            this.Size = new System.Drawing.Size(658, 178);
+            this.Size = new System.Drawing.Size(776, 178);
             this.Load += new System.EventHandler(this.ClienteTurnoItem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelEstado.ResumeLayout(false);
+            this.panelEstado.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -134,5 +150,6 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelEstado;
     }
 }
