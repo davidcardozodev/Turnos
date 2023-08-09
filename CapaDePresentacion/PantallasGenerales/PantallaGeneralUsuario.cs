@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDePresentacion.PantallaGenerales;
 using CapaDePresentacion.PantallasUsuario;
+using CapaDePresentacion.PantallasUsuario.PantallasAdmin;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -66,6 +67,9 @@ namespace CapaDePresentacion.PantallasGenerales
         {
             if (DatosUsuario.Rol == Roles.rolCliente)
                 AbrirFormulario<ClientePrincipal>();
+
+            if (DatosUsuario.Rol == Roles.rolAdmin)
+                AbrirFormulario<AdminPrincipal>();
         }
 
         #endregion
