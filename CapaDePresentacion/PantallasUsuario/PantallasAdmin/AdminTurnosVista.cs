@@ -1,6 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
-using CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes;
+using CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -28,18 +28,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
-                ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
+                AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
 
-                clienteTurnoItem.Id = Turno.Id;
-                clienteTurnoItem.DiaNombre = Turno.DiaNombre;
-                clienteTurnoItem.DiaNumero = Turno.DiaNumero;
-                clienteTurnoItem.Mes = Turno.Mes;
-                clienteTurnoItem.Anio = Turno.Anio;
-                clienteTurnoItem.Hora = Turno.Hora;
-                clienteTurnoItem.Descripcion = Turno.Descripcion;
-                clienteTurnoItem.Estado = Turno.Estado;
+                adminTurnoItem.Id = Turno.Id;
+                adminTurnoItem.DiaNombre = Turno.DiaNombre;
+                adminTurnoItem.DiaNumero = Turno.DiaNumero;
+                adminTurnoItem.Mes = Turno.Mes;
+                adminTurnoItem.Anio = Turno.Anio;
+                adminTurnoItem.Hora = Turno.Hora;
+                adminTurnoItem.Descripcion = Turno.Descripcion;
+                adminTurnoItem.Estado = Turno.Estado;
 
-                flowLayoutPanel1.Controls.Add(clienteTurnoItem);
+                flowLayoutPanel1.Controls.Add(adminTurnoItem);
             }
         }
 

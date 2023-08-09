@@ -82,6 +82,12 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminVistaUsuarios.Designer.cs">
       <DependentUpon>AdminVistaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminTurnoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminTurnoItem.Designer.cs">
+      <DependentUpon>AdminTurnoItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminVistaUsuarios.resx">
       <DependentUpon>AdminVistaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminTurnoItem.resx">
+      <DependentUpon>AdminTurnoItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.resx">
       <DependentUpon>UsuarioItem.cs</DependentUpon>
