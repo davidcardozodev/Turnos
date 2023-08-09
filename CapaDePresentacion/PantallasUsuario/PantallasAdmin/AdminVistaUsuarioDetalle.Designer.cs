@@ -40,7 +40,14 @@
             this.comboRol = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblDisponibilidad = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboFin = new System.Windows.Forms.ComboBox();
+            this.lblFin = new System.Windows.Forms.Label();
+            this.comboInicio = new System.Windows.Forms.ComboBox();
+            this.lblInicio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -144,7 +151,7 @@
             // 
             this.comboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboRol.FormattingEnabled = true;
-            this.comboRol.Location = new System.Drawing.Point(229, 314);
+            this.comboRol.Location = new System.Drawing.Point(228, 485);
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(162, 40);
             this.comboRol.TabIndex = 17;
@@ -153,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 314);
+            this.label1.Location = new System.Drawing.Point(36, 485);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 32);
             this.label1.TabIndex = 18;
@@ -162,7 +169,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(613, 314);
+            this.btnGuardar.Location = new System.Drawing.Point(612, 485);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(152, 78);
             this.btnGuardar.TabIndex = 23;
@@ -170,11 +177,74 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // lblDisponibilidad
+            // 
+            this.lblDisponibilidad.AutoSize = true;
+            this.lblDisponibilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisponibilidad.Location = new System.Drawing.Point(37, 293);
+            this.lblDisponibilidad.Name = "lblDisponibilidad";
+            this.lblDisponibilidad.Size = new System.Drawing.Size(195, 32);
+            this.lblDisponibilidad.TabIndex = 28;
+            this.lblDisponibilidad.Text = "Disponibilidad";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.comboFin);
+            this.panel2.Controls.Add(this.lblFin);
+            this.panel2.Controls.Add(this.comboInicio);
+            this.panel2.Controls.Add(this.lblInicio);
+            this.panel2.Location = new System.Drawing.Point(34, 328);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(730, 106);
+            this.panel2.TabIndex = 27;
+            // 
+            // comboFin
+            // 
+            this.comboFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboFin.FormattingEnabled = true;
+            this.comboFin.Location = new System.Drawing.Point(482, 34);
+            this.comboFin.Name = "comboFin";
+            this.comboFin.Size = new System.Drawing.Size(162, 40);
+            this.comboFin.TabIndex = 29;
+            // 
+            // lblFin
+            // 
+            this.lblFin.AutoSize = true;
+            this.lblFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFin.Location = new System.Drawing.Point(371, 34);
+            this.lblFin.Name = "lblFin";
+            this.lblFin.Size = new System.Drawing.Size(54, 32);
+            this.lblFin.TabIndex = 28;
+            this.lblFin.Text = "Fin";
+            // 
+            // comboInicio
+            // 
+            this.comboInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboInicio.FormattingEnabled = true;
+            this.comboInicio.Location = new System.Drawing.Point(131, 34);
+            this.comboInicio.Name = "comboInicio";
+            this.comboInicio.Size = new System.Drawing.Size(162, 40);
+            this.comboInicio.TabIndex = 27;
+            this.comboInicio.SelectedIndexChanged += new System.EventHandler(this.comboInicio_SelectedIndexChanged);
+            // 
+            // lblInicio
+            // 
+            this.lblInicio.AutoSize = true;
+            this.lblInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Location = new System.Drawing.Point(20, 34);
+            this.lblInicio.Name = "lblInicio";
+            this.lblInicio.Size = new System.Drawing.Size(81, 32);
+            this.lblInicio.TabIndex = 25;
+            this.lblInicio.Text = "Inicio";
+            // 
             // AdminVistaUsuarioDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.ClientSize = new System.Drawing.Size(800, 603);
+            this.Controls.Add(this.lblDisponibilidad);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
@@ -186,6 +256,8 @@
             this.Load += new System.EventHandler(this.AdminVistaUsuarioDetalle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +277,11 @@
         private System.Windows.Forms.ComboBox comboRol;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label lblDisponibilidad;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboFin;
+        private System.Windows.Forms.Label lblFin;
+        private System.Windows.Forms.ComboBox comboInicio;
+        private System.Windows.Forms.Label lblInicio;
     }
 }

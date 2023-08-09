@@ -22,7 +22,41 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             CargarRoles();
             CargarDatosUsuario();
+            CargarValoresHorarioInicio();
+            ValorInicialHorario();
         }
+
+        #region "Horario"
+
+        private void CargarValoresFinHorario()
+        {
+            for (int i = (int)comboInicio.SelectedItem; i <= 22; i++)
+                comboFin.Items.Add(i);
+        }
+
+        private void CargarValoresHorarioInicio()
+        {
+            for (int i = 8; i <= 22; i++)
+                comboInicio.Items.Add(i);
+        }
+
+        private void ValorInicialHorario()
+        {
+            comboInicio.SelectedItem = 8;
+        }
+
+        private void comboInicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LimpiarHorarios();
+            CargarValoresFinHorario();
+        }
+
+        private void LimpiarHorarios()
+        {
+            comboFin.Items.Clear();
+        }
+
+        #endregion
 
         private void CargarDatosUsuario()
         {
