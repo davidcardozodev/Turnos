@@ -38,7 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.rtxtDecripcion = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDarDeBaja = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,22 +151,23 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Detalle del turno";
             // 
-            // button1
+            // btnDarDeBaja
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(536, 422);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 58);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Dar de baja";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarDeBaja.Location = new System.Drawing.Point(536, 422);
+            this.btnDarDeBaja.Name = "btnDarDeBaja";
+            this.btnDarDeBaja.Size = new System.Drawing.Size(204, 58);
+            this.btnDarDeBaja.TabIndex = 18;
+            this.btnDarDeBaja.Text = "Dar de baja";
+            this.btnDarDeBaja.UseVisualStyleBackColor = true;
+            this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
             // 
             // ClienteTurnoDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(752, 502);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDarDeBaja);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "ClienteTurnoDetalle";
@@ -192,6 +193,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RichTextBox rtxtDecripcion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDarDeBaja;
     }
 }

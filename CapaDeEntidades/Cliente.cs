@@ -19,5 +19,10 @@ namespace CapaDeEntidades
         {
             _ConsultasUsuario.CrearTurno(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
         }
+
+        public void DarBajaTurno(int idTurno)
+        {
+            _ConsultasUsuario.DarBajaTurno(idTurno);
+        }
     }
 }

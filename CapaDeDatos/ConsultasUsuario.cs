@@ -71,6 +71,7 @@ namespace CapaDeDatos
 
             while (_Lector.Read())
             {
+                int Id = int.Parse(_Lector["Id"].ToString());
                 string DiaNombre = _Lector["DiaNombre"].ToString();
                 string DiaNumero = _Lector["DiaNumero"].ToString();
                 string Mes = _Lector["Mes"].ToString();
@@ -81,6 +82,7 @@ namespace CapaDeDatos
 
                 _Valores.Add(new FormatoTurnos
                 {
+                    Id = Id,
                     DiaNombre = DiaNombre,
                     DiaNumero = DiaNumero,
                     Mes = Mes,
@@ -110,6 +112,16 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@descripcion", descripcion);
             _Comando.ExecuteNonQuery();
             _Comando.Parameters.Clear();
+        }
+
+        public void DarBajaTurno(int idTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "DarBajaTurno";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
         }
     }
 }

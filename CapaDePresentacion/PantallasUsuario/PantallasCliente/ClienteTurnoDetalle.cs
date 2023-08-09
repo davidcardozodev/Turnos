@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using CapaDeEntidades;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 {
@@ -29,6 +30,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             lblHora.Text = Hora;
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
+        }
+
+        private void btnDarDeBaja_Click(object sender, System.EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+
+            cliente.DarBajaTurno(Id);
         }
     }
 }
