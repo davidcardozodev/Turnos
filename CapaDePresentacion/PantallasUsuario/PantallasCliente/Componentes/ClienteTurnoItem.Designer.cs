@@ -35,12 +35,12 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelEstado = new System.Windows.Forms.Panel();
             this.picOpciones = new System.Windows.Forms.PictureBox();
+            this.panelEstado = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelEstado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOpciones)).BeginInit();
+            this.panelEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDiaNombre
@@ -115,15 +115,6 @@
             this.panel2.Size = new System.Drawing.Size(635, 140);
             this.panel2.TabIndex = 6;
             // 
-            // panelEstado
-            // 
-            this.panelEstado.BackColor = System.Drawing.Color.White;
-            this.panelEstado.Controls.Add(this.lblEstado);
-            this.panelEstado.Location = new System.Drawing.Point(204, 16);
-            this.panelEstado.Name = "panelEstado";
-            this.panelEstado.Size = new System.Drawing.Size(295, 51);
-            this.panelEstado.TabIndex = 5;
-            // 
             // picOpciones
             // 
             this.picOpciones.Image = global::CapaDePresentacion.Properties.Resources.tresPuntos;
@@ -133,6 +124,16 @@
             this.picOpciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picOpciones.TabIndex = 6;
             this.picOpciones.TabStop = false;
+            this.picOpciones.Click += new System.EventHandler(this.picOpciones_Click);
+            // 
+            // panelEstado
+            // 
+            this.panelEstado.BackColor = System.Drawing.Color.White;
+            this.panelEstado.Controls.Add(this.lblEstado);
+            this.panelEstado.Location = new System.Drawing.Point(204, 16);
+            this.panelEstado.Name = "panelEstado";
+            this.panelEstado.Size = new System.Drawing.Size(295, 51);
+            this.panelEstado.TabIndex = 5;
             // 
             // ClienteTurnoItem
             // 
@@ -148,9 +149,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picOpciones)).EndInit();
             this.panelEstado.ResumeLayout(false);
             this.panelEstado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picOpciones)).EndInit();
             this.ResumeLayout(false);
 
         }
