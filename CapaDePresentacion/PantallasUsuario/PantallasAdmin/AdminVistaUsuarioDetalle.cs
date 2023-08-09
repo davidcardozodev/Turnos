@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDeEntidades;
+using System;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
@@ -31,6 +32,15 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             comboRol.Items.Add("Cliente");
             comboRol.Items.Add("Proveedor");
             comboRol.Items.Add("Admin");
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            admin.AdminModicarUsuario(Id, comboRol.Text);
+
+            MessageBox.Show("Cambios guardados");
         }
     }
 }

@@ -108,5 +108,15 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminModicarUsuario(int idUsuario, string rol)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminModicarUsuario";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+            _Comando.Parameters.AddWithValue("@rol", rol);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
     }
 }
