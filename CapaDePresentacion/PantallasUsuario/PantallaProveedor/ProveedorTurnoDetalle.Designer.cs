@@ -184,6 +184,7 @@
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.panel1);
             this.Name = "ProveedorTurnoDetalle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProveedorTurnoDetalle";
             this.Load += new System.EventHandler(this.ProveedorTurnoDetalle_Load);
             this.panel1.ResumeLayout(false);

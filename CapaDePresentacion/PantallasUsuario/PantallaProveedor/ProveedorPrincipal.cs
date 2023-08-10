@@ -52,5 +52,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         }
 
         #endregion
+
+        private void btnLlamador_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<ProveedorLlamador>();
+        }
     }
 }

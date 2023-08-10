@@ -30,11 +30,13 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTurnosClientes = new System.Windows.Forms.Button();
+            this.btnLlamador = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLlamador);
             this.panel1.Controls.Add(this.btnTurnosClientes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -45,13 +47,24 @@
             // btnTurnosClientes
             // 
             this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosClientes.Location = new System.Drawing.Point(218, 163);
+            this.btnTurnosClientes.Location = new System.Drawing.Point(46, 164);
             this.btnTurnosClientes.Name = "btnTurnosClientes";
             this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
             this.btnTurnosClientes.TabIndex = 2;
             this.btnTurnosClientes.Text = "Turnos de los clientes";
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
             this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
+            // 
+            // btnLlamador
+            // 
+            this.btnLlamador.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLlamador.Location = new System.Drawing.Point(401, 164);
+            this.btnLlamador.Name = "btnLlamador";
+            this.btnLlamador.Size = new System.Drawing.Size(310, 111);
+            this.btnLlamador.TabIndex = 3;
+            this.btnLlamador.Text = "Llamador";
+            this.btnLlamador.UseVisualStyleBackColor = true;
+            this.btnLlamador.Click += new System.EventHandler(this.btnLlamador_Click);
             // 
             // ProveedorPrincipal
             // 
@@ -71,5 +84,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnTurnosClientes;
+        private System.Windows.Forms.Button btnLlamador;
     }
 }
