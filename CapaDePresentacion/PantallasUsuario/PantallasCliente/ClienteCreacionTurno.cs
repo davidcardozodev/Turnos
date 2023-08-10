@@ -15,6 +15,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             CargarHorarios();
             GuardarFecha();
+            ValorInicialHorario();
         }
 
         private void btnVolverAtras_Click(object sender, System.EventArgs e)
@@ -25,6 +26,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         #region "Datos del turno"
 
         string anio, mes, diaNombre, diaNumero, hora, descripcion;
+
+        private void ValorInicialHorario()
+        {
+            comboHora.SelectedItem = 8;
+        }
 
         private void CargarHorarios()
         {

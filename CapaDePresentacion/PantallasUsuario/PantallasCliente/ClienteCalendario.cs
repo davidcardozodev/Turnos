@@ -16,6 +16,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             ActualizarFecha();
             OcultarCalendario();
             CargarValoresHorario();
+            ValorInicialHorario();
         }
 
         private string DiaNombre { get; set; }
@@ -90,6 +91,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             cliente.TurnoCrear(DatosUsuario.Id, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion);
 
             MessageBox.Show("Turno guardado");
+        }
+
+        private void ValorInicialHorario()
+        {
+            comboHora.SelectedItem = 8;
         }
     }
 }
