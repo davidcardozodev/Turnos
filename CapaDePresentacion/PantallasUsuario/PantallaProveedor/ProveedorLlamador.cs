@@ -16,8 +16,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
         private void ProveedorLlamador_Load(object sender, EventArgs e)
         {
-            CargarTurnoItem();
-            CargarTurnoItemEnCurso();
+            ActualizarTurnos();
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
@@ -79,6 +78,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
                 flowLayoutPanel2.Controls.Add(proveedorTurnoLlamadorEnCurso);
             }
+        }
+
+        public void ActualizarTurnos()
+        {
+            LimpiarTurnos();
+            CargarTurnoItem();
+            CargarTurnoItemEnCurso();
+        }
+
+        public void LimpiarTurnos()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel2.Controls.Clear();
         }
     }
 }
