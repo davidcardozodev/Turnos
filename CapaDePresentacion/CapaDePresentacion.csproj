@@ -64,6 +64,18 @@
     <Compile Include="PantallasGenerales\Perfil.Designer.cs">
       <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorPrincipal.Designer.cs">
+      <DependentUpon>ProveedorPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.Designer.cs">
+      <DependentUpon>ProveedorTurnosVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasGenerales\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorPrincipal.resx">
+      <DependentUpon>ProveedorPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.resx">
+      <DependentUpon>ProveedorTurnosVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
