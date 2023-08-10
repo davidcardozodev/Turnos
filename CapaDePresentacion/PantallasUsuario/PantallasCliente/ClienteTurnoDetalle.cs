@@ -29,7 +29,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void CargarInformacion()
         {
             lblFecha.Text = DiaNombre + " " + DiaNumero + ", " + Mes + ", " + Anio;
-            lblHora.Text = Hora;
+            lblHora.Text = Hora + ":00hs";
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
         }

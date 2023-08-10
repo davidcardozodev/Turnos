@@ -29,7 +29,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             lblDiaNombre.Text = DiaNombre;
             lblDiaNumero.Text = DiaNumero;
-            lblHora.Text = Hora;
+            lblHora.Text = Hora + ":00hs";
             lblDescripcion.Text = Descripcion;
             lblEstado.Text = Estado;
         }

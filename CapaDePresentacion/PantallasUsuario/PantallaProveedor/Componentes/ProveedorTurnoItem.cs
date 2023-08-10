@@ -25,7 +25,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         {
             lblDiaNombre.Text = DiaNombre;
             lblDiaNumero.Text = DiaNumero;
-            lblHora.Text = Hora;
+            lblHora.Text = Hora + ":00hs";
             lblCliente.Text = PrimerNombre + " " + SegundoNombre;
         }
 

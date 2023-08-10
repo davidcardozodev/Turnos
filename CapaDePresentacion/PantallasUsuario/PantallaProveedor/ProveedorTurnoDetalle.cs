@@ -34,7 +34,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         {
             lblFecha.Text = DiaNombre + " " + DiaNumero + ", " + Mes + ", " + Anio;
             lblUsuario.Text = PrimerNombre + " " + SegundoNombre + " (" + Usuario + ")";
-            lblHora.Text = Hora;
+            lblHora.Text = Hora + ":00hs";
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
         }

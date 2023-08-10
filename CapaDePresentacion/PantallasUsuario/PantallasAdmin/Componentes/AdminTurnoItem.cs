@@ -31,7 +31,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         private void CargarInformacion()
         {
             lblDiaNombre.Text = DiaNombre + " " + DiaNumero;
-            lblHora.Text = Hora;
+            lblHora.Text = Hora + ":00hs";
             lblEstado.Text = Estado;
         }
 
