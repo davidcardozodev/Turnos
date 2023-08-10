@@ -31,6 +31,7 @@
             this.btnVolverAtras = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnVolverAtras
@@ -49,7 +50,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 105);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(842, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(630, 518);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // label1
@@ -62,11 +63,20 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Llamador";
             // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(704, 105);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(630, 518);
+            this.flowLayoutPanel2.TabIndex = 10;
+            // 
             // ProveedorLlamador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 645);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
@@ -84,5 +94,6 @@
         private System.Windows.Forms.Button btnVolverAtras;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }
