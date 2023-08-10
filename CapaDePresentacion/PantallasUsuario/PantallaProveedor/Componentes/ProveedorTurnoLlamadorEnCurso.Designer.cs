@@ -29,23 +29,36 @@
         private void InitializeComponent()
         {
             this.lblCliente = new System.Windows.Forms.Label();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(18, 41);
+            this.lblCliente.Location = new System.Drawing.Point(116, 44);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(104, 32);
             this.lblCliente.TabIndex = 6;
             this.lblCliente.Text = "Cliente";
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Location = new System.Drawing.Point(23, 34);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(64, 52);
+            this.btnFinalizar.TabIndex = 7;
+            this.btnFinalizar.Text = "-";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // ProveedorTurnoLlamadorEnCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.lblCliente);
             this.Name = "ProveedorTurnoLlamadorEnCurso";
             this.Size = new System.Drawing.Size(439, 120);
@@ -58,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

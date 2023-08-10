@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using CapaDeEntidades;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 {
@@ -31,5 +32,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             lblCliente.Text = PrimerNombre + " " + SegundoNombre;
         }
 
+        private void btnFinalizar_Click(object sender, System.EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+
+            proveedor.TurnoProveedorFinalizar(Id);
+
+            (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).ActualizarTurnos();
+        }
     }
 }

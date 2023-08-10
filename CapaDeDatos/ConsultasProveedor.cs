@@ -165,6 +165,16 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void TurnoProveedorFinalizar(int idTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoProveedorFinalizar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
         public void ProveedorAgregarEnCurso(int idTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();

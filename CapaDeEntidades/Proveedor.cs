@@ -34,5 +34,10 @@ namespace CapaDeEntidades
         {
             _ConsultasProveedor.ProveedorAgregarEnCurso(idTurno);
         }
+
+        public void TurnoProveedorFinalizar(int idTurno)
+        {
+            _ConsultasProveedor.TurnoProveedorFinalizar(idTurno);
+        }
     }
 }
