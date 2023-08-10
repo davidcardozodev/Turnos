@@ -58,7 +58,7 @@
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(120, 32);
             this.lblLogin.TabIndex = 0;
-            this.lblLogin.Text = "Turnapp";
+            this.lblLogin.Text = "Turnos";
             // 
             // txtUsuario
             // 
@@ -137,7 +137,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Turnapp";
+            this.Text = "Turnos";
             this.panelLateral.ResumeLayout(false);
             this.panelLateral.PerformLayout();
             this.ResumeLayout(false);

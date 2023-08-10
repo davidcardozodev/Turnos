@@ -134,7 +134,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(115, 37);
             this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Tienda";
+            this.lblTitulo.Text = "Turnos";
             // 
             // PantallaGeneralUsuario
             // 
@@ -143,7 +143,7 @@
             this.Controls.Add(this.panelcontainer);
             this.Name = "PantallaGeneralUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Turnapp";
+            this.Text = "Turnos";
             this.Load += new System.EventHandler(this.PantallaGeneralUsuario_Load);
             this.panelcontainer.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
