@@ -29,21 +29,21 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             foreach (FormatoTurnosAdmin Turno in ListaTurnos)
             {
-                ProveedorTurnoItem proveedorTurnoItem = new ProveedorTurnoItem();
+                ProveedorTurnoLlamador proveedorTurnoLlamador = new ProveedorTurnoLlamador();
 
-                proveedorTurnoItem.Id = Turno.Id;
-                proveedorTurnoItem.DiaNombre = Turno.DiaNombre;
-                proveedorTurnoItem.DiaNumero = Turno.DiaNumero;
-                proveedorTurnoItem.Mes = Turno.Mes;
-                proveedorTurnoItem.Anio = Turno.Anio;
-                proveedorTurnoItem.Hora = Turno.Hora;
-                proveedorTurnoItem.Descripcion = Turno.Descripcion;
-                proveedorTurnoItem.Estado = Turno.Estado;
-                proveedorTurnoItem.Usuario = Turno.Usuario;
-                proveedorTurnoItem.PrimerNombre = Turno.PrimerNombre;
-                proveedorTurnoItem.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoLlamador.Id = Turno.Id;
+                proveedorTurnoLlamador.DiaNombre = Turno.DiaNombre;
+                proveedorTurnoLlamador.DiaNumero = Turno.DiaNumero;
+                proveedorTurnoLlamador.Mes = Turno.Mes;
+                proveedorTurnoLlamador.Anio = Turno.Anio;
+                proveedorTurnoLlamador.Hora = Turno.Hora;
+                proveedorTurnoLlamador.Descripcion = Turno.Descripcion;
+                proveedorTurnoLlamador.Estado = Turno.Estado;
+                proveedorTurnoLlamador.Usuario = Turno.Usuario;
+                proveedorTurnoLlamador.PrimerNombre = Turno.PrimerNombre;
+                proveedorTurnoLlamador.SegundoNombre = Turno.SegundoNombre;
 
-                flowLayoutPanel1.Controls.Add(proveedorTurnoItem);
+                flowLayoutPanel1.Controls.Add(proveedorTurnoLlamador);
             }
         }
 
