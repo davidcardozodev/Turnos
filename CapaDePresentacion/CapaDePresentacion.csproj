@@ -70,6 +70,12 @@
     <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamador.Designer.cs">
       <DependentUpon>ProveedorTurnoLlamador.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorEnCurso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorEnCurso.Designer.cs">
+      <DependentUpon>ProveedorTurnoLlamadorEnCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorLlamador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamador.resx">
       <DependentUpon>ProveedorTurnoLlamador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorEnCurso.resx">
+      <DependentUpon>ProveedorTurnoLlamadorEnCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorLlamador.resx">
       <DependentUpon>ProveedorLlamador.cs</DependentUpon>
