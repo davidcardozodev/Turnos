@@ -106,6 +106,12 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.Designer.cs">
       <DependentUpon>UsuarioItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasCliente\ClienteCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasCliente\ClienteCalendario.Designer.cs">
+      <DependentUpon>ClienteCalendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\UsuarioItem.resx">
       <DependentUpon>UsuarioItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteCalendario.resx">
+      <DependentUpon>ClienteCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteCreacionTurno.resx">
       <DependentUpon>ClienteCreacionTurno.cs</DependentUpon>

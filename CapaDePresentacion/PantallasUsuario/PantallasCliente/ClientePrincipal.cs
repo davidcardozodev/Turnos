@@ -63,5 +63,11 @@ namespace CapaDePresentacion.PantallasUsuario
         }
 
         #endregion
+
+        private void btnCalendario_Click(object sender, System.EventArgs e)
+        {
+            ClienteCalendario clienteCalendario = new ClienteCalendario();
+            clienteCalendario.Show();
+        }
     }
 }
