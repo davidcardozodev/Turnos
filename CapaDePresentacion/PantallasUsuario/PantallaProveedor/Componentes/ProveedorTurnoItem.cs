@@ -33,5 +33,24 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         {
             CargarInformacion();
         }
+
+        private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ProveedorTurnoDetalle proveedorTurnoDetalle = new ProveedorTurnoDetalle();
+
+            proveedorTurnoDetalle.Id = Id;
+            proveedorTurnoDetalle.DiaNombre = DiaNombre;
+            proveedorTurnoDetalle.DiaNumero = DiaNumero;
+            proveedorTurnoDetalle.Mes = Mes;
+            proveedorTurnoDetalle.Anio = Anio;
+            proveedorTurnoDetalle.Hora = Hora;
+            proveedorTurnoDetalle.Descripcion = Descripcion;
+            proveedorTurnoDetalle.Estado = Estado;
+            proveedorTurnoDetalle.Usuario = Usuario;
+            proveedorTurnoDetalle.PrimerNombre = PrimerNombre;
+            proveedorTurnoDetalle.SegundoNombre = SegundoNombre;
+
+            proveedorTurnoDetalle.Show();
+        }
     }
 }

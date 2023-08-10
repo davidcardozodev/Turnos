@@ -49,6 +49,7 @@
             this.linkVerMas.TabIndex = 12;
             this.linkVerMas.TabStop = true;
             this.linkVerMas.Text = "Ver mas";
+            this.linkVerMas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkVerMas_LinkClicked);
             // 
             // panel2
             // 
