@@ -34,7 +34,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             lblEstado.Text = Estado;
         }
 
-        private void picOpciones_Click(object sender, System.EventArgs e)
+        private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AdminTurnoDetalle adminTurnoDetalle = new AdminTurnoDetalle();
 

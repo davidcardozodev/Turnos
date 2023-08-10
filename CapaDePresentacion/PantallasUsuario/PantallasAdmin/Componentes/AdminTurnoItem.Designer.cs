@@ -29,48 +29,25 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelEstado = new System.Windows.Forms.Panel();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDiaNombre = new System.Windows.Forms.Label();
             this.lblDiaNumero = new System.Windows.Forms.Label();
-            this.picOpciones = new System.Windows.Forms.PictureBox();
+            this.linkVerMas = new System.Windows.Forms.LinkLabel();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panelEstado.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picOpciones)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.picOpciones);
-            this.panel2.Controls.Add(this.panelEstado);
+            this.panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.panel2.Controls.Add(this.lblEstado);
             this.panel2.Controls.Add(this.lblHora);
-            this.panel2.Location = new System.Drawing.Point(234, 12);
+            this.panel2.Location = new System.Drawing.Point(389, 15);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(455, 140);
+            this.panel2.Size = new System.Drawing.Size(252, 140);
             this.panel2.TabIndex = 8;
-            // 
-            // panelEstado
-            // 
-            this.panelEstado.BackColor = System.Drawing.Color.White;
-            this.panelEstado.Controls.Add(this.lblEstado);
-            this.panelEstado.Location = new System.Drawing.Point(29, 67);
-            this.panelEstado.Name = "panelEstado";
-            this.panelEstado.Size = new System.Drawing.Size(295, 51);
-            this.panelEstado.TabIndex = 5;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(18, 9);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(103, 32);
-            this.lblEstado.TabIndex = 4;
-            this.lblEstado.Text = "Estado";
             // 
             // lblHora
             // 
@@ -84,10 +61,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.BackColor = System.Drawing.Color.LightCyan;
             this.panel1.Controls.Add(this.lblDiaNombre);
             this.panel1.Controls.Add(this.lblDiaNumero);
-            this.panel1.Location = new System.Drawing.Point(16, 12);
+            this.panel1.Location = new System.Drawing.Point(171, 15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 140);
             this.panel1.TabIndex = 7;
@@ -112,46 +89,55 @@
             this.lblDiaNumero.TabIndex = 1;
             this.lblDiaNumero.Text = "DiaNumero";
             // 
-            // picOpciones
+            // linkVerMas
             // 
-            this.picOpciones.Image = global::CapaDePresentacion.Properties.Resources.tresPuntos;
-            this.picOpciones.Location = new System.Drawing.Point(361, 29);
-            this.picOpciones.Name = "picOpciones";
-            this.picOpciones.Size = new System.Drawing.Size(67, 70);
-            this.picOpciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picOpciones.TabIndex = 6;
-            this.picOpciones.TabStop = false;
-            this.picOpciones.Click += new System.EventHandler(this.picOpciones_Click);
+            this.linkVerMas.AutoSize = true;
+            this.linkVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkVerMas.Location = new System.Drawing.Point(30, 69);
+            this.linkVerMas.Name = "linkVerMas";
+            this.linkVerMas.Size = new System.Drawing.Size(118, 32);
+            this.linkVerMas.TabIndex = 9;
+            this.linkVerMas.TabStop = true;
+            this.linkVerMas.Text = "Ver mas";
+            this.linkVerMas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkVerMas_LinkClicked);
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(23, 76);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(103, 32);
+            this.lblEstado.TabIndex = 5;
+            this.lblEstado.Text = "Estado";
             // 
             // AdminTurnoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.linkVerMas);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AdminTurnoItem";
-            this.Size = new System.Drawing.Size(710, 182);
+            this.Size = new System.Drawing.Size(675, 182);
             this.Load += new System.EventHandler(this.AdminTurnoItem_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelEstado.ResumeLayout(false);
-            this.panelEstado.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picOpciones)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox picOpciones;
-        private System.Windows.Forms.Panel panelEstado;
-        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDiaNombre;
         private System.Windows.Forms.Label lblDiaNumero;
+        private System.Windows.Forms.LinkLabel linkVerMas;
+        private System.Windows.Forms.Label lblEstado;
     }
 }
