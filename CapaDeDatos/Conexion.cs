@@ -5,7 +5,7 @@ namespace CapaDeDatos
 {
     public class Conexion
     {
-        private SqlConnection _Conexion = new SqlConnection("Server=(local); DataBase=Turnapp;Integrated Security=true");
+        private SqlConnection _Conexion = new SqlConnection("Server=(local); DataBase=Turnos;Integrated Security=true");
 
         public SqlConnection ConexionAbrir()
         {
