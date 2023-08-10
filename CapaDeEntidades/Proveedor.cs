@@ -14,5 +14,10 @@ namespace CapaDeEntidades
         {
             return _ConsultasProveedor.TurnoCargarProveedor();
         }
+
+        public void ProveedorAsignar(int idProveedor, int idTurno)
+        {
+            _ConsultasProveedor.ProveedorAsignar(idProveedor, idTurno);
+        }
     }
 }

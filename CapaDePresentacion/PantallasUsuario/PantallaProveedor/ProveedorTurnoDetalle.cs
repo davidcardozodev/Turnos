@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using CapaComun;
+using CapaDeEntidades;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 {
@@ -35,6 +37,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
             lblEstado.Text = Estado;
         }
 
+        private void btnAsignar_Click(object sender, System.EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
 
+            proveedor.ProveedorAsignar(DatosUsuario.Id, Id);
+
+            MessageBox.Show("Cambios guardados");
+        }
     }
 }

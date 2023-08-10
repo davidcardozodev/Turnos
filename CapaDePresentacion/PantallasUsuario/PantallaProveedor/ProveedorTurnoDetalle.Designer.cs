@@ -174,6 +174,7 @@
             this.btnAsignar.TabIndex = 22;
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // ProveedorTurnoDetalle
             // 

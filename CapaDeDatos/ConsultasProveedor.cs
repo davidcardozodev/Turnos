@@ -62,6 +62,16 @@ namespace CapaDeDatos
             return _Valores;
         }
 
+        public void ProveedorAsignar(int idProveedor, int idTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ProveedorAsignar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idProveedor", idProveedor);
+            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
 
     }
 }
