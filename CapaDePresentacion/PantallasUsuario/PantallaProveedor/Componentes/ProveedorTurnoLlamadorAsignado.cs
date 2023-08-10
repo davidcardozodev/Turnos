@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 {
-    public partial class ProveedorTurnoLlamador : UserControl
+    public partial class ProveedorTurnoLlamadorAsignado : UserControl
     {
-        public ProveedorTurnoLlamador()
+        public ProveedorTurnoLlamadorAsignado()
         {
             InitializeComponent();
         }

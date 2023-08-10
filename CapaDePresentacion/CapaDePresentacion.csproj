@@ -64,11 +64,11 @@
     <Compile Include="PantallasGenerales\Perfil.Designer.cs">
       <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamador.cs">
+    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorAsignado.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamador.Designer.cs">
-      <DependentUpon>ProveedorTurnoLlamador.cs</DependentUpon>
+    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorAsignado.Designer.cs">
+      <DependentUpon>ProveedorTurnoLlamadorAsignado.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorEnCurso.cs">
       <SubType>UserControl</SubType>
@@ -195,8 +195,8 @@
     <EmbeddedResource Include="PantallasGenerales\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamador.resx">
-      <DependentUpon>ProveedorTurnoLlamador.cs</DependentUpon>
+    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorAsignado.resx">
+      <DependentUpon>ProveedorTurnoLlamadorAsignado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoLlamadorEnCurso.resx">
       <DependentUpon>ProveedorTurnoLlamadorEnCurso.cs</DependentUpon>

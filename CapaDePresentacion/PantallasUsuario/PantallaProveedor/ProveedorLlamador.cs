@@ -35,7 +35,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             foreach (FormatoTurnosAdmin Turno in ListaTurnos)
             {
-                ProveedorTurnoLlamador proveedorTurnoLlamador = new ProveedorTurnoLlamador();
+                ProveedorTurnoLlamadorAsignado proveedorTurnoLlamador = new ProveedorTurnoLlamadorAsignado();
 
                 proveedorTurnoLlamador.Id = Turno.Id;
                 proveedorTurnoLlamador.DiaNombre = Turno.DiaNombre;

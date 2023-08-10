@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 {
-    partial class ProveedorTurnoLlamador
+    partial class ProveedorTurnoLlamadorAsignado
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
