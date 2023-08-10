@@ -28,20 +28,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void CargarHorarios()
         {
-            comboHora.Items.Add("08:00");
-            comboHora.Items.Add("09:00");
-            comboHora.Items.Add("10:00");
-            comboHora.Items.Add("11:00");
-            comboHora.Items.Add("12:00");
-            comboHora.Items.Add("13:00");
-            comboHora.Items.Add("14:00");
-            comboHora.Items.Add("15:00");
-            comboHora.Items.Add("16:00");
-            comboHora.Items.Add("17:00");
-            comboHora.Items.Add("18:00");
-            comboHora.Items.Add("19:00");
-            comboHora.Items.Add("20:00");
-            comboHora.Items.Add("21:00");
+            for (int i = 8; i <= 22; i++)
+                comboHora.Items.Add(i);
         }
 
         private void GuardarFecha()
