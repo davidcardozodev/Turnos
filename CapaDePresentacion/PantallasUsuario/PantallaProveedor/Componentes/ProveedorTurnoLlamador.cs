@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using CapaDeEntidades;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 {
@@ -29,6 +30,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         private void ProveedorTurnoLlamador_Load(object sender, System.EventArgs e)
         {
             CargarInformacion();
+        }
+
+        private void btnAgregarEnCurso_Click(object sender, System.EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+
+            proveedor.ProveedorAgregarEnCurso(Id);
+
+            (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).CargarTurnoItem();
+            (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).CargarTurnoItemEnCurso();
         }
     }
 }
