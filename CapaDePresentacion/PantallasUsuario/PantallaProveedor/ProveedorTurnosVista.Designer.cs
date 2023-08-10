@@ -42,6 +42,7 @@
             this.btnVolverAtras.TabIndex = 7;
             this.btnVolverAtras.Text = "Volver atras";
             this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
             // flowLayoutPanel1
             // 
