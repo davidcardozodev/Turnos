@@ -32,7 +32,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             lblEstado.Text = Estado;
         }
 
-        private void picOpciones_Click(object sender, System.EventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ClienteTurnoDetalle clienteTurnoDetalle = new ClienteTurnoDetalle();
 
