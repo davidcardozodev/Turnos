@@ -257,10 +257,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tresPuntos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Creditos\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
