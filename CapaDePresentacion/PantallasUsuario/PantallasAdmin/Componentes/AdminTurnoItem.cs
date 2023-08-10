@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 {
@@ -24,6 +25,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         private void AdminTurnoItem_Load(object sender, System.EventArgs e)
         {
             CargarInformacion();
+            CambiarColorEstado();
         }
 
         private void CargarInformacion()
@@ -52,5 +54,24 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
             adminTurnoDetalle.Show();
         }
+
+        private void CambiarColorEstado()
+        {
+            switch (Estado)
+            {
+                case "Cancelado":
+                    lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
+                    break;
+                case "Finalizado":
+                    lblEstado.ForeColor = Color.FromArgb(0, 255, 0);
+                    break;
+                case "Pendiente":
+                case "Asignado":
+                case "EnCurso":
+                    lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
+                    break;
+            }
+        }
+
     }
 }

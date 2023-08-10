@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
@@ -14,6 +15,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         private void ProveedorTurnoDetalle_Load(object sender, System.EventArgs e)
         {
             CargarInformacion();
+            CambiarColorEstado();
         }
 
         public int Id { get; set; }
@@ -45,5 +47,24 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             MessageBox.Show("Cambios guardados");
         }
+
+        private void CambiarColorEstado()
+        {
+            switch (Estado)
+            {
+                case "Cancelado":
+                    lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
+                    break;
+                case "Finalizado":
+                    lblEstado.ForeColor = Color.FromArgb(0, 255, 0);
+                    break;
+                case "Pendiente":
+                case "Asignado":
+                case "EnCurso":
+                    lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
+                    break;
+            }
+        }
+
     }
 }
