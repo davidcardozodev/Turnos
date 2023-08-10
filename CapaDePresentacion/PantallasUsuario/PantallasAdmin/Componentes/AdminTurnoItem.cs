@@ -30,8 +30,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
         private void CargarInformacion()
         {
-            lblDiaNombre.Text = DiaNombre;
-            lblDiaNumero.Text = DiaNumero;
+            lblDiaNombre.Text = DiaNombre + " " + DiaNumero;
             lblHora.Text = Hora;
             lblEstado.Text = Estado;
         }
