@@ -76,6 +76,12 @@
     <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.Designer.cs">
       <DependentUpon>ProveedorTurnosVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoItem.Designer.cs">
+      <DependentUpon>ProveedorTurnoItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.resx">
       <DependentUpon>ProveedorTurnosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoItem.resx">
+      <DependentUpon>ProveedorTurnoItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
