@@ -38,8 +38,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             proveedor.ProveedorAgregarEnCurso(Id);
 
-            (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).CargarTurnoItem();
-            (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).CargarTurnoItemEnCurso();
+            (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).ActualizarTurnos();
         }
     }
 }
