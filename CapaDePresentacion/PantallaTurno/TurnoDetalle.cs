@@ -17,7 +17,24 @@ namespace CapaDePresentacion.PantallaTurno
         {
             CargarInformacion();
             CambiarColorEstado();
+            OcultarEtiquetas();
         }
+
+        private void OcultarEtiquetas()
+        {
+            switch (DatosUsuario.Rol)
+            {
+                case Roles.rolCliente:
+                    lblUsuario.Visible = false;
+                    lblUsuarioCategoria.Visible = false;
+                    break;
+                case Roles.rolProveedor:
+                    lblProveedor.Visible = false;
+                    lblProveedorCategoria.Visible = false;
+                    break;
+            }
+        }
+
         public int Id { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
