@@ -186,6 +186,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Turno\TurnoDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turno\TurnoDetalle.Designer.cs">
+      <DependentUpon>TurnoDetalle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PantallasGenerales\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +271,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Turno\TurnoDetalle.resx">
+      <DependentUpon>TurnoDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
