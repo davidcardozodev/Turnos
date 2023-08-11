@@ -88,12 +88,6 @@
     <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorPrincipal.Designer.cs">
       <DependentUpon>ProveedorPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorTurnoDetalle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorTurnoDetalle.Designer.cs">
-      <DependentUpon>ProveedorTurnoDetalle.cs</DependentUpon>
-    </Compile>
     <Compile Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,12 +105,6 @@
     </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.Designer.cs">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PantallasUsuario\PantallasAdmin\AdminTurnoDetalle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallasUsuario\PantallasAdmin\AdminTurnoDetalle.Designer.cs">
-      <DependentUpon>AdminTurnoDetalle.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.cs">
       <SubType>Form</SubType>
@@ -166,12 +154,6 @@
     <Compile Include="PantallasUsuario\PantallasCliente\ClientePrincipal.Designer.cs">
       <DependentUpon>ClientePrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallasUsuario\PantallasCliente\ClienteTurnoDetalle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PantallasUsuario\PantallasCliente\ClienteTurnoDetalle.Designer.cs">
-      <DependentUpon>ClienteTurnoDetalle.cs</DependentUpon>
-    </Compile>
     <Compile Include="PantallasUsuario\PantallasCliente\ClienteTurnosVista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,10 +168,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Turno\TurnoDetalle.cs">
+    <Compile Include="PantallaTurno\TurnoDetalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Turno\TurnoDetalle.Designer.cs">
+    <Compile Include="PantallaTurno\TurnoDetalle.Designer.cs">
       <DependentUpon>TurnoDetalle.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="PantallasGenerales\Inicio.resx">
@@ -213,9 +195,6 @@
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorPrincipal.resx">
       <DependentUpon>ProveedorPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorTurnoDetalle.resx">
-      <DependentUpon>ProveedorTurnoDetalle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\ProveedorTurnosVista.resx">
       <DependentUpon>ProveedorTurnosVista.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,9 +203,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminTurnoDetalle.resx">
-      <DependentUpon>AdminTurnoDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminTurnosVista.resx">
       <DependentUpon>AdminTurnosVista.cs</DependentUpon>
@@ -252,9 +228,6 @@
     <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClientePrincipal.resx">
       <DependentUpon>ClientePrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteTurnoDetalle.resx">
-      <DependentUpon>ClienteTurnoDetalle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasCliente\ClienteTurnosVista.resx">
       <DependentUpon>ClienteTurnosVista.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,7 +244,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Turno\TurnoDetalle.resx">
+    <EmbeddedResource Include="PantallaTurno\TurnoDetalle.resx">
       <DependentUpon>TurnoDetalle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
