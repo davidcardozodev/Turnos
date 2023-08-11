@@ -21,6 +21,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
+        public string NombreProveedor { get; set; }
 
         private void AdminTurnoItem_Load(object sender, System.EventArgs e)
         {
@@ -50,6 +51,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             adminTurnoDetalle.Usuario = Usuario;
             adminTurnoDetalle.PrimerNombre = PrimerNombre;
             adminTurnoDetalle.SegundoNombre = SegundoNombre;
+            adminTurnoDetalle.NombreProveedor = NombreProveedor;
 
             adminTurnoDetalle.Show();
         }

@@ -37,6 +37,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
                 clienteTurnoItem.Hora = Turno.Hora;
                 clienteTurnoItem.Descripcion = Turno.Descripcion;
                 clienteTurnoItem.Estado = Turno.Estado;
+                clienteTurnoItem.NombreProveedor = Turno.NombreProveedor;
+
 
                 flowLayoutPanel1.Controls.Add(clienteTurnoItem);
             }

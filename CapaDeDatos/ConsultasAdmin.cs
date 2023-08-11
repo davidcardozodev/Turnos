@@ -75,6 +75,7 @@ namespace CapaDeDatos
                 string Usuario = _Lector["Usuario"].ToString();
                 string PrimerNombre = _Lector["PrimerNombre"].ToString();
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
 
                 _Valores.Add(new FormatoTurnosAdmin
                 {
@@ -89,7 +90,8 @@ namespace CapaDeDatos
                     Estado = Estado,
                     Usuario = Usuario,
                     PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre
+                    SegundoNombre = SegundoNombre,
+                    NombreProveedor = NombreProveedor
                 });
             }
 

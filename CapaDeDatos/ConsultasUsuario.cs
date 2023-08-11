@@ -79,6 +79,7 @@ namespace CapaDeDatos
                 string Hora = _Lector["Hora"].ToString();
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
@@ -90,6 +91,7 @@ namespace CapaDeDatos
                     Hora = Hora,
                     Descripcion = Descripcion,
                     Estado = Estado,
+                    NombreProveedor = NombreProveedor,
                 });
             }
 

@@ -41,13 +41,15 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblHoraCategoria = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.lblProveedorCategoria = new System.Windows.Forms.Label();
+            this.lblProveedor = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDarDeBaja
             // 
             this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarDeBaja.Location = new System.Drawing.Point(552, 489);
+            this.btnDarDeBaja.Location = new System.Drawing.Point(552, 559);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
             this.btnDarDeBaja.Size = new System.Drawing.Size(204, 58);
             this.btnDarDeBaja.TabIndex = 21;
@@ -68,6 +70,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblProveedor);
+            this.panel1.Controls.Add(this.lblProveedorCategoria);
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.lblUsuarioCategoria);
             this.panel1.Controls.Add(this.rtxtDecripcion);
@@ -80,7 +84,7 @@
             this.panel1.Controls.Add(this.lblFecha);
             this.panel1.Location = new System.Drawing.Point(26, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 396);
+            this.panel1.Size = new System.Drawing.Size(730, 466);
             this.panel1.TabIndex = 19;
             // 
             // lblUsuario
@@ -129,7 +133,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEstado.Location = new System.Drawing.Point(206, 340);
+            this.lblEstado.Location = new System.Drawing.Point(203, 410);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 13;
@@ -139,7 +143,7 @@
             // 
             this.lblEstadoCategoria.AutoSize = true;
             this.lblEstadoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCategoria.Location = new System.Drawing.Point(65, 340);
+            this.lblEstadoCategoria.Location = new System.Drawing.Point(65, 410);
             this.lblEstadoCategoria.Name = "lblEstadoCategoria";
             this.lblEstadoCategoria.Size = new System.Drawing.Size(103, 32);
             this.lblEstadoCategoria.TabIndex = 9;
@@ -187,11 +191,32 @@
             this.lblFecha.TabIndex = 10;
             this.lblFecha.Text = "Fecha";
             // 
+            // lblProveedorCategoria
+            // 
+            this.lblProveedorCategoria.AutoSize = true;
+            this.lblProveedorCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedorCategoria.Location = new System.Drawing.Point(23, 347);
+            this.lblProveedorCategoria.Name = "lblProveedorCategoria";
+            this.lblProveedorCategoria.Size = new System.Drawing.Size(145, 32);
+            this.lblProveedorCategoria.TabIndex = 17;
+            this.lblProveedorCategoria.Text = "Proveedor";
+            // 
+            // lblProveedor
+            // 
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.ForeColor = System.Drawing.Color.DimGray;
+            this.lblProveedor.Location = new System.Drawing.Point(203, 347);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(145, 32);
+            this.lblProveedor.TabIndex = 18;
+            this.lblProveedor.Text = "Proveedor";
+            // 
             // AdminTurnoDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 572);
+            this.ClientSize = new System.Drawing.Size(781, 642);
             this.Controls.Add(this.btnDarDeBaja);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -221,5 +246,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblHoraCategoria;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.Label lblProveedorCategoria;
     }
 }

@@ -14,5 +14,6 @@
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
+        public string NombreProveedor { get; set; }
     }
 }

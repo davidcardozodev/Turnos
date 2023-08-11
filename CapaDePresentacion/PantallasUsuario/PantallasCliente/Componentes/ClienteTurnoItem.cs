@@ -18,6 +18,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         public string Hora { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
+        public string NombreProveedor { get; set; }
+
 
         private void ClienteTurnoItem_Load(object sender, System.EventArgs e)
         {
@@ -46,6 +48,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             clienteTurnoDetalle.Hora = Hora;
             clienteTurnoDetalle.Descripcion = Descripcion;
             clienteTurnoDetalle.Estado = Estado;
+            clienteTurnoDetalle.NombreProveedor = NombreProveedor;
 
             clienteTurnoDetalle.Show();
         }

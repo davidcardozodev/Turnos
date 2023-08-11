@@ -22,6 +22,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
+        public string NombreProveedor { get; set; }
 
         private void AdminTurnoDetalle_Load(object sender, System.EventArgs e)
         {
@@ -36,6 +37,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             lblHora.Text = Hora + ":00hs";
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
+            lblProveedor.Text = NombreProveedor;
         }
 
         private void btnDarDeBaja_Click(object sender, System.EventArgs e)
