@@ -18,6 +18,13 @@ namespace CapaDePresentacion.PantallaTurno
             CargarInformacion();
             CambiarColorEstado();
             OcultarEtiquetas();
+            ActivarOpcionAsignarProveedor();
+        }
+
+        private void ActivarOpcionAsignarProveedor()
+        {
+            if (DatosUsuario.Rol == Roles.rolProveedor)
+                btnAsignar.Visible = true;
         }
 
         private void OcultarEtiquetas()
