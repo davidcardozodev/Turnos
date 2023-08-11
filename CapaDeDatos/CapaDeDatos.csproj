@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="ConsultasAdmin.cs" />
+    <Compile Include="ConsultasCliente.cs" />
     <Compile Include="ConsultasProveedor.cs" />
     <Compile Include="ConsultasTurno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

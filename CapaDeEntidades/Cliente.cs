@@ -8,16 +8,16 @@ namespace CapaDeEntidades
     {
         public Cliente() { }
 
-        private ConsultasUsuario _ConsultasUsuario = new ConsultasUsuario();
+        private ConsultasCliente _ConsultasCliente = new ConsultasCliente();
 
         public List<FormatoTurnos> TurnoCargar(int idCliente)
         {
-            return _ConsultasUsuario.TurnoCargar(idCliente);
+            return _ConsultasCliente.TurnoCargar(idCliente);
         }
 
         public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
         {
-            _ConsultasUsuario.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
+            _ConsultasCliente.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
         }
     }
 }
