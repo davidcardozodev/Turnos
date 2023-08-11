@@ -4,7 +4,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace CapaDePresentacion.Turno
+namespace CapaDePresentacion.PantallaTurno
 {
     public partial class TurnoDetalle : Form
     {
@@ -44,9 +44,9 @@ namespace CapaDePresentacion.Turno
 
         private void btnDarDeBaja_Click(object sender, System.EventArgs e)
         {
-            Admin admin = new Admin();
+            Turno turno = new Turno();
 
-            admin.TurnoDarBaja(Id);
+            turno.TurnoDarBaja(Id);
         }
 
         private void CambiarColorEstado()

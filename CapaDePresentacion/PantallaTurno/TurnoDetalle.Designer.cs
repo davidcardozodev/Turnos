@@ -1,4 +1,4 @@
-﻿namespace CapaDePresentacion.Turno
+﻿namespace CapaDePresentacion.PantallaTurno
 {
     partial class TurnoDetalle
     {
