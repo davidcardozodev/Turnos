@@ -100,16 +100,6 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public void TurnoDarBaja(int idTurno)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoDarBaja";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
-            _Comando.ExecuteNonQuery();
-            _Conexion.ConexionCerrar();
-        }
-
         public void AdminModicarUsuario(int idUsuario, string rol)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
