@@ -10,17 +10,17 @@ namespace CapaDeEntidades
 
         ConsultasProveedor _ConsultasProveedor = new ConsultasProveedor();
 
-        public List<FormatoTurnosAdmin> TurnoCargarProveedor()
+        public List<FormatoTurnos> TurnoCargarProveedor()
         {
             return _ConsultasProveedor.TurnoCargarProveedor();
         }
 
-        public List<FormatoTurnosAdmin> TurnoCargarProveedorAsignado(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int idProveedor)
         {
             return _ConsultasProveedor.TurnoCargarProveedorAsignado(idProveedor);
         }
 
-        public List<FormatoTurnosAdmin> TurnoCargarProveedorEnCurso(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int idProveedor)
         {
             return _ConsultasProveedor.TurnoCargarProveedorEnCurso(idProveedor);
         }

@@ -22,11 +22,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         {
             Proveedor proveedor = new Proveedor();
 
-            List<FormatoTurnosAdmin> ListaTurnos = new List<FormatoTurnosAdmin>();
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
             ListaTurnos = proveedor.TurnoCargarProveedor();
 
-            foreach (FormatoTurnosAdmin Turno in ListaTurnos)
+            foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 ProveedorTurnoItem proveedorTurnoItem = new ProveedorTurnoItem();
 

@@ -11,6 +11,9 @@
         public string Hora { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
+        public string Usuario { get; set; }
+        public string PrimerNombre { get; set; }
+        public string SegundoNombre { get; set; }
         public string NombreProveedor { get; set; }
 
     }

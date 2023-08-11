@@ -22,11 +22,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            List<FormatoTurnosAdmin> ListaTurnos = new List<FormatoTurnosAdmin>();
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
             ListaTurnos = admin.TurnoCargarAdmin();
 
-            foreach (FormatoTurnosAdmin Turno in ListaTurnos)
+            foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
 

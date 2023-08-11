@@ -13,11 +13,11 @@ namespace CapaDeDatos
         private SqlDataReader _Lector;
         private DataTable _Tabla = new DataTable();
         private SqlCommand _Comando = new SqlCommand();
-        private List<FormatoTurnosAdmin> _Valores = new List<FormatoTurnosAdmin>();
+        private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
 
         #endregion
 
-        public List<FormatoTurnosAdmin> TurnoCargarProveedor()
+        public List<FormatoTurnos> TurnoCargarProveedor()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarProveedor";
@@ -40,7 +40,7 @@ namespace CapaDeDatos
                 string PrimerNombre = _Lector["PrimerNombre"].ToString();
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
 
-                _Valores.Add(new FormatoTurnosAdmin
+                _Valores.Add(new FormatoTurnos
                 {
                     Id = Id,
                     IdCliente = IdCliente,
@@ -62,7 +62,7 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnosAdmin> TurnoCargarProveedorAsignado(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int idProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarProveedorAsignado";
@@ -86,7 +86,7 @@ namespace CapaDeDatos
                 string PrimerNombre = _Lector["PrimerNombre"].ToString();
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
 
-                _Valores.Add(new FormatoTurnosAdmin
+                _Valores.Add(new FormatoTurnos
                 {
                     Id = Id,
                     IdCliente = IdCliente,
@@ -108,7 +108,7 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnosAdmin> TurnoCargarProveedorEnCurso(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int idProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarProveedorEnCurso";
@@ -132,7 +132,7 @@ namespace CapaDeDatos
                 string PrimerNombre = _Lector["PrimerNombre"].ToString();
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
 
-                _Valores.Add(new FormatoTurnosAdmin
+                _Valores.Add(new FormatoTurnos
                 {
                     Id = Id,
                     IdCliente = IdCliente,

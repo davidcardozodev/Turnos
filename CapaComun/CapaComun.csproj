@@ -44,7 +44,6 @@
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="DatosUsuarioItem.cs" />
     <Compile Include="FormatoTurnos.cs" />
-    <Compile Include="FormatoTurnosAdmin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roles.cs" />
   </ItemGroup>
