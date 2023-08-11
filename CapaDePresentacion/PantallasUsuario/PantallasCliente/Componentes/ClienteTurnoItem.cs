@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using CapaDePresentacion.Turno;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
@@ -38,19 +39,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ClienteTurnoDetalle clienteTurnoDetalle = new ClienteTurnoDetalle();
+            TurnoDetalle turnoDetalle = new TurnoDetalle();
 
-            clienteTurnoDetalle.Id = Id;
-            clienteTurnoDetalle.DiaNombre = DiaNombre;
-            clienteTurnoDetalle.DiaNumero = DiaNumero;
-            clienteTurnoDetalle.Mes = Mes;
-            clienteTurnoDetalle.Anio = Anio;
-            clienteTurnoDetalle.Hora = Hora;
-            clienteTurnoDetalle.Descripcion = Descripcion;
-            clienteTurnoDetalle.Estado = Estado;
-            clienteTurnoDetalle.NombreProveedor = NombreProveedor;
+            turnoDetalle.Id = Id;
+            turnoDetalle.DiaNombre = DiaNombre;
+            turnoDetalle.DiaNumero = DiaNumero;
+            turnoDetalle.Mes = Mes;
+            turnoDetalle.Anio = Anio;
+            turnoDetalle.Hora = Hora;
+            turnoDetalle.Descripcion = Descripcion;
+            turnoDetalle.Estado = Estado;
+            turnoDetalle.NombreProveedor = NombreProveedor;
 
-            clienteTurnoDetalle.Show();
+            turnoDetalle.Show();
         }
 
         private void CambiarColorEstado()

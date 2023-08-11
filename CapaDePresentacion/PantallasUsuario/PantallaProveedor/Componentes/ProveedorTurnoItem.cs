@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using CapaDePresentacion.Turno;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 {
@@ -36,21 +37,22 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ProveedorTurnoDetalle proveedorTurnoDetalle = new ProveedorTurnoDetalle();
+            TurnoDetalle turnoDetalle = new TurnoDetalle();
 
-            proveedorTurnoDetalle.Id = Id;
-            proveedorTurnoDetalle.DiaNombre = DiaNombre;
-            proveedorTurnoDetalle.DiaNumero = DiaNumero;
-            proveedorTurnoDetalle.Mes = Mes;
-            proveedorTurnoDetalle.Anio = Anio;
-            proveedorTurnoDetalle.Hora = Hora;
-            proveedorTurnoDetalle.Descripcion = Descripcion;
-            proveedorTurnoDetalle.Estado = Estado;
-            proveedorTurnoDetalle.Usuario = Usuario;
-            proveedorTurnoDetalle.PrimerNombre = PrimerNombre;
-            proveedorTurnoDetalle.SegundoNombre = SegundoNombre;
 
-            proveedorTurnoDetalle.Show();
+            turnoDetalle.Id = Id;
+            turnoDetalle.DiaNombre = DiaNombre;
+            turnoDetalle.DiaNumero = DiaNumero;
+            turnoDetalle.Mes = Mes;
+            turnoDetalle.Anio = Anio;
+            turnoDetalle.Hora = Hora;
+            turnoDetalle.Descripcion = Descripcion;
+            turnoDetalle.Estado = Estado;
+            turnoDetalle.Usuario = Usuario;
+            turnoDetalle.PrimerNombre = PrimerNombre;
+            turnoDetalle.SegundoNombre = SegundoNombre;
+
+            turnoDetalle.Show();
         }
     }
 }

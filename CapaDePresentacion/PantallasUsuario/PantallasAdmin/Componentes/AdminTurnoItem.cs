@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using CapaDePresentacion.Turno;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
@@ -38,22 +39,22 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AdminTurnoDetalle adminTurnoDetalle = new AdminTurnoDetalle();
+            TurnoDetalle turnoDetalle = new TurnoDetalle();
 
-            adminTurnoDetalle.Id = Id;
-            adminTurnoDetalle.DiaNombre = DiaNombre;
-            adminTurnoDetalle.DiaNumero = DiaNumero;
-            adminTurnoDetalle.Mes = Mes;
-            adminTurnoDetalle.Anio = Anio;
-            adminTurnoDetalle.Hora = Hora;
-            adminTurnoDetalle.Descripcion = Descripcion;
-            adminTurnoDetalle.Estado = Estado;
-            adminTurnoDetalle.Usuario = Usuario;
-            adminTurnoDetalle.PrimerNombre = PrimerNombre;
-            adminTurnoDetalle.SegundoNombre = SegundoNombre;
-            adminTurnoDetalle.NombreProveedor = NombreProveedor;
+            turnoDetalle.Id = Id;
+            turnoDetalle.DiaNombre = DiaNombre;
+            turnoDetalle.DiaNumero = DiaNumero;
+            turnoDetalle.Mes = Mes;
+            turnoDetalle.Anio = Anio;
+            turnoDetalle.Hora = Hora;
+            turnoDetalle.Descripcion = Descripcion;
+            turnoDetalle.Estado = Estado;
+            turnoDetalle.Usuario = Usuario;
+            turnoDetalle.PrimerNombre = PrimerNombre;
+            turnoDetalle.SegundoNombre = SegundoNombre;
+            turnoDetalle.NombreProveedor = NombreProveedor;
 
-            adminTurnoDetalle.Show();
+            turnoDetalle.Show();
         }
 
         private void CambiarColorEstado()
