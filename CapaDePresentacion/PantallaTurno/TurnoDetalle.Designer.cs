@@ -44,6 +44,9 @@
             this.lblHoraCategoria = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnAsignar = new System.Windows.Forms.Button();
+            this.comboProveedores = new System.Windows.Forms.ComboBox();
+            this.lblCambiarProveedor = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,11 +228,47 @@
             this.btnAsignar.Visible = false;
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
+            // comboProveedores
+            // 
+            this.comboProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboProveedores.FormattingEnabled = true;
+            this.comboProveedores.Location = new System.Drawing.Point(21, 594);
+            this.comboProveedores.Name = "comboProveedores";
+            this.comboProveedores.Size = new System.Drawing.Size(235, 37);
+            this.comboProveedores.TabIndex = 26;
+            this.comboProveedores.Visible = false;
+            // 
+            // lblCambiarProveedor
+            // 
+            this.lblCambiarProveedor.AutoSize = true;
+            this.lblCambiarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambiarProveedor.Location = new System.Drawing.Point(15, 548);
+            this.lblCambiarProveedor.Name = "lblCambiarProveedor";
+            this.lblCambiarProveedor.Size = new System.Drawing.Size(256, 32);
+            this.lblCambiarProveedor.TabIndex = 19;
+            this.lblCambiarProveedor.Text = "Cambiar proveedor";
+            this.lblCambiarProveedor.Visible = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(536, 612);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(204, 58);
+            this.btnGuardar.TabIndex = 27;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Visible = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // TurnoDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 665);
+            this.ClientSize = new System.Drawing.Size(754, 678);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.lblCambiarProveedor);
+            this.Controls.Add(this.comboProveedores);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnDarDeBaja);
             this.Controls.Add(this.label5);
@@ -263,5 +302,8 @@
         private System.Windows.Forms.Label lblHoraCategoria;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Button btnAsignar;
+        private System.Windows.Forms.ComboBox comboProveedores;
+        private System.Windows.Forms.Label lblCambiarProveedor;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

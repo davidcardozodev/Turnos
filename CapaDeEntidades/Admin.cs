@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDeDatos;
 using System.Collections.Generic;
+using System.Data;
 
 namespace CapaDeEntidades
 {
@@ -28,6 +29,16 @@ namespace CapaDeEntidades
         public void AdminGuardarDisponibilidad(int idUsuario, int horarioInicio, int horarioFin)
         {
             _ConsultasAdmin.AdminGuardarDisponibilidad(idUsuario, horarioInicio, horarioFin);
+        }
+
+        public DataTable AdminCargarProveedores()
+        {
+            return _ConsultasAdmin.AdminCargarProveedores();
+        }
+
+        public void AdminGuardarProveedor(int idTurno, string nombreProveedor)
+        {
+            _ConsultasAdmin.AdminGuardarProveedor(idTurno, nombreProveedor);
         }
     }
 }

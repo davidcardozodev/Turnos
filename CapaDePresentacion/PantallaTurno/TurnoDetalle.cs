@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -20,6 +21,31 @@ namespace CapaDePresentacion.PantallaTurno
             OcultarEtiquetas();
             ActivarOpcionAsignarProveedor();
             OcultarOpcionDarBaja();
+            CargarProveedores();
+        }
+
+        private void CargarProveedores()
+        {
+            if (DatosUsuario.Rol == Roles.rolAdmin)
+            {
+                ActivarOpcionProveedores();
+
+                Admin admin = new Admin();
+
+                DataTable proveedores = new DataTable();
+
+                proveedores = admin.AdminCargarProveedores();
+
+                foreach (DataRow proveedor in proveedores.Rows)
+                    comboProveedores.Items.Add(proveedor["PrimerNombre"].ToString() + " " + proveedor["SegundoNombre"].ToString());
+            }
+        }
+
+        private void ActivarOpcionProveedores()
+        {
+            comboProveedores.Visible = true;
+            lblCambiarProveedor.Visible = true;
+            btnGuardar.Visible = true;
         }
 
         private void OcultarOpcionDarBaja()
@@ -103,6 +129,15 @@ namespace CapaDePresentacion.PantallaTurno
             Proveedor proveedor = new Proveedor();
 
             proveedor.ProveedorAsignar(DatosUsuario.Id, Id);
+
+            MessageBox.Show("Cambios guardados");
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            admin.AdminGuardarProveedor(Id, comboProveedores.Text);
 
             MessageBox.Show("Cambios guardados");
         }
