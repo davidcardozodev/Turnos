@@ -1,4 +1,4 @@
-﻿using CapaDePresentacion.Turno;
+﻿using CapaDePresentacion.PantallaTurno;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes

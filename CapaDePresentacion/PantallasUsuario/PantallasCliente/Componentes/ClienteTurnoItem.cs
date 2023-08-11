@@ -1,4 +1,4 @@
-﻿using CapaDePresentacion.Turno;
+﻿using CapaDePresentacion.PantallaTurno;
 using System.Drawing;
 using System.Windows.Forms;
 
