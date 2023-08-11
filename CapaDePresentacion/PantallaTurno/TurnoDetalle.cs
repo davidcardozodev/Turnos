@@ -88,6 +88,8 @@ namespace CapaDePresentacion.PantallaTurno
         public string SegundoNombre { get; set; }
         public string NombreProveedor { get; set; }
 
+        string anio, mes, diaNombre, diaNumero;
+
 
         private void CargarInformacion()
         {
@@ -139,7 +141,26 @@ namespace CapaDePresentacion.PantallaTurno
 
             admin.AdminGuardarProveedor(Id, comboProveedores.Text);
 
+            AdminModificarFecha();
+
             MessageBox.Show("Cambios guardados");
+        }
+
+        private void AdminModificarFecha()
+        {
+            Admin admin = new Admin();
+
+            GuardarFecha();
+
+            admin.AdminModificarFecha(Id, diaNombre, diaNumero, mes, anio);
+        }
+
+        private void GuardarFecha()
+        {
+            anio = dtpFecha.Value.ToString("yyyy");
+            mes = dtpFecha.Value.ToString("MMMM");
+            diaNombre = dtpFecha.Value.ToString("dddd");
+            diaNumero = dtpFecha.Value.ToString("dd");
         }
     }
 }

@@ -47,13 +47,17 @@
             this.comboProveedores = new System.Windows.Forms.ComboBox();
             this.lblCambiarProveedor = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelModificar = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panelModificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDarDeBaja
             // 
             this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarDeBaja.Location = new System.Drawing.Point(536, 548);
+            this.btnDarDeBaja.Location = new System.Drawing.Point(683, 533);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
             this.btnDarDeBaja.Size = new System.Drawing.Size(204, 58);
             this.btnDarDeBaja.TabIndex = 24;
@@ -65,7 +69,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(241, 9);
+            this.label5.Location = new System.Drawing.Point(393, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(249, 37);
             this.label5.TabIndex = 23;
@@ -86,9 +90,9 @@
             this.panel1.Controls.Add(this.lblHora);
             this.panel1.Controls.Add(this.lblHoraCategoria);
             this.panel1.Controls.Add(this.lblFecha);
-            this.panel1.Location = new System.Drawing.Point(10, 76);
+            this.panel1.Location = new System.Drawing.Point(27, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 466);
+            this.panel1.Size = new System.Drawing.Size(860, 466);
             this.panel1.TabIndex = 22;
             // 
             // lblProveedor
@@ -219,7 +223,7 @@
             // btnAsignar
             // 
             this.btnAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignar.Location = new System.Drawing.Point(536, 548);
+            this.btnAsignar.Location = new System.Drawing.Point(683, 533);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(204, 58);
             this.btnAsignar.TabIndex = 25;
@@ -232,7 +236,7 @@
             // 
             this.comboProveedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboProveedores.FormattingEnabled = true;
-            this.comboProveedores.Location = new System.Drawing.Point(21, 594);
+            this.comboProveedores.Location = new System.Drawing.Point(174, 37);
             this.comboProveedores.Name = "comboProveedores";
             this.comboProveedores.Size = new System.Drawing.Size(235, 37);
             this.comboProveedores.TabIndex = 26;
@@ -242,17 +246,17 @@
             // 
             this.lblCambiarProveedor.AutoSize = true;
             this.lblCambiarProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambiarProveedor.Location = new System.Drawing.Point(15, 548);
+            this.lblCambiarProveedor.Location = new System.Drawing.Point(9, 37);
             this.lblCambiarProveedor.Name = "lblCambiarProveedor";
-            this.lblCambiarProveedor.Size = new System.Drawing.Size(256, 32);
+            this.lblCambiarProveedor.Size = new System.Drawing.Size(145, 32);
             this.lblCambiarProveedor.TabIndex = 19;
-            this.lblCambiarProveedor.Text = "Cambiar proveedor";
+            this.lblCambiarProveedor.Text = "Proveedor";
             this.lblCambiarProveedor.Visible = false;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(536, 612);
+            this.btnGuardar.Location = new System.Drawing.Point(683, 608);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(204, 58);
             this.btnGuardar.TabIndex = 27;
@@ -261,14 +265,43 @@
             this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Location = new System.Drawing.Point(174, 104);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(456, 35);
+            this.dtpFecha.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(46, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 32);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Fecha";
+            this.label1.Visible = false;
+            // 
+            // panelModificar
+            // 
+            this.panelModificar.Controls.Add(this.dtpFecha);
+            this.panelModificar.Controls.Add(this.label1);
+            this.panelModificar.Controls.Add(this.lblCambiarProveedor);
+            this.panelModificar.Controls.Add(this.comboProveedores);
+            this.panelModificar.Location = new System.Drawing.Point(12, 533);
+            this.panelModificar.Name = "panelModificar";
+            this.panelModificar.Size = new System.Drawing.Size(637, 149);
+            this.panelModificar.TabIndex = 31;
+            // 
             // TurnoDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 678);
+            this.ClientSize = new System.Drawing.Size(904, 686);
+            this.Controls.Add(this.panelModificar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.lblCambiarProveedor);
-            this.Controls.Add(this.comboProveedores);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnDarDeBaja);
             this.Controls.Add(this.label5);
@@ -279,6 +312,8 @@
             this.Load += new System.EventHandler(this.TurnoDetalle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelModificar.ResumeLayout(false);
+            this.panelModificar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +340,8 @@
         private System.Windows.Forms.ComboBox comboProveedores;
         private System.Windows.Forms.Label lblCambiarProveedor;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelModificar;
     }
 }

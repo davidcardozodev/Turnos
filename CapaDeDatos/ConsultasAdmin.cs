@@ -150,6 +150,18 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-
+        public void AdminModificarFecha(int idTurno, string diaNombre, string diaNumero, string mes, string anio)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminModificarFecha";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
+            _Comando.Parameters.AddWithValue("@diaNumero", diaNumero);
+            _Comando.Parameters.AddWithValue("@mes", mes);
+            _Comando.Parameters.AddWithValue("@anio", anio);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
     }
 }
