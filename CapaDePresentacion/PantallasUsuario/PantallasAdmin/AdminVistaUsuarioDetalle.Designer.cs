@@ -201,6 +201,7 @@
             // 
             // comboFin
             // 
+            this.comboFin.Enabled = false;
             this.comboFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboFin.FormattingEnabled = true;
             this.comboFin.Location = new System.Drawing.Point(482, 34);
@@ -220,6 +221,7 @@
             // 
             // comboInicio
             // 
+            this.comboInicio.Enabled = false;
             this.comboInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboInicio.FormattingEnabled = true;
             this.comboInicio.Location = new System.Drawing.Point(131, 34);

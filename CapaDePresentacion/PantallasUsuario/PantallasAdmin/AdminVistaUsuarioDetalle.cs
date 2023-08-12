@@ -1,4 +1,5 @@
-﻿using CapaDeEntidades;
+﻿using CapaComun;
+using CapaDeEntidades;
 using System;
 using System.Windows.Forms;
 
@@ -24,6 +25,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarDatosUsuario();
             CargarValoresHorarioInicio();
             ValorInicialHorario();
+            ActivarCambioHorarioProveedor();
+        }
+
+        private void ActivarCambioHorarioProveedor()
+        {
+            if (Rol == Roles.rolProveedor)
+            {
+                comboInicio.Enabled = true;
+                comboFin.Enabled = true;
+            }
         }
 
         #region "Horario"
