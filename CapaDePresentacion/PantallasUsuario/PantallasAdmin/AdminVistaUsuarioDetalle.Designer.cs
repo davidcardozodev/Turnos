@@ -232,7 +232,7 @@
             this.comboInicio.Name = "comboInicio";
             this.comboInicio.Size = new System.Drawing.Size(162, 40);
             this.comboInicio.TabIndex = 27;
-            this.comboInicio.SelectedIndexChanged += new System.EventHandler(this.comboInicio_SelectedIndexChanged);
+            this.comboInicio.SelectedValueChanged += new System.EventHandler(this.comboInicio_SelectedValueChanged);
             this.comboInicio.Click += new System.EventHandler(this.comboInicio_Click);
             // 
             // lblInicio

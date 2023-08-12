@@ -41,19 +41,20 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarValoresFinHorario()
         {
-            for (int i = (int)comboInicio.SelectedItem; i <= 22; i++)
+            for (int i = (int)comboInicio.SelectedItem + 1; i <= 22; i++)
                 comboFin.Items.Add(i);
         }
 
         private void CargarValoresHorarioInicio()
         {
-            for (int i = 8; i <= 22; i++)
+            for (int i = 8; i <= 21; i++)
                 comboInicio.Items.Add(i);
         }
 
         private void ValorInicialHorarios()
         {
             comboInicio.SelectedItem = 8;
+            comboFin.SelectedItem = 9;
         }
 
         private void LimpiarHorarios()
@@ -127,6 +128,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void DesactivarOpcionGuardado()
         {
             btnGuardar.Enabled = false;
+        }
+
+        private void comboInicio_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LimpiarHorarios();
+            CargarValoresFinHorario();
+            ActualizarValorHorarioFin();
+        }
+
+        private void ActualizarValorHorarioFin()
+        {
+            comboFin.SelectedItem = (int)comboInicio.SelectedItem + 1;
         }
     }
 }
