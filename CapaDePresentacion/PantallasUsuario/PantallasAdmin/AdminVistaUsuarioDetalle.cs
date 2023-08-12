@@ -26,6 +26,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarValoresHorarioInicio();
             ValorInicialHorarios();
             ActivarCambioHorarioProveedor();
+            ValorInicialProveedor();
+        }
+
+        private void ValorInicialProveedor()
+        {
+            comboRol.SelectedText = Rol;
         }
 
         private void ActivarCambioHorarioProveedor()
