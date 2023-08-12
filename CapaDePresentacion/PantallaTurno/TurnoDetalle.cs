@@ -30,6 +30,9 @@ namespace CapaDePresentacion.PantallaTurno
             {
                 ActivarOpcionProveedores();
 
+                comboProveedores.Items.Add("Sin definir");
+                comboProveedores.SelectedText = "Sin definir";
+
                 Admin admin = new Admin();
 
                 DataTable proveedores = new DataTable();
@@ -145,6 +148,11 @@ namespace CapaDePresentacion.PantallaTurno
         {
             guardarProveedor = true;
             btnGuardar.Enabled = true;
+
+            if (comboProveedores.Text != "Sin definir" || guardarFecha == true)
+                btnGuardar.Enabled = true;
+            else
+                btnGuardar.Enabled = false;
         }
 
         private void dtpFecha_ValueChanged(object sender, EventArgs e)
