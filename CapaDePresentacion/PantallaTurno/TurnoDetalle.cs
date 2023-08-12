@@ -144,11 +144,13 @@ namespace CapaDePresentacion.PantallaTurno
         private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)
         {
             guardarProveedor = true;
+            btnGuardar.Enabled = true;
         }
 
         private void dtpFecha_ValueChanged(object sender, EventArgs e)
         {
             guardarFecha = true;
+            btnGuardar.Enabled = true;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
