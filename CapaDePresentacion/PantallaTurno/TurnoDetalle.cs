@@ -76,6 +76,7 @@ namespace CapaDePresentacion.PantallaTurno
         }
 
         public int Id { get; set; }
+        public int IdCliente { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
         public string Mes { get; set; }
@@ -88,8 +89,13 @@ namespace CapaDePresentacion.PantallaTurno
         public string SegundoNombre { get; set; }
         public string NombreProveedor { get; set; }
 
-        string anio, mes, diaNombre, diaNumero;
+        string anio = "";
+        string mes = "";
+        string diaNombre = "";
+        string diaNumero = "";
 
+        private bool guardarProveedor = false;
+        private bool guardarFecha = false;
 
         private void CargarInformacion()
         {
@@ -135,24 +141,34 @@ namespace CapaDePresentacion.PantallaTurno
             MessageBox.Show("Cambios guardados");
         }
 
+        private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            guardarProveedor = true;
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            guardarFecha = true;
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
-
-            admin.AdminGuardarProveedor(Id, comboProveedores.Text);
-
-            AdminModificarFecha();
+            AdminGuardarModificacion();
 
             MessageBox.Show("Cambios guardados");
         }
 
-        private void AdminModificarFecha()
+        private void AdminGuardarModificacion()
         {
             Admin admin = new Admin();
 
-            GuardarFecha();
+            if (guardarFecha)
+                GuardarFecha();
 
-            admin.AdminModificarFecha(Id, diaNombre, diaNumero, mes, anio);
+            if (!guardarProveedor)
+                comboProveedores.Text = string.Empty;
+
+            admin.AdminGuardarModificacion(Id, DatosUsuario.Id, IdCliente, diaNombre, diaNumero, mes, anio, comboProveedores.Text);
         }
 
         private void GuardarFecha()

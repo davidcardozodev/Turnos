@@ -31,6 +31,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
 
                 adminTurnoItem.Id = Turno.Id;
+                adminTurnoItem.IdCliente = Turno.IdCliente;
                 adminTurnoItem.DiaNombre = Turno.DiaNombre;
                 adminTurnoItem.DiaNumero = Turno.DiaNumero;
                 adminTurnoItem.Mes = Turno.Mes;

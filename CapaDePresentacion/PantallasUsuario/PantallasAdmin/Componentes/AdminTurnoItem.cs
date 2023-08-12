@@ -12,6 +12,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         }
 
         public int Id { get; set; }
+        public int IdCliente { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
         public string Mes { get; set; }
@@ -42,6 +43,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             TurnoDetalle turnoDetalle = new TurnoDetalle();
 
             turnoDetalle.Id = Id;
+            turnoDetalle.IdCliente = IdCliente;
             turnoDetalle.DiaNombre = DiaNombre;
             turnoDetalle.DiaNumero = DiaNumero;
             turnoDetalle.Mes = Mes;

@@ -41,9 +41,9 @@ namespace CapaDeEntidades
             _ConsultasAdmin.AdminGuardarProveedor(idTurno, nombreProveedor);
         }
 
-        public void AdminModificarFecha(int idTurno, string diaNombre, string diaNumero, string mes, string anio)
+        public void AdminGuardarModificacion(int idTurno, int idAdmin, int idCliente, string diaNombre, string diaNumero, string mes, string anio, string nombreProveedor)
         {
-            _ConsultasAdmin.AdminModificarFecha(idTurno, diaNombre, diaNumero, mes, anio);
+            _ConsultasAdmin.AdminGuardarModificacion(idTurno, idAdmin, idCliente, diaNombre, diaNumero, mes, anio, nombreProveedor);
         }
     }
 }

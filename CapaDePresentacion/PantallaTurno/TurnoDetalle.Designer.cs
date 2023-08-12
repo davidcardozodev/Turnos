@@ -241,6 +241,7 @@
             this.comboProveedores.Size = new System.Drawing.Size(235, 37);
             this.comboProveedores.TabIndex = 26;
             this.comboProveedores.Visible = false;
+            this.comboProveedores.SelectedIndexChanged += new System.EventHandler(this.comboProveedores_SelectedIndexChanged);
             // 
             // lblCambiarProveedor
             // 
@@ -272,6 +273,7 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(456, 35);
             this.dtpFecha.TabIndex = 28;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // label1
             // 
