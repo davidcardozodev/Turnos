@@ -155,6 +155,8 @@
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(162, 40);
             this.comboRol.TabIndex = 17;
+            this.comboRol.SelectedIndexChanged += new System.EventHandler(this.comboRol_SelectedIndexChanged);
+            this.comboRol.SelectedValueChanged += new System.EventHandler(this.comboRol_SelectedValueChanged);
             // 
             // label1
             // 
@@ -168,6 +170,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(612, 485);
             this.btnGuardar.Name = "btnGuardar";
@@ -208,6 +211,7 @@
             this.comboFin.Name = "comboFin";
             this.comboFin.Size = new System.Drawing.Size(162, 40);
             this.comboFin.TabIndex = 29;
+            this.comboFin.SelectedIndexChanged += new System.EventHandler(this.comboFin_SelectedIndexChanged);
             // 
             // lblFin
             // 
@@ -229,6 +233,7 @@
             this.comboInicio.Size = new System.Drawing.Size(162, 40);
             this.comboInicio.TabIndex = 27;
             this.comboInicio.SelectedIndexChanged += new System.EventHandler(this.comboInicio_SelectedIndexChanged);
+            this.comboInicio.Click += new System.EventHandler(this.comboInicio_Click);
             // 
             // lblInicio
             // 

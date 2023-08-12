@@ -24,7 +24,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarRoles();
             CargarDatosUsuario();
             CargarValoresHorarioInicio();
-            ValorInicialHorario();
+            ValorInicialHorarios();
             ActivarCambioHorarioProveedor();
         }
 
@@ -51,15 +51,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 comboInicio.Items.Add(i);
         }
 
-        private void ValorInicialHorario()
+        private void ValorInicialHorarios()
         {
             comboInicio.SelectedItem = 8;
-        }
-
-        private void comboInicio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LimpiarHorarios();
-            CargarValoresFinHorario();
         }
 
         private void LimpiarHorarios()
@@ -94,6 +88,45 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             adminDisponibilidad.AdminGuardarDisponibilidad(Id, int.Parse(comboInicio.Text), int.Parse(comboFin.Text));
 
             MessageBox.Show("Cambios guardados");
+        }
+
+        private void comboRol_SelectedValueChanged(object sender, EventArgs e)
+        {
+            LimpiarHorarios();
+            CargarValoresFinHorario();
+            ActivarOpcionGuardado();
+        }
+
+        private void ActivarOpcionGuardado()
+        {
+            btnGuardar.Enabled = true;
+        }
+
+        private void comboInicio_Click(object sender, EventArgs e)
+        {
+            ActivarOpcionGuardado();
+        }
+
+        private void comboInicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LimpiarHorarios();
+            CargarValoresFinHorario();
+        }
+
+        private void comboFin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ActivarOpcionGuardado();
+        }
+
+        private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboRol.Text == Rol)
+                DesactivarOpcionGuardado();
+        }
+
+        private void DesactivarOpcionGuardado()
+        {
+            btnGuardar.Enabled = false;
         }
     }
 }
