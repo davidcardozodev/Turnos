@@ -31,13 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnVolverAtras = new System.Windows.Forms.Button();
+            this.btnNotificaciones = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(485, 22);
+            this.label1.Location = new System.Drawing.Point(477, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(286, 37);
             this.label1.TabIndex = 0;
@@ -46,15 +49,15 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(37, 117);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(29, 146);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1153, 456);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(37, 12);
+            this.btnVolverAtras.Location = new System.Drawing.Point(29, 3);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
             this.btnVolverAtras.TabIndex = 2;
@@ -62,20 +65,42 @@
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
+            // btnNotificaciones
+            // 
+            this.btnNotificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotificaciones.Location = new System.Drawing.Point(978, 13);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Size = new System.Drawing.Size(204, 58);
+            this.btnNotificaciones.TabIndex = 4;
+            this.btnNotificaciones.Text = "Notificaciones";
+            this.btnNotificaciones.UseVisualStyleBackColor = true;
+            this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnVolverAtras);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.btnNotificaciones);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1248, 688);
+            this.panel1.TabIndex = 5;
+            // 
             // ClienteTurnosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1248, 688);
-            this.Controls.Add(this.btnVolverAtras);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClienteTurnosVista";
             this.Text = "ClienteTurnosVista";
             this.Load += new System.EventHandler(this.ClienteTurnosVista_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -84,5 +109,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnVolverAtras;
+        private System.Windows.Forms.Button btnNotificaciones;
+        private System.Windows.Forms.Panel panel1;
     }
 }

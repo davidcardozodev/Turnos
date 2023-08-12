@@ -57,6 +57,80 @@ namespace CapaDeDatos
             return _Valores;
         }
 
+        public List<FormatoTurnos> TurnoCargarDetalle(int IdTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCargarDetalle";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
+                string Hora = _Lector["Hora"].ToString();
+                string Descripcion = _Lector["Descripcion"].ToString();
+                string Estado = _Lector["Estado"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = Id,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
+                    Hora = Hora,
+                    Descripcion = Descripcion,
+                    Estado = Estado,
+                    NombreProveedor = NombreProveedor,
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> TurnoCargarModificacion(int idCliente)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCargarModificacion";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int IdTurno = int.Parse(_Lector["IdTurno"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = IdTurno,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
+                    NombreProveedor = NombreProveedor,
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
         public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
