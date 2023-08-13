@@ -61,6 +61,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         private void ClienteTurnoItemModificacion_Load(object sender, EventArgs e)
         {
             RellenarTextoInformacion();
+            DesactivarOpcionesTurnoEstado();
+        }
+
+        private void DesactivarOpcionesTurnoEstado()
+        {
+            if (Estado != "Pendiente")
+            {
+                btnAceptar.Enabled = false;
+                btnRechazar.Enabled = false;
+            }
         }
 
         private void RellenarTextoInformacion()
