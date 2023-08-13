@@ -1,5 +1,4 @@
-﻿using CapaComun;
-using CapaDeEntidades;
+﻿using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
@@ -80,9 +79,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarRoles()
         {
-            comboRol.Items.Add("Cliente");
-            comboRol.Items.Add("Proveedor");
-            comboRol.Items.Add("Admin");
+            comboRol.Items.Add(Roles.rolCliente);
+            comboRol.Items.Add(Roles.rolProveedor);
+            comboRol.Items.Add(Roles.rolAdmin);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
