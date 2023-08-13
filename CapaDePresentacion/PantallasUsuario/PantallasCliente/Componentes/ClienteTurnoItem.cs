@@ -1,4 +1,5 @@
-﻿using CapaDePresentacion.PantallaTurno;
+﻿using CapaDeNegocio;
+using CapaDePresentacion.PantallaTurno;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -58,18 +59,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             switch (Estado)
             {
-                case "Cancelado":
+                case Estados.Cancelado:
                     lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
                     break;
-                case "Finalizado":
+                case Estados.Finalizado:
                     lblEstado.ForeColor = Color.FromArgb(0, 255, 0);
                     break;
-                case "Pendiente":
-                case "Asignado":
-                case "EnCurso":
+                case Estados.Pendiente:
+                case Estados.Asignado:
+                case Estados.EnCurso:
                     lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
                     break;
             }
         }
+
     }
 }

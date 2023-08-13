@@ -31,8 +31,8 @@ namespace CapaDePresentacion.PantallaTurno
             {
                 ActivarOpcionProveedores();
 
-                comboProveedores.Items.Add("Sin definir");
-                comboProveedores.SelectedText = "Sin definir";
+                comboProveedores.Items.Add(Estados.SinDefinir);
+                comboProveedores.SelectedText = Estados.SinDefinir;
 
                 Admin admin = new Admin();
 
@@ -126,15 +126,15 @@ namespace CapaDePresentacion.PantallaTurno
         {
             switch (Estado)
             {
-                case "Cancelado":
+                case Estados.Cancelado:
                     lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
                     break;
-                case "Finalizado":
+                case Estados.Finalizado:
                     lblEstado.ForeColor = Color.FromArgb(0, 255, 0);
                     break;
-                case "Pendiente":
-                case "Asignado":
-                case "EnCurso":
+                case Estados.Pendiente:
+                case Estados.Asignado:
+                case Estados.EnCurso:
                     lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
                     break;
             }
@@ -154,7 +154,7 @@ namespace CapaDePresentacion.PantallaTurno
             guardarProveedor = true;
             btnGuardar.Enabled = true;
 
-            if (comboProveedores.Text != "Sin definir" || guardarFecha == true)
+            if (comboProveedores.Text != Estados.SinDefinir || guardarFecha == true)
                 btnGuardar.Enabled = true;
             else
                 btnGuardar.Enabled = false;

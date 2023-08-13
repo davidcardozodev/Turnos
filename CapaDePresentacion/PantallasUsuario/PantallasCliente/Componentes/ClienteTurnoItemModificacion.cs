@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
+using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void DesactivarOpcionesTurnoEstado()
         {
-            if (Estado != "Pendiente")
+            if (Estado != Estados.Pendiente)
             {
                 btnAceptar.Enabled = false;
                 btnRechazar.Enabled = false;
@@ -77,7 +78,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             lblInformacion.Text = "";
 
-            if (NombreProveedor != "Sin definir")
+            if (NombreProveedor != Estados.SinDefinir)
                 lblInformacion.Text += "Nuevo proveedor: " + NombreProveedor + Environment.NewLine;
 
             if (DiaNombre != "")
@@ -90,7 +91,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
             cliente.TurnoModificacionAceptar(IdTurno);
 
-            if (NombreProveedor != "Sin definir")
+            if (NombreProveedor != Estados.SinDefinir)
             {
                 Cliente clienteTurnoModificacionCambiarProveedor = new Cliente();
 
