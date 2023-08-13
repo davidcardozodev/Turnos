@@ -100,10 +100,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public void AdminModicarUsuario(int idUsuario, string rol)
+        public void AdminModificarUsuario(int idUsuario, string rol)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminModicarUsuario";
+            _Comando.CommandText = "AdminModificarUsuario";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idUsuario", idUsuario);
             _Comando.Parameters.AddWithValue("@rol", rol);
