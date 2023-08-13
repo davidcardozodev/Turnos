@@ -8,8 +8,6 @@ namespace CapaDeDatos
         #region "Objetos"
 
         private Conexion _Conexion = new Conexion();
-        private SqlDataReader _Lector;
-        private DataTable _Tabla = new DataTable();
         private SqlCommand _Comando = new SqlCommand();
 
         #endregion

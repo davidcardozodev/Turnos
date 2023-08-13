@@ -1,5 +1,4 @@
 ﻿using CapaComun;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -10,10 +9,7 @@ namespace CapaDeDatos
         #region "Objetos"
 
         private Conexion _Conexion = new Conexion();
-        private SqlDataReader _Lector;
-        private DataTable _Tabla = new DataTable();
         private SqlCommand _Comando = new SqlCommand();
-        private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
 
         #endregion
 

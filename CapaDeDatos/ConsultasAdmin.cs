@@ -11,7 +11,6 @@ namespace CapaDeDatos
 
         private Conexion _Conexion = new Conexion();
         private SqlDataReader _Lector;
-        private DataTable _Tabla = new DataTable();
         private SqlCommand _Comando = new SqlCommand();
         private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
         private List<DatosUsuarioItem> _Usuarios = new List<DatosUsuarioItem>();
