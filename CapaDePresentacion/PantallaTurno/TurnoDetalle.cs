@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Data;
 using System.Drawing;
@@ -145,7 +146,7 @@ namespace CapaDePresentacion.PantallaTurno
 
             proveedor.ProveedorAsignar(DatosUsuario.Id, Id);
 
-            MessageBox.Show("Cambios guardados");
+            MessageBox.Show(Mensajes.GuardadoCambios);
         }
 
         private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,7 +170,7 @@ namespace CapaDePresentacion.PantallaTurno
         {
             AdminGuardarModificacion();
 
-            MessageBox.Show("Cambios guardados");
+            MessageBox.Show(Mensajes.GuardadoCambios);
         }
 
         private void AdminGuardarModificacion()

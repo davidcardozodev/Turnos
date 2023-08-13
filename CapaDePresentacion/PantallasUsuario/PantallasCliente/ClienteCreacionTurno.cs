@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
+using CapaDeNegocio;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
@@ -63,7 +64,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             cliente.TurnoCrear(DatosUsuario.Id, diaNombre, diaNumero, mes, anio, hora, descripcion);
 
-            MessageBox.Show("Turno guardado");
+            MessageBox.Show(Mensajes.GuardadoTurno);
         }
     }
 }

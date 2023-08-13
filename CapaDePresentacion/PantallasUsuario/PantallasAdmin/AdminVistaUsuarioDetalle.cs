@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
+using CapaDeNegocio;
 using System;
 using System.Windows.Forms;
 
@@ -94,7 +95,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             adminDisponibilidad.AdminGuardarDisponibilidad(Id, int.Parse(comboInicio.Text), int.Parse(comboFin.Text));
 
-            MessageBox.Show("Cambios guardados");
+            MessageBox.Show(Mensajes.GuardadoCambios);
         }
 
         private void comboRol_SelectedValueChanged(object sender, EventArgs e)
