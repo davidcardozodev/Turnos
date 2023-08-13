@@ -60,6 +60,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void ClienteTurnoItemModificacion_Load(object sender, EventArgs e)
         {
+            RellenarTextoInformacion();
+        }
+
+        private void RellenarTextoInformacion()
+        {
             lblInformacion.Text = "";
 
             if (NombreProveedor != "Sin definir")
@@ -67,7 +72,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
             if (DiaNombre != "")
                 lblInformacion.Text += "Nueva fecha: " + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio;
-
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
