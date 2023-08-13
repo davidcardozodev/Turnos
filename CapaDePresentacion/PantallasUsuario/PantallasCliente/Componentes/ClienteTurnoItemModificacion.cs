@@ -105,7 +105,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
                 clienteTurnoModificacionCambiarFecha.TurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
             }
 
-            MessageBox.Show("Cambios guardados");
+            MessageBox.Show(Mensajes.GuardadoCambios);
         }
 
         private void btnRechazar_Click(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
             cliente.TurnoModificacionRechazar(IdTurno);
 
-            MessageBox.Show("Cambios guardados");
+            MessageBox.Show(Mensajes.GuardadoCambios);
         }
     }
 }
