@@ -1,4 +1,5 @@
 ﻿using CapaComun;
+using CapaDeNegocio;
 using CapaDePresentacion.PantallaGenerales;
 using CapaDePresentacion.PantallasUsuario;
 using CapaDePresentacion.PantallasUsuario.PantallaProveedor;

@@ -1,4 +1,4 @@
-﻿namespace CapaComun
+﻿namespace CapaDeNegocio
 {
     public class Roles
     {
