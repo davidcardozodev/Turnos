@@ -147,5 +147,50 @@ namespace CapaDeDatos
             _Comando.Parameters.Clear();
         }
 
+        public void TurnoModificacionAceptar(int IdTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoModificacionAceptar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
+        public void TurnoModificacionCambiarFecha(int IdTurno, string diaNumero, string diaNombre, string mes, string anio)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoModificacionCambiarFecha";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.Parameters.AddWithValue("@diaNumero", diaNumero);
+            _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
+            _Comando.Parameters.AddWithValue("@mes", mes);
+            _Comando.Parameters.AddWithValue("@anio", anio);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
+        public void TurnoModificacionCambiarProveedor(int IdTurno, string nombreProveedor)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoModificacionCambiarProveedor";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.Parameters.AddWithValue("@nombreProveedor", nombreProveedor);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
+        public void TurnoModificacionRechazar(int IdTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoModificacionRechazar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
     }
 }

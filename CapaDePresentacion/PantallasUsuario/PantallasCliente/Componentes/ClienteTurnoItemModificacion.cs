@@ -69,5 +69,37 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
                 lblInformacion.Text += "Nueva fecha: " + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio;
 
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+
+            cliente.TurnoModificacionAceptar(IdTurno);
+
+            if (NombreProveedor != "Sin definir")
+            {
+                Cliente clienteTurnoModificacionCambiarProveedor = new Cliente();
+
+                clienteTurnoModificacionCambiarProveedor.TurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
+            }
+
+            if (DiaNombre != "")
+            {
+                Cliente clienteTurnoModificacionCambiarFecha = new Cliente();
+
+                clienteTurnoModificacionCambiarFecha.TurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
+            }
+
+            MessageBox.Show("Cambios guardados");
+        }
+
+        private void btnRechazar_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+
+            cliente.TurnoModificacionRechazar(IdTurno);
+
+            MessageBox.Show("Cambios guardados");
+        }
     }
 }

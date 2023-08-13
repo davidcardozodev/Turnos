@@ -65,6 +65,7 @@
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnRechazar
             // 
@@ -75,6 +76,7 @@
             this.btnRechazar.TabIndex = 3;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
+            this.btnRechazar.Click += new System.EventHandler(this.btnRechazar_Click);
             // 
             // ClienteTurnoItemModificacion
             // 

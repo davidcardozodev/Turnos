@@ -29,5 +29,25 @@ namespace CapaDeEntidades
         {
             _ConsultasCliente.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
         }
+
+        public void TurnoModificacionAceptar(int IdTurno)
+        {
+            _ConsultasCliente.TurnoModificacionAceptar(IdTurno);
+        }
+
+        public void TurnoModificacionCambiarFecha(int IdTurno, string diaNumero, string diaNombre, string mes, string anio)
+        {
+            _ConsultasCliente.TurnoModificacionCambiarFecha(IdTurno, diaNumero, diaNombre, mes, anio);
+        }
+
+        public void TurnoModificacionCambiarProveedor(int IdTurno, string nombreProveedor)
+        {
+            _ConsultasCliente.TurnoModificacionCambiarProveedor(IdTurno, nombreProveedor);
+        }
+
+        public void TurnoModificacionRechazar(int IdTurno)
+        {
+            _ConsultasCliente.TurnoModificacionRechazar(IdTurno);
+        }
     }
 }
