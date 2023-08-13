@@ -75,6 +75,10 @@ namespace CapaDePresentacion.PantallaTurno
                     lblProveedor.Visible = false;
                     lblProveedorCategoria.Visible = false;
                     break;
+                case Roles.rolAdmin:
+                    dtpFecha.Visible = true;
+                    lblFechaModificacion.Visible = true;
+                    break;
             }
         }
 
