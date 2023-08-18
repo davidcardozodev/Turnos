@@ -1,4 +1,6 @@
-﻿using CapaDeEntidades;
+﻿using CapaComun;
+using CapaDeEntidades;
+using CapaDeNegocio;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
@@ -13,6 +15,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         private void ProveedorTurnoLlamadorEnCurso_Load(object sender, System.EventArgs e)
         {
             CargarInformacion();
+            OcultarOpcionFinalizar();
+        }
+
+        private void OcultarOpcionFinalizar()
+        {
+            if (DatosUsuario.Rol == Roles.rolLlamador)
+                btnFinalizar.Visible = false;
         }
 
         public int Id { get; set; }
