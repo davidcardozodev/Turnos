@@ -8,5 +8,6 @@
         public const string Pendiente = "Pendiente";
         public const string Asignado = "Asignado";
         public const string EnCurso = "En curso";
+        public const string Aceptado = "Aceptado";
     }
 }
