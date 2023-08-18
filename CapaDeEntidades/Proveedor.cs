@@ -39,5 +39,10 @@ namespace CapaDeEntidades
         {
             _ConsultasProveedor.TurnoProveedorFinalizar(idTurno);
         }
+
+        public void ProveedorCargarDisponibilidad(int idProveedor)
+        {
+            _ConsultasProveedor.ProveedorCargarDisponibilidad(idProveedor);
+        }
     }
 }

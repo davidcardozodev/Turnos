@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTurnosClientes = new System.Windows.Forms.Button();
             this.btnLlamador = new System.Windows.Forms.Button();
+            this.btnTurnosClientes = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,17 +44,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 2;
             // 
-            // btnTurnosClientes
-            // 
-            this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosClientes.Location = new System.Drawing.Point(46, 164);
-            this.btnTurnosClientes.Name = "btnTurnosClientes";
-            this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
-            this.btnTurnosClientes.TabIndex = 2;
-            this.btnTurnosClientes.Text = "Turnos de los clientes";
-            this.btnTurnosClientes.UseVisualStyleBackColor = true;
-            this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
-            // 
             // btnLlamador
             // 
             this.btnLlamador.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,6 +55,17 @@
             this.btnLlamador.UseVisualStyleBackColor = true;
             this.btnLlamador.Click += new System.EventHandler(this.btnLlamador_Click);
             // 
+            // btnTurnosClientes
+            // 
+            this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTurnosClientes.Location = new System.Drawing.Point(46, 164);
+            this.btnTurnosClientes.Name = "btnTurnosClientes";
+            this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
+            this.btnTurnosClientes.TabIndex = 2;
+            this.btnTurnosClientes.Text = "Turnos de los clientes";
+            this.btnTurnosClientes.UseVisualStyleBackColor = true;
+            this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
+            // 
             // ProveedorPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -75,6 +75,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProveedorPrincipal";
             this.Text = "ProveedorPrincipal";
+            this.Load += new System.EventHandler(this.ProveedorPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

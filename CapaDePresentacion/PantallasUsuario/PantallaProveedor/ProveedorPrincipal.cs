@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaComun;
+using CapaDeEntidades;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -56,6 +58,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         private void btnLlamador_Click(object sender, EventArgs e)
         {
             AbrirFormulario<ProveedorLlamador>();
+        }
+
+        private void ProveedorPrincipal_Load(object sender, EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+
+            proveedor.ProveedorCargarDisponibilidad(DatosUsuario.Id);
         }
     }
 }

@@ -184,5 +184,40 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void ProveedorCargarDisponibilidad(int idProveedor)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ProveedorCargarDisponibilidad";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idProveedor", idProveedor);
+
+            SqlDataReader Reader = _Comando.ExecuteReader();
+
+            LeerFilas(Reader, _Conexion);
+        }
+
+        private static bool LeerFilas(SqlDataReader Reader, Conexion conexion)
+        {
+            if (Reader.HasRows)
+            {
+                while (Reader.Read())
+                    FormatoCamposCache(Reader);
+
+                conexion.ConexionCerrar();
+                return true;
+            }
+            else
+            {
+                conexion.ConexionCerrar();
+                return false;
+            }
+
+        }
+
+        private static void FormatoCamposCache(SqlDataReader Reader)
+        {
+            DatosDisponibilidad.HorarioInicio = int.Parse(Reader["HorarioInicio"].ToString());
+            DatosDisponibilidad.HorarioFin = int.Parse(Reader["HorarioFin"].ToString());
+        }
     }
 }
