@@ -113,6 +113,7 @@ namespace CapaDeDatos
                 string Mes = _Lector["Mes"].ToString();
                 string Anio = _Lector["Anio"].ToString();
                 string NombreProveedor = _Lector["NombreProveedor"].ToString();
+                string Estado = _Lector["Estado"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
@@ -122,6 +123,7 @@ namespace CapaDeDatos
                     Mes = Mes,
                     Anio = Anio,
                     NombreProveedor = NombreProveedor,
+                    Estado = Estado
                 });
             }
 
