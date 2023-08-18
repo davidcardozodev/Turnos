@@ -4,6 +4,7 @@ using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
@@ -63,20 +64,28 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             RellenarTextoInformacion();
             DesactivarOpcionesTurnoEstado();
+            CambiarColorEstado();
         }
 
         private void DesactivarOpcionesTurnoEstado()
         {
             if (Estado != Estados.Pendiente)
             {
-                btnAceptar.Enabled = false;
-                btnRechazar.Enabled = false;
+                btnAceptar.Visible = false;
+                btnRechazar.Visible = false;
+            }
+
+            if (Estado == Estados.Cancelado)
+            {
+                lblInformacion.Text = "Dado de baja por el administrador";
+                lblEstado.Visible = false;
             }
         }
 
         private void RellenarTextoInformacion()
         {
             lblInformacion.Text = "";
+            lblEstado.Text = Estado;
 
             if (NombreProveedor != Estados.SinDefinir)
                 lblInformacion.Text += "Nuevo proveedor: " + NombreProveedor + Environment.NewLine;
@@ -116,5 +125,24 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
+
+        private void CambiarColorEstado()
+        {
+            switch (Estado)
+            {
+                case Estados.Rechazado:
+                case Estados.Cancelado:
+                    lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
+                    lblInformacion.ForeColor = Color.FromArgb(255, 0, 0);
+                    break;
+                case Estados.Aceptado:
+                    lblEstado.ForeColor = Color.FromArgb(0, 255, 0);
+                    break;
+                case Estados.Pendiente:
+                    lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
+                    break;
+            }
+        }
+
     }
 }

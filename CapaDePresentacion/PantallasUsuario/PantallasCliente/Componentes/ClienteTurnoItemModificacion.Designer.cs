@@ -32,6 +32,7 @@
             this.linkTurnoOriginal = new System.Windows.Forms.LinkLabel();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnRechazar = new System.Windows.Forms.Button();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblInformacion
@@ -78,17 +79,28 @@
             this.btnRechazar.UseVisualStyleBackColor = true;
             this.btnRechazar.Click += new System.EventHandler(this.btnRechazar_Click);
             // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(14, 106);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(103, 32);
+            this.lblEstado.TabIndex = 4;
+            this.lblEstado.Text = "Estado";
+            // 
             // ClienteTurnoItemModificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.btnRechazar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.linkTurnoOriginal);
             this.Controls.Add(this.lblInformacion);
             this.Name = "ClienteTurnoItemModificacion";
-            this.Size = new System.Drawing.Size(1227, 114);
+            this.Size = new System.Drawing.Size(1227, 190);
             this.Load += new System.EventHandler(this.ClienteTurnoItemModificacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,5 +113,6 @@
         private System.Windows.Forms.LinkLabel linkTurnoOriginal;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnRechazar;
+        private System.Windows.Forms.Label lblEstado;
     }
 }
