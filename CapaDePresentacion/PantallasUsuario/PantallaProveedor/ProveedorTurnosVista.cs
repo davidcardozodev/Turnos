@@ -24,7 +24,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = proveedor.TurnoCargarProveedor();
+            ListaTurnos = proveedor.ProveedorCargarTurnos(DatosDisponibilidad.HorarioInicio, DatosDisponibilidad.HorarioFin);
 
             foreach (FormatoTurnos Turno in ListaTurnos)
             {

@@ -16,11 +16,13 @@ namespace CapaDeDatos
 
         #endregion
 
-        public List<FormatoTurnos> TurnoCargarProveedor()
+        public List<FormatoTurnos> ProveedorCargarTurnos(int horarioInicio, int horarioFin)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarProveedor";
+            _Comando.CommandText = "ProveedorCargarTurnos";
             _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
+            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
 
             _Lector = _Comando.ExecuteReader();
 
