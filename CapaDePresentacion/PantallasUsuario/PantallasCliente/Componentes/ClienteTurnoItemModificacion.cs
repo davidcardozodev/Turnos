@@ -16,6 +16,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             InitializeComponent();
         }
 
+        #region "Atributos"
 
         public int IdTurno { get; set; }
         public string DiaNombre { get; set; }
@@ -27,11 +28,35 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         public string Estado { get; set; }
         public string NombreProveedor { get; set; }
 
+        #endregion
 
+        #region "Cargar informacion"
 
-        private void linkTurnoOriginal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ClienteTurnoItemModificacion_Load(object sender, EventArgs e)
         {
-            CargarTurnoItem();
+            RellenarTextoInformacion();
+            DesactivarOpcionesTurnoEstado();
+            CambiarColorEstado();
+        }
+
+        private void RellenarTextoInformacion()
+        {
+            lblInformacion.Text = "";
+            lblEstado.Text = Estado;
+            RellenarInformacionProveedor();
+            RellenarInformacionFecha();
+        }
+
+        private void RellenarInformacionFecha()
+        {
+            if (DiaNombre != "")
+                lblInformacion.Text += "Nueva fecha: " + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio;
+        }
+
+        private void RellenarInformacionProveedor()
+        {
+            if (NombreProveedor != Estados.SinDefinir)
+                lblInformacion.Text += "Nuevo proveedor: " + NombreProveedor + Environment.NewLine;
         }
 
         private void CargarTurnoItem()
@@ -60,21 +85,21 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             }
         }
 
-        private void ClienteTurnoItemModificacion_Load(object sender, EventArgs e)
+        #endregion
+
+        private void linkTurnoOriginal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            RellenarTextoInformacion();
-            DesactivarOpcionesTurnoEstado();
-            CambiarColorEstado();
+            CargarTurnoItem();
         }
 
         private void DesactivarOpcionesTurnoEstado()
         {
-            if (Estado != Estados.Pendiente)
-            {
-                btnAceptar.Visible = false;
-                btnRechazar.Visible = false;
-            }
+            OcultarOpcionesEstadoNoPendiente();
+            MostrarNotificacionBaja();
+        }
 
+        private void MostrarNotificacionBaja()
+        {
             if (Estado == Estados.Cancelado)
             {
                 lblInformacion.Text = "Dado de baja por el administrador";
@@ -82,40 +107,49 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             }
         }
 
-        private void RellenarTextoInformacion()
+        private void OcultarOpcionesEstadoNoPendiente()
         {
-            lblInformacion.Text = "";
-            lblEstado.Text = Estado;
-
-            if (NombreProveedor != Estados.SinDefinir)
-                lblInformacion.Text += "Nuevo proveedor: " + NombreProveedor + Environment.NewLine;
-
-            if (DiaNombre != "")
-                lblInformacion.Text += "Nueva fecha: " + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio;
+            if (Estado != Estados.Pendiente)
+            {
+                btnAceptar.Visible = false;
+                btnRechazar.Visible = false;
+            }
         }
+
+        #region "Aceptar cambios"
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
 
             cliente.TurnoModificacionAceptar(IdTurno);
+            CambiarProveedor();
+            CambiarFecha();
 
-            if (NombreProveedor != Estados.SinDefinir)
-            {
-                Cliente clienteTurnoModificacionCambiarProveedor = new Cliente();
+            MessageBox.Show(Mensajes.GuardadoCambios);
+        }
 
-                clienteTurnoModificacionCambiarProveedor.TurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
-            }
-
+        private void CambiarFecha()
+        {
             if (DiaNombre != "")
             {
                 Cliente clienteTurnoModificacionCambiarFecha = new Cliente();
 
                 clienteTurnoModificacionCambiarFecha.TurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
             }
-
-            MessageBox.Show(Mensajes.GuardadoCambios);
         }
+
+        private void CambiarProveedor()
+        {
+            if (NombreProveedor != Estados.SinDefinir)
+            {
+                Cliente clienteTurnoModificacionCambiarProveedor = new Cliente();
+
+                clienteTurnoModificacionCambiarProveedor.TurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
+            }
+        }
+
+        #endregion
 
         private void btnRechazar_Click(object sender, EventArgs e)
         {
