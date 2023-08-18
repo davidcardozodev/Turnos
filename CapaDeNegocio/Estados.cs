@@ -9,5 +9,6 @@
         public const string Asignado = "Asignado";
         public const string EnCurso = "En curso";
         public const string Aceptado = "Aceptado";
+        public const string Rechazado = "Rechazado";
     }
 }
