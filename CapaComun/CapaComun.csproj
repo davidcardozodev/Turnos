@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosDisponibilidad.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="DatosUsuarioItem.cs" />
     <Compile Include="FormatoTurnos.cs" />
