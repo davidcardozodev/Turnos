@@ -61,5 +61,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             AbrirFormulario<AdminVistaUsuarios>();
         }
+
+        private void btnAgregarUsuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminRegistroUsuario>();
+        }
     }
 }
