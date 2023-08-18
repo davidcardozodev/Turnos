@@ -181,5 +181,17 @@ namespace CapaDeDatos
             _Comando.Parameters.Clear();
         }
 
+        public void AdminGuardarBajaNotificacion(int idTurno, int idAdmin, int idCliente)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminGuardarBajaNotificacion";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.Parameters.AddWithValue("@idAdmin", idAdmin);
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
     }
 }

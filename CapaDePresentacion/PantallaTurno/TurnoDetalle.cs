@@ -120,6 +120,17 @@ namespace CapaDePresentacion.PantallaTurno
             Turno turno = new Turno();
 
             turno.TurnoDarBaja(Id);
+            AdminDarBajaTurno();
+        }
+
+        private void AdminDarBajaTurno()
+        {
+            if (DatosUsuario.Rol == Roles.rolAdmin)
+            {
+                Admin admin = new Admin();
+
+                admin.AdminGuardarBajaNotificacion(Id, DatosUsuario.Id, IdCliente);
+            }
         }
 
         private void CambiarColorEstado()

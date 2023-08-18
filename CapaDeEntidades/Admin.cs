@@ -50,5 +50,10 @@ namespace CapaDeEntidades
         {
             _ConsultasAdmin.AdminRegistrarUsuario(nombreUsuario, clave, primerNombre, segundoNombre, email, rol);
         }
+
+        public void AdminGuardarBajaNotificacion(int idTurno, int idAdmin, int idCliente)
+        {
+            _ConsultasAdmin.AdminGuardarBajaNotificacion(idTurno, idAdmin, idCliente);
+        }
     }
 }
