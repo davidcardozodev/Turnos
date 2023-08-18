@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDeNegocio;
 using CapaDePresentacion.PantallaGenerales;
+using CapaDePresentacion.PantallaLlamador;
 using CapaDePresentacion.PantallasUsuario;
 using CapaDePresentacion.PantallasUsuario.PantallaProveedor;
 using CapaDePresentacion.PantallasUsuario.PantallasAdmin;
@@ -75,6 +76,9 @@ namespace CapaDePresentacion.PantallasGenerales
 
             if (DatosUsuario.Rol == Roles.rolProveedor)
                 AbrirFormulario<ProveedorPrincipal>();
+
+            if (DatosUsuario.Rol == Roles.rolLlamador)
+                AbrirFormulario<PantallaLlamadorPrincipal>();
         }
 
         #endregion
