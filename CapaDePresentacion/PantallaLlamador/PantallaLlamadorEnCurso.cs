@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallaLlamador
 {
-    public partial class PantallaLlamadorPrincipal : Form
+    public partial class PantallaLlamadorEnCurso : Form
     {
-        public PantallaLlamadorPrincipal()
+        public PantallaLlamadorEnCurso()
         {
             InitializeComponent();
         }

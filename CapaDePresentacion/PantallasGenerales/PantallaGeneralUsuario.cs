@@ -78,7 +78,7 @@ namespace CapaDePresentacion.PantallasGenerales
                 AbrirFormulario<ProveedorPrincipal>();
 
             if (DatosUsuario.Rol == Roles.rolLlamador)
-                AbrirFormulario<PantallaLlamadorPrincipal>();
+                AbrirFormulario<PantallaLlamadorEnCurso>();
         }
 
         #endregion

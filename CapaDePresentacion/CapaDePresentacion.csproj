@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PantallaLlamador\PantallaLlamadorPrincipal.cs">
+    <Compile Include="PantallaLlamador\PantallaLlamadorEnCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaLlamador\PantallaLlamadorPrincipal.Designer.cs">
-      <DependentUpon>PantallaLlamadorPrincipal.cs</DependentUpon>
+    <Compile Include="PantallaLlamador\PantallaLlamadorEnCurso.Designer.cs">
+      <DependentUpon>PantallaLlamadorEnCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasGenerales\Inicio.cs">
       <SubType>Form</SubType>
@@ -198,8 +198,8 @@
     <Compile Include="PantallaTurno\TurnoDetalle.Designer.cs">
       <DependentUpon>TurnoDetalle.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PantallaLlamador\PantallaLlamadorPrincipal.resx">
-      <DependentUpon>PantallaLlamadorPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaLlamador\PantallaLlamadorEnCurso.resx">
+      <DependentUpon>PantallaLlamadorEnCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasGenerales\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

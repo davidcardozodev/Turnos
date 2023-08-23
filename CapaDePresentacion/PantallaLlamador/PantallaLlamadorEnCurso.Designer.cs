@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallaLlamador
 {
-    partial class PantallaLlamadorPrincipal
+    partial class PantallaLlamadorEnCurso
     {
         /// <summary>
         /// Required designer variable.
