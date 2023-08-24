@@ -43,6 +43,8 @@
             this.lblClave = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblTipoPlan = new System.Windows.Forms.Label();
+            this.comboTipoPlan = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,7 +142,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(546, 444);
+            this.btnRegistrar.Location = new System.Drawing.Point(546, 485);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(181, 59);
             this.btnRegistrar.TabIndex = 47;
@@ -168,6 +170,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblTipoPlan);
+            this.panel1.Controls.Add(this.comboTipoPlan);
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.txtClave);
             this.panel1.Controls.Add(this.lblPrimerNombre);
@@ -183,7 +187,7 @@
             this.panel1.Controls.Add(this.txtPrimerNombre);
             this.panel1.Location = new System.Drawing.Point(12, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(788, 523);
+            this.panel1.Size = new System.Drawing.Size(788, 573);
             this.panel1.TabIndex = 50;
             // 
             // lblTitulo
@@ -196,11 +200,30 @@
             this.lblTitulo.TabIndex = 51;
             this.lblTitulo.Text = "Registrar usuario";
             // 
+            // lblTipoPlan
+            // 
+            this.lblTipoPlan.AutoSize = true;
+            this.lblTipoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoPlan.Location = new System.Drawing.Point(55, 416);
+            this.lblTipoPlan.Name = "lblTipoPlan";
+            this.lblTipoPlan.Size = new System.Drawing.Size(194, 37);
+            this.lblTipoPlan.TabIndex = 50;
+            this.lblTipoPlan.Text = "Tipo de plan";
+            // 
+            // comboTipoPlan
+            // 
+            this.comboTipoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTipoPlan.FormattingEnabled = true;
+            this.comboTipoPlan.Location = new System.Drawing.Point(294, 413);
+            this.comboTipoPlan.Name = "comboTipoPlan";
+            this.comboTipoPlan.Size = new System.Drawing.Size(433, 40);
+            this.comboTipoPlan.TabIndex = 51;
+            // 
             // AdminRegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 627);
+            this.ClientSize = new System.Drawing.Size(829, 681);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -231,5 +254,7 @@
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblTipoPlan;
+        private System.Windows.Forms.ComboBox comboTipoPlan;
     }
 }

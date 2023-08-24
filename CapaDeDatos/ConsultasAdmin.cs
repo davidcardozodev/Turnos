@@ -166,7 +166,7 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminRegistrarUsuario(string nombreUsuario, string clave, string primerNombre, string segundoNombre, string email, string rol)
+        public void AdminRegistrarUsuario(string nombreUsuario, string clave, string primerNombre, string segundoNombre, string email, string rol, string tipoPlan)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminRegistrarUsuario";
@@ -177,6 +177,7 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@segundoNombre", segundoNombre);
             _Comando.Parameters.AddWithValue("@email", email);
             _Comando.Parameters.AddWithValue("@rol", rol);
+            _Comando.Parameters.AddWithValue("@tipoPlan", tipoPlan);
             _Comando.ExecuteNonQuery();
             _Comando.Parameters.Clear();
         }

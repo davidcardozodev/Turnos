@@ -15,6 +15,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void AdminRegistroUsuario_Load(object sender, EventArgs e)
         {
             CargarRoles();
+            CargarTipoPlanes();
+        }
+
+        private void CargarTipoPlanes()
+        {
+            comboTipoPlan.Items.Add(Plan.Basico);
+            comboTipoPlan.Items.Add(Plan.Estandar);
+            comboTipoPlan.Items.Add(Plan.Premium);
         }
 
         private void CargarRoles()
@@ -28,7 +36,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminRegistrarUsuario(txtUsuario.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, txtClave.Text, comboRol.Text);
+            admin.AdminRegistrarUsuario(txtUsuario.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, txtClave.Text, comboRol.Text, comboTipoPlan.Text);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
