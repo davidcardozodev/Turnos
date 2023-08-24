@@ -28,84 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDiaNombre = new System.Windows.Forms.Label();
-            this.lblDiaNumero = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.linkVerMas = new System.Windows.Forms.LinkLabel();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.lblInformacion = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblDiaNombre
-            // 
-            this.lblDiaNombre.AutoSize = true;
-            this.lblDiaNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaNombre.Location = new System.Drawing.Point(20, 17);
-            this.lblDiaNombre.Name = "lblDiaNombre";
-            this.lblDiaNombre.Size = new System.Drawing.Size(157, 32);
-            this.lblDiaNombre.TabIndex = 0;
-            this.lblDiaNombre.Text = "DiaNombre";
-            // 
-            // lblDiaNumero
-            // 
-            this.lblDiaNumero.AutoSize = true;
-            this.lblDiaNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaNumero.Location = new System.Drawing.Point(20, 86);
-            this.lblDiaNumero.Name = "lblDiaNumero";
-            this.lblDiaNumero.Size = new System.Drawing.Size(157, 32);
-            this.lblDiaNumero.TabIndex = 1;
-            this.lblDiaNumero.Text = "DiaNumero";
-            // 
-            // lblHora
-            // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(23, 16);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(75, 32);
-            this.lblHora.TabIndex = 2;
-            this.lblHora.Text = "Hora";
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(23, 85);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(163, 32);
-            this.lblDescripcion.TabIndex = 3;
-            this.lblDescripcion.Text = "Descripcion";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightCyan;
-            this.panel1.Controls.Add(this.lblDiaNombre);
-            this.panel1.Controls.Add(this.lblDiaNumero);
-            this.panel1.Location = new System.Drawing.Point(188, 17);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 140);
-            this.panel1.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightCyan;
-            this.panel2.Controls.Add(this.lblEstado);
-            this.panel2.Controls.Add(this.lblHora);
-            this.panel2.Controls.Add(this.lblDescripcion);
-            this.panel2.Location = new System.Drawing.Point(406, 17);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(635, 140);
-            this.panel2.TabIndex = 6;
             // 
             // linkVerMas
             // 
             this.linkVerMas.AutoSize = true;
             this.linkVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkVerMas.Location = new System.Drawing.Point(33, 68);
+            this.linkVerMas.Location = new System.Drawing.Point(21, 23);
             this.linkVerMas.Name = "linkVerMas";
             this.linkVerMas.Size = new System.Drawing.Size(118, 32);
             this.linkVerMas.TabIndex = 7;
@@ -117,41 +49,41 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(439, 17);
+            this.lblEstado.Location = new System.Drawing.Point(160, 23);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
-            this.lblEstado.TabIndex = 5;
+            this.lblEstado.TabIndex = 12;
             this.lblEstado.Text = "Estado";
+            // 
+            // lblInformacion
+            // 
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.Location = new System.Drawing.Point(321, 23);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(162, 32);
+            this.lblInformacion.TabIndex = 13;
+            this.lblInformacion.Text = "Informacion";
             // 
             // ClienteTurnoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.linkVerMas);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "ClienteTurnoItem";
-            this.Size = new System.Drawing.Size(1060, 178);
+            this.Size = new System.Drawing.Size(1012, 67);
             this.Load += new System.EventHandler(this.ClienteTurnoItem_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblDiaNombre;
-        private System.Windows.Forms.Label lblDiaNumero;
-        private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.LinkLabel linkVerMas;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblInformacion;
     }
 }

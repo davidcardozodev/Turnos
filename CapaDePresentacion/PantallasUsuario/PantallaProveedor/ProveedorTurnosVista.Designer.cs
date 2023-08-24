@@ -47,9 +47,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(261, 114);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(47, 114);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(756, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1218, 518);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label1
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 652);
+            this.ClientSize = new System.Drawing.Size(1305, 652);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);

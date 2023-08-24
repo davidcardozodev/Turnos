@@ -28,6 +28,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         public string Estado { get; set; }
         public string NombreProveedor { get; set; }
 
+        private string espacio = "   ";
+
         #endregion
 
         #region "Cargar informacion"
@@ -37,6 +39,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             RellenarTextoInformacion();
             DesactivarOpcionesTurnoEstado();
             CambiarColorEstado();
+            MostrarNotificacionBaja();
         }
 
         private void RellenarTextoInformacion()
@@ -49,14 +52,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void RellenarInformacionFecha()
         {
+            string de = " de ";
+
+
             if (DiaNombre != "")
-                lblInformacion.Text += "Nueva fecha: " + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio;
+                lblInformacion.Text += DiaNombre + " " + DiaNumero + de + Mes + de + Anio + espacio;
         }
 
         private void RellenarInformacionProveedor()
         {
             if (NombreProveedor != Estados.SinDefinir)
-                lblInformacion.Text += "Nuevo proveedor: " + NombreProveedor + Environment.NewLine;
+                lblInformacion.Text += NombreProveedor + espacio;
         }
 
         private void CargarTurnoItem()
@@ -94,26 +100,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void DesactivarOpcionesTurnoEstado()
         {
-            OcultarOpcionesEstadoNoPendiente();
-            MostrarNotificacionBaja();
+            if (Estado != Estados.Pendiente)
+            {
+                btnAceptar.Enabled = false;
+                btnRechazar.Enabled = false;
+            }
         }
 
         private void MostrarNotificacionBaja()
         {
             if (Estado == Estados.Cancelado)
-            {
                 lblInformacion.Text = "Dado de baja por el administrador";
-                lblEstado.Visible = false;
-            }
-        }
-
-        private void OcultarOpcionesEstadoNoPendiente()
-        {
-            if (Estado != Estados.Pendiente)
-            {
-                btnAceptar.Visible = false;
-                btnRechazar.Visible = false;
-            }
         }
 
         #region "Aceptar cambios"
@@ -167,7 +164,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
                 case Estados.Rechazado:
                 case Estados.Cancelado:
                     lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
-                    lblInformacion.ForeColor = Color.FromArgb(255, 0, 0);
                     break;
                 case Estados.Aceptado:
                     lblEstado.ForeColor = Color.FromArgb(0, 255, 0);

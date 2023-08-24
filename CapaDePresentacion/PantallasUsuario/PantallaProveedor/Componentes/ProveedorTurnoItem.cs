@@ -1,4 +1,6 @@
-﻿using CapaDePresentacion.PantallaTurno;
+﻿using CapaDeNegocio;
+using CapaDePresentacion.PantallaTurno;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
@@ -9,6 +11,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         {
             InitializeComponent();
         }
+
+        #region "Atributos"
 
         public int Id { get; set; }
         public string DiaNombre { get; set; }
@@ -21,22 +25,26 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
-        public string Presencia { get; set; }
+        public string PresenciaEstado { get; set; }
         public string TipoPlan { get; set; }
+
+        #endregion
 
         private void CargarInformacion()
         {
-            lblDiaNombre.Text = DiaNombre;
-            lblDiaNumero.Text = DiaNumero;
-            lblHora.Text = Hora + ":00hs";
-            lblCliente.Text = PrimerNombre + " " + SegundoNombre;
-            lblPresencia.Text = Presencia;
-            lblPlan.Text = TipoPlan;
+            string espacio = "      ";
+
+            Hora += ":00hs";
+
+            lblPresencia.Text = PresenciaEstado;
+
+            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + espacio + Hora + espacio + TipoPlan;
         }
 
         private void ProveedorTurnoItem_Load(object sender, System.EventArgs e)
         {
             CargarInformacion();
+            CambiarColorPresencia();
         }
 
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -54,9 +62,25 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             turnoDetalle.Usuario = Usuario;
             turnoDetalle.PrimerNombre = PrimerNombre;
             turnoDetalle.SegundoNombre = SegundoNombre;
-            turnoDetalle.Presencia = Presencia;
+            turnoDetalle.Presencia = PresenciaEstado;
 
             turnoDetalle.Show();
         }
+
+
+        private void CambiarColorPresencia()
+        {
+            switch (PresenciaEstado)
+            {
+                case Presencia.Ausente:
+                    lblPresencia.ForeColor = Color.FromArgb(255, 0, 0);
+                    break;
+
+                case Presencia.Presente:
+                    lblPresencia.ForeColor = Color.FromArgb(0, 255, 0);
+                    break;
+            }
+        }
+
     }
 }

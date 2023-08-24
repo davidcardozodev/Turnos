@@ -39,7 +39,7 @@
             // 
             this.lblInformacion.AutoSize = true;
             this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion.Location = new System.Drawing.Point(224, 18);
+            this.lblInformacion.Location = new System.Drawing.Point(390, 33);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.linkTurnoOriginal.AutoSize = true;
             this.linkTurnoOriginal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkTurnoOriginal.Location = new System.Drawing.Point(14, 43);
+            this.linkTurnoOriginal.Location = new System.Drawing.Point(13, 28);
             this.linkTurnoOriginal.Name = "linkTurnoOriginal";
             this.linkTurnoOriginal.Size = new System.Drawing.Size(189, 32);
             this.linkTurnoOriginal.TabIndex = 1;
@@ -59,10 +59,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(879, 18);
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(1061, 22);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(150, 62);
+            this.btnAceptar.Size = new System.Drawing.Size(122, 47);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // 
             // btnRechazar
             // 
-            this.btnRechazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRechazar.Location = new System.Drawing.Point(1056, 18);
+            this.btnRechazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRechazar.Location = new System.Drawing.Point(1189, 22);
             this.btnRechazar.Name = "btnRechazar";
-            this.btnRechazar.Size = new System.Drawing.Size(157, 62);
+            this.btnRechazar.Size = new System.Drawing.Size(138, 47);
             this.btnRechazar.TabIndex = 3;
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(14, 106);
+            this.lblEstado.Location = new System.Drawing.Point(222, 33);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 4;
@@ -100,7 +100,7 @@
             this.Controls.Add(this.linkTurnoOriginal);
             this.Controls.Add(this.lblInformacion);
             this.Name = "ClienteTurnoItemModificacion";
-            this.Size = new System.Drawing.Size(1227, 190);
+            this.Size = new System.Drawing.Size(1341, 90);
             this.Load += new System.EventHandler(this.ClienteTurnoItemModificacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

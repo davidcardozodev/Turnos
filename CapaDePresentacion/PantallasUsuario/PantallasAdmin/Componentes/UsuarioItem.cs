@@ -19,11 +19,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
         private void UsuarioItem_Load(object sender, System.EventArgs e)
         {
-            lblUsuario.Text = Usuario;
-            lblNombre.Text = PrimerNombre;
-            lblApellido.Text = SegundoNombre;
-            lblEmail.Text = Email;
-            lblRol.Text = Rol;
+            string espacio = "      ";
+
+            lblInformacion.Text = Usuario + espacio + PrimerNombre + " " + SegundoNombre + espacio + Email + espacio + Rol;
         }
 
         private void linkModificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
