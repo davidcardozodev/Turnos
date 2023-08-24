@@ -151,6 +151,7 @@
             this.Controls.Add(this.panelCalendario);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.monthCalendar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClienteCalendario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteCalendario";

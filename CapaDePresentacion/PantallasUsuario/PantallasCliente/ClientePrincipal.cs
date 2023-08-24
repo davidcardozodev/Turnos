@@ -66,8 +66,7 @@ namespace CapaDePresentacion.PantallasUsuario
 
         private void btnCalendario_Click(object sender, System.EventArgs e)
         {
-            ClienteCalendario clienteCalendario = new ClienteCalendario();
-            clienteCalendario.Show();
+            AbrirFormulario<ClienteCalendario>();
         }
     }
 }
