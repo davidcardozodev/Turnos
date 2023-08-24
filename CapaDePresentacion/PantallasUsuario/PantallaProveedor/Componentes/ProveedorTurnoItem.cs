@@ -21,6 +21,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
+        public string Presencia { get; set; }
+        public string TipoPlan { get; set; }
 
         private void CargarInformacion()
         {
@@ -28,6 +30,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             lblDiaNumero.Text = DiaNumero;
             lblHora.Text = Hora + ":00hs";
             lblCliente.Text = PrimerNombre + " " + SegundoNombre;
+            lblPresencia.Text = Presencia;
+            lblPlan.Text = TipoPlan;
         }
 
         private void ProveedorTurnoItem_Load(object sender, System.EventArgs e)
@@ -38,7 +42,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             TurnoDetalle turnoDetalle = new TurnoDetalle();
-
 
             turnoDetalle.Id = Id;
             turnoDetalle.DiaNombre = DiaNombre;
@@ -51,6 +54,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             turnoDetalle.Usuario = Usuario;
             turnoDetalle.PrimerNombre = PrimerNombre;
             turnoDetalle.SegundoNombre = SegundoNombre;
+            /* turnoDetalle.Presencia = Presencia;
+             turnoDetalle.TipoPlan = TipoPlan;*/
 
             turnoDetalle.Show();
         }

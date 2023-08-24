@@ -15,6 +15,8 @@
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
         public string NombreProveedor { get; set; }
+        public string Presencia { get; set; }
+        public string TipoPlan { get; set; }
 
     }
 }

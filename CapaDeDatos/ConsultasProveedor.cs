@@ -40,6 +40,8 @@ namespace CapaDeDatos
                 string Usuario = _Lector["Usuario"].ToString();
                 string PrimerNombre = _Lector["PrimerNombre"].ToString();
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Presencia = _Lector["Presencia"].ToString();
+                string TipoPlan = _Lector["TipoPlan"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
@@ -54,7 +56,9 @@ namespace CapaDeDatos
                     Estado = Estado,
                     Usuario = Usuario,
                     PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre
+                    SegundoNombre = SegundoNombre,
+                    Presencia = Presencia,
+                    TipoPlan = TipoPlan
                 });
             }
 

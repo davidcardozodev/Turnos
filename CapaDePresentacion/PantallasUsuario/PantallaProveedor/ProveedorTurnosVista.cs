@@ -41,6 +41,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 proveedorTurnoItem.Usuario = Turno.Usuario;
                 proveedorTurnoItem.PrimerNombre = Turno.PrimerNombre;
                 proveedorTurnoItem.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoItem.Presencia = Turno.Presencia;
+                proveedorTurnoItem.TipoPlan = Turno.TipoPlan;
 
                 flowLayoutPanel1.Controls.Add(proveedorTurnoItem);
             }
