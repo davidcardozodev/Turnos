@@ -1,5 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
+using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void ClienteTurnosVista_Load(object sender, System.EventArgs e)
         {
             CargarTurnoItem();
+            CargarEstadosTurno();
+        }
+
+        private void CargarEstadosTurno()
+        {
+            comboEstado.Items.Add("Mostrar todo");
+            comboEstado.Items.Add(Estados.Asignado);
+            comboEstado.Items.Add(Estados.Cancelado);
+            comboEstado.Items.Add(Estados.EnCurso);
+            comboEstado.Items.Add(Estados.Pendiente);
+            comboEstado.SelectedItem = "Mostrar todo";
         }
 
         #region "Cargar Formulario"
@@ -61,6 +73,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
+            LimpiarTurnos();
+
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
             ListaTurnos = cliente.TurnoCargar(DatosUsuario.Id);
@@ -97,6 +111,47 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void btnNotificaciones_Click(object sender, System.EventArgs e)
         {
             AbrirFormulario<ClienteTurnosVistaModificacion>();
+        }
+
+        private void comboEstado_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if (comboEstado.Text == "Mostrar todo")
+                CargarTurnoItem();
+            else
+                CargarTurnoEstadoFiltrado();
+        }
+
+        private void CargarTurnoEstadoFiltrado()
+        {
+            Turno turno = new Turno();
+
+            LimpiarTurnos();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = turno.TurnoFiltrarEstado(DatosUsuario.Id, comboEstado.Text);
+
+            foreach (FormatoTurnos Turno in ListaTurnos)
+            {
+                ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
+
+                clienteTurnoItem.Id = Turno.Id;
+                clienteTurnoItem.DiaNombre = Turno.DiaNombre;
+                clienteTurnoItem.DiaNumero = Turno.DiaNumero;
+                clienteTurnoItem.Mes = Turno.Mes;
+                clienteTurnoItem.Anio = Turno.Anio;
+                clienteTurnoItem.Hora = Turno.Hora;
+                clienteTurnoItem.Descripcion = Turno.Descripcion;
+                clienteTurnoItem.Estado = Turno.Estado;
+                clienteTurnoItem.NombreProveedor = Turno.NombreProveedor;
+
+                flowLayoutPanel1.Controls.Add(clienteTurnoItem);
+            }
+        }
+
+        private void LimpiarTurnos()
+        {
+            flowLayoutPanel1.Controls.Clear();
         }
     }
 }

@@ -31,12 +31,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolverAtras = new System.Windows.Forms.Button();
+            this.comboEstado = new System.Windows.Forms.ComboBox();
+            this.lblMostrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(45, 118);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(45, 188);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1088, 518);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -62,11 +64,33 @@
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
+            // comboEstado
+            // 
+            this.comboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstado.FormattingEnabled = true;
+            this.comboEstado.Location = new System.Drawing.Point(170, 117);
+            this.comboEstado.Name = "comboEstado";
+            this.comboEstado.Size = new System.Drawing.Size(280, 40);
+            this.comboEstado.TabIndex = 8;
+            this.comboEstado.SelectedIndexChanged += new System.EventHandler(this.comboEstado_SelectedIndexChanged);
+            // 
+            // lblMostrar
+            // 
+            this.lblMostrar.AutoSize = true;
+            this.lblMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostrar.Location = new System.Drawing.Point(38, 117);
+            this.lblMostrar.Name = "lblMostrar";
+            this.lblMostrar.Size = new System.Drawing.Size(126, 37);
+            this.lblMostrar.TabIndex = 7;
+            this.lblMostrar.Text = "Mostrar";
+            // 
             // AdminTurnosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 662);
+            this.ClientSize = new System.Drawing.Size(1165, 725);
+            this.Controls.Add(this.comboEstado);
+            this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
@@ -84,5 +108,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVolverAtras;
+        private System.Windows.Forms.ComboBox comboEstado;
+        private System.Windows.Forms.Label lblMostrar;
     }
 }

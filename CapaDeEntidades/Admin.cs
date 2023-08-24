@@ -21,6 +21,11 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuario();
         }
 
+        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string estado)
+        {
+            return _ConsultasAdmin.TurnoCargarEstadoFiltradoAdmin(estado);
+        }
+
         public void AdminModificarUsuario(int idUsuario, string rol)
         {
             _ConsultasAdmin.AdminModificarUsuario(idUsuario, rol);
