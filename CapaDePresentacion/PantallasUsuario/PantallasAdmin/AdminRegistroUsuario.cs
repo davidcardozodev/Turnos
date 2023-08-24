@@ -19,6 +19,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarRolTipoPlanDefecto();
         }
 
+        private string usuario;
+        private string primerNombre;
+        private string segundoNombre;
+        private string email;
+        private string clave;
+        private string rol;
+        private string tipoPlan;
+
         private void CargarRolTipoPlanDefecto()
         {
             comboRol.SelectedItem = Rol.Cliente;
@@ -41,9 +49,39 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            AsignarDatos();
+
+            if (ComprobarCampos())
+                RegistrarUsuario();
+            else
+                MessageBox.Show("Todos los campos deben estar llenos");
+        }
+
+        private bool ComprobarCampos()
+        {
+            return !string.IsNullOrWhiteSpace(usuario) &&
+                   !string.IsNullOrWhiteSpace(primerNombre) &&
+                   !string.IsNullOrWhiteSpace(segundoNombre) &&
+                   !string.IsNullOrWhiteSpace(email) &&
+                   !string.IsNullOrWhiteSpace(clave);
+        }
+
+        private void AsignarDatos()
+        {
+            usuario = txtUsuario.Text;
+            primerNombre = txtPrimerNombre.Text;
+            segundoNombre = txtSegundoNombre.Text;
+            email = txtEmail.Text;
+            clave = txtClave.Text;
+            rol = comboRol.Text;
+            tipoPlan = comboTipoPlan.Text;
+        }
+
+        private void RegistrarUsuario()
+        {
             Admin admin = new Admin();
 
-            admin.AdminRegistrarUsuario(txtUsuario.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, txtClave.Text, comboRol.Text, comboTipoPlan.Text);
+            admin.AdminRegistrarUsuario(usuario, primerNombre, segundoNombre, email, clave, rol, tipoPlan);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
