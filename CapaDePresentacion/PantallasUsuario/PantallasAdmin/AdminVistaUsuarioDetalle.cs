@@ -17,7 +17,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
         public string Email { get; set; }
-        public string Rol { get; set; }
+        public string RolUsuario { get; set; }
 
         private void AdminVistaUsuarioDetalle_Load(object sender, EventArgs e)
         {
@@ -31,12 +31,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void ValorInicialProveedor()
         {
-            comboRol.SelectedText = Rol;
+            comboRol.SelectedText = RolUsuario;
         }
 
         private void ActivarCambioHorarioProveedor()
         {
-            if (Rol == Roles.rolProveedor)
+            if (RolUsuario == Rol.Proveedor)
             {
                 comboInicio.Enabled = true;
                 comboFin.Enabled = true;
@@ -74,14 +74,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             lblUsuario.Text = PrimerNombre + " " + SegundoNombre + " (" + Usuario + ")";
             lblEmail.Text = Email;
-            lblRol.Text = Rol;
+            lblRol.Text = RolUsuario;
         }
 
         private void CargarRoles()
         {
-            comboRol.Items.Add(Roles.rolCliente);
-            comboRol.Items.Add(Roles.rolProveedor);
-            comboRol.Items.Add(Roles.rolAdmin);
+            comboRol.Items.Add(Rol.Cliente);
+            comboRol.Items.Add(Rol.Proveedor);
+            comboRol.Items.Add(Rol.Admin);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -127,7 +127,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboRol.Text == Rol)
+            if (comboRol.Text == RolUsuario)
                 DesactivarOpcionGuardado();
         }
 

@@ -68,16 +68,16 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarPantallaUsuario()
         {
-            if (DatosUsuario.Rol == Roles.rolCliente)
+            if (DatosUsuario.Rol == Rol.Cliente)
                 AbrirFormulario<ClientePrincipal>();
 
-            if (DatosUsuario.Rol == Roles.rolAdmin)
+            if (DatosUsuario.Rol == Rol.Admin)
                 AbrirFormulario<AdminPrincipal>();
 
-            if (DatosUsuario.Rol == Roles.rolProveedor)
+            if (DatosUsuario.Rol == Rol.Proveedor)
                 AbrirFormulario<ProveedorPrincipal>();
 
-            if (DatosUsuario.Rol == Roles.rolLlamador)
+            if (DatosUsuario.Rol == Rol.Llamador)
                 AbrirFormulario<PantallaLlamadorPrincipal>();
         }
 

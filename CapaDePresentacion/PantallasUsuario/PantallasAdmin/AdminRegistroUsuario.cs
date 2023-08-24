@@ -21,7 +21,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarRolTipoPlanDefecto()
         {
-            comboRol.SelectedItem = Roles.rolCliente;
+            comboRol.SelectedItem = Rol.Cliente;
             comboTipoPlan.SelectedItem = Plan.Basico;
         }
 
@@ -34,9 +34,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarRoles()
         {
-            comboRol.Items.Add(Roles.rolCliente);
-            comboRol.Items.Add(Roles.rolProveedor);
-            comboRol.Items.Add(Roles.rolAdmin);
+            comboRol.Items.Add(Rol.Cliente);
+            comboRol.Items.Add(Rol.Proveedor);
+            comboRol.Items.Add(Rol.Admin);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

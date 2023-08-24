@@ -34,7 +34,7 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void CargarProveedores()
         {
-            if (DatosUsuario.Rol == Roles.rolAdmin)
+            if (DatosUsuario.Rol == Rol.Admin)
             {
                 ActivarOpcionProveedores();
 
@@ -61,13 +61,13 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void OcultarOpcionDarBaja()
         {
-            if (DatosUsuario.Rol == Roles.rolProveedor)
+            if (DatosUsuario.Rol == Rol.Proveedor)
                 btnDarDeBaja.Visible = false;
         }
 
         private void ActivarOpcionAsignarProveedor()
         {
-            if (DatosUsuario.Rol == Roles.rolProveedor)
+            if (DatosUsuario.Rol == Rol.Proveedor)
                 btnAsignar.Visible = true;
         }
 
@@ -75,15 +75,15 @@ namespace CapaDePresentacion.PantallaTurno
         {
             switch (DatosUsuario.Rol)
             {
-                case Roles.rolCliente:
+                case Rol.Cliente:
                     lblUsuario.Visible = false;
                     lblUsuarioCategoria.Visible = false;
                     break;
-                case Roles.rolProveedor:
+                case Rol.Proveedor:
                     lblProveedor.Visible = false;
                     lblProveedorCategoria.Visible = false;
                     break;
-                case Roles.rolAdmin:
+                case Rol.Admin:
                     dtpFecha.Visible = true;
                     lblFechaModificacion.Visible = true;
                     break;
@@ -133,7 +133,7 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void AdminDarBajaTurno()
         {
-            if (DatosUsuario.Rol == Roles.rolAdmin)
+            if (DatosUsuario.Rol == Rol.Admin)
             {
                 Admin admin = new Admin();
 

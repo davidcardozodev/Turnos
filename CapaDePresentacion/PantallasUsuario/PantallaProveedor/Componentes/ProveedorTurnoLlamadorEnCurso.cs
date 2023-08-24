@@ -20,7 +20,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void OcultarOpcionFinalizar()
         {
-            if (DatosUsuario.Rol == Roles.rolLlamador)
+            if (DatosUsuario.Rol == Rol.Llamador)
                 btnFinalizar.Visible = false;
         }
 

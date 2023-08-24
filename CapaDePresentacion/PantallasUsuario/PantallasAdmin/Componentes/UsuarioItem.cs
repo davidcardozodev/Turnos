@@ -35,7 +35,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             adminVistaUsuarioDetalle.PrimerNombre = PrimerNombre;
             adminVistaUsuarioDetalle.SegundoNombre = SegundoNombre;
             adminVistaUsuarioDetalle.Email = Email;
-            adminVistaUsuarioDetalle.Rol = Rol;
+            adminVistaUsuarioDetalle.RolUsuario = Rol;
 
             adminVistaUsuarioDetalle.Show();
         }
