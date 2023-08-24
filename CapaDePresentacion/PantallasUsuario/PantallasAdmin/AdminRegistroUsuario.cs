@@ -16,6 +16,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             CargarRoles();
             CargarTipoPlanes();
+            CargarRolTipoPlanDefecto();
+        }
+
+        private void CargarRolTipoPlanDefecto()
+        {
+            comboRol.SelectedItem = Roles.rolCliente;
+            comboTipoPlan.SelectedItem = Plan.Basico;
         }
 
         private void CargarTipoPlanes()
