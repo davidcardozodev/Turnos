@@ -98,5 +98,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             comboHora.SelectedItem = 8;
         }
+
+        private void btnVolverAtras_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

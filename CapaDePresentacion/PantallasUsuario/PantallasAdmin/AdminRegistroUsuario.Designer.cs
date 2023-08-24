@@ -42,9 +42,10 @@
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblTipoPlan = new System.Windows.Forms.Label();
             this.comboTipoPlan = new System.Windows.Forms.ComboBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -190,16 +191,6 @@
             this.panel1.Size = new System.Drawing.Size(788, 573);
             this.panel1.TabIndex = 50;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(299, 19);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(261, 37);
-            this.lblTitulo.TabIndex = 51;
-            this.lblTitulo.Text = "Registrar usuario";
-            // 
             // lblTipoPlan
             // 
             this.lblTipoPlan.AutoSize = true;
@@ -219,11 +210,33 @@
             this.comboTipoPlan.Size = new System.Drawing.Size(433, 40);
             this.comboTipoPlan.TabIndex = 51;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(299, 19);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(261, 37);
+            this.lblTitulo.TabIndex = 51;
+            this.lblTitulo.Text = "Registrar usuario";
+            // 
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverAtras.Location = new System.Drawing.Point(12, 9);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
+            this.btnVolverAtras.TabIndex = 52;
+            this.btnVolverAtras.Text = "Volver atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
+            // 
             // AdminRegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 681);
+            this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -256,5 +269,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblTipoPlan;
         private System.Windows.Forms.ComboBox comboTipoPlan;
+        private System.Windows.Forms.Button btnVolverAtras;
     }
 }

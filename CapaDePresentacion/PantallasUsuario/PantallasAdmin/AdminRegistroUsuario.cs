@@ -47,5 +47,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
+
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFechaCategoria = new System.Windows.Forms.Label();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.panelCalendario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,11 +144,23 @@
             this.lblFechaCategoria.TabIndex = 5;
             this.lblFechaCategoria.Text = "Fecha";
             // 
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverAtras.Location = new System.Drawing.Point(49, 25);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
+            this.btnVolverAtras.TabIndex = 12;
+            this.btnVolverAtras.Text = "Volver atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
+            // 
             // ClienteCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1158, 571);
+            this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.panelCalendario);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.monthCalendar1);
@@ -174,5 +187,6 @@
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblFechaCategoria;
+        private System.Windows.Forms.Button btnVolverAtras;
     }
 }
