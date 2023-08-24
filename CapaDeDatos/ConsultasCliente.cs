@@ -193,5 +193,41 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public bool BuscarCliente(string Usuario, string Clave)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "BuscarCliente";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Usuario", Usuario);
+            _Comando.Parameters.AddWithValue("@Clave", Clave);
+
+            SqlDataReader Reader = _Comando.ExecuteReader();
+
+            return LeerFilas(Reader, _Conexion);
+        }
+
+        private static bool LeerFilas(SqlDataReader Reader, Conexion conexion)
+        {
+            if (Reader.HasRows)
+            {
+                conexion.ConexionCerrar();
+                return true;
+            }
+            else
+            {
+                conexion.ConexionCerrar();
+                return false;
+            }
+        }
+
+        public void RegistrarPresencia(string Usuario)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "RegistrarPresencia";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Usuario", Usuario);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="PantallaLlamador\PantallaLlamadorEnCurso.Designer.cs">
       <DependentUpon>PantallaLlamadorEnCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallaLlamador\PantallaLlamadorPresencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaLlamador\PantallaLlamadorPresencia.Designer.cs">
+      <DependentUpon>PantallaLlamadorPresencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaLlamador\PantallaLlamadorPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </Compile>
     <EmbeddedResource Include="PantallaLlamador\PantallaLlamadorEnCurso.resx">
       <DependentUpon>PantallaLlamadorEnCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaLlamador\PantallaLlamadorPresencia.resx">
+      <DependentUpon>PantallaLlamadorPresencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaLlamador\PantallaLlamadorPrincipal.resx">
       <DependentUpon>PantallaLlamadorPrincipal.cs</DependentUpon>

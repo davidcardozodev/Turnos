@@ -49,5 +49,15 @@ namespace CapaDeEntidades
         {
             _ConsultasCliente.TurnoModificacionRechazar(IdTurno);
         }
+
+        public bool BuscarCliente(string Usuario, string Clave)
+        {
+            return _ConsultasCliente.BuscarCliente(Usuario, Clave);
+        }
+
+        public void RegistrarPresencia(string Usuario)
+        {
+            _ConsultasCliente.RegistrarPresencia(Usuario);
+        }
     }
 }
