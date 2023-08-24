@@ -54,6 +54,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             turnoDetalle.Usuario = Usuario;
             turnoDetalle.PrimerNombre = PrimerNombre;
             turnoDetalle.SegundoNombre = SegundoNombre;
+            turnoDetalle.Presencia = Presencia;
 
             turnoDetalle.Show();
         }

@@ -23,6 +23,13 @@ namespace CapaDePresentacion.PantallaTurno
             ActivarOpcionAsignarProveedor();
             OcultarOpcionDarBaja();
             CargarProveedores();
+            DesactivarOpcionAsignar();
+        }
+
+        private void DesactivarOpcionAsignar()
+        {
+            if (Presencia == "Ausente")
+                btnAsignar.Enabled = false;
         }
 
         private void CargarProveedores()
@@ -96,6 +103,7 @@ namespace CapaDePresentacion.PantallaTurno
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
         public string NombreProveedor { get; set; }
+        public string Presencia { get; set; }
 
         string anio = "";
         string mes = "";
