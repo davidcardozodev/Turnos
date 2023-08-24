@@ -119,10 +119,13 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CerrarForm()
         {
-            this.Close();
+            VolverAtras();
         }
 
-
+        private void VolverAtras()
+        {
+            this.Close();
+        }
 
         #endregion
 

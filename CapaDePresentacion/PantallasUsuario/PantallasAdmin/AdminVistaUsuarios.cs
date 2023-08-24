@@ -43,6 +43,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void btnVolverAtras_Click(object sender, System.EventArgs e)
         {
+            VolverAtras();
+        }
+
+        private void VolverAtras()
+        {
             this.Close();
         }
     }

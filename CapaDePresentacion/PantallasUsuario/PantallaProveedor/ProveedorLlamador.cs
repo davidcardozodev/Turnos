@@ -21,6 +21,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
+            VolverAtras();
+        }
+
+        private void VolverAtras()
+        {
             this.Close();
         }
 
