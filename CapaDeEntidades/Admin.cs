@@ -26,6 +26,11 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.TurnoCargarEstadoFiltradoAdmin(estado);
         }
 
+        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string rol)
+        {
+            return _ConsultasAdmin.AdminCargarUsuarioFiltrado(rol);
+        }
+
         public void AdminModificarUsuario(int idUsuario, string rol)
         {
             _ConsultasAdmin.AdminModificarUsuario(idUsuario, rol);
