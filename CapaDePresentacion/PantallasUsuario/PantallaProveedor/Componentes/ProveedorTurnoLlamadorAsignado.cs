@@ -21,10 +21,32 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
+        public string TipoPlan { get; set; }
+
+        private string Prioridad = "Prioridad: ";
 
         private void CargarInformacion()
         {
             lblCliente.Text = PrimerNombre + " " + SegundoNombre;
+            EstablecerPrioridad();
+        }
+
+        private void EstablecerPrioridad()
+        {
+            switch (TipoPlan)
+            {
+                case "Basico":
+                    Prioridad += "baja";
+                    break;
+                case "Estandar":
+                    Prioridad += "media";
+                    break;
+                case "Premium":
+                    Prioridad += "alta";
+                    break;
+            }
+
+            lblPrioridad.Text = Prioridad;
         }
 
         private void ProveedorTurnoLlamador_Load(object sender, System.EventArgs e)

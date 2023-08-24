@@ -47,6 +47,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 proveedorTurnoLlamador.Usuario = Turno.Usuario;
                 proveedorTurnoLlamador.PrimerNombre = Turno.PrimerNombre;
                 proveedorTurnoLlamador.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoLlamador.TipoPlan = Turno.TipoPlan;
 
                 flowLayoutPanel1.Controls.Add(proveedorTurnoLlamador);
             }
