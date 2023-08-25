@@ -56,6 +56,7 @@
             // 
             // btnDarDeBaja
             // 
+            this.btnDarDeBaja.Enabled = false;
             this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarDeBaja.Location = new System.Drawing.Point(683, 533);
             this.btnDarDeBaja.Name = "btnDarDeBaja";

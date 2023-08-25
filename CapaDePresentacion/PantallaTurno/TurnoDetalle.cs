@@ -24,6 +24,13 @@ namespace CapaDePresentacion.PantallaTurno
             OcultarOpcionDarBaja();
             CargarProveedores();
             DesactivarOpcionAsignar();
+            DesactivarOpcionDarBaja();
+        }
+
+        private void DesactivarOpcionDarBaja()
+        {
+            if (Estado == "Pendiente")
+                btnDarDeBaja.Enabled = true;
         }
 
         private void DesactivarOpcionAsignar()
