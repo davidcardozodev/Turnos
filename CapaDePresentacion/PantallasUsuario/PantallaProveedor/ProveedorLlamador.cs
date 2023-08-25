@@ -37,6 +37,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             ListaTurnos = proveedor.TurnoCargarProveedorAsignado(DatosUsuario.Id);
 
+            CamposTurnoAsignado(ListaTurnos);
+        }
+
+        private void CamposTurnoAsignado(List<FormatoTurnos> ListaTurnos)
+        {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 ProveedorTurnoLlamadorAsignado proveedorTurnoLlamador = new ProveedorTurnoLlamadorAsignado();
@@ -66,6 +71,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             ListaTurnos = proveedor.TurnoCargarProveedorEnCurso(DatosUsuario.Id);
 
+            CamposTurnoEnCurso(ListaTurnos);
+        }
+
+        private void CamposTurnoEnCurso(List<FormatoTurnos> ListaTurnos)
+        {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 ProveedorTurnoLlamadorEnCurso proveedorTurnoLlamadorEnCurso = new ProveedorTurnoLlamadorEnCurso();

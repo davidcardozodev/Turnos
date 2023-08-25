@@ -22,9 +22,15 @@ namespace CapaDeDatos
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarUsuario";
             _Comando.CommandType = CommandType.StoredProcedure;
-
             _Lector = _Comando.ExecuteReader();
+            CamposUsuario();
+            _Conexion.ConexionCerrar();
 
+            return _Usuarios;
+        }
+
+        private void CamposUsuario()
+        {
             while (_Lector.Read())
             {
                 int Id = int.Parse(_Lector["Id"].ToString());
@@ -48,10 +54,6 @@ namespace CapaDeDatos
                     TipoPlan = TipoPlan
                 });
             }
-
-            _Conexion.ConexionCerrar();
-
-            return _Usuarios;
         }
 
         public List<FormatoTurnos> TurnoCargarAdmin()
@@ -59,9 +61,15 @@ namespace CapaDeDatos
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarAdmin";
             _Comando.CommandType = CommandType.StoredProcedure;
-
             _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
 
+            return _Valores;
+        }
+
+        private void CamposTurno()
+        {
             while (_Lector.Read())
             {
                 int Id = int.Parse(_Lector["Id"].ToString());
@@ -95,10 +103,6 @@ namespace CapaDeDatos
                     NombreProveedor = NombreProveedor
                 });
             }
-
-            _Conexion.ConexionCerrar();
-
-            return _Valores;
         }
 
         public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string estado)
@@ -107,43 +111,8 @@ namespace CapaDeDatos
             _Comando.CommandText = "TurnoCargarEstadoFiltradoAdmin";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@estado", estado);
-
             _Lector = _Comando.ExecuteReader();
-
-            while (_Lector.Read())
-            {
-                int Id = int.Parse(_Lector["Id"].ToString());
-                int IdCliente = int.Parse(_Lector["IdCliente"].ToString());
-                string DiaNombre = _Lector["DiaNombre"].ToString();
-                string DiaNumero = _Lector["DiaNumero"].ToString();
-                string Mes = _Lector["Mes"].ToString();
-                string Anio = _Lector["Anio"].ToString();
-                string Hora = _Lector["Hora"].ToString();
-                string Descripcion = _Lector["Descripcion"].ToString();
-                string Estado = _Lector["Estado"].ToString();
-                string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
-                string NombreProveedor = _Lector["NombreProveedor"].ToString();
-
-                _Valores.Add(new FormatoTurnos
-                {
-                    Id = Id,
-                    IdCliente = IdCliente,
-                    DiaNombre = DiaNombre,
-                    DiaNumero = DiaNumero,
-                    Mes = Mes,
-                    Anio = Anio,
-                    Hora = Hora,
-                    Descripcion = Descripcion,
-                    Estado = Estado,
-                    Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
-                    NombreProveedor = NombreProveedor
-                });
-            }
-
+            CamposTurno();
             _Conexion.ConexionCerrar();
 
             return _Valores;
@@ -155,33 +124,8 @@ namespace CapaDeDatos
             _Comando.CommandText = "AdminCargarUsuarioFiltrado";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@rol", rol);
-
             _Lector = _Comando.ExecuteReader();
-
-            while (_Lector.Read())
-            {
-                int Id = int.Parse(_Lector["Id"].ToString());
-                string Usuario = _Lector["Usuario"].ToString();
-                string Clave = _Lector["Clave"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
-                string Email = _Lector["Email"].ToString();
-                string Rol = _Lector["Rol"].ToString();
-                string TipoPlan = _Lector["TipoPlan"].ToString();
-
-                _Usuarios.Add(new DatosUsuarioItem
-                {
-                    Id = Id,
-                    Usuario = Usuario,
-                    Clave = Clave,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
-                    Email = Email,
-                    Rol = Rol,
-                    TipoPlan = TipoPlan
-                });
-            }
-
+            CamposUsuario();
             _Conexion.ConexionCerrar();
 
             return _Usuarios;
@@ -193,43 +137,8 @@ namespace CapaDeDatos
             _Comando.CommandText = "TurnoCargarBusquedaAdmin";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-
             _Lector = _Comando.ExecuteReader();
-
-            while (_Lector.Read())
-            {
-                int Id = int.Parse(_Lector["Id"].ToString());
-                int IdCliente = int.Parse(_Lector["IdCliente"].ToString());
-                string DiaNombre = _Lector["DiaNombre"].ToString();
-                string DiaNumero = _Lector["DiaNumero"].ToString();
-                string Mes = _Lector["Mes"].ToString();
-                string Anio = _Lector["Anio"].ToString();
-                string Hora = _Lector["Hora"].ToString();
-                string Descripcion = _Lector["Descripcion"].ToString();
-                string Estado = _Lector["Estado"].ToString();
-                string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
-                string NombreProveedor = _Lector["NombreProveedor"].ToString();
-
-                _Valores.Add(new FormatoTurnos
-                {
-                    Id = Id,
-                    IdCliente = IdCliente,
-                    DiaNombre = DiaNombre,
-                    DiaNumero = DiaNumero,
-                    Mes = Mes,
-                    Anio = Anio,
-                    Hora = Hora,
-                    Descripcion = Descripcion,
-                    Estado = Estado,
-                    Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
-                    NombreProveedor = NombreProveedor
-                });
-            }
-
+            CamposTurno();
             _Conexion.ConexionCerrar();
 
             return _Valores;
@@ -241,33 +150,8 @@ namespace CapaDeDatos
             _Comando.CommandText = "AdminCargarUsuarioBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-
             _Lector = _Comando.ExecuteReader();
-
-            while (_Lector.Read())
-            {
-                int Id = int.Parse(_Lector["Id"].ToString());
-                string Usuario = _Lector["Usuario"].ToString();
-                string Clave = _Lector["Clave"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
-                string Email = _Lector["Email"].ToString();
-                string Rol = _Lector["Rol"].ToString();
-                string TipoPlan = _Lector["TipoPlan"].ToString();
-
-                _Usuarios.Add(new DatosUsuarioItem
-                {
-                    Id = Id,
-                    Usuario = Usuario,
-                    Clave = Clave,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
-                    Email = Email,
-                    Rol = Rol,
-                    TipoPlan = TipoPlan
-                });
-            }
-
+            CamposUsuario();
             _Conexion.ConexionCerrar();
 
             return _Usuarios;

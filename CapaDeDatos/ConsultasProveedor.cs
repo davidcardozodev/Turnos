@@ -23,9 +23,15 @@ namespace CapaDeDatos
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
             _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
-
             _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
 
+            return _Valores;
+        }
+
+        private void CamposTurno()
+        {
             while (_Lector.Read())
             {
                 int Id = int.Parse(_Lector["Id"].ToString());
@@ -61,10 +67,6 @@ namespace CapaDeDatos
                     TipoPlan = TipoPlan
                 });
             }
-
-            _Conexion.ConexionCerrar();
-
-            return _Valores;
         }
 
         public List<FormatoTurnos> TurnoCargarProveedorAsignado(int idProveedor)
@@ -169,45 +171,8 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
             _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
             _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-
             _Lector = _Comando.ExecuteReader();
-
-            while (_Lector.Read())
-            {
-                int Id = int.Parse(_Lector["Id"].ToString());
-                int IdCliente = int.Parse(_Lector["IdCliente"].ToString());
-                string DiaNombre = _Lector["DiaNombre"].ToString();
-                string DiaNumero = _Lector["DiaNumero"].ToString();
-                string Mes = _Lector["Mes"].ToString();
-                string Anio = _Lector["Anio"].ToString();
-                string Hora = _Lector["Hora"].ToString();
-                string Descripcion = _Lector["Descripcion"].ToString();
-                string Estado = _Lector["Estado"].ToString();
-                string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
-                string Presencia = _Lector["Presencia"].ToString();
-                string TipoPlan = _Lector["TipoPlan"].ToString();
-
-                _Valores.Add(new FormatoTurnos
-                {
-                    Id = Id,
-                    IdCliente = IdCliente,
-                    DiaNombre = DiaNombre,
-                    DiaNumero = DiaNumero,
-                    Mes = Mes,
-                    Anio = Anio,
-                    Hora = Hora,
-                    Descripcion = Descripcion,
-                    Estado = Estado,
-                    Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
-                    Presencia = Presencia,
-                    TipoPlan = TipoPlan
-                });
-            }
-
+            CamposTurno();
             _Conexion.ConexionCerrar();
 
             return _Valores;

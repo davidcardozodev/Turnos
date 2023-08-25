@@ -27,6 +27,11 @@ namespace CapaDePresentacion.PantallaLlamador
 
             ListaTurnos = proveedor.TurnoCargarProveedorEnCurso(DatosUsuario.Id);
 
+            CamposTurno(ListaTurnos);
+        }
+
+        private void CamposTurno(List<FormatoTurnos> ListaTurnos)
+        {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 ProveedorTurnoLlamadorEnCurso proveedorTurnoLlamadorEnCurso = new ProveedorTurnoLlamadorEnCurso();
