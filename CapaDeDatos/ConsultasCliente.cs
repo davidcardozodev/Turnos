@@ -174,6 +174,43 @@ namespace CapaDeDatos
             return _Valores;
         }
 
+        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int idCliente, string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "CargarTurnoModificacionBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int IdTurno = int.Parse(_Lector["IdTurno"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
+                string Estado = _Lector["Estado"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = IdTurno,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
+                    NombreProveedor = NombreProveedor,
+                    Estado = Estado
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
         public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
