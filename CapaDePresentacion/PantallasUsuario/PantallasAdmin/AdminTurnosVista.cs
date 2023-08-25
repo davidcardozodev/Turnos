@@ -117,5 +117,43 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             else
                 CargarTurnoEstadoFiltrado();
         }
+
+        private void btnBuscar_Click(object sender, System.EventArgs e)
+        {
+            TurnoCargarBusquedaAdmin();
+        }
+
+        private void TurnoCargarBusquedaAdmin()
+        {
+            Admin admin = new Admin();
+
+            LimpiarTurnos();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = admin.TurnoCargarBusquedaAdmin(txtBuscar.Text);
+
+            foreach (FormatoTurnos Turno in ListaTurnos)
+            {
+                AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
+
+                adminTurnoItem.Id = Turno.Id;
+                adminTurnoItem.IdCliente = Turno.IdCliente;
+                adminTurnoItem.DiaNombre = Turno.DiaNombre;
+                adminTurnoItem.DiaNumero = Turno.DiaNumero;
+                adminTurnoItem.Mes = Turno.Mes;
+                adminTurnoItem.Anio = Turno.Anio;
+                adminTurnoItem.Hora = Turno.Hora;
+                adminTurnoItem.Descripcion = Turno.Descripcion;
+                adminTurnoItem.Estado = Turno.Estado;
+                adminTurnoItem.Usuario = Turno.Usuario;
+                adminTurnoItem.PrimerNombre = Turno.PrimerNombre;
+                adminTurnoItem.SegundoNombre = Turno.SegundoNombre;
+                adminTurnoItem.NombreProveedor = Turno.NombreProveedor;
+
+                flowLayoutPanel1.Controls.Add(adminTurnoItem);
+            }
+        }
+
     }
 }
