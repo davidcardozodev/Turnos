@@ -30,6 +30,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
             adminVistaUsuarioDetalle.Id = Id;
             adminVistaUsuarioDetalle.Usuario = Usuario;
+            adminVistaUsuarioDetalle.Clave = Clave;
             adminVistaUsuarioDetalle.PrimerNombre = PrimerNombre;
             adminVistaUsuarioDetalle.SegundoNombre = SegundoNombre;
             adminVistaUsuarioDetalle.Email = Email;

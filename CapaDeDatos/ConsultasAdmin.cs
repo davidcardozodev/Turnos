@@ -268,12 +268,17 @@ namespace CapaDeDatos
         }
 
 
-        public void AdminModificarUsuario(int idUsuario, string rol)
+        public void AdminModificarUsuario(int idUsuario, string usuario, string clave, string primerNombre, string segundoNombre, string email, string rol)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminModificarUsuario";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+            _Comando.Parameters.AddWithValue("@usuario", usuario);
+            _Comando.Parameters.AddWithValue("@clave", clave);
+            _Comando.Parameters.AddWithValue("@primerNombre", primerNombre);
+            _Comando.Parameters.AddWithValue("@segundoNombre", segundoNombre);
+            _Comando.Parameters.AddWithValue("@email", email);
             _Comando.Parameters.AddWithValue("@rol", rol);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();

@@ -14,6 +14,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         public int Id { get; set; }
         public string Usuario { get; set; }
+        public string Clave { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
         public string Email { get; set; }
@@ -72,9 +73,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarDatosUsuario()
         {
-            lblUsuario.Text = PrimerNombre + " " + SegundoNombre + " (" + Usuario + ")";
-            lblEmail.Text = Email;
-            lblRol.Text = RolUsuario;
+            txtUsuario.Text = Usuario;
+            txtClave.Text = Clave;
+            txtPrimerNombre.Text = PrimerNombre;
+            txtSegundoNombre.Text = SegundoNombre;
+            txtEmail.Text = Email;
+            comboRol.SelectedValue = RolUsuario;
         }
 
         private void CargarRoles()
@@ -88,7 +92,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminModificarUsuario(Id, comboRol.Text);
+            admin.AdminModificarUsuario(Id, txtUsuario.Text, txtClave.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, comboRol.Text);
 
             Admin adminDisponibilidad = new Admin();
 
