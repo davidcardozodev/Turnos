@@ -33,8 +33,10 @@
             this.btnVolverAtras = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblMostrar = new System.Windows.Forms.Label();
             this.comboEstado = new System.Windows.Forms.ComboBox();
+            this.lblMostrar = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +82,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.comboEstado);
             this.panel1.Controls.Add(this.lblMostrar);
             this.panel1.Controls.Add(this.btnVolverAtras);
@@ -92,6 +96,16 @@
             this.panel1.Size = new System.Drawing.Size(1248, 688);
             this.panel1.TabIndex = 5;
             // 
+            // comboEstado
+            // 
+            this.comboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstado.FormattingEnabled = true;
+            this.comboEstado.Location = new System.Drawing.Point(154, 119);
+            this.comboEstado.Name = "comboEstado";
+            this.comboEstado.Size = new System.Drawing.Size(280, 40);
+            this.comboEstado.TabIndex = 6;
+            this.comboEstado.SelectedIndexChanged += new System.EventHandler(this.comboEstado_SelectedIndexChanged);
+            // 
             // lblMostrar
             // 
             this.lblMostrar.AutoSize = true;
@@ -102,15 +116,24 @@
             this.lblMostrar.TabIndex = 5;
             this.lblMostrar.Text = "Mostrar";
             // 
-            // comboEstado
+            // txtBuscar
             // 
-            this.comboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboEstado.FormattingEnabled = true;
-            this.comboEstado.Location = new System.Drawing.Point(154, 119);
-            this.comboEstado.Name = "comboEstado";
-            this.comboEstado.Size = new System.Drawing.Size(280, 40);
-            this.comboEstado.TabIndex = 6;
-            this.comboEstado.SelectedIndexChanged += new System.EventHandler(this.comboEstado_SelectedIndexChanged);
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(656, 117);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(344, 39);
+            this.txtBuscar.TabIndex = 8;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(511, 107);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(139, 58);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // ClienteTurnosVista
             // 
@@ -137,5 +160,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMostrar;
         private System.Windows.Forms.ComboBox comboEstado;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

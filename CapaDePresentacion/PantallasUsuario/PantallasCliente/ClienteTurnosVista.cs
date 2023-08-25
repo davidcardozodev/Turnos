@@ -153,5 +153,39 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             flowLayoutPanel1.Controls.Clear();
         }
+
+        private void btnBuscar_Click(object sender, System.EventArgs e)
+        {
+            TurnoCargarBusqueda();
+        }
+
+        private void TurnoCargarBusqueda()
+        {
+            Cliente cliente = new Cliente();
+
+            LimpiarTurnos();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = cliente.TurnoCargarBusqueda(DatosUsuario.Id, txtBuscar.Text);
+
+            foreach (FormatoTurnos Turno in ListaTurnos)
+            {
+                ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
+
+                clienteTurnoItem.Id = Turno.Id;
+                clienteTurnoItem.DiaNombre = Turno.DiaNombre;
+                clienteTurnoItem.DiaNumero = Turno.DiaNumero;
+                clienteTurnoItem.Mes = Turno.Mes;
+                clienteTurnoItem.Anio = Turno.Anio;
+                clienteTurnoItem.Hora = Turno.Hora;
+                clienteTurnoItem.Descripcion = Turno.Descripcion;
+                clienteTurnoItem.Estado = Turno.Estado;
+                clienteTurnoItem.NombreProveedor = Turno.NombreProveedor;
+
+                flowLayoutPanel1.Controls.Add(clienteTurnoItem);
+            }
+        }
+
     }
 }
