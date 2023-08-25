@@ -125,5 +125,14 @@ namespace CapaDePresentacion.PantallaLlamador
                 MensajeError("Usuario o Clave incorrecta");
         }
 
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            VolverAtras();
+        }
+
+        private void VolverAtras()
+        {
+            this.Close();
+        }
     }
 }

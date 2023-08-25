@@ -34,6 +34,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -97,11 +98,23 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverAtras.Location = new System.Drawing.Point(38, 22);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
+            this.btnVolverAtras.TabIndex = 54;
+            this.btnVolverAtras.Text = "Volver atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
+            // 
             // PantallaLlamadorPresencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 505);
+            this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
@@ -125,5 +138,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnVolverAtras;
     }
 }

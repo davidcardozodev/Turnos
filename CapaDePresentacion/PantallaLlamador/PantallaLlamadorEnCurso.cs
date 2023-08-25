@@ -47,5 +47,14 @@ namespace CapaDePresentacion.PantallaLlamador
             }
         }
 
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            VolverAtras();
+        }
+
+        private void VolverAtras()
+        {
+            this.Close();
+        }
     }
 }

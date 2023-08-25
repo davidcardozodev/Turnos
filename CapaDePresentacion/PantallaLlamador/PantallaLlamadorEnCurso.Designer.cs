@@ -30,13 +30,14 @@
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(48, 81);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 128);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(721, 357);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(721, 486);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblTitulo
@@ -49,15 +50,27 @@
             this.lblTitulo.TabIndex = 9;
             this.lblTitulo.Text = "Turnos en curso";
             // 
-            // PantallaLlamadorPrincipal
+            // btnVolverAtras
+            // 
+            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverAtras.Location = new System.Drawing.Point(32, 22);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
+            this.btnVolverAtras.TabIndex = 53;
+            this.btnVolverAtras.Text = "Volver atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
+            // 
+            // PantallaLlamadorEnCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 654);
+            this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "PantallaLlamadorPrincipal";
+            this.Name = "PantallaLlamadorEnCurso";
             this.Text = "PantallaLlamadorPrincipal";
             this.Load += new System.EventHandler(this.PantallaLlamadorPrincipal_Load);
             this.ResumeLayout(false);
@@ -69,5 +82,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnVolverAtras;
     }
 }
