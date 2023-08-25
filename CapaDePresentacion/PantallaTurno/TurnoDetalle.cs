@@ -125,6 +125,14 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void btnDarDeBaja_Click(object sender, System.EventArgs e)
         {
+            DialogResult Alerta = MessageBox.Show("¿Quiere dar de baja el turno?", "Dar de baja", MessageBoxButtons.YesNo);
+
+            if (Alerta == DialogResult.Yes)
+                DarBaja();
+        }
+
+        private void DarBaja()
+        {
             Turno turno = new Turno();
 
             turno.TurnoDarBaja(Id);
