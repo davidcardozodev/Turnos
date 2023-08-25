@@ -16,6 +16,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public string SegundoNombre { get; set; }
         public string Email { get; set; }
         public string Rol { get; set; }
+        public string TipoPlan { get; set; }
 
         private void UsuarioItem_Load(object sender, System.EventArgs e)
         {
@@ -35,6 +36,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             adminVistaUsuarioDetalle.SegundoNombre = SegundoNombre;
             adminVistaUsuarioDetalle.Email = Email;
             adminVistaUsuarioDetalle.RolUsuario = Rol;
+            adminVistaUsuarioDetalle.TipoPlan = TipoPlan;
 
             adminVistaUsuarioDetalle.Show();
         }

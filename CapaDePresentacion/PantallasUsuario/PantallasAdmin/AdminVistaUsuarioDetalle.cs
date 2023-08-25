@@ -19,15 +19,24 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         public string SegundoNombre { get; set; }
         public string Email { get; set; }
         public string RolUsuario { get; set; }
+        public string TipoPlan { get; set; }
 
         private void AdminVistaUsuarioDetalle_Load(object sender, EventArgs e)
         {
             CargarRoles();
             CargarDatosUsuario();
+            CargarPlanes();
             CargarValoresHorarioInicio();
             ValorInicialHorarios();
             ActivarCambioHorarioProveedor();
             ValorInicialProveedor();
+        }
+
+        private void CargarPlanes()
+        {
+            comboPlan.Items.Add(Plan.Basico);
+            comboPlan.Items.Add(Plan.Estandar);
+            comboPlan.Items.Add(Plan.Premium);
         }
 
         private void ValorInicialProveedor()
@@ -79,6 +88,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             txtSegundoNombre.Text = SegundoNombre;
             txtEmail.Text = Email;
             comboRol.SelectedValue = RolUsuario;
+            comboPlan.SelectedValue = TipoPlan;
+            comboPlan.SelectedText = TipoPlan;
         }
 
         private void CargarRoles()

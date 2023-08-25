@@ -34,6 +34,7 @@ namespace CapaDeDatos
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
                 string Email = _Lector["Email"].ToString();
                 string Rol = _Lector["Rol"].ToString();
+                string TipoPlan = _Lector["TipoPlan"].ToString();
 
                 _Usuarios.Add(new DatosUsuarioItem
                 {
@@ -43,7 +44,8 @@ namespace CapaDeDatos
                     PrimerNombre = PrimerNombre,
                     SegundoNombre = SegundoNombre,
                     Email = Email,
-                    Rol = Rol
+                    Rol = Rol,
+                    TipoPlan = TipoPlan
                 });
             }
 
@@ -165,6 +167,7 @@ namespace CapaDeDatos
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
                 string Email = _Lector["Email"].ToString();
                 string Rol = _Lector["Rol"].ToString();
+                string TipoPlan = _Lector["TipoPlan"].ToString();
 
                 _Usuarios.Add(new DatosUsuarioItem
                 {
@@ -174,7 +177,8 @@ namespace CapaDeDatos
                     PrimerNombre = PrimerNombre,
                     SegundoNombre = SegundoNombre,
                     Email = Email,
-                    Rol = Rol
+                    Rol = Rol,
+                    TipoPlan = TipoPlan
                 });
             }
 
@@ -249,6 +253,7 @@ namespace CapaDeDatos
                 string SegundoNombre = _Lector["SegundoNombre"].ToString();
                 string Email = _Lector["Email"].ToString();
                 string Rol = _Lector["Rol"].ToString();
+                string TipoPlan = _Lector["TipoPlan"].ToString();
 
                 _Usuarios.Add(new DatosUsuarioItem
                 {
@@ -258,7 +263,8 @@ namespace CapaDeDatos
                     PrimerNombre = PrimerNombre,
                     SegundoNombre = SegundoNombre,
                     Email = Email,
-                    Rol = Rol
+                    Rol = Rol,
+                    TipoPlan = TipoPlan
                 });
             }
 

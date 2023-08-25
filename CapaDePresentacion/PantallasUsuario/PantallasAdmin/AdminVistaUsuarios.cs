@@ -49,6 +49,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 usuarioItem.SegundoNombre = Usuario.SegundoNombre;
                 usuarioItem.Email = Usuario.Email;
                 usuarioItem.Rol = Usuario.Rol;
+                usuarioItem.TipoPlan = Usuario.TipoPlan;
 
                 flowLayoutPanel1.Controls.Add(usuarioItem);
             }
@@ -75,6 +76,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 usuarioItem.SegundoNombre = Usuario.SegundoNombre;
                 usuarioItem.Email = Usuario.Email;
                 usuarioItem.Rol = Usuario.Rol;
+                usuarioItem.TipoPlan = Usuario.TipoPlan;
 
                 flowLayoutPanel1.Controls.Add(usuarioItem);
             }
@@ -129,6 +131,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 usuarioItem.SegundoNombre = Usuario.SegundoNombre;
                 usuarioItem.Email = Usuario.Email;
                 usuarioItem.Rol = Usuario.Rol;
+                usuarioItem.TipoPlan = Usuario.TipoPlan;
 
                 flowLayoutPanel1.Controls.Add(usuarioItem);
             }
