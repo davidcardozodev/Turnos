@@ -102,5 +102,37 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             flowLayoutPanel1.Controls.Clear();
         }
+
+        private void btnBuscar_Click(object sender, System.EventArgs e)
+        {
+            AdminCargarUsuarioBusqueda();
+        }
+
+        private void AdminCargarUsuarioBusqueda()
+        {
+            Admin admin = new Admin();
+
+            LimpiarLista();
+
+            List<DatosUsuarioItem> Usuarios = new List<DatosUsuarioItem>();
+
+            Usuarios = admin.AdminCargarUsuarioBusqueda(txtBuscar.Text);
+
+            foreach (DatosUsuarioItem Usuario in Usuarios)
+            {
+                UsuarioItem usuarioItem = new UsuarioItem();
+
+                usuarioItem.Id = Usuario.Id;
+                usuarioItem.Usuario = Usuario.Usuario;
+                usuarioItem.Clave = Usuario.Clave;
+                usuarioItem.PrimerNombre = Usuario.PrimerNombre;
+                usuarioItem.SegundoNombre = Usuario.SegundoNombre;
+                usuarioItem.Email = Usuario.Email;
+                usuarioItem.Rol = Usuario.Rol;
+
+                flowLayoutPanel1.Controls.Add(usuarioItem);
+            }
+        }
+
     }
 }

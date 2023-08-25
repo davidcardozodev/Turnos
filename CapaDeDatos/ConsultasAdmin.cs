@@ -183,7 +183,6 @@ namespace CapaDeDatos
             return _Usuarios;
         }
 
-
         public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
@@ -231,6 +230,43 @@ namespace CapaDeDatos
 
             return _Valores;
         }
+
+        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarUsuarioBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Usuario = _Lector["Usuario"].ToString();
+                string Clave = _Lector["Clave"].ToString();
+                string PrimerNombre = _Lector["PrimerNombre"].ToString();
+                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Email = _Lector["Email"].ToString();
+                string Rol = _Lector["Rol"].ToString();
+
+                _Usuarios.Add(new DatosUsuarioItem
+                {
+                    Id = Id,
+                    Usuario = Usuario,
+                    Clave = Clave,
+                    PrimerNombre = PrimerNombre,
+                    SegundoNombre = SegundoNombre,
+                    Email = Email,
+                    Rol = Rol
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Usuarios;
+        }
+
 
         public void AdminModificarUsuario(int idUsuario, string rol)
         {
