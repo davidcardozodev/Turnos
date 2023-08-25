@@ -25,6 +25,11 @@ namespace CapaDeEntidades
             return _ConsultasProveedor.TurnoCargarProveedorEnCurso(idProveedor);
         }
 
+        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int horarioInicio, int horarioFin, string busqueda)
+        {
+            return _ConsultasProveedor.ProveedorCargarTurnosBusqueda(horarioInicio, horarioFin, busqueda);
+        }
+
         public void ProveedorAsignar(int idProveedor, int idTurno)
         {
             _ConsultasProveedor.ProveedorAsignar(idProveedor, idTurno);

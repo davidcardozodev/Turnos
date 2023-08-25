@@ -161,6 +161,58 @@ namespace CapaDeDatos
             return _Valores;
         }
 
+        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int horarioInicio, int horarioFin, string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ProveedorCargarTurnosBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
+            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                int IdCliente = int.Parse(_Lector["IdCliente"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
+                string Hora = _Lector["Hora"].ToString();
+                string Descripcion = _Lector["Descripcion"].ToString();
+                string Estado = _Lector["Estado"].ToString();
+                string Usuario = _Lector["Usuario"].ToString();
+                string PrimerNombre = _Lector["PrimerNombre"].ToString();
+                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Presencia = _Lector["Presencia"].ToString();
+                string TipoPlan = _Lector["TipoPlan"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = Id,
+                    IdCliente = IdCliente,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
+                    Hora = Hora,
+                    Descripcion = Descripcion,
+                    Estado = Estado,
+                    Usuario = Usuario,
+                    PrimerNombre = PrimerNombre,
+                    SegundoNombre = SegundoNombre,
+                    Presencia = Presencia,
+                    TipoPlan = TipoPlan
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
         public void ProveedorAsignar(int idProveedor, int idTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();

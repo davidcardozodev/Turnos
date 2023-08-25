@@ -57,5 +57,47 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         {
             this.Close();
         }
+
+        private void btnBuscar_Click(object sender, System.EventArgs e)
+        {
+            CargarTurnosBusqueda();
+        }
+
+        private void CargarTurnosBusqueda()
+        {
+            Proveedor proveedor = new Proveedor();
+
+            LimpiarLista();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = proveedor.ProveedorCargarTurnosBusqueda(DatosDisponibilidad.HorarioInicio, DatosDisponibilidad.HorarioFin, txtBuscar.Text);
+
+            foreach (FormatoTurnos Turno in ListaTurnos)
+            {
+                ProveedorTurnoItem proveedorTurnoItem = new ProveedorTurnoItem();
+
+                proveedorTurnoItem.Id = Turno.Id;
+                proveedorTurnoItem.DiaNombre = Turno.DiaNombre;
+                proveedorTurnoItem.DiaNumero = Turno.DiaNumero;
+                proveedorTurnoItem.Mes = Turno.Mes;
+                proveedorTurnoItem.Anio = Turno.Anio;
+                proveedorTurnoItem.Hora = Turno.Hora;
+                proveedorTurnoItem.Descripcion = Turno.Descripcion;
+                proveedorTurnoItem.Estado = Turno.Estado;
+                proveedorTurnoItem.Usuario = Turno.Usuario;
+                proveedorTurnoItem.PrimerNombre = Turno.PrimerNombre;
+                proveedorTurnoItem.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoItem.PresenciaEstado = Turno.Presencia;
+                proveedorTurnoItem.TipoPlan = Turno.TipoPlan;
+
+                flowLayoutPanel1.Controls.Add(proveedorTurnoItem);
+            }
+        }
+
+        private void LimpiarLista()
+        {
+            flowLayoutPanel1.Controls.Clear();
+        }
     }
 }
