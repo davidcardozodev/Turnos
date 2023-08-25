@@ -79,6 +79,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             ListaTurnos = cliente.TurnoCargar(DatosUsuario.Id);
 
+            DatosTurno(ListaTurnos);
+        }
+
+        private void DatosTurno(List<FormatoTurnos> ListaTurnos)
+        {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
@@ -131,22 +136,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             ListaTurnos = turno.TurnoFiltrarEstado(DatosUsuario.Id, comboEstado.Text);
 
-            foreach (FormatoTurnos Turno in ListaTurnos)
-            {
-                ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
-
-                clienteTurnoItem.Id = Turno.Id;
-                clienteTurnoItem.DiaNombre = Turno.DiaNombre;
-                clienteTurnoItem.DiaNumero = Turno.DiaNumero;
-                clienteTurnoItem.Mes = Turno.Mes;
-                clienteTurnoItem.Anio = Turno.Anio;
-                clienteTurnoItem.Hora = Turno.Hora;
-                clienteTurnoItem.Descripcion = Turno.Descripcion;
-                clienteTurnoItem.Estado = Turno.Estado;
-                clienteTurnoItem.NombreProveedor = Turno.NombreProveedor;
-
-                flowLayoutPanel1.Controls.Add(clienteTurnoItem);
-            }
+            DatosTurno(ListaTurnos);
         }
 
         private void LimpiarTurnos()
@@ -169,22 +159,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             ListaTurnos = cliente.TurnoCargarBusqueda(DatosUsuario.Id, txtBuscar.Text);
 
-            foreach (FormatoTurnos Turno in ListaTurnos)
-            {
-                ClienteTurnoItem clienteTurnoItem = new ClienteTurnoItem();
-
-                clienteTurnoItem.Id = Turno.Id;
-                clienteTurnoItem.DiaNombre = Turno.DiaNombre;
-                clienteTurnoItem.DiaNumero = Turno.DiaNumero;
-                clienteTurnoItem.Mes = Turno.Mes;
-                clienteTurnoItem.Anio = Turno.Anio;
-                clienteTurnoItem.Hora = Turno.Hora;
-                clienteTurnoItem.Descripcion = Turno.Descripcion;
-                clienteTurnoItem.Estado = Turno.Estado;
-                clienteTurnoItem.NombreProveedor = Turno.NombreProveedor;
-
-                flowLayoutPanel1.Controls.Add(clienteTurnoItem);
-            }
+            DatosTurno(ListaTurnos);
         }
 
     }

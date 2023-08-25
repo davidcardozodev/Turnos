@@ -38,21 +38,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             Usuarios = admin.AdminCargarUsuario();
 
-            foreach (DatosUsuarioItem Usuario in Usuarios)
-            {
-                UsuarioItem usuarioItem = new UsuarioItem();
-
-                usuarioItem.Id = Usuario.Id;
-                usuarioItem.Usuario = Usuario.Usuario;
-                usuarioItem.Clave = Usuario.Clave;
-                usuarioItem.PrimerNombre = Usuario.PrimerNombre;
-                usuarioItem.SegundoNombre = Usuario.SegundoNombre;
-                usuarioItem.Email = Usuario.Email;
-                usuarioItem.Rol = Usuario.Rol;
-                usuarioItem.TipoPlan = Usuario.TipoPlan;
-
-                flowLayoutPanel1.Controls.Add(usuarioItem);
-            }
+            DatosUsuario(Usuarios);
         }
 
         private void AdminCargarUsuarioFiltrado()
@@ -65,6 +51,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             Usuarios = admin.AdminCargarUsuarioFiltrado(comboRol.Text);
 
+            DatosUsuario(Usuarios);
+        }
+
+        private void DatosUsuario(List<DatosUsuarioItem> Usuarios)
+        {
             foreach (DatosUsuarioItem Usuario in Usuarios)
             {
                 UsuarioItem usuarioItem = new UsuarioItem();
@@ -120,21 +111,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             Usuarios = admin.AdminCargarUsuarioBusqueda(txtBuscar.Text);
 
-            foreach (DatosUsuarioItem Usuario in Usuarios)
-            {
-                UsuarioItem usuarioItem = new UsuarioItem();
-
-                usuarioItem.Id = Usuario.Id;
-                usuarioItem.Usuario = Usuario.Usuario;
-                usuarioItem.Clave = Usuario.Clave;
-                usuarioItem.PrimerNombre = Usuario.PrimerNombre;
-                usuarioItem.SegundoNombre = Usuario.SegundoNombre;
-                usuarioItem.Email = Usuario.Email;
-                usuarioItem.Rol = Usuario.Rol;
-                usuarioItem.TipoPlan = Usuario.TipoPlan;
-
-                flowLayoutPanel1.Controls.Add(usuarioItem);
-            }
+            DatosUsuario(Usuarios);
         }
 
     }

@@ -41,6 +41,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             ListaTurnos = admin.TurnoCargarAdmin();
 
+            DatosTurnos(ListaTurnos);
+        }
+
+        private void DatosTurnos(List<FormatoTurnos> ListaTurnos)
+        {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
@@ -83,26 +88,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             ListaTurnos = admin.TurnoCargarEstadoFiltradoAdmin(comboEstado.Text);
 
-            foreach (FormatoTurnos Turno in ListaTurnos)
-            {
-                AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
-
-                adminTurnoItem.Id = Turno.Id;
-                adminTurnoItem.IdCliente = Turno.IdCliente;
-                adminTurnoItem.DiaNombre = Turno.DiaNombre;
-                adminTurnoItem.DiaNumero = Turno.DiaNumero;
-                adminTurnoItem.Mes = Turno.Mes;
-                adminTurnoItem.Anio = Turno.Anio;
-                adminTurnoItem.Hora = Turno.Hora;
-                adminTurnoItem.Descripcion = Turno.Descripcion;
-                adminTurnoItem.Estado = Turno.Estado;
-                adminTurnoItem.Usuario = Turno.Usuario;
-                adminTurnoItem.PrimerNombre = Turno.PrimerNombre;
-                adminTurnoItem.SegundoNombre = Turno.SegundoNombre;
-                adminTurnoItem.NombreProveedor = Turno.NombreProveedor;
-
-                flowLayoutPanel1.Controls.Add(adminTurnoItem);
-            }
+            DatosTurnos(ListaTurnos);
         }
 
         private void LimpiarTurnos()
@@ -133,26 +119,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             ListaTurnos = admin.TurnoCargarBusquedaAdmin(txtBuscar.Text);
 
-            foreach (FormatoTurnos Turno in ListaTurnos)
-            {
-                AdminTurnoItem adminTurnoItem = new AdminTurnoItem();
-
-                adminTurnoItem.Id = Turno.Id;
-                adminTurnoItem.IdCliente = Turno.IdCliente;
-                adminTurnoItem.DiaNombre = Turno.DiaNombre;
-                adminTurnoItem.DiaNumero = Turno.DiaNumero;
-                adminTurnoItem.Mes = Turno.Mes;
-                adminTurnoItem.Anio = Turno.Anio;
-                adminTurnoItem.Hora = Turno.Hora;
-                adminTurnoItem.Descripcion = Turno.Descripcion;
-                adminTurnoItem.Estado = Turno.Estado;
-                adminTurnoItem.Usuario = Turno.Usuario;
-                adminTurnoItem.PrimerNombre = Turno.PrimerNombre;
-                adminTurnoItem.SegundoNombre = Turno.SegundoNombre;
-                adminTurnoItem.NombreProveedor = Turno.NombreProveedor;
-
-                flowLayoutPanel1.Controls.Add(adminTurnoItem);
-            }
+            DatosTurnos(ListaTurnos);
         }
 
     }

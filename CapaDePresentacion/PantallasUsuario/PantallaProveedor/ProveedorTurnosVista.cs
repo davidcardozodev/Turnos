@@ -26,6 +26,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             ListaTurnos = proveedor.ProveedorCargarTurnos(DatosDisponibilidad.HorarioInicio, DatosDisponibilidad.HorarioFin);
 
+            DatosTurno(ListaTurnos);
+        }
+
+        private void DatosTurno(List<FormatoTurnos> ListaTurnos)
+        {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
                 ProveedorTurnoItem proveedorTurnoItem = new ProveedorTurnoItem();
@@ -73,26 +78,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
 
             ListaTurnos = proveedor.ProveedorCargarTurnosBusqueda(DatosDisponibilidad.HorarioInicio, DatosDisponibilidad.HorarioFin, txtBuscar.Text);
 
-            foreach (FormatoTurnos Turno in ListaTurnos)
-            {
-                ProveedorTurnoItem proveedorTurnoItem = new ProveedorTurnoItem();
-
-                proveedorTurnoItem.Id = Turno.Id;
-                proveedorTurnoItem.DiaNombre = Turno.DiaNombre;
-                proveedorTurnoItem.DiaNumero = Turno.DiaNumero;
-                proveedorTurnoItem.Mes = Turno.Mes;
-                proveedorTurnoItem.Anio = Turno.Anio;
-                proveedorTurnoItem.Hora = Turno.Hora;
-                proveedorTurnoItem.Descripcion = Turno.Descripcion;
-                proveedorTurnoItem.Estado = Turno.Estado;
-                proveedorTurnoItem.Usuario = Turno.Usuario;
-                proveedorTurnoItem.PrimerNombre = Turno.PrimerNombre;
-                proveedorTurnoItem.SegundoNombre = Turno.SegundoNombre;
-                proveedorTurnoItem.PresenciaEstado = Turno.Presencia;
-                proveedorTurnoItem.TipoPlan = Turno.TipoPlan;
-
-                flowLayoutPanel1.Controls.Add(proveedorTurnoItem);
-            }
+            DatosTurno(ListaTurnos);
         }
 
         private void LimpiarLista()
