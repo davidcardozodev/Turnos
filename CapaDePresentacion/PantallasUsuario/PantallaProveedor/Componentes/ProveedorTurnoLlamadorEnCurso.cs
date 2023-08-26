@@ -24,6 +24,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
                 btnFinalizar.Visible = false;
         }
 
+        #region "Atributos"
+
         public int Id { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
@@ -35,6 +37,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Usuario { get; set; }
         public string PrimerNombre { get; set; }
         public string SegundoNombre { get; set; }
+
+        #endregion
 
         private void CargarInformacion()
         {

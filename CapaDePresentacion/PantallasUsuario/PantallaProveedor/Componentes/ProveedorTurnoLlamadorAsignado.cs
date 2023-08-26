@@ -10,6 +10,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             InitializeComponent();
         }
 
+        #region "Atributos"
+
         public int Id { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
@@ -24,6 +26,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string TipoPlan { get; set; }
 
         private string Prioridad = "Prioridad: ";
+
+        #endregion
 
         private void CargarInformacion()
         {

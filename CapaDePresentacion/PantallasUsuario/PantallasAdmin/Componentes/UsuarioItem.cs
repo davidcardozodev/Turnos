@@ -9,6 +9,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             InitializeComponent();
         }
 
+        #region "Atributos"
+
         public int Id { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
@@ -17,6 +19,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public string Email { get; set; }
         public string Rol { get; set; }
         public string TipoPlan { get; set; }
+
+        #endregion
 
         private void UsuarioItem_Load(object sender, System.EventArgs e)
         {

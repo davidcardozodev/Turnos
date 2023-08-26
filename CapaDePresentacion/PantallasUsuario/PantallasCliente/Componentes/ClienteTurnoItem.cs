@@ -12,6 +12,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             InitializeComponent();
         }
 
+        #region "Atributos"
+
         public int Id { get; set; }
         public string DiaNombre { get; set; }
         public string DiaNumero { get; set; }
@@ -22,6 +24,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         public string Estado { get; set; }
         public string NombreProveedor { get; set; }
 
+        #endregion
 
         private void ClienteTurnoItem_Load(object sender, System.EventArgs e)
         {

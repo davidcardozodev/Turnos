@@ -97,6 +97,8 @@ namespace CapaDePresentacion.PantallaTurno
             }
         }
 
+        #region "Atributos"
+
         public int Id { get; set; }
         public int IdCliente { get; set; }
         public string DiaNombre { get; set; }
@@ -119,6 +121,8 @@ namespace CapaDePresentacion.PantallaTurno
 
         private bool guardarProveedor = false;
         private bool guardarFecha = false;
+
+        #endregion
 
         private void CargarInformacion()
         {

@@ -19,6 +19,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarRolTipoPlanDefecto();
         }
 
+        #region "Atributos"
+
+
         private string usuario;
         private string primerNombre;
         private string segundoNombre;
@@ -26,6 +29,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private string clave;
         private string rol;
         private string tipoPlan;
+
+        #endregion
 
         private void CargarRolTipoPlanDefecto()
         {

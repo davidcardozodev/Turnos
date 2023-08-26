@@ -20,6 +20,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             ValorInicialHorario();
         }
 
+        #region "Atributos"
+
         private string DiaNombre { get; set; }
         private string DiaNumero { get; set; }
         private string Mes { get; set; }
@@ -29,6 +31,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private string Descripcion;
         private string Hora;
+
+        #endregion
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
