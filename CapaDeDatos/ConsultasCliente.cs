@@ -16,12 +16,41 @@ namespace CapaDeDatos
 
         #endregion
 
+        #region "Lista turnos (pantalla principal)"
+
         public List<FormatoTurnos> TurnoCargar(int idCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargar";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> TurnoCargarDetalle(int IdTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCargarDetalle";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> TurnoCargarBusqueda(int idCliente, string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCargarBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -58,18 +87,9 @@ namespace CapaDeDatos
             }
         }
 
-        public List<FormatoTurnos> TurnoCargarDetalle(int IdTurno)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarDetalle";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
-            _Lector = _Comando.ExecuteReader();
-            CamposTurno();
-            _Conexion.ConexionCerrar();
+        #endregion
 
-            return _Valores;
-        }
+        #region "Lista turnos (pantalla notificacion)"
 
         public List<FormatoTurnos> TurnoCargarModificacion(int idCliente)
         {
@@ -77,6 +97,20 @@ namespace CapaDeDatos
             _Comando.CommandText = "TurnoCargarModificacion";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Lector = _Comando.ExecuteReader();
+            CamposTurnoModificacion();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int idCliente, string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "CargarTurnoModificacionBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurnoModificacion();
             _Conexion.ConexionCerrar();
@@ -109,49 +143,9 @@ namespace CapaDeDatos
             }
         }
 
-        public List<FormatoTurnos> TurnoCargarBusqueda(int idCliente, string busqueda)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarBusqueda";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-            _Lector = _Comando.ExecuteReader();
-            CamposTurno();
-            _Conexion.ConexionCerrar();
+        #endregion
 
-            return _Valores;
-        }
-
-        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int idCliente, string busqueda)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "CargarTurnoModificacionBusqueda";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-            _Lector = _Comando.ExecuteReader();
-            CamposTurnoModificacion();
-            _Conexion.ConexionCerrar();
-
-            return _Valores;
-        }
-
-        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCrear";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
-            _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
-            _Comando.Parameters.AddWithValue("@diaNumero", diaNumero);
-            _Comando.Parameters.AddWithValue("@mes", mes);
-            _Comando.Parameters.AddWithValue("@anio", anio);
-            _Comando.Parameters.AddWithValue("@hora", hora);
-            _Comando.Parameters.AddWithValue("@descripcion", descripcion);
-            _Comando.ExecuteNonQuery();
-            _Comando.Parameters.Clear();
-        }
+        #region "Modificar turno"
 
         public void TurnoModificacionAceptar(int IdTurno)
         {
@@ -188,15 +182,9 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void TurnoModificacionRechazar(int IdTurno)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoModificacionRechazar";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
-            _Comando.ExecuteNonQuery();
-            _Conexion.ConexionCerrar();
-        }
+        #endregion
+
+        #region "Registrar presencia"
 
         public bool BuscarCliente(string Usuario, string Clave)
         {
@@ -234,5 +222,34 @@ namespace CapaDeDatos
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
+
+        #endregion
+
+        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCrear";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
+            _Comando.Parameters.AddWithValue("@diaNumero", diaNumero);
+            _Comando.Parameters.AddWithValue("@mes", mes);
+            _Comando.Parameters.AddWithValue("@anio", anio);
+            _Comando.Parameters.AddWithValue("@hora", hora);
+            _Comando.Parameters.AddWithValue("@descripcion", descripcion);
+            _Comando.ExecuteNonQuery();
+            _Comando.Parameters.Clear();
+        }
+
+        public void TurnoModificacionRechazar(int IdTurno)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoModificacionRechazar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
     }
 }

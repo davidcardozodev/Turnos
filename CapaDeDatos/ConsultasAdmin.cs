@@ -17,6 +17,8 @@ namespace CapaDeDatos
 
         #endregion
 
+        #region "Lista usuarios"
+
         public List<DatosUsuarioItem> AdminCargarUsuario()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
@@ -28,6 +30,33 @@ namespace CapaDeDatos
 
             return _Usuarios;
         }
+
+        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string rol)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarUsuarioFiltrado";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@rol", rol);
+            _Lector = _Comando.ExecuteReader();
+            CamposUsuario();
+            _Conexion.ConexionCerrar();
+
+            return _Usuarios;
+        }
+
+        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarUsuarioBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+            _Lector = _Comando.ExecuteReader();
+            CamposUsuario();
+            _Conexion.ConexionCerrar();
+
+            return _Usuarios;
+        }
+
 
         private void CamposUsuario()
         {
@@ -56,11 +85,41 @@ namespace CapaDeDatos
             }
         }
 
+        #endregion
+
+        #region "Lista turnos"
+
         public List<FormatoTurnos> TurnoCargarAdmin()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarAdmin";
             _Comando.CommandType = CommandType.StoredProcedure;
+            _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string estado)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCargarEstadoFiltradoAdmin";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@estado", estado);
+            _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "TurnoCargarBusquedaAdmin";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -105,58 +164,9 @@ namespace CapaDeDatos
             }
         }
 
-        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string estado)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarEstadoFiltradoAdmin";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@estado", estado);
-            _Lector = _Comando.ExecuteReader();
-            CamposTurno();
-            _Conexion.ConexionCerrar();
+        #endregion
 
-            return _Valores;
-        }
-
-        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string rol)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminCargarUsuarioFiltrado";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@rol", rol);
-            _Lector = _Comando.ExecuteReader();
-            CamposUsuario();
-            _Conexion.ConexionCerrar();
-
-            return _Usuarios;
-        }
-
-        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string busqueda)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarBusquedaAdmin";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-            _Lector = _Comando.ExecuteReader();
-            CamposTurno();
-            _Conexion.ConexionCerrar();
-
-            return _Valores;
-        }
-
-        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string busqueda)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminCargarUsuarioBusqueda";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-            _Lector = _Comando.ExecuteReader();
-            CamposUsuario();
-            _Conexion.ConexionCerrar();
-
-            return _Usuarios;
-        }
-
+        #region "Guardar"
 
         public void AdminModificarUsuario(int idUsuario, string usuario, string clave, string primerNombre, string segundoNombre, string email, string rol)
         {
@@ -184,22 +194,6 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
-        }
-
-        public DataTable AdminCargarProveedores()
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminCargarProveedores";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.ExecuteNonQuery();
-
-            DataTable TablaFiltrada = new DataTable();
-            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
-
-            adaptador.Fill(TablaFiltrada);
-
-            _Conexion.ConexionCerrar();
-            return TablaFiltrada;
         }
 
         public void AdminGuardarProveedor(int idTurno, string nombreProveedor)
@@ -256,6 +250,24 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@idCliente", idCliente);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
+        }
+
+        #endregion
+
+        public DataTable AdminCargarProveedores()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarProveedores";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.ExecuteNonQuery();
+
+            DataTable TablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+
+            adaptador.Fill(TablaFiltrada);
+
+            _Conexion.ConexionCerrar();
+            return TablaFiltrada;
         }
 
     }

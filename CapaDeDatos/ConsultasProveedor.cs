@@ -16,6 +16,8 @@ namespace CapaDeDatos
 
         #endregion
 
+        #region "Pantalla principal"
+
         public List<FormatoTurnos> ProveedorCargarTurnos(int horarioInicio, int horarioFin)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
@@ -23,6 +25,21 @@ namespace CapaDeDatos
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
             _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
+            _Lector = _Comando.ExecuteReader();
+            CamposTurno();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int horarioInicio, int horarioFin, string busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ProveedorCargarTurnosBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
+            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
+            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -68,6 +85,10 @@ namespace CapaDeDatos
                 });
             }
         }
+
+        #endregion
+
+        #region "Pantalla llamador"
 
         public List<FormatoTurnos> TurnoCargarProveedorAsignado(int idProveedor)
         {
@@ -163,20 +184,9 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int horarioInicio, int horarioFin, string busqueda)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "ProveedorCargarTurnosBusqueda";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
-            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
-            _Lector = _Comando.ExecuteReader();
-            CamposTurno();
-            _Conexion.ConexionCerrar();
+        #endregion
 
-            return _Valores;
-        }
+        #region "Acciones"
 
         public void ProveedorAsignar(int idProveedor, int idTurno)
         {
@@ -208,6 +218,10 @@ namespace CapaDeDatos
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
+
+        #endregion
+
+        #region "Disponibilidad"
 
         public void ProveedorCargarDisponibilidad(int idProveedor)
         {
@@ -244,5 +258,8 @@ namespace CapaDeDatos
             DatosDisponibilidad.HorarioInicio = int.Parse(Reader["HorarioInicio"].ToString());
             DatosDisponibilidad.HorarioFin = int.Parse(Reader["HorarioFin"].ToString());
         }
+
+        #endregion
+
     }
 }
