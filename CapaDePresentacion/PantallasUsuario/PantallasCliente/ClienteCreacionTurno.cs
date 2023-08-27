@@ -1,7 +1,9 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
+using System;
 using System.Data;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
@@ -32,9 +34,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
                 comboArea.Items.Add(proveedor["Nombre"].ToString());
         }
 
+        private const int CB_SETCUEBANNER = 0x1703;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+
         private void CargarValorPredeterminadoArea()
         {
-            comboArea.SelectedText = Estados.SinDefinir;
+            SendMessage(this.comboArea.Handle, CB_SETCUEBANNER, 0, Estados.SinDefinir);
         }
 
         private void btnVolverAtras_Click(object sender, System.EventArgs e)

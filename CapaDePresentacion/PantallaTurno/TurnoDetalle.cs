@@ -4,6 +4,7 @@ using CapaDeNegocio;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallaTurno
@@ -44,8 +45,7 @@ namespace CapaDePresentacion.PantallaTurno
             if (DatosUsuario.Rol == Rol.Admin)
             {
                 ActivarOpcionProveedores();
-
-                comboProveedores.SelectedText = Estados.SinDefinir;
+                CargarValorPredeterminadoProveedor();
 
                 Admin admin = new Admin();
 
@@ -56,6 +56,16 @@ namespace CapaDePresentacion.PantallaTurno
                 foreach (DataRow proveedor in proveedores.Rows)
                     comboProveedores.Items.Add(proveedor["PrimerNombre"].ToString() + " " + proveedor["SegundoNombre"].ToString());
             }
+        }
+
+        private const int CB_SETCUEBANNER = 0x1703;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+
+        private void CargarValorPredeterminadoProveedor()
+        {
+            SendMessage(this.comboProveedores.Handle, CB_SETCUEBANNER, 0, Estados.SinDefinir);
         }
 
         private void ActivarOpcionProveedores()
