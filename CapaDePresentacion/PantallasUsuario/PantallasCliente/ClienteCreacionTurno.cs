@@ -34,7 +34,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void CargarValorPredeterminadoArea()
         {
-            comboArea.Items.Add(Estados.SinDefinir);
             comboArea.SelectedText = Estados.SinDefinir;
         }
 

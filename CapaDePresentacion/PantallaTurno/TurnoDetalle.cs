@@ -45,7 +45,6 @@ namespace CapaDePresentacion.PantallaTurno
             {
                 ActivarOpcionProveedores();
 
-                comboProveedores.Items.Add(Estados.SinDefinir);
                 comboProveedores.SelectedText = Estados.SinDefinir;
 
                 Admin admin = new Admin();
