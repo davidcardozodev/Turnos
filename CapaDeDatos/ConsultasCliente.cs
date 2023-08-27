@@ -13,6 +13,7 @@ namespace CapaDeDatos
         private SqlDataReader _Lector;
         private SqlCommand _Comando = new SqlCommand();
         private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
+        private DataTable _Tabla = new DataTable();
 
         #endregion
 
@@ -251,5 +252,18 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public DataTable ClienteCargarArea()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ClienteCargarArea";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.ExecuteNonQuery();
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+            adaptador.Fill(_Tabla);
+
+            _Conexion.ConexionCerrar();
+            return _Tabla;
+        }
     }
 }

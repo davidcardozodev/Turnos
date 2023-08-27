@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDeDatos;
 using System.Collections.Generic;
+using System.Data;
 
 namespace CapaDeEntidades
 {
@@ -68,6 +69,11 @@ namespace CapaDeEntidades
         public void RegistrarPresencia(string Usuario)
         {
             _ConsultasCliente.RegistrarPresencia(Usuario);
+        }
+
+        public DataTable ClienteCargarArea()
+        {
+            return _ConsultasCliente.ClienteCargarArea();
         }
     }
 }

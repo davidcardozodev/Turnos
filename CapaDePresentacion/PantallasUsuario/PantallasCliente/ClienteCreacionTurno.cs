@@ -1,6 +1,7 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
+using System.Data;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
@@ -17,6 +18,24 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             CargarHorarios();
             GuardarFecha();
             ValorInicialHorario();
+            CargarAreas();
+            CargarValorPredeterminadoArea();
+        }
+
+        private void CargarAreas()
+        {
+            Cliente cliente = new Cliente();
+
+            DataTable areas = cliente.ClienteCargarArea();
+
+            foreach (DataRow proveedor in areas.Rows)
+                comboArea.Items.Add(proveedor["Nombre"].ToString());
+        }
+
+        private void CargarValorPredeterminadoArea()
+        {
+            comboArea.Items.Add(Estados.SinDefinir);
+            comboArea.SelectedText = Estados.SinDefinir;
         }
 
         private void btnVolverAtras_Click(object sender, System.EventArgs e)
