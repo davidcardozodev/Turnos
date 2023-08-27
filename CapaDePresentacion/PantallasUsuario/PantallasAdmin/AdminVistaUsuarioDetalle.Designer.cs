@@ -92,6 +92,7 @@
             // 
             // comboPlan
             // 
+            this.comboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPlan.FormattingEnabled = true;
             this.comboPlan.Location = new System.Drawing.Point(262, 286);
@@ -111,6 +112,7 @@
             // 
             // comboFin
             // 
+            this.comboFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboFin.Enabled = false;
             this.comboFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboFin.FormattingEnabled = true;
@@ -132,6 +134,7 @@
             // 
             // comboInicio
             // 
+            this.comboInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboInicio.Enabled = false;
             this.comboInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboInicio.FormattingEnabled = true;
@@ -243,6 +246,7 @@
             // 
             // comboRol
             // 
+            this.comboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboRol.FormattingEnabled = true;
             this.comboRol.Location = new System.Drawing.Point(718, 155);

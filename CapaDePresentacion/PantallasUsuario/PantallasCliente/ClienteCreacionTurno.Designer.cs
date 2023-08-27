@@ -33,14 +33,14 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblArea = new System.Windows.Forms.Label();
+            this.comboArea = new System.Windows.Forms.ComboBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.comboHora = new System.Windows.Forms.ComboBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.btnCrearTurno = new System.Windows.Forms.Button();
             this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.comboArea = new System.Windows.Forms.ComboBox();
-            this.lblArea = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,26 @@
             this.panel1.Size = new System.Drawing.Size(583, 297);
             this.panel1.TabIndex = 7;
             // 
+            // lblArea
+            // 
+            this.lblArea.AutoSize = true;
+            this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Location = new System.Drawing.Point(12, 154);
+            this.lblArea.Name = "lblArea";
+            this.lblArea.Size = new System.Drawing.Size(85, 37);
+            this.lblArea.TabIndex = 12;
+            this.lblArea.Text = "Area";
+            // 
+            // comboArea
+            // 
+            this.comboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboArea.FormattingEnabled = true;
+            this.comboArea.Location = new System.Drawing.Point(124, 157);
+            this.comboArea.Name = "comboArea";
+            this.comboArea.Size = new System.Drawing.Size(436, 37);
+            this.comboArea.TabIndex = 11;
+            // 
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +129,7 @@
             // 
             // comboHora
             // 
+            this.comboHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboHora.FormattingEnabled = true;
             this.comboHora.Location = new System.Drawing.Point(124, 97);
@@ -156,25 +177,6 @@
             this.lblSubtitulo.Size = new System.Drawing.Size(101, 37);
             this.lblSubtitulo.TabIndex = 9;
             this.lblSubtitulo.Text = "Datos";
-            // 
-            // comboArea
-            // 
-            this.comboArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboArea.FormattingEnabled = true;
-            this.comboArea.Location = new System.Drawing.Point(124, 157);
-            this.comboArea.Name = "comboArea";
-            this.comboArea.Size = new System.Drawing.Size(436, 37);
-            this.comboArea.TabIndex = 11;
-            // 
-            // lblArea
-            // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(12, 154);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(85, 37);
-            this.lblArea.TabIndex = 12;
-            this.lblArea.Text = "Area";
             // 
             // ClienteCreacionTurno
             // 
