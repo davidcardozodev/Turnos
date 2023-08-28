@@ -28,12 +28,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void AdminVistaUsuarioDetalle_Load(object sender, EventArgs e)
         {
             CargarRoles();
-            CargarDatosUsuario();
             CargarPlanes();
             CargarValoresHorarioInicio();
             ValorInicialHorarios();
             ActivarCambioHorarioProveedor();
             ValorInicialProveedor();
+            CargarDatosUsuario();
         }
 
         private void CargarPlanes()
@@ -91,9 +91,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             txtPrimerNombre.Text = PrimerNombre;
             txtSegundoNombre.Text = SegundoNombre;
             txtEmail.Text = Email;
-            comboRol.SelectedValue = RolUsuario;
-            comboPlan.SelectedValue = TipoPlan;
-            comboPlan.SelectedText = TipoPlan;
+            comboRol.SelectedItem = RolUsuario;
+            comboPlan.SelectedItem = TipoPlan;
         }
 
         private void CargarRoles()
