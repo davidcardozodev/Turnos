@@ -63,7 +63,7 @@
             // 
             this.lblSegundoNombre.AutoSize = true;
             this.lblSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoNombre.Location = new System.Drawing.Point(11, 138);
+            this.lblSegundoNombre.Location = new System.Drawing.Point(11, 206);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
             this.lblSegundoNombre.Size = new System.Drawing.Size(263, 37);
             this.lblSegundoNombre.TabIndex = 39;
@@ -73,7 +73,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(166, 207);
+            this.lblEmail.Location = new System.Drawing.Point(166, 275);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(97, 37);
             this.lblEmail.TabIndex = 40;
@@ -93,7 +93,7 @@
             // 
             this.lblPrimerNombre.AutoSize = true;
             this.lblPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombre.Location = new System.Drawing.Point(45, 75);
+            this.lblPrimerNombre.Location = new System.Drawing.Point(45, 143);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
             this.lblPrimerNombre.Size = new System.Drawing.Size(229, 37);
             this.lblPrimerNombre.TabIndex = 38;
@@ -110,7 +110,7 @@
             // txtPrimerNombre
             // 
             this.txtPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerNombre.Location = new System.Drawing.Point(294, 75);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(294, 143);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(433, 39);
             this.txtPrimerNombre.TabIndex = 43;
@@ -118,7 +118,7 @@
             // txtSegundoNombre
             // 
             this.txtSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSegundoNombre.Location = new System.Drawing.Point(294, 138);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(294, 206);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Size = new System.Drawing.Size(433, 39);
             this.txtSegundoNombre.TabIndex = 44;
@@ -126,7 +126,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(294, 207);
+            this.txtEmail.Location = new System.Drawing.Point(294, 275);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(433, 39);
             this.txtEmail.TabIndex = 45;
@@ -155,7 +155,7 @@
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(294, 270);
+            this.txtClave.Location = new System.Drawing.Point(294, 82);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(433, 39);
             this.txtClave.TabIndex = 49;
@@ -164,7 +164,7 @@
             // 
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.Location = new System.Drawing.Point(166, 270);
+            this.lblClave.Location = new System.Drawing.Point(166, 82);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(97, 37);
             this.lblClave.TabIndex = 48;
