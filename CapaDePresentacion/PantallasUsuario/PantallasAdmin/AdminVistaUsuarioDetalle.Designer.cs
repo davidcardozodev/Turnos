@@ -114,13 +114,13 @@
             // comboFin
             // 
             this.comboFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboFin.Enabled = false;
             this.comboFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboFin.FormattingEnabled = true;
             this.comboFin.Location = new System.Drawing.Point(667, 218);
             this.comboFin.Name = "comboFin";
             this.comboFin.Size = new System.Drawing.Size(294, 40);
             this.comboFin.TabIndex = 29;
+            this.comboFin.Visible = false;
             this.comboFin.SelectedIndexChanged += new System.EventHandler(this.comboFin_SelectedIndexChanged);
             // 
             // lblFin
@@ -132,17 +132,18 @@
             this.lblFin.Size = new System.Drawing.Size(54, 32);
             this.lblFin.TabIndex = 28;
             this.lblFin.Text = "Fin";
+            this.lblFin.Visible = false;
             // 
             // comboInicio
             // 
             this.comboInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboInicio.Enabled = false;
             this.comboInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboInicio.FormattingEnabled = true;
             this.comboInicio.Location = new System.Drawing.Point(667, 155);
             this.comboInicio.Name = "comboInicio";
             this.comboInicio.Size = new System.Drawing.Size(294, 40);
             this.comboInicio.TabIndex = 27;
+            this.comboInicio.Visible = false;
             this.comboInicio.SelectedValueChanged += new System.EventHandler(this.comboInicio_SelectedValueChanged);
             this.comboInicio.Click += new System.EventHandler(this.comboInicio_Click);
             // 
@@ -155,6 +156,7 @@
             this.lblInicio.Size = new System.Drawing.Size(81, 32);
             this.lblInicio.TabIndex = 25;
             this.lblInicio.Text = "Inicio";
+            this.lblInicio.Visible = false;
             // 
             // txtClave
             // 

@@ -52,8 +52,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             if (RolUsuario == Rol.Proveedor)
             {
-                comboInicio.Enabled = true;
-                comboFin.Enabled = true;
+                comboInicio.Visible = true;
+                comboFin.Visible = true;
+                lblInicio.Visible = true;
+                lblFin.Visible = true;
             }
         }
 
