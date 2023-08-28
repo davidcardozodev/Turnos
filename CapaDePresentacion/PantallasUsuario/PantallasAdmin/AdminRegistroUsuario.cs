@@ -86,7 +86,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminRegistrarUsuario(Usuario, PrimerNombre, SegundoNombre, Email, Clave, Rol_, TipoPlan);
+            admin.AdminRegistrarUsuario(Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol_, TipoPlan);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
