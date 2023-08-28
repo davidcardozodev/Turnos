@@ -68,6 +68,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 usuarioItem.Email = Usuario.Email;
                 usuarioItem.Rol = Usuario.Rol;
                 usuarioItem.TipoPlan = Usuario.TipoPlan;
+                usuarioItem.HorarioInicio = Usuario.HorarioInicio;
+                usuarioItem.HorarioFin = Usuario.HorarioFin;
 
                 flowLayoutPanel1.Controls.Add(usuarioItem);
             }

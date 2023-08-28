@@ -22,6 +22,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         public string Email { get; set; }
         public string RolUsuario { get; set; }
         public string TipoPlan { get; set; }
+        public int HorarioInicio { get; set; }
+        public int HorarioFin { get; set; }
 
         #endregion
 
@@ -34,6 +36,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             ActivarCambioHorarioProveedor();
             ValorInicialProveedor();
             CargarDatosUsuario();
+            CargarDisponibilidadProveedor();
+
+        }
+
+        private void CargarDisponibilidadProveedor()
+        {
+            if (RolUsuario == Rol.Proveedor)
+            {
+                comboInicio.SelectedItem = HorarioInicio;
+                comboFin.SelectedItem = HorarioFin;
+            }
         }
 
         private void CargarPlanes()

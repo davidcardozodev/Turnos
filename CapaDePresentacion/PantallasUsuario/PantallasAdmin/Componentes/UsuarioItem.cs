@@ -19,6 +19,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public string Email { get; set; }
         public string Rol { get; set; }
         public string TipoPlan { get; set; }
+        public int HorarioInicio { get; set; }
+        public int HorarioFin { get; set; }
 
         #endregion
 
@@ -41,6 +43,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             adminVistaUsuarioDetalle.Email = Email;
             adminVistaUsuarioDetalle.RolUsuario = Rol;
             adminVistaUsuarioDetalle.TipoPlan = TipoPlan;
+            adminVistaUsuarioDetalle.HorarioInicio = HorarioInicio;
+            adminVistaUsuarioDetalle.HorarioFin = HorarioFin;
 
             adminVistaUsuarioDetalle.Show();
         }

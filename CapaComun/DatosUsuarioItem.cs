@@ -10,5 +10,7 @@
         public string Email { get; set; }
         public string Rol { get; set; }
         public string TipoPlan { get; set; }
+        public int HorarioInicio { get; set; }
+        public int HorarioFin { get; set; }
     }
 }

@@ -70,6 +70,8 @@ namespace CapaDeDatos
                 string Email = _Lector["Email"].ToString();
                 string Rol = _Lector["Rol"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
+                int HorarioInicio = int.Parse(_Lector["HorarioInicio"].ToString());
+                int HorarioFin = int.Parse(_Lector["HorarioFin"].ToString());
 
                 _Usuarios.Add(new DatosUsuarioItem
                 {
@@ -80,7 +82,9 @@ namespace CapaDeDatos
                     SegundoNombre = SegundoNombre,
                     Email = Email,
                     Rol = Rol,
-                    TipoPlan = TipoPlan
+                    TipoPlan = TipoPlan,
+                    HorarioInicio = HorarioInicio,
+                    HorarioFin = HorarioFin
                 });
             }
         }
