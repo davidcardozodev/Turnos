@@ -1,6 +1,9 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
+using System;
+using System.Data;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
@@ -18,6 +21,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             OcultarCalendario();
             CargarValoresHorario();
             ValorInicialHorario();
+            CargarAreas();
+            CargarValorPredeterminadoArea();
         }
 
         #region "Atributos"
@@ -33,6 +38,26 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private string Hora;
 
         #endregion
+
+        private void CargarAreas()
+        {
+            Cliente cliente = new Cliente();
+
+            DataTable areas = cliente.ClienteCargarArea();
+
+            foreach (DataRow proveedor in areas.Rows)
+                comboArea.Items.Add(proveedor["Nombre"].ToString());
+        }
+
+        private const int CB_SETCUEBANNER = 0x1703;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
+
+        private void CargarValorPredeterminadoArea()
+        {
+            SendMessage(this.comboArea.Handle, CB_SETCUEBANNER, 0, Estados.SinDefinir);
+        }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
