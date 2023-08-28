@@ -11,9 +11,9 @@ namespace CapaDeEntidades
 
         private ConsultasCliente _ConsultasCliente = new ConsultasCliente();
 
-        public List<FormatoTurnos> TurnoCargar(int idCliente)
+        public List<FormatoTurnos> TurnoCargar(int IdCliente)
         {
-            return _ConsultasCliente.TurnoCargar(idCliente);
+            return _ConsultasCliente.TurnoCargar(IdCliente);
         }
 
         public List<FormatoTurnos> TurnoCargarDetalle(int IdTurno)
@@ -21,24 +21,24 @@ namespace CapaDeEntidades
             return _ConsultasCliente.TurnoCargarDetalle(IdTurno);
         }
 
-        public List<FormatoTurnos> TurnoCargarModificacion(int idCliente)
+        public List<FormatoTurnos> TurnoCargarModificacion(int IdCliente)
         {
-            return _ConsultasCliente.TurnoCargarModificacion(idCliente);
+            return _ConsultasCliente.TurnoCargarModificacion(IdCliente);
         }
 
-        public List<FormatoTurnos> TurnoCargarBusqueda(int idCliente, string busqueda)
+        public List<FormatoTurnos> TurnoCargarBusqueda(int IdCliente, string Busqueda)
         {
-            return _ConsultasCliente.TurnoCargarBusqueda(idCliente, busqueda);
+            return _ConsultasCliente.TurnoCargarBusqueda(IdCliente, Busqueda);
         }
 
-        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int idCliente, string busqueda)
+        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int IdCliente, string Busqueda)
         {
-            return _ConsultasCliente.CargarTurnoModificacionBusqueda(idCliente, busqueda);
+            return _ConsultasCliente.CargarTurnoModificacionBusqueda(IdCliente, Busqueda);
         }
 
-        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion, string area, string establecimiento)
+        public void TurnoCrear(int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string Hora, string Descripcion, string Area, string Establecimiento)
         {
-            _ConsultasCliente.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion, area, establecimiento);
+            _ConsultasCliente.TurnoCrear(IdCliente, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
         }
 
         public void TurnoModificacionAceptar(int IdTurno)
@@ -46,14 +46,14 @@ namespace CapaDeEntidades
             _ConsultasCliente.TurnoModificacionAceptar(IdTurno);
         }
 
-        public void TurnoModificacionCambiarFecha(int IdTurno, string diaNumero, string diaNombre, string mes, string anio)
+        public void TurnoModificacionCambiarFecha(int IdTurno, string DiaNumero, string DiaNombre, string Mes, string Anio)
         {
-            _ConsultasCliente.TurnoModificacionCambiarFecha(IdTurno, diaNumero, diaNombre, mes, anio);
+            _ConsultasCliente.TurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
         }
 
-        public void TurnoModificacionCambiarProveedor(int IdTurno, string nombreProveedor)
+        public void TurnoModificacionCambiarProveedor(int IdTurno, string NombreProveedor)
         {
-            _ConsultasCliente.TurnoModificacionCambiarProveedor(IdTurno, nombreProveedor);
+            _ConsultasCliente.TurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
         }
 
         public void TurnoModificacionRechazar(int IdTurno)

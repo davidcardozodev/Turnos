@@ -10,19 +10,19 @@ namespace CapaDeEntidades
 
         private ConsultasTurno _ConsultasTurno = new ConsultasTurno();
 
-        public void TurnoDarBaja(int idTurno)
+        public void TurnoDarBaja(int IdTurno)
         {
-            _ConsultasTurno.TurnoDarBaja(idTurno);
+            _ConsultasTurno.TurnoDarBaja(IdTurno);
         }
 
-        public List<FormatoTurnos> TurnoFiltrarEstado(int idCliente, string estado)
+        public List<FormatoTurnos> TurnoFiltrarEstado(int IdCliente, string Estado)
         {
-            return _ConsultasTurno.TurnoFiltrarEstado(idCliente, estado);
+            return _ConsultasTurno.TurnoFiltrarEstado(IdCliente, Estado);
         }
 
-        public List<FormatoTurnos> TurnoModificacionFiltrarEstado(int idCliente, string estado)
+        public List<FormatoTurnos> TurnoModificacionFiltrarEstado(int IdCliente, string Estado)
         {
-            return _ConsultasTurno.TurnoModificacionFiltrarEstado(idCliente, estado);
+            return _ConsultasTurno.TurnoModificacionFiltrarEstado(IdCliente, Estado);
         }
     }
 }

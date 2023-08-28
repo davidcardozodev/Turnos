@@ -109,11 +109,11 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void BusquedaUsuario()
         {
-            Usuario usuario = new Usuario();
+            Usuario Usuario = new Usuario();
 
             try
             {
-                var loginValido = usuario.IniciarSesion(txtUsuario.Text, txtClave.Text);
+                var loginValido = Usuario.IniciarSesion(txtUsuario.Text, txtClave.Text);
                 InicioSesionValidado(loginValido);
             }
             catch (Exception)

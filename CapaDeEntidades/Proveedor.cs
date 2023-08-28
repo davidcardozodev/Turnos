@@ -10,44 +10,44 @@ namespace CapaDeEntidades
 
         ConsultasProveedor _ConsultasProveedor = new ConsultasProveedor();
 
-        public List<FormatoTurnos> ProveedorCargarTurnos(int horarioInicio, int horarioFin)
+        public List<FormatoTurnos> ProveedorCargarTurnos(int HorarioInicio, int HorarioFin)
         {
-            return _ConsultasProveedor.ProveedorCargarTurnos(horarioInicio, horarioFin);
+            return _ConsultasProveedor.ProveedorCargarTurnos(HorarioInicio, HorarioFin);
         }
 
-        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int IdProveedor)
         {
-            return _ConsultasProveedor.TurnoCargarProveedorAsignado(idProveedor);
+            return _ConsultasProveedor.TurnoCargarProveedorAsignado(IdProveedor);
         }
 
-        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int IdProveedor)
         {
-            return _ConsultasProveedor.TurnoCargarProveedorEnCurso(idProveedor);
+            return _ConsultasProveedor.TurnoCargarProveedorEnCurso(IdProveedor);
         }
 
-        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int horarioInicio, int horarioFin, string busqueda)
+        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int HorarioInicio, int HorarioFin, string Busqueda)
         {
-            return _ConsultasProveedor.ProveedorCargarTurnosBusqueda(horarioInicio, horarioFin, busqueda);
+            return _ConsultasProveedor.ProveedorCargarTurnosBusqueda(HorarioInicio, HorarioFin, Busqueda);
         }
 
-        public void ProveedorAsignar(int idProveedor, int idTurno)
+        public void ProveedorAsignar(int IdProveedor, int IdTurno)
         {
-            _ConsultasProveedor.ProveedorAsignar(idProveedor, idTurno);
+            _ConsultasProveedor.ProveedorAsignar(IdProveedor, IdTurno);
         }
 
-        public void ProveedorAgregarEnCurso(int idTurno)
+        public void ProveedorAgregarEnCurso(int IdTurno)
         {
-            _ConsultasProveedor.ProveedorAgregarEnCurso(idTurno);
+            _ConsultasProveedor.ProveedorAgregarEnCurso(IdTurno);
         }
 
-        public void TurnoProveedorFinalizar(int idTurno)
+        public void TurnoProveedorFinalizar(int IdTurno)
         {
-            _ConsultasProveedor.TurnoProveedorFinalizar(idTurno);
+            _ConsultasProveedor.TurnoProveedorFinalizar(IdTurno);
         }
 
-        public void ProveedorCargarDisponibilidad(int idProveedor)
+        public void ProveedorCargarDisponibilidad(int IdProveedor)
         {
-            _ConsultasProveedor.ProveedorCargarDisponibilidad(idProveedor);
+            _ConsultasProveedor.ProveedorCargarDisponibilidad(IdProveedor);
         }
     }
 }

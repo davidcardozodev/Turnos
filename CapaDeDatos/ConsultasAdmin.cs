@@ -31,12 +31,12 @@ namespace CapaDeDatos
             return _Usuarios;
         }
 
-        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string rol)
+        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string Rol)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarUsuarioFiltrado";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@rol", rol);
+            _Comando.Parameters.AddWithValue("@Rol", Rol);
             _Lector = _Comando.ExecuteReader();
             CamposUsuario();
             _Conexion.ConexionCerrar();
@@ -44,12 +44,12 @@ namespace CapaDeDatos
             return _Usuarios;
         }
 
-        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string busqueda)
+        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarUsuarioBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+            _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposUsuario();
             _Conexion.ConexionCerrar();
@@ -101,12 +101,12 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string estado)
+        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string Estado)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarEstadoFiltradoAdmin";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@estado", estado);
+            _Comando.Parameters.AddWithValue("@Estado", Estado);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -114,12 +114,12 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string busqueda)
+        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarBusquedaAdmin";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+            _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -168,86 +168,86 @@ namespace CapaDeDatos
 
         #region "Guardar"
 
-        public void AdminModificarUsuario(int idUsuario, string usuario, string clave, string primerNombre, string segundoNombre, string email, string rol)
+        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminModificarUsuario";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idUsuario", idUsuario);
-            _Comando.Parameters.AddWithValue("@usuario", usuario);
-            _Comando.Parameters.AddWithValue("@clave", clave);
-            _Comando.Parameters.AddWithValue("@primerNombre", primerNombre);
-            _Comando.Parameters.AddWithValue("@segundoNombre", segundoNombre);
-            _Comando.Parameters.AddWithValue("@email", email);
-            _Comando.Parameters.AddWithValue("@rol", rol);
+            _Comando.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+            _Comando.Parameters.AddWithValue("@Usuario", Usuario);
+            _Comando.Parameters.AddWithValue("@Clave", Clave);
+            _Comando.Parameters.AddWithValue("@PrimerNombre", PrimerNombre);
+            _Comando.Parameters.AddWithValue("@SegundoNombre", SegundoNombre);
+            _Comando.Parameters.AddWithValue("@Email", Email);
+            _Comando.Parameters.AddWithValue("@Rol", Rol);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminGuardarDisponibilidad(int idUsuario, int horarioInicio, int horarioFin)
+        public void AdminGuardarDisponibilidad(int IdUsuario, int HorarioInicio, int HorarioFin)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminGuardarDisponibilidad";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idUsuario", idUsuario);
-            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
-            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
+            _Comando.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+            _Comando.Parameters.AddWithValue("@HorarioInicio", HorarioInicio);
+            _Comando.Parameters.AddWithValue("@HorarioFin", HorarioFin);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminGuardarProveedor(int idTurno, string nombreProveedor)
+        public void AdminGuardarProveedor(int IdTurno, string NombreProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminGuardarProveedor";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
-            _Comando.Parameters.AddWithValue("@nombreProveedor", nombreProveedor);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.Parameters.AddWithValue("@NombreProveedor", NombreProveedor);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminGuardarModificacion(int idTurno, int idAdmin, int idCliente, string diaNombre, string diaNumero, string mes, string anio, string nombreProveedor)
+        public void AdminGuardarModificacion(int IdTurno, int IdAdmin, int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string NombreProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminGuardarModificacion";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
-            _Comando.Parameters.AddWithValue("@idAdmin", idAdmin);
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
-            _Comando.Parameters.AddWithValue("@diaNombre", diaNombre);
-            _Comando.Parameters.AddWithValue("@diaNumero", diaNumero);
-            _Comando.Parameters.AddWithValue("@mes", mes);
-            _Comando.Parameters.AddWithValue("@anio", anio);
-            _Comando.Parameters.AddWithValue("@nombreProveedor", nombreProveedor);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.Parameters.AddWithValue("@IdAdmin", IdAdmin);
+            _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
+            _Comando.Parameters.AddWithValue("@DiaNombre", DiaNombre);
+            _Comando.Parameters.AddWithValue("@DiaNumero", DiaNumero);
+            _Comando.Parameters.AddWithValue("@Mes", Mes);
+            _Comando.Parameters.AddWithValue("@Anio", Anio);
+            _Comando.Parameters.AddWithValue("@NombreProveedor", NombreProveedor);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminRegistrarUsuario(string nombreUsuario, string clave, string primerNombre, string segundoNombre, string email, string rol, string tipoPlan)
+        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string TipoPlan)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminRegistrarUsuario";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-            _Comando.Parameters.AddWithValue("@clave", clave);
-            _Comando.Parameters.AddWithValue("@primerNombre", primerNombre);
-            _Comando.Parameters.AddWithValue("@segundoNombre", segundoNombre);
-            _Comando.Parameters.AddWithValue("@email", email);
-            _Comando.Parameters.AddWithValue("@rol", rol);
-            _Comando.Parameters.AddWithValue("@tipoPlan", tipoPlan);
+            _Comando.Parameters.AddWithValue("@NombreUsuario", NombreUsuario);
+            _Comando.Parameters.AddWithValue("@Clave", Clave);
+            _Comando.Parameters.AddWithValue("@PrimerNombre", PrimerNombre);
+            _Comando.Parameters.AddWithValue("@SegundoNombre", SegundoNombre);
+            _Comando.Parameters.AddWithValue("@Email", Email);
+            _Comando.Parameters.AddWithValue("@Rol", Rol);
+            _Comando.Parameters.AddWithValue("@TipoPlan", TipoPlan);
             _Comando.ExecuteNonQuery();
             _Comando.Parameters.Clear();
         }
 
-        public void AdminGuardarBajaNotificacion(int idTurno, int idAdmin, int idCliente)
+        public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminGuardarBajaNotificacion";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
-            _Comando.Parameters.AddWithValue("@idAdmin", idAdmin);
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.Parameters.AddWithValue("@IdAdmin", IdAdmin);
+            _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }

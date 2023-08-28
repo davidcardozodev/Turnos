@@ -21,34 +21,34 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuario();
         }
 
-        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string estado)
+        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string Estado)
         {
-            return _ConsultasAdmin.TurnoCargarEstadoFiltradoAdmin(estado);
+            return _ConsultasAdmin.TurnoCargarEstadoFiltradoAdmin(Estado);
         }
 
-        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string rol)
+        public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string Rol)
         {
-            return _ConsultasAdmin.AdminCargarUsuarioFiltrado(rol);
+            return _ConsultasAdmin.AdminCargarUsuarioFiltrado(Rol);
         }
 
-        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string busqueda)
+        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string Busqueda)
         {
-            return _ConsultasAdmin.TurnoCargarBusquedaAdmin(busqueda);
+            return _ConsultasAdmin.TurnoCargarBusquedaAdmin(Busqueda);
         }
 
-        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string busqueda)
+        public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string Busqueda)
         {
-            return _ConsultasAdmin.AdminCargarUsuarioBusqueda(busqueda);
+            return _ConsultasAdmin.AdminCargarUsuarioBusqueda(Busqueda);
         }
 
-        public void AdminModificarUsuario(int idUsuario, string usuario, string clave, string primerNombre, string segundoNombre, string email, string rol)
+        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol)
         {
-            _ConsultasAdmin.AdminModificarUsuario(idUsuario, usuario, clave, primerNombre, segundoNombre, email, rol);
+            _ConsultasAdmin.AdminModificarUsuario(IdUsuario, Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol);
         }
 
-        public void AdminGuardarDisponibilidad(int idUsuario, int horarioInicio, int horarioFin)
+        public void AdminGuardarDisponibilidad(int IdUsuario, int HorarioInicio, int HorarioFin)
         {
-            _ConsultasAdmin.AdminGuardarDisponibilidad(idUsuario, horarioInicio, horarioFin);
+            _ConsultasAdmin.AdminGuardarDisponibilidad(IdUsuario, HorarioInicio, HorarioFin);
         }
 
         public DataTable AdminCargarProveedores()
@@ -56,24 +56,24 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarProveedores();
         }
 
-        public void AdminGuardarProveedor(int idTurno, string nombreProveedor)
+        public void AdminGuardarProveedor(int IdTurno, string NombreProveedor)
         {
-            _ConsultasAdmin.AdminGuardarProveedor(idTurno, nombreProveedor);
+            _ConsultasAdmin.AdminGuardarProveedor(IdTurno, NombreProveedor);
         }
 
-        public void AdminGuardarModificacion(int idTurno, int idAdmin, int idCliente, string diaNombre, string diaNumero, string mes, string anio, string nombreProveedor)
+        public void AdminGuardarModificacion(int IdTurno, int IdAdmin, int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string NombreProveedor)
         {
-            _ConsultasAdmin.AdminGuardarModificacion(idTurno, idAdmin, idCliente, diaNombre, diaNumero, mes, anio, nombreProveedor);
+            _ConsultasAdmin.AdminGuardarModificacion(IdTurno, IdAdmin, IdCliente, DiaNombre, DiaNumero, Mes, Anio, NombreProveedor);
         }
 
-        public void AdminRegistrarUsuario(string nombreUsuario, string clave, string primerNombre, string segundoNombre, string email, string rol, string tipoPlan)
+        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string TipoPlan)
         {
-            _ConsultasAdmin.AdminRegistrarUsuario(nombreUsuario, clave, primerNombre, segundoNombre, email, rol, tipoPlan);
+            _ConsultasAdmin.AdminRegistrarUsuario(NombreUsuario, Clave, PrimerNombre, SegundoNombre, Email, Rol, TipoPlan);
         }
 
-        public void AdminGuardarBajaNotificacion(int idTurno, int idAdmin, int idCliente)
+        public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)
         {
-            _ConsultasAdmin.AdminGuardarBajaNotificacion(idTurno, idAdmin, idCliente);
+            _ConsultasAdmin.AdminGuardarBajaNotificacion(IdTurno, IdAdmin, IdCliente);
         }
     }
 }

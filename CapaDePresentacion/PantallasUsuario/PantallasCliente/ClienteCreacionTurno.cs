@@ -29,9 +29,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            DataTable areas = cliente.ClienteCargarArea();
+            DataTable Areas = cliente.ClienteCargarArea();
 
-            foreach (DataRow proveedor in areas.Rows)
+            foreach (DataRow proveedor in Areas.Rows)
                 comboArea.Items.Add(proveedor["Nombre"].ToString());
         }
 
@@ -39,9 +39,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            DataTable establecimiento = cliente.ClienteCargarEstablecimiento();
+            DataTable Establecimiento = cliente.ClienteCargarEstablecimiento();
 
-            foreach (DataRow proveedor in establecimiento.Rows)
+            foreach (DataRow proveedor in Establecimiento.Rows)
                 comboEstablecimiento.Items.Add(proveedor["Nombre"].ToString());
         }
 
@@ -68,7 +68,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         #region "Datos del turno"
 
-        private string anio, mes, diaNombre, diaNumero, hora, descripcion, area, establecimiento;
+        private string Anio, Mes, DiaNombre, DiaNumero, Hora, Descripcion, Area, Establecimiento;
 
         private void ValorInicialHorario()
         {
@@ -83,18 +83,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void GuardarFecha()
         {
-            anio = dtpFecha.Value.ToString("yyyy");
-            mes = dtpFecha.Value.ToString("MMMM");
-            diaNombre = dtpFecha.Value.ToString("dddd");
-            diaNumero = dtpFecha.Value.ToString("dd");
+            Anio = dtpFecha.Value.ToString("yyyy");
+            Mes = dtpFecha.Value.ToString("MMMM");
+            DiaNombre = dtpFecha.Value.ToString("dddd");
+            DiaNumero = dtpFecha.Value.ToString("dd");
         }
 
         private void GuardarDatos()
         {
-            hora = comboHora.Text;
-            descripcion = txtDescripcion.Text;
-            area = comboArea.Text;
-            establecimiento = comboEstablecimiento.Text;
+            Hora = comboHora.Text;
+            Descripcion = txtDescripcion.Text;
+            Area = comboArea.Text;
+            Establecimiento = comboEstablecimiento.Text;
         }
 
         #endregion
@@ -106,7 +106,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             GuardarDatos();
             GuardarFecha();
 
-            cliente.TurnoCrear(DatosUsuario.Id, diaNombre, diaNumero, mes, anio, hora, descripcion, area, establecimiento);
+            cliente.TurnoCrear(DatosUsuario.Id, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
 
             MessageBox.Show(Mensajes.GuardadoTurno);
         }

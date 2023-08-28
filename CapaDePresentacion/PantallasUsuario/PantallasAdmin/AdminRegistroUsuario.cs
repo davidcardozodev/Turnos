@@ -22,13 +22,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         #region "Atributos"
 
 
-        private string usuario;
-        private string primerNombre;
-        private string segundoNombre;
-        private string email;
-        private string clave;
-        private string rol;
-        private string tipoPlan;
+        private string Usuario;
+        private string PrimerNombre;
+        private string SegundoNombre;
+        private string Email;
+        private string Clave;
+        private string Rol_;
+        private string TipoPlan;
 
         #endregion
 
@@ -64,29 +64,29 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private bool ComprobarCampos()
         {
-            return !string.IsNullOrWhiteSpace(usuario) &&
-                   !string.IsNullOrWhiteSpace(primerNombre) &&
-                   !string.IsNullOrWhiteSpace(segundoNombre) &&
-                   !string.IsNullOrWhiteSpace(email) &&
-                   !string.IsNullOrWhiteSpace(clave);
+            return !string.IsNullOrWhiteSpace(Usuario) &&
+                   !string.IsNullOrWhiteSpace(PrimerNombre) &&
+                   !string.IsNullOrWhiteSpace(SegundoNombre) &&
+                   !string.IsNullOrWhiteSpace(Email) &&
+                   !string.IsNullOrWhiteSpace(Clave);
         }
 
         private void AsignarDatos()
         {
-            usuario = txtUsuario.Text;
-            primerNombre = txtPrimerNombre.Text;
-            segundoNombre = txtSegundoNombre.Text;
-            email = txtEmail.Text;
-            clave = txtClave.Text;
-            rol = comboRol.Text;
-            tipoPlan = comboTipoPlan.Text;
+            Usuario = txtUsuario.Text;
+            PrimerNombre = txtPrimerNombre.Text;
+            SegundoNombre = txtSegundoNombre.Text;
+            Email = txtEmail.Text;
+            Clave = txtClave.Text;
+            Rol_ = comboRol.Text;
+            TipoPlan = comboTipoPlan.Text;
         }
 
         private void RegistrarUsuario()
         {
             Admin admin = new Admin();
 
-            admin.AdminRegistrarUsuario(usuario, primerNombre, segundoNombre, email, clave, rol, tipoPlan);
+            admin.AdminRegistrarUsuario(Usuario, PrimerNombre, SegundoNombre, Email, Clave, Rol_, TipoPlan);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }

@@ -123,13 +123,13 @@ namespace CapaDePresentacion.PantallaTurno
         public string NombreProveedor { get; set; }
         public string Presencia { get; set; }
 
-        string anio = "";
-        string mes = "";
-        string diaNombre = "";
-        string diaNumero = "";
+        string AnioGuardar = "";
+        string MesGuardar = "";
+        string DiaNombreGuardar = "";
+        string DiaNumeroGuardar = "";
 
-        private bool guardarProveedor = false;
-        private bool guardarFecha = false;
+        private bool GuardarProveedor = false;
+        private bool GuardarFecha = false;
 
         #endregion
 
@@ -198,10 +198,10 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)
         {
-            guardarProveedor = true;
+            GuardarProveedor = true;
             btnGuardar.Enabled = true;
 
-            if (comboProveedores.Text != Estados.SinDefinir || guardarFecha == true)
+            if (comboProveedores.Text != Estados.SinDefinir || GuardarFecha == true)
                 btnGuardar.Enabled = true;
             else
                 btnGuardar.Enabled = false;
@@ -209,7 +209,7 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void dtpFecha_ValueChanged(object sender, EventArgs e)
         {
-            guardarFecha = true;
+            GuardarFecha = true;
             btnGuardar.Enabled = true;
         }
 
@@ -224,21 +224,21 @@ namespace CapaDePresentacion.PantallaTurno
         {
             Admin admin = new Admin();
 
-            if (guardarFecha)
-                GuardarFecha();
+            if (GuardarFecha)
+                GuardarNuevaFecha();
 
-            if (!guardarProveedor)
+            if (!GuardarProveedor)
                 comboProveedores.Text = string.Empty;
 
-            admin.AdminGuardarModificacion(Id, DatosUsuario.Id, IdCliente, diaNombre, diaNumero, mes, anio, comboProveedores.Text);
+            admin.AdminGuardarModificacion(Id, DatosUsuario.Id, IdCliente, DiaNombreGuardar, DiaNumeroGuardar, MesGuardar, AnioGuardar, comboProveedores.Text);
         }
 
-        private void GuardarFecha()
+        private void GuardarNuevaFecha()
         {
-            anio = dtpFecha.Value.ToString("yyyy");
-            mes = dtpFecha.Value.ToString("MMMM");
-            diaNombre = dtpFecha.Value.ToString("dddd");
-            diaNumero = dtpFecha.Value.ToString("dd");
+            AnioGuardar = dtpFecha.Value.ToString("yyyy");
+            MesGuardar = dtpFecha.Value.ToString("MMMM");
+            DiaNombreGuardar = dtpFecha.Value.ToString("dddd");
+            DiaNumeroGuardar = dtpFecha.Value.ToString("dd");
         }
     }
 }

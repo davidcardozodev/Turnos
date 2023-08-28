@@ -16,23 +16,23 @@ namespace CapaDeDatos
 
         #endregion
 
-        public void TurnoDarBaja(int idTurno)
+        public void TurnoDarBaja(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoDarBaja";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public List<FormatoTurnos> TurnoFiltrarEstado(int idCliente, string estado)
+        public List<FormatoTurnos> TurnoFiltrarEstado(int IdCliente_, string Estado_)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoFiltrarEstado";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
-            _Comando.Parameters.AddWithValue("@estado", estado);
+            _Comando.Parameters.AddWithValue("@IdCliente", IdCliente_);
+            _Comando.Parameters.AddWithValue("@Estado", Estado_);
 
             _Lector = _Comando.ExecuteReader();
 
@@ -67,13 +67,13 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoModificacionFiltrarEstado(int idCliente, string estado)
+        public List<FormatoTurnos> TurnoModificacionFiltrarEstado(int IdCliente_, string Estado_)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoModificacionFiltrarEstado";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idCliente", idCliente);
-            _Comando.Parameters.AddWithValue("@estado", estado);
+            _Comando.Parameters.AddWithValue("@IdCliente", IdCliente_);
+            _Comando.Parameters.AddWithValue("@Estado", Estado_);
 
             _Lector = _Comando.ExecuteReader();
 

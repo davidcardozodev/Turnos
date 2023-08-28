@@ -18,13 +18,13 @@ namespace CapaDeDatos
 
         #region "Pantalla principal"
 
-        public List<FormatoTurnos> ProveedorCargarTurnos(int horarioInicio, int horarioFin)
+        public List<FormatoTurnos> ProveedorCargarTurnos(int HorarioInicio, int HorarioFin)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "ProveedorCargarTurnos";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
-            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
+            _Comando.Parameters.AddWithValue("@HorarioInicio", HorarioInicio);
+            _Comando.Parameters.AddWithValue("@HorarioFin", HorarioFin);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -32,14 +32,14 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int horarioInicio, int horarioFin, string busqueda)
+        public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int HorarioInicio, int HorarioFin, string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "ProveedorCargarTurnosBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@horarioInicio", horarioInicio);
-            _Comando.Parameters.AddWithValue("@horarioFin", horarioFin);
-            _Comando.Parameters.AddWithValue("@busqueda", busqueda);
+            _Comando.Parameters.AddWithValue("@HorarioInicio", HorarioInicio);
+            _Comando.Parameters.AddWithValue("@HorarioFin", HorarioFin);
+            _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
             _Conexion.ConexionCerrar();
@@ -90,12 +90,12 @@ namespace CapaDeDatos
 
         #region "Pantalla llamador"
 
-        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int IdProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarProveedorAsignado";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("idProveedor", idProveedor);
+            _Comando.Parameters.AddWithValue("IdProveedor", IdProveedor);
 
             _Lector = _Comando.ExecuteReader();
 
@@ -138,12 +138,12 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int idProveedor)
+        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int IdProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCargarProveedorEnCurso";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("idProveedor", idProveedor);
+            _Comando.Parameters.AddWithValue("IdProveedor", IdProveedor);
 
             _Lector = _Comando.ExecuteReader();
 
@@ -188,33 +188,33 @@ namespace CapaDeDatos
 
         #region "Acciones"
 
-        public void ProveedorAsignar(int idProveedor, int idTurno)
+        public void ProveedorAsignar(int IdProveedor, int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "ProveedorAsignar";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idProveedor", idProveedor);
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.Parameters.AddWithValue("@IdProveedor", IdProveedor);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void TurnoProveedorFinalizar(int idTurno)
+        public void TurnoProveedorFinalizar(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoProveedorFinalizar";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void ProveedorAgregarEnCurso(int idTurno)
+        public void ProveedorAgregarEnCurso(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "ProveedorAgregarEnCurso";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idTurno", idTurno);
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
@@ -223,31 +223,31 @@ namespace CapaDeDatos
 
         #region "Disponibilidad"
 
-        public void ProveedorCargarDisponibilidad(int idProveedor)
+        public void ProveedorCargarDisponibilidad(int IdProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "ProveedorCargarDisponibilidad";
             _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@idProveedor", idProveedor);
+            _Comando.Parameters.AddWithValue("@IdProveedor", IdProveedor);
 
             SqlDataReader Reader = _Comando.ExecuteReader();
 
             LeerFilas(Reader, _Conexion);
         }
 
-        private static bool LeerFilas(SqlDataReader Reader, Conexion conexion)
+        private static bool LeerFilas(SqlDataReader Reader, Conexion _Conexion)
         {
             if (Reader.HasRows)
             {
                 while (Reader.Read())
                     FormatoCamposCache(Reader);
 
-                conexion.ConexionCerrar();
+                _Conexion.ConexionCerrar();
                 return true;
             }
             else
             {
-                conexion.ConexionCerrar();
+                _Conexion.ConexionCerrar();
                 return false;
             }
 

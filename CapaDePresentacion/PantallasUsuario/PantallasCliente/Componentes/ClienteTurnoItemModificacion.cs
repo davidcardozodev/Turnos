@@ -28,7 +28,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         public string Estado { get; set; }
         public string NombreProveedor { get; set; }
 
-        private string espacio = "   ";
+        private string Espacio = "   ";
 
         #endregion
 
@@ -56,13 +56,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
 
             if (DiaNombre != "")
-                lblInformacion.Text += DiaNombre + " " + DiaNumero + de + Mes + de + Anio + espacio;
+                lblInformacion.Text += DiaNombre + " " + DiaNumero + de + Mes + de + Anio + Espacio;
         }
 
         private void RellenarInformacionProveedor()
         {
             if (NombreProveedor != Estados.SinDefinir)
-                lblInformacion.Text += NombreProveedor + espacio;
+                lblInformacion.Text += NombreProveedor + Espacio;
         }
 
         private void CargarTurnoItem()

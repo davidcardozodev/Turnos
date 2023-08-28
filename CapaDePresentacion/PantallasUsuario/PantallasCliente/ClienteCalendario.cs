@@ -33,7 +33,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private string Mes { get; set; }
         private string Anio { get; set; }
 
-        private bool calendario = false;
+        private bool Calendario = false;
 
         private string Descripcion;
         private string Hora;
@@ -46,9 +46,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            DataTable areas = cliente.ClienteCargarArea();
+            DataTable Areas = cliente.ClienteCargarArea();
 
-            foreach (DataRow proveedor in areas.Rows)
+            foreach (DataRow proveedor in Areas.Rows)
                 comboArea.Items.Add(proveedor["Nombre"].ToString());
         }
 
@@ -56,9 +56,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            DataTable establecimiento = cliente.ClienteCargarEstablecimiento();
+            DataTable Establecimiento = cliente.ClienteCargarEstablecimiento();
 
-            foreach (DataRow proveedor in establecimiento.Rows)
+            foreach (DataRow proveedor in Establecimiento.Rows)
                 comboEstablecimiento.Items.Add(proveedor["Nombre"].ToString());
         }
 
@@ -95,7 +95,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void btnAbrir_Click(object sender, System.EventArgs e)
         {
-            if (!calendario)
+            if (!Calendario)
                 MostrarCalendario();
             else
                 OcultarCalendario();
@@ -105,14 +105,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             btnAbrir.Text = "-";
             panelCalendario.Visible = true;
-            calendario = true;
+            Calendario = true;
         }
 
         private void OcultarCalendario()
         {
             btnAbrir.Text = "+";
             panelCalendario.Visible = false;
-            calendario = false;
+            Calendario = false;
         }
 
         private void GuardarDatos()

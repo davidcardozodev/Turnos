@@ -27,19 +27,19 @@ namespace CapaDeDatos
             return LeerFilas(Reader, _Conexion);
         }
 
-        private static bool LeerFilas(SqlDataReader Reader, Conexion conexion)
+        private static bool LeerFilas(SqlDataReader Reader, Conexion _Conexion)
         {
             if (Reader.HasRows)
             {
                 while (Reader.Read())
                     FormatoCamposCache(Reader);
 
-                conexion.ConexionCerrar();
+                _Conexion.ConexionCerrar();
                 return true;
             }
             else
             {
-                conexion.ConexionCerrar();
+                _Conexion.ConexionCerrar();
                 return false;
             }
 

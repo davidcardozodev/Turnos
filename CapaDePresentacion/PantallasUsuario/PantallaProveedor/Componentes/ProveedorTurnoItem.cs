@@ -32,13 +32,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void CargarInformacion()
         {
-            string espacio = "      ";
+            string Espacio = "      ";
 
             Hora += ":00hs";
 
             lblPresencia.Text = PresenciaEstado;
 
-            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + espacio + Hora + espacio + TipoPlan;
+            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + Espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + Espacio + Hora + Espacio + TipoPlan;
         }
 
         private void ProveedorTurnoItem_Load(object sender, System.EventArgs e)

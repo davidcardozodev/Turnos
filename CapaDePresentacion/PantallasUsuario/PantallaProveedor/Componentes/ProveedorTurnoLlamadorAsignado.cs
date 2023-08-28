@@ -40,13 +40,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             switch (TipoPlan)
             {
                 case "Basico":
-                    Prioridad += "baja";
+                    Prioridad += "Baja";
                     break;
                 case "Estandar":
-                    Prioridad += "media";
+                    Prioridad += "Media";
                     break;
                 case "Premium":
-                    Prioridad += "alta";
+                    Prioridad += "Alta";
                     break;
             }
 
