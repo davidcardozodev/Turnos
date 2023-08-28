@@ -21,7 +21,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             GuardarFecha();
             ValorInicialHorario();
             CargarAreas();
-            CargarValorPredeterminadoArea();
+            CargarValorPredeterminadoListas();
+            CargarEstablecimientos();
         }
 
         private void CargarAreas()
@@ -34,14 +35,25 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
                 comboArea.Items.Add(proveedor["Nombre"].ToString());
         }
 
+        private void CargarEstablecimientos()
+        {
+            Cliente cliente = new Cliente();
+
+            DataTable establecimiento = cliente.ClienteCargarEstablecimiento();
+
+            foreach (DataRow proveedor in establecimiento.Rows)
+                comboEstablecimiento.Items.Add(proveedor["Nombre"].ToString());
+        }
+
         private const int CB_SETCUEBANNER = 0x1703;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)] string lParam);
 
-        private void CargarValorPredeterminadoArea()
+        private void CargarValorPredeterminadoListas()
         {
             SendMessage(this.comboArea.Handle, CB_SETCUEBANNER, 0, Estados.SinDefinir);
+            SendMessage(this.comboEstablecimiento.Handle, CB_SETCUEBANNER, 0, Estados.SinDefinir);
         }
 
         private void btnVolverAtras_Click(object sender, System.EventArgs e)

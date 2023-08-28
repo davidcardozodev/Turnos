@@ -75,5 +75,10 @@ namespace CapaDeEntidades
         {
             return _ConsultasCliente.ClienteCargarArea();
         }
+
+        public DataTable ClienteCargarEstablecimiento()
+        {
+            return _ConsultasCliente.ClienteCargarEstablecimiento();
+        }
     }
 }

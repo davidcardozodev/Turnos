@@ -40,7 +40,8 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.btnCrearTurno = new System.Windows.Forms.Button();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.lblEstablecimiento = new System.Windows.Forms.Label();
+            this.comboEstablecimiento = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(45, 49);
+            this.lblTitulo.Location = new System.Drawing.Point(327, 31);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(272, 37);
             this.lblTitulo.TabIndex = 1;
@@ -57,7 +58,7 @@
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(431, 49);
+            this.btnVolverAtras.Location = new System.Drawing.Point(52, 21);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
             this.btnVolverAtras.TabIndex = 3;
@@ -69,7 +70,7 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(12, 27);
+            this.lblFecha.Location = new System.Drawing.Point(148, 27);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(106, 37);
             this.lblFecha.TabIndex = 5;
@@ -78,14 +79,17 @@
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(124, 27);
+            this.dtpFecha.Location = new System.Drawing.Point(282, 27);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(456, 35);
+            this.dtpFecha.Size = new System.Drawing.Size(436, 35);
             this.dtpFecha.TabIndex = 6;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCrearTurno);
+            this.panel1.Controls.Add(this.lblEstablecimiento);
+            this.panel1.Controls.Add(this.comboEstablecimiento);
             this.panel1.Controls.Add(this.lblArea);
             this.panel1.Controls.Add(this.comboArea);
             this.panel1.Controls.Add(this.txtDescripcion);
@@ -94,16 +98,16 @@
             this.panel1.Controls.Add(this.lblHora);
             this.panel1.Controls.Add(this.lblFecha);
             this.panel1.Controls.Add(this.dtpFecha);
-            this.panel1.Location = new System.Drawing.Point(52, 169);
+            this.panel1.Location = new System.Drawing.Point(52, 134);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(583, 297);
+            this.panel1.Size = new System.Drawing.Size(739, 449);
             this.panel1.TabIndex = 7;
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(12, 154);
+            this.lblArea.Location = new System.Drawing.Point(167, 154);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(85, 37);
             this.lblArea.TabIndex = 12;
@@ -114,7 +118,7 @@
             this.comboArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboArea.FormattingEnabled = true;
-            this.comboArea.Location = new System.Drawing.Point(124, 157);
+            this.comboArea.Location = new System.Drawing.Point(282, 157);
             this.comboArea.Name = "comboArea";
             this.comboArea.Size = new System.Drawing.Size(436, 37);
             this.comboArea.TabIndex = 11;
@@ -122,9 +126,9 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(202, 230);
+            this.txtDescripcion.Location = new System.Drawing.Point(282, 301);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(358, 35);
+            this.txtDescripcion.Size = new System.Drawing.Size(436, 35);
             this.txtDescripcion.TabIndex = 10;
             // 
             // comboHora
@@ -132,7 +136,7 @@
             this.comboHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboHora.FormattingEnabled = true;
-            this.comboHora.Location = new System.Drawing.Point(124, 97);
+            this.comboHora.Location = new System.Drawing.Point(282, 97);
             this.comboHora.Name = "comboHora";
             this.comboHora.Size = new System.Drawing.Size(436, 37);
             this.comboHora.TabIndex = 9;
@@ -141,7 +145,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(12, 227);
+            this.lblDescripcion.Location = new System.Drawing.Point(70, 298);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(184, 37);
             this.lblDescripcion.TabIndex = 8;
@@ -151,7 +155,7 @@
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(12, 94);
+            this.lblHora.Location = new System.Drawing.Point(167, 94);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(87, 37);
             this.lblHora.TabIndex = 7;
@@ -160,7 +164,7 @@
             // btnCrearTurno
             // 
             this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearTurno.Location = new System.Drawing.Point(52, 507);
+            this.btnCrearTurno.Location = new System.Drawing.Point(514, 370);
             this.btnCrearTurno.Name = "btnCrearTurno";
             this.btnCrearTurno.Size = new System.Drawing.Size(204, 58);
             this.btnCrearTurno.TabIndex = 8;
@@ -168,23 +172,31 @@
             this.btnCrearTurno.UseVisualStyleBackColor = true;
             this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
             // 
-            // lblSubtitulo
+            // lblEstablecimiento
             // 
-            this.lblSubtitulo.AutoSize = true;
-            this.lblSubtitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtitulo.Location = new System.Drawing.Point(45, 129);
-            this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(101, 37);
-            this.lblSubtitulo.TabIndex = 9;
-            this.lblSubtitulo.Text = "Datos";
+            this.lblEstablecimiento.AutoSize = true;
+            this.lblEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstablecimiento.Location = new System.Drawing.Point(12, 224);
+            this.lblEstablecimiento.Name = "lblEstablecimiento";
+            this.lblEstablecimiento.Size = new System.Drawing.Size(242, 37);
+            this.lblEstablecimiento.TabIndex = 14;
+            this.lblEstablecimiento.Text = "Establecimiento";
+            // 
+            // comboEstablecimiento
+            // 
+            this.comboEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstablecimiento.FormattingEnabled = true;
+            this.comboEstablecimiento.Location = new System.Drawing.Point(282, 227);
+            this.comboEstablecimiento.Name = "comboEstablecimiento";
+            this.comboEstablecimiento.Size = new System.Drawing.Size(436, 37);
+            this.comboEstablecimiento.TabIndex = 13;
             // 
             // ClienteCreacionTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 645);
-            this.Controls.Add(this.lblSubtitulo);
-            this.Controls.Add(this.btnCrearTurno);
+            this.ClientSize = new System.Drawing.Size(818, 619);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lblTitulo);
@@ -213,6 +225,7 @@
         private System.Windows.Forms.Button btnCrearTurno;
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.ComboBox comboArea;
-        private System.Windows.Forms.Label lblSubtitulo;
+        private System.Windows.Forms.Label lblEstablecimiento;
+        private System.Windows.Forms.ComboBox comboEstablecimiento;
     }
 }

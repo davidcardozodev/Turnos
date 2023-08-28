@@ -265,5 +265,19 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
             return _Tabla;
         }
+
+        public DataTable ClienteCargarEstablecimiento()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ClienteCargarEstablecimiento";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.ExecuteNonQuery();
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+            adaptador.Fill(_Tabla);
+
+            _Conexion.ConexionCerrar();
+            return _Tabla;
+        }
     }
 }
