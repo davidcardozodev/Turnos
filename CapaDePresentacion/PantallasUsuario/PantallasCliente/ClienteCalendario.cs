@@ -37,6 +37,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private string Descripcion;
         private string Hora;
+        private string Area;
+        private string Establecimiento;
 
         #endregion
 
@@ -113,10 +115,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             calendario = false;
         }
 
-        private void GuardarHoraDescripcion()
+        private void GuardarDatos()
         {
             Hora = comboHora.Text;
             Descripcion = txtDescripcion.Text;
+            Area = comboArea.Text;
+            Establecimiento = comboEstablecimiento.Text;
         }
 
         private void CargarValoresHorario()
@@ -129,9 +133,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            GuardarHoraDescripcion();
+            GuardarDatos();
 
-            cliente.TurnoCrear(DatosUsuario.Id, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion);
+            cliente.TurnoCrear(DatosUsuario.Id, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
 
             MessageBox.Show(Mensajes.GuardadoTurno);
         }

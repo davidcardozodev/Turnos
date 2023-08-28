@@ -226,7 +226,7 @@ namespace CapaDeDatos
 
         #endregion
 
-        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion, string area, string establecimiento)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "TurnoCrear";
@@ -238,6 +238,8 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@anio", anio);
             _Comando.Parameters.AddWithValue("@hora", hora);
             _Comando.Parameters.AddWithValue("@descripcion", descripcion);
+            _Comando.Parameters.AddWithValue("@area", area);
+            _Comando.Parameters.AddWithValue("@establecimiento", establecimiento);
             _Comando.ExecuteNonQuery();
             _Comando.Parameters.Clear();
         }

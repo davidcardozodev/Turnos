@@ -68,7 +68,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         #region "Datos del turno"
 
-        string anio, mes, diaNombre, diaNumero, hora, descripcion;
+        private string anio, mes, diaNombre, diaNumero, hora, descripcion, area, establecimiento;
 
         private void ValorInicialHorario()
         {
@@ -89,10 +89,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             diaNumero = dtpFecha.Value.ToString("dd");
         }
 
-        private void GuardarHoraDescripcion()
+        private void GuardarDatos()
         {
             hora = comboHora.Text;
             descripcion = txtDescripcion.Text;
+            area = comboArea.Text;
+            establecimiento = comboEstablecimiento.Text;
         }
 
         #endregion
@@ -101,10 +103,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            GuardarHoraDescripcion();
+            GuardarDatos();
             GuardarFecha();
 
-            cliente.TurnoCrear(DatosUsuario.Id, diaNombre, diaNumero, mes, anio, hora, descripcion);
+            cliente.TurnoCrear(DatosUsuario.Id, diaNombre, diaNumero, mes, anio, hora, descripcion, area, establecimiento);
 
             MessageBox.Show(Mensajes.GuardadoTurno);
         }

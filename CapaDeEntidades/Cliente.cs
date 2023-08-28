@@ -36,9 +36,9 @@ namespace CapaDeEntidades
             return _ConsultasCliente.CargarTurnoModificacionBusqueda(idCliente, busqueda);
         }
 
-        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion)
+        public void TurnoCrear(int idCliente, string diaNombre, string diaNumero, string mes, string anio, string hora, string descripcion, string area, string establecimiento)
         {
-            _ConsultasCliente.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion);
+            _ConsultasCliente.TurnoCrear(idCliente, diaNombre, diaNumero, mes, anio, hora, descripcion, area, establecimiento);
         }
 
         public void TurnoModificacionAceptar(int IdTurno)
