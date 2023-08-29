@@ -89,6 +89,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             proveedor.ProveedorAsignar(DatosUsuario.Id, Id);
 
+            (Application.OpenForms["ProveedorTurnosVista"] as ProveedorTurnosVista).CargarTurnoItem();
+
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
     }

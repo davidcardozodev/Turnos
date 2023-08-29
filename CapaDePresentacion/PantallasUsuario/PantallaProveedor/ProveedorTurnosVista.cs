@@ -18,8 +18,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
             CargarTurnoItem();
         }
 
-        private void CargarTurnoItem()
+        public void CargarTurnoItem()
         {
+            LimpiarLista();
+
             Proveedor proveedor = new Proveedor();
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
