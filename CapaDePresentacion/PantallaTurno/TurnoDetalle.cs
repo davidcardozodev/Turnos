@@ -21,10 +21,8 @@ namespace CapaDePresentacion.PantallaTurno
             CargarInformacion();
             CambiarColorEstado();
             OcultarEtiquetas();
-            ActivarOpcionAsignarProveedor();
             OcultarOpcionDarBaja();
             CargarProveedores();
-            DesactivarOpcionAsignar();
             DesactivarOpcionDarBaja();
         }
 
@@ -32,12 +30,6 @@ namespace CapaDePresentacion.PantallaTurno
         {
             if (Estado == "Pendiente")
                 btnDarDeBaja.Enabled = true;
-        }
-
-        private void DesactivarOpcionAsignar()
-        {
-            if (Presencia == "Ausente")
-                btnAsignar.Enabled = false;
         }
 
         private void CargarProveedores()
@@ -79,12 +71,6 @@ namespace CapaDePresentacion.PantallaTurno
         {
             if (DatosUsuario.Rol == Rol.Proveedor)
                 btnDarDeBaja.Visible = false;
-        }
-
-        private void ActivarOpcionAsignarProveedor()
-        {
-            if (DatosUsuario.Rol == Rol.Proveedor)
-                btnAsignar.Visible = true;
         }
 
         private void OcultarEtiquetas()
@@ -185,15 +171,6 @@ namespace CapaDePresentacion.PantallaTurno
                     lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
                     break;
             }
-        }
-
-        private void btnAsignar_Click(object sender, EventArgs e)
-        {
-            Proveedor proveedor = new Proveedor();
-
-            proveedor.ProveedorAsignar(DatosUsuario.Id, Id);
-
-            MessageBox.Show(Mensajes.GuardadoCambios);
         }
 
         private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)

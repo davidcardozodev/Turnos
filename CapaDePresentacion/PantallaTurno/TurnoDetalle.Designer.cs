@@ -43,7 +43,6 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblHoraCategoria = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.btnAsignar = new System.Windows.Forms.Button();
             this.comboProveedores = new System.Windows.Forms.ComboBox();
             this.lblCambiarProveedor = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -221,18 +220,6 @@
             this.lblFecha.TabIndex = 10;
             this.lblFecha.Text = "Fecha";
             // 
-            // btnAsignar
-            // 
-            this.btnAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignar.Location = new System.Drawing.Point(683, 533);
-            this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(204, 58);
-            this.btnAsignar.TabIndex = 25;
-            this.btnAsignar.Text = "Asignar";
-            this.btnAsignar.UseVisualStyleBackColor = true;
-            this.btnAsignar.Visible = false;
-            this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
-            // 
             // comboProveedores
             // 
             this.comboProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -308,7 +295,6 @@
             this.ClientSize = new System.Drawing.Size(904, 686);
             this.Controls.Add(this.panelModificar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnDarDeBaja);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
@@ -342,7 +328,6 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Label lblHoraCategoria;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Button btnAsignar;
         private System.Windows.Forms.ComboBox comboProveedores;
         private System.Windows.Forms.Label lblCambiarProveedor;
         private System.Windows.Forms.Button btnGuardar;

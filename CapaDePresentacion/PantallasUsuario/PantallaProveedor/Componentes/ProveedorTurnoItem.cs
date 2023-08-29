@@ -1,4 +1,6 @@
-﻿using CapaDeNegocio;
+﻿using CapaComun;
+using CapaDeEntidades;
+using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
 using System.Drawing;
 using System.Windows.Forms;
@@ -15,10 +17,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         #region "Atributos"
 
         public int Id { get; set; }
-        public string DiaNombre { get; set; }
-        public string DiaNumero { get; set; }
-        public string Mes { get; set; }
-        public string Anio { get; set; }
         public string Hora { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
@@ -38,13 +36,20 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             lblPresencia.Text = PresenciaEstado;
 
-            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + Espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + Espacio + Hora + Espacio + TipoPlan;
+            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + Espacio + Hora + Espacio + TipoPlan;
         }
 
         private void ProveedorTurnoItem_Load(object sender, System.EventArgs e)
         {
             CargarInformacion();
             CambiarColorPresencia();
+            ActivarOpcionAsignar();
+        }
+
+        private void ActivarOpcionAsignar()
+        {
+            if (PresenciaEstado == Presencia.Presente)
+                btnAsignar.Enabled = true;
         }
 
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -52,10 +57,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             TurnoDetalle turnoDetalle = new TurnoDetalle();
 
             turnoDetalle.Id = Id;
-            turnoDetalle.DiaNombre = DiaNombre;
-            turnoDetalle.DiaNumero = DiaNumero;
-            turnoDetalle.Mes = Mes;
-            turnoDetalle.Anio = Anio;
             turnoDetalle.Hora = Hora;
             turnoDetalle.Descripcion = Descripcion;
             turnoDetalle.Estado = Estado;
@@ -82,5 +83,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             }
         }
 
+        private void btnAsignar_Click(object sender, System.EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+
+            proveedor.ProveedorAsignar(DatosUsuario.Id, Id);
+
+            MessageBox.Show(Mensajes.GuardadoCambios);
+        }
     }
 }

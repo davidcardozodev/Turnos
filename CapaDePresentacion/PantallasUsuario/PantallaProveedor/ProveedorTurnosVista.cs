@@ -36,10 +36,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 ProveedorTurnoItem proveedorTurnoItem = new ProveedorTurnoItem();
 
                 proveedorTurnoItem.Id = Turno.Id;
-                proveedorTurnoItem.DiaNombre = Turno.DiaNombre;
-                proveedorTurnoItem.DiaNumero = Turno.DiaNumero;
-                proveedorTurnoItem.Mes = Turno.Mes;
-                proveedorTurnoItem.Anio = Turno.Anio;
                 proveedorTurnoItem.Hora = Turno.Hora;
                 proveedorTurnoItem.Descripcion = Turno.Descripcion;
                 proveedorTurnoItem.Estado = Turno.Estado;
