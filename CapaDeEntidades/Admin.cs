@@ -66,9 +66,9 @@ namespace CapaDeEntidades
             _ConsultasAdmin.AdminGuardarModificacion(IdTurno, IdAdmin, IdCliente, DiaNombre, DiaNumero, Mes, Anio, NombreProveedor);
         }
 
-        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string TipoPlan)
+        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, int HorarioInicio, int HorarioFin, string TipoPlan)
         {
-            _ConsultasAdmin.AdminRegistrarUsuario(NombreUsuario, Clave, PrimerNombre, SegundoNombre, Email, Rol, TipoPlan);
+            _ConsultasAdmin.AdminRegistrarUsuario(NombreUsuario, Clave, PrimerNombre, SegundoNombre, Email, Rol, HorarioInicio, HorarioFin, TipoPlan);
         }
 
         public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)

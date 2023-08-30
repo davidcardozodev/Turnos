@@ -17,10 +17,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarRoles();
             CargarTipoPlanes();
             CargarRolTipoPlanDefecto();
+            CargarValoresHorarioInicio();
+            CargarValoresFinHorario();
+            ValorInicialHorarios();
         }
 
         #region "Atributos"
-
 
         private string Usuario;
         private string PrimerNombre;
@@ -29,6 +31,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private string Clave;
         private string Rol_;
         private string TipoPlan;
+        private int HorarioInicio = 0;
+        private int HorarioFin = 0;
+        private bool CambiarHorarioProveedor = false;
 
         #endregion
 
@@ -86,7 +91,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminRegistrarUsuario(Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol_, TipoPlan);
+            admin.AdminRegistrarUsuario(Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol_, HorarioInicio, HorarioFin, TipoPlan);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
@@ -99,6 +104,71 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void VolverAtras()
         {
             this.Close();
+        }
+
+        private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboRol.Text == Rol.Proveedor)
+            {
+                comboHorarioInicio.Enabled = true;
+                comboHorarioFin.Enabled = true;
+                CambiarHorarioProveedor = true;
+                HorarioInicio = 8;
+                HorarioFin = 9;
+            }
+            else
+            {
+                comboHorarioInicio.Enabled = false;
+                comboHorarioFin.Enabled = false;
+                CambiarHorarioProveedor = false;
+                HorarioInicio = 0;
+                HorarioFin = 0;
+            }
+        }
+
+        private void ValorInicialHorarios()
+        {
+            comboHorarioInicio.SelectedItem = 8;
+            comboHorarioFin.SelectedItem = 9;
+        }
+
+        private void CargarValoresFinHorario()
+        {
+            for (int i = HorarioInicio + 1; i <= 22; i++)
+                comboHorarioFin.Items.Add(i);
+        }
+
+        private void CargarValoresHorarioInicio()
+        {
+            for (int i = 8; i <= 21; i++)
+                comboHorarioInicio.Items.Add(i);
+        }
+
+        private void comboHorarioInicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CambiarHorarioProveedor)
+            {
+                HorarioInicio = int.Parse(comboHorarioInicio.Text);
+                LimpiarHorarios();
+                CargarValoresFinHorario();
+                ActualizarValorHorarioFin();
+            }
+        }
+
+        private void LimpiarHorarios()
+        {
+            comboHorarioFin.Items.Clear();
+        }
+
+        private void ActualizarValorHorarioFin()
+        {
+            comboHorarioFin.SelectedItem = (int)comboHorarioInicio.SelectedItem + 1;
+        }
+
+        private void comboHorarioFin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CambiarHorarioProveedor)
+                HorarioFin = int.Parse(comboHorarioFin.Text);
         }
     }
 }

@@ -42,6 +42,11 @@
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelDisponibilidad = new System.Windows.Forms.Label();
+            this.lblHorarioFin = new System.Windows.Forms.Label();
+            this.comboHorarioFin = new System.Windows.Forms.ComboBox();
+            this.lblHorarioInicio = new System.Windows.Forms.Label();
+            this.comboHorarioInicio = new System.Windows.Forms.ComboBox();
             this.lblTipoPlan = new System.Windows.Forms.Label();
             this.comboTipoPlan = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -140,6 +145,7 @@
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(433, 40);
             this.comboRol.TabIndex = 46;
+            this.comboRol.SelectedIndexChanged += new System.EventHandler(this.comboRol_SelectedIndexChanged);
             // 
             // btnRegistrar
             // 
@@ -172,6 +178,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelDisponibilidad);
+            this.panel1.Controls.Add(this.lblHorarioFin);
+            this.panel1.Controls.Add(this.comboHorarioFin);
+            this.panel1.Controls.Add(this.lblHorarioInicio);
+            this.panel1.Controls.Add(this.comboHorarioInicio);
             this.panel1.Controls.Add(this.lblTipoPlan);
             this.panel1.Controls.Add(this.comboTipoPlan);
             this.panel1.Controls.Add(this.lblUsuario);
@@ -189,8 +200,60 @@
             this.panel1.Controls.Add(this.txtPrimerNombre);
             this.panel1.Location = new System.Drawing.Point(12, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(788, 573);
+            this.panel1.Size = new System.Drawing.Size(1242, 573);
             this.panel1.TabIndex = 50;
+            // 
+            // labelDisponibilidad
+            // 
+            this.labelDisponibilidad.AutoSize = true;
+            this.labelDisponibilidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisponibilidad.Location = new System.Drawing.Point(776, 18);
+            this.labelDisponibilidad.Name = "labelDisponibilidad";
+            this.labelDisponibilidad.Size = new System.Drawing.Size(459, 37);
+            this.labelDisponibilidad.TabIndex = 56;
+            this.labelDisponibilidad.Text = "Disponibilidad (solo proveedor)";
+            // 
+            // lblHorarioFin
+            // 
+            this.lblHorarioFin.AutoSize = true;
+            this.lblHorarioFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorarioFin.Location = new System.Drawing.Point(805, 146);
+            this.lblHorarioFin.Name = "lblHorarioFin";
+            this.lblHorarioFin.Size = new System.Drawing.Size(62, 37);
+            this.lblHorarioFin.TabIndex = 54;
+            this.lblHorarioFin.Text = "Fin";
+            // 
+            // comboHorarioFin
+            // 
+            this.comboHorarioFin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboHorarioFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboHorarioFin.FormattingEnabled = true;
+            this.comboHorarioFin.Location = new System.Drawing.Point(885, 146);
+            this.comboHorarioFin.Name = "comboHorarioFin";
+            this.comboHorarioFin.Size = new System.Drawing.Size(339, 40);
+            this.comboHorarioFin.TabIndex = 55;
+            this.comboHorarioFin.SelectedIndexChanged += new System.EventHandler(this.comboHorarioFin_SelectedIndexChanged);
+            // 
+            // lblHorarioInicio
+            // 
+            this.lblHorarioInicio.AutoSize = true;
+            this.lblHorarioInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorarioInicio.Location = new System.Drawing.Point(776, 85);
+            this.lblHorarioInicio.Name = "lblHorarioInicio";
+            this.lblHorarioInicio.Size = new System.Drawing.Size(91, 37);
+            this.lblHorarioInicio.TabIndex = 52;
+            this.lblHorarioInicio.Text = "Inicio";
+            // 
+            // comboHorarioInicio
+            // 
+            this.comboHorarioInicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboHorarioInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboHorarioInicio.FormattingEnabled = true;
+            this.comboHorarioInicio.Location = new System.Drawing.Point(885, 82);
+            this.comboHorarioInicio.Name = "comboHorarioInicio";
+            this.comboHorarioInicio.Size = new System.Drawing.Size(339, 40);
+            this.comboHorarioInicio.TabIndex = 53;
+            this.comboHorarioInicio.SelectedIndexChanged += new System.EventHandler(this.comboHorarioInicio_SelectedIndexChanged);
             // 
             // lblTipoPlan
             // 
@@ -216,7 +279,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(299, 19);
+            this.lblTitulo.Location = new System.Drawing.Point(566, 19);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(261, 37);
             this.lblTitulo.TabIndex = 51;
@@ -237,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 681);
+            this.ClientSize = new System.Drawing.Size(1272, 681);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
@@ -272,5 +335,10 @@
         private System.Windows.Forms.Label lblTipoPlan;
         private System.Windows.Forms.ComboBox comboTipoPlan;
         private System.Windows.Forms.Button btnVolverAtras;
+        private System.Windows.Forms.Label lblHorarioFin;
+        private System.Windows.Forms.ComboBox comboHorarioFin;
+        private System.Windows.Forms.Label lblHorarioInicio;
+        private System.Windows.Forms.ComboBox comboHorarioInicio;
+        private System.Windows.Forms.Label labelDisponibilidad;
     }
 }
