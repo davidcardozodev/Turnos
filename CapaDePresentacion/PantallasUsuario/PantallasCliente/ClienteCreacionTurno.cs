@@ -18,7 +18,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void ClienteCreacionTurno_Load(object sender, System.EventArgs e)
         {
             CargarHorarios();
-            GuardarFecha();
             ValorInicialHorario();
             CargarAreas();
             CargarValorPredeterminadoListas();
@@ -81,20 +80,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
                 comboHora.Items.Add(i);
         }
 
-        private void GuardarFecha()
-        {
-            Anio = dtpFecha.Value.ToString("yyyy");
-            Mes = dtpFecha.Value.ToString("MMMM");
-            DiaNombre = dtpFecha.Value.ToString("dddd");
-            DiaNumero = dtpFecha.Value.ToString("dd");
-        }
-
         private void GuardarDatos()
         {
             Hora = comboHora.Text;
             Descripcion = txtDescripcion.Text;
             Area = comboArea.Text;
             Establecimiento = comboEstablecimiento.Text;
+
+            Anio = dtpFecha.Value.ToString("yyyy");
+            Mes = dtpFecha.Value.ToString("MMMM");
+            DiaNombre = dtpFecha.Value.ToString("dddd");
+            DiaNumero = dtpFecha.Value.ToString("dd");
         }
 
         #endregion
@@ -102,8 +98,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void btnCrearTurno_Click(object sender, System.EventArgs e)
         {
             GuardarDatos();
-            GuardarFecha();
-
             VerificarCampos();
         }
 
