@@ -101,10 +101,32 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void btnCrearTurno_Click(object sender, System.EventArgs e)
         {
-            Cliente cliente = new Cliente();
-
             GuardarDatos();
             GuardarFecha();
+
+            VerificarCampos();
+        }
+
+        private void VerificarCampos()
+        {
+            string mensajeError = "";
+
+            if (string.IsNullOrEmpty(Area))
+                mensajeError += Mensajes.ErrorArea + Environment.NewLine;
+
+            if (string.IsNullOrEmpty(Establecimiento))
+                mensajeError += Mensajes.ErrorEstablecimiento;
+
+            if (string.IsNullOrEmpty(Area) || string.IsNullOrEmpty(Establecimiento))
+                MessageBox.Show(mensajeError);
+
+            if (!string.IsNullOrEmpty(Area) && !string.IsNullOrEmpty(Establecimiento))
+                GuardarTurno();
+        }
+
+        private void GuardarTurno()
+        {
+            Cliente cliente = new Cliente();
 
             cliente.TurnoCrear(DatosUsuario.Id, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
 
