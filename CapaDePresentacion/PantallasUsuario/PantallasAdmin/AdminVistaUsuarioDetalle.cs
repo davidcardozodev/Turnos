@@ -134,39 +134,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             LimpiarHorarios();
             CargarValoresFinHorario();
-            ActivarOpcionGuardado();
-        }
-
-        private void ActivarOpcionGuardado()
-        {
-            btnGuardar.Enabled = true;
-        }
-
-        private void comboInicio_Click(object sender, EventArgs e)
-        {
-            ActivarOpcionGuardado();
-        }
-
-        private void comboInicio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LimpiarHorarios();
-            CargarValoresFinHorario();
-        }
-
-        private void comboFin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ActivarOpcionGuardado();
-        }
-
-        private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboRol.Text == RolUsuario)
-                DesactivarOpcionGuardado();
-        }
-
-        private void DesactivarOpcionGuardado()
-        {
-            btnGuardar.Enabled = false;
         }
 
         private void comboInicio_SelectedValueChanged(object sender, EventArgs e)

@@ -30,6 +30,7 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.comboPlan = new System.Windows.Forms.ComboBox();
             this.lblTipoPlan = new System.Windows.Forms.Label();
             this.comboFin = new System.Windows.Forms.ComboBox();
@@ -49,7 +50,6 @@
             this.comboRol = new System.Windows.Forms.ComboBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRolCategoria = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +91,17 @@
             this.panel1.Size = new System.Drawing.Size(996, 404);
             this.panel1.TabIndex = 21;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(809, 309);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(152, 78);
+            this.btnGuardar.TabIndex = 23;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // comboPlan
             // 
             this.comboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -121,7 +132,6 @@
             this.comboFin.Size = new System.Drawing.Size(294, 40);
             this.comboFin.TabIndex = 29;
             this.comboFin.Visible = false;
-            this.comboFin.SelectedIndexChanged += new System.EventHandler(this.comboFin_SelectedIndexChanged);
             // 
             // lblFin
             // 
@@ -145,7 +155,6 @@
             this.comboInicio.TabIndex = 27;
             this.comboInicio.Visible = false;
             this.comboInicio.SelectedValueChanged += new System.EventHandler(this.comboInicio_SelectedValueChanged);
-            this.comboInicio.Click += new System.EventHandler(this.comboInicio_Click);
             // 
             // lblInicio
             // 
@@ -256,7 +265,6 @@
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(294, 40);
             this.comboRol.TabIndex = 17;
-            this.comboRol.SelectedIndexChanged += new System.EventHandler(this.comboRol_SelectedIndexChanged);
             this.comboRol.SelectedValueChanged += new System.EventHandler(this.comboRol_SelectedValueChanged);
             // 
             // lblEmail
@@ -278,18 +286,6 @@
             this.lblRolCategoria.Size = new System.Drawing.Size(57, 32);
             this.lblRolCategoria.TabIndex = 7;
             this.lblRolCategoria.Text = "Rol";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Enabled = false;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(809, 309);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(152, 78);
-            this.btnGuardar.TabIndex = 23;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // AdminVistaUsuarioDetalle
             // 
