@@ -134,6 +134,25 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             LimpiarHorarios();
             CargarValoresFinHorario();
+            MostrarHorarios();
+        }
+
+        private void MostrarHorarios()
+        {
+            if (comboRol.Text == Rol.Proveedor)
+            {
+                comboInicio.Visible = true;
+                comboFin.Visible = true;
+                lblInicio.Visible = true;
+                lblFin.Visible = true;
+            }
+            else
+            {
+                comboInicio.Visible = false;
+                comboFin.Visible = false;
+                lblInicio.Visible = false;
+                lblFin.Visible = false;
+            }
         }
 
         private void comboInicio_SelectedValueChanged(object sender, EventArgs e)
