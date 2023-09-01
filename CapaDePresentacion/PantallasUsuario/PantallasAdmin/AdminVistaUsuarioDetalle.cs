@@ -121,7 +121,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminModificarUsuario(Id, txtUsuario.Text, txtClave.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, comboRol.Text);
+            admin.AdminModificarUsuario(Id, txtUsuario.Text, txtClave.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, comboRol.Text, comboPlan.Text);
 
             Admin adminDisponibilidad = new Admin();
 

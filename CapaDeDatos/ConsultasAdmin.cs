@@ -172,7 +172,7 @@ namespace CapaDeDatos
 
         #region "Guardar"
 
-        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol)
+        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string Plan)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminModificarUsuario";
@@ -184,6 +184,7 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@SegundoNombre", SegundoNombre);
             _Comando.Parameters.AddWithValue("@Email", Email);
             _Comando.Parameters.AddWithValue("@Rol", Rol);
+            _Comando.Parameters.AddWithValue("@Plan", Plan);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }

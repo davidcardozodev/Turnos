@@ -41,9 +41,9 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuarioBusqueda(Busqueda);
         }
 
-        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol)
+        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string Plan)
         {
-            _ConsultasAdmin.AdminModificarUsuario(IdUsuario, Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol);
+            _ConsultasAdmin.AdminModificarUsuario(IdUsuario, Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol, Plan);
         }
 
         public void AdminGuardarDisponibilidad(int IdUsuario, int HorarioInicio, int HorarioFin)
