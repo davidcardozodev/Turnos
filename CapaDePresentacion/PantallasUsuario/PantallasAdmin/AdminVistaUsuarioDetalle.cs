@@ -145,6 +145,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 comboFin.Visible = true;
                 lblInicio.Visible = true;
                 lblFin.Visible = true;
+                ActualizarValorHorarioFin();
             }
             else
             {
