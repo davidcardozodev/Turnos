@@ -42,6 +42,7 @@
             this.btnAgregarEnCurso.TabIndex = 8;
             this.btnAgregarEnCurso.Text = "+";
             this.btnAgregarEnCurso.UseVisualStyleBackColor = true;
+            this.btnAgregarEnCurso.Click += new System.EventHandler(this.btnAgregarEnCurso_Click);
             // 
             // lblCliente
             // 
