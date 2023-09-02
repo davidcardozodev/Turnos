@@ -71,7 +71,7 @@ namespace CapaDePresentacion.PantallaLlamador
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             VerificarCampos();
-            IniciarSesion();
+            UsuarioIniciarSesion();
         }
 
         private void VerificarCampos()
@@ -90,7 +90,7 @@ namespace CapaDePresentacion.PantallaLlamador
             MessageBox.Show("Error: " + Mensaje);
         }
 
-        private void IniciarSesion()
+        private void UsuarioIniciarSesion()
         {
             if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
                 BusquedaUsuario();
@@ -102,7 +102,7 @@ namespace CapaDePresentacion.PantallaLlamador
 
             try
             {
-                var loginValido = cliente.BuscarCliente(txtUsuario.Text, txtClave.Text);
+                var loginValido = cliente.ClienteBuscarCoincidencia(txtUsuario.Text, txtClave.Text);
                 RegistroValidado(loginValido);
             }
             catch (Exception)
@@ -117,7 +117,7 @@ namespace CapaDePresentacion.PantallaLlamador
 
             if (inicioSesionValidado)
             {
-                cliente.RegistrarPresencia(txtUsuario.Text);
+                cliente.ClienteRegistrarPresencia(txtUsuario.Text);
                 MessageBox.Show("Se registro correctamente");
                 RellenarCampos();
             }

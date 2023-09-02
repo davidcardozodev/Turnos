@@ -55,7 +55,7 @@ namespace CapaDePresentacion.PantallaLlamador
             AbrirFormulario<PantallaLlamadorEnCurso>();
         }
 
-        private void btnRegistrarPresencia_Click(object sender, EventArgs e)
+        private void btnClienteRegistrarPresencia_Click(object sender, EventArgs e)
         {
             AbrirFormulario<PantallaLlamadorPresencia>();
         }

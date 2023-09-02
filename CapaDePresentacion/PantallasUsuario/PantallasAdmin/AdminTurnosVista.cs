@@ -39,7 +39,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = admin.TurnoCargarAdmin();
+            ListaTurnos = admin.AdminCargarTurno();
 
             DatosTurnos(ListaTurnos);
         }
@@ -86,7 +86,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = admin.TurnoCargarEstadoFiltradoAdmin(comboEstado.Text);
+            ListaTurnos = admin.AdminCargarTurnoEstadoFiltrado(comboEstado.Text);
 
             DatosTurnos(ListaTurnos);
         }
@@ -106,10 +106,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void btnBuscar_Click(object sender, System.EventArgs e)
         {
-            TurnoCargarBusquedaAdmin();
+            AdminCargarTurnoBusqueda();
         }
 
-        private void TurnoCargarBusquedaAdmin()
+        private void AdminCargarTurnoBusqueda()
         {
             Admin admin = new Admin();
 
@@ -117,7 +117,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = admin.TurnoCargarBusquedaAdmin(txtBuscar.Text);
+            ListaTurnos = admin.AdminCargarTurnoBusqueda(txtBuscar.Text);
 
             DatosTurnos(ListaTurnos);
         }

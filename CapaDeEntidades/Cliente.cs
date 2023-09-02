@@ -11,64 +11,64 @@ namespace CapaDeEntidades
 
         private ConsultasCliente _ConsultasCliente = new ConsultasCliente();
 
-        public List<FormatoTurnos> TurnoCargar(int IdCliente)
+        public List<FormatoTurnos> ClienteCargarTurno(int IdCliente)
         {
-            return _ConsultasCliente.TurnoCargar(IdCliente);
+            return _ConsultasCliente.ClienteCargarTurno(IdCliente);
         }
 
-        public List<FormatoTurnos> TurnoCargarDetalle(int IdTurno)
+        public List<FormatoTurnos> ClienteCargarTurnoDetalle(int IdTurno)
         {
-            return _ConsultasCliente.TurnoCargarDetalle(IdTurno);
+            return _ConsultasCliente.ClienteCargarTurnoDetalle(IdTurno);
         }
 
-        public List<FormatoTurnos> TurnoCargarModificacion(int IdCliente)
+        public List<FormatoTurnos> ClienteCargarTurnoModificacion(int IdCliente)
         {
-            return _ConsultasCliente.TurnoCargarModificacion(IdCliente);
+            return _ConsultasCliente.ClienteCargarTurnoModificacion(IdCliente);
         }
 
-        public List<FormatoTurnos> TurnoCargarBusqueda(int IdCliente, string Busqueda)
+        public List<FormatoTurnos> ClienteCargarTurnoBusqueda(int IdCliente, string Busqueda)
         {
-            return _ConsultasCliente.TurnoCargarBusqueda(IdCliente, Busqueda);
+            return _ConsultasCliente.ClienteCargarTurnoBusqueda(IdCliente, Busqueda);
         }
 
-        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int IdCliente, string Busqueda)
+        public List<FormatoTurnos> ClienteCargarTurnoModificacionBusqueda(int IdCliente, string Busqueda)
         {
-            return _ConsultasCliente.CargarTurnoModificacionBusqueda(IdCliente, Busqueda);
+            return _ConsultasCliente.ClienteCargarTurnoModificacionBusqueda(IdCliente, Busqueda);
         }
 
-        public void TurnoCrear(int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string Hora, string Descripcion, string Area, string Establecimiento)
+        public void ClienteCrearTurno(int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string Hora, string Descripcion, string Area, string Establecimiento)
         {
-            _ConsultasCliente.TurnoCrear(IdCliente, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
+            _ConsultasCliente.ClienteCrearTurno(IdCliente, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
         }
 
-        public void TurnoModificacionAceptar(int IdTurno)
+        public void ClienteTurnoModificacionAceptar(int IdTurno)
         {
-            _ConsultasCliente.TurnoModificacionAceptar(IdTurno);
+            _ConsultasCliente.ClienteTurnoModificacionAceptar(IdTurno);
         }
 
-        public void TurnoModificacionCambiarFecha(int IdTurno, string DiaNumero, string DiaNombre, string Mes, string Anio)
+        public void ClienteTurnoModificacionCambiarFecha(int IdTurno, string DiaNumero, string DiaNombre, string Mes, string Anio)
         {
-            _ConsultasCliente.TurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
+            _ConsultasCliente.ClienteTurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
         }
 
-        public void TurnoModificacionCambiarProveedor(int IdTurno, string NombreProveedor)
+        public void ClienteTurnoModificacionCambiarProveedor(int IdTurno, string NombreProveedor)
         {
-            _ConsultasCliente.TurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
+            _ConsultasCliente.ClienteTurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
         }
 
-        public void TurnoModificacionRechazar(int IdTurno)
+        public void ClienteTurnoModificacionRechazar(int IdTurno)
         {
-            _ConsultasCliente.TurnoModificacionRechazar(IdTurno);
+            _ConsultasCliente.ClienteTurnoModificacionRechazar(IdTurno);
         }
 
-        public bool BuscarCliente(string Usuario, string Clave)
+        public bool ClienteBuscarCoincidencia(string Usuario, string Clave)
         {
-            return _ConsultasCliente.BuscarCliente(Usuario, Clave);
+            return _ConsultasCliente.ClienteBuscarCoincidencia(Usuario, Clave);
         }
 
-        public void RegistrarPresencia(string Usuario)
+        public void ClienteRegistrarPresencia(string Usuario)
         {
-            _ConsultasCliente.RegistrarPresencia(Usuario);
+            _ConsultasCliente.ClienteRegistrarPresencia(Usuario);
         }
 
         public DataTable ClienteCargarArea()

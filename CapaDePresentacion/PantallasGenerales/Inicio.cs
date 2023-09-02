@@ -98,10 +98,10 @@ namespace CapaDePresentacion.PantallasGenerales
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             VerificarCampos();
-            IniciarSesion();
+            UsuarioIniciarSesion();
         }
 
-        private void IniciarSesion()
+        private void UsuarioIniciarSesion()
         {
             if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
                 BusquedaUsuario();
@@ -113,7 +113,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
             try
             {
-                var loginValido = Usuario.IniciarSesion(txtUsuario.Text, txtClave.Text);
+                var loginValido = Usuario.UsuarioIniciarSesion(txtUsuario.Text, txtClave.Text);
                 InicioSesionValidado(loginValido);
             }
             catch (Exception)

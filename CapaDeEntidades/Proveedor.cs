@@ -15,14 +15,14 @@ namespace CapaDeEntidades
             return _ConsultasProveedor.ProveedorCargarTurnos(HorarioInicio, HorarioFin);
         }
 
-        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int IdProveedor)
+        public List<FormatoTurnos> ProveedorCargarTurnoAsignado(int IdProveedor)
         {
-            return _ConsultasProveedor.TurnoCargarProveedorAsignado(IdProveedor);
+            return _ConsultasProveedor.ProveedorCargarTurnoAsignado(IdProveedor);
         }
 
-        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int IdProveedor)
+        public List<FormatoTurnos> ProveedorCargarTurnoEnCurso(int IdProveedor)
         {
-            return _ConsultasProveedor.TurnoCargarProveedorEnCurso(IdProveedor);
+            return _ConsultasProveedor.ProveedorCargarTurnoEnCurso(IdProveedor);
         }
 
         public List<FormatoTurnos> ProveedorCargarTurnosBusqueda(int HorarioInicio, int HorarioFin, string Busqueda)
@@ -40,9 +40,9 @@ namespace CapaDeEntidades
             _ConsultasProveedor.ProveedorAgregarEnCurso(IdTurno);
         }
 
-        public void TurnoProveedorFinalizar(int IdTurno)
+        public void ProveedorFinalizarTurno(int IdTurno)
         {
-            _ConsultasProveedor.TurnoProveedorFinalizar(IdTurno);
+            _ConsultasProveedor.ProveedorFinalizarTurno(IdTurno);
         }
 
         public void ProveedorCargarDisponibilidad(int IdProveedor)

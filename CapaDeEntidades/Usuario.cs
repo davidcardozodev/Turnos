@@ -8,9 +8,9 @@ namespace CapaDeEntidades
 
         public Usuario() { }
 
-        public bool IniciarSesion(string Usuario, string Clave)
+        public bool UsuarioIniciarSesion(string Usuario, string Clave)
         {
-            return _ConsultasUsuario.IniciarSesion(Usuario, Clave);
+            return _ConsultasUsuario.UsuarioIniciarSesion(Usuario, Clave);
         }
     }
 }

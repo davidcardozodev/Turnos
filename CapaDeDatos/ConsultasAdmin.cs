@@ -93,10 +93,10 @@ namespace CapaDeDatos
 
         #region "Lista turnos"
 
-        public List<FormatoTurnos> TurnoCargarAdmin()
+        public List<FormatoTurnos> AdminCargarTurno()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarAdmin";
+            _Comando.CommandText = "AdminCargarTurno";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Lector = _Comando.ExecuteReader();
             CamposTurno();
@@ -105,10 +105,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string Estado)
+        public List<FormatoTurnos> AdminCargarTurnoEstadoFiltrado(string Estado)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarEstadoFiltradoAdmin";
+            _Comando.CommandText = "AdminCargarTurnoEstadoFiltrado";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@Estado", Estado);
             _Lector = _Comando.ExecuteReader();
@@ -118,10 +118,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string Busqueda)
+        public List<FormatoTurnos> AdminCargarTurnoBusqueda(string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarBusquedaAdmin";
+            _Comando.CommandText = "AdminCargarTurnoBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
             _Lector = _Comando.ExecuteReader();

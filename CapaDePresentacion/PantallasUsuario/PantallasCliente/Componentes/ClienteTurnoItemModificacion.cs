@@ -71,7 +71,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = cliente.TurnoCargarDetalle(IdTurno);
+            ListaTurnos = cliente.ClienteCargarTurnoDetalle(IdTurno);
 
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
@@ -119,7 +119,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             Cliente cliente = new Cliente();
 
-            cliente.TurnoModificacionAceptar(IdTurno);
+            cliente.ClienteTurnoModificacionAceptar(IdTurno);
             CambiarProveedor();
             CambiarFecha();
 
@@ -132,7 +132,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             {
                 Cliente clienteTurnoModificacionCambiarFecha = new Cliente();
 
-                clienteTurnoModificacionCambiarFecha.TurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
+                clienteTurnoModificacionCambiarFecha.ClienteTurnoModificacionCambiarFecha(IdTurno, DiaNumero, DiaNombre, Mes, Anio);
             }
         }
 
@@ -140,9 +140,9 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             if (NombreProveedor != Estados.SinDefinir)
             {
-                Cliente clienteTurnoModificacionCambiarProveedor = new Cliente();
+                Cliente clienteClienteTurnoModificacionCambiarProveedor = new Cliente();
 
-                clienteTurnoModificacionCambiarProveedor.TurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
+                clienteClienteTurnoModificacionCambiarProveedor.ClienteTurnoModificacionCambiarProveedor(IdTurno, NombreProveedor);
             }
         }
 
@@ -152,7 +152,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         {
             Cliente cliente = new Cliente();
 
-            cliente.TurnoModificacionRechazar(IdTurno);
+            cliente.ClienteTurnoModificacionRechazar(IdTurno);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }

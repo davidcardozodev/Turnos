@@ -49,7 +49,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         {
             Proveedor proveedor = new Proveedor();
 
-            proveedor.TurnoProveedorFinalizar(Id);
+            proveedor.ProveedorFinalizarTurno(Id);
 
             (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).ActualizarTurnos();
         }

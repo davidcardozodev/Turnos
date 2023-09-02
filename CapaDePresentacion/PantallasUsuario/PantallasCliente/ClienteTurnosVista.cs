@@ -77,7 +77,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = cliente.TurnoCargar(DatosUsuario.Id);
+            ListaTurnos = cliente.ClienteCargarTurno(DatosUsuario.Id);
 
             DatosTurno(ListaTurnos);
         }
@@ -146,10 +146,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void btnBuscar_Click(object sender, System.EventArgs e)
         {
-            TurnoCargarBusqueda();
+            ClienteCargarTurnoBusqueda();
         }
 
-        private void TurnoCargarBusqueda()
+        private void ClienteCargarTurnoBusqueda()
         {
             Cliente cliente = new Cliente();
 
@@ -157,7 +157,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = cliente.TurnoCargarBusqueda(DatosUsuario.Id, txtBuscar.Text);
+            ListaTurnos = cliente.ClienteCargarTurnoBusqueda(DatosUsuario.Id, txtBuscar.Text);
 
             DatosTurno(ListaTurnos);
         }

@@ -14,10 +14,10 @@ namespace CapaDeDatos
         #endregion
 
 
-        public bool IniciarSesion(string Usuario, string Clave)
+        public bool UsuarioIniciarSesion(string Usuario, string Clave)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "IniciarSesion";
+            _Comando.CommandText = "UsuarioIniciarSesion";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@Usuario", Usuario);
             _Comando.Parameters.AddWithValue("@Clave", Clave);

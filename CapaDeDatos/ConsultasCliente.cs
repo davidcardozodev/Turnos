@@ -19,10 +19,10 @@ namespace CapaDeDatos
 
         #region "Lista turnos (pantalla principal)"
 
-        public List<FormatoTurnos> TurnoCargar(int IdCliente)
+        public List<FormatoTurnos> ClienteCargarTurno(int IdCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargar";
+            _Comando.CommandText = "ClienteCargarTurno";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
             _Lector = _Comando.ExecuteReader();
@@ -32,10 +32,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarDetalle(int IdTurno)
+        public List<FormatoTurnos> ClienteCargarTurnoDetalle(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarDetalle";
+            _Comando.CommandText = "ClienteCargarTurnoDetalle";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Lector = _Comando.ExecuteReader();
@@ -45,10 +45,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarBusqueda(int IdCliente, string Busqueda)
+        public List<FormatoTurnos> ClienteCargarTurnoBusqueda(int IdCliente, string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarBusqueda";
+            _Comando.CommandText = "ClienteCargarTurnoBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
             _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
@@ -92,10 +92,10 @@ namespace CapaDeDatos
 
         #region "Lista turnos (pantalla notificacion)"
 
-        public List<FormatoTurnos> TurnoCargarModificacion(int IdCliente)
+        public List<FormatoTurnos> ClienteCargarTurnoModificacion(int IdCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarModificacion";
+            _Comando.CommandText = "ClienteCargarTurnoModificacion";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
             _Lector = _Comando.ExecuteReader();
@@ -105,10 +105,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> CargarTurnoModificacionBusqueda(int IdCliente, string Busqueda)
+        public List<FormatoTurnos> ClienteCargarTurnoModificacionBusqueda(int IdCliente, string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "CargarTurnoModificacionBusqueda";
+            _Comando.CommandText = "ClienteCargarTurnoModificacionBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
             _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
@@ -148,20 +148,20 @@ namespace CapaDeDatos
 
         #region "Modificar turno"
 
-        public void TurnoModificacionAceptar(int IdTurno)
+        public void ClienteTurnoModificacionAceptar(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoModificacionAceptar";
+            _Comando.CommandText = "ClienteTurnoModificacionAceptar";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();
             _Conexion.ConexionCerrar();
         }
 
-        public void TurnoModificacionCambiarFecha(int IdTurno, string DiaNumero, string DiaNombre, string Mes, string Anio)
+        public void ClienteTurnoModificacionCambiarFecha(int IdTurno, string DiaNumero, string DiaNombre, string Mes, string Anio)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoModificacionCambiarFecha";
+            _Comando.CommandText = "ClienteTurnoModificacionCambiarFecha";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.Parameters.AddWithValue("@DiaNumero", DiaNumero);
@@ -172,10 +172,10 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void TurnoModificacionCambiarProveedor(int IdTurno, string NombreProveedor)
+        public void ClienteTurnoModificacionCambiarProveedor(int IdTurno, string NombreProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoModificacionCambiarProveedor";
+            _Comando.CommandText = "ClienteTurnoModificacionCambiarProveedor";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.Parameters.AddWithValue("@NombreProveedor", NombreProveedor);
@@ -187,10 +187,10 @@ namespace CapaDeDatos
 
         #region "Registrar presencia"
 
-        public bool BuscarCliente(string Usuario, string Clave)
+        public bool ClienteBuscarCoincidencia(string Usuario, string Clave)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "BuscarCliente";
+            _Comando.CommandText = "ClienteBuscarCoincidencia";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@Usuario", Usuario);
             _Comando.Parameters.AddWithValue("@Clave", Clave);
@@ -214,10 +214,10 @@ namespace CapaDeDatos
             }
         }
 
-        public void RegistrarPresencia(string Usuario)
+        public void ClienteRegistrarPresencia(string Usuario)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "RegistrarPresencia";
+            _Comando.CommandText = "ClienteRegistrarPresencia";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@Usuario", Usuario);
             _Comando.ExecuteNonQuery();
@@ -226,10 +226,10 @@ namespace CapaDeDatos
 
         #endregion
 
-        public void TurnoCrear(int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string Hora, string Descripcion, string Area, string Establecimiento)
+        public void ClienteCrearTurno(int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string Hora, string Descripcion, string Area, string Establecimiento)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCrear";
+            _Comando.CommandText = "ClienteCrearTurno";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdCliente", IdCliente);
             _Comando.Parameters.AddWithValue("@DiaNombre", DiaNombre);
@@ -244,10 +244,10 @@ namespace CapaDeDatos
             _Comando.Parameters.Clear();
         }
 
-        public void TurnoModificacionRechazar(int IdTurno)
+        public void ClienteTurnoModificacionRechazar(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoModificacionRechazar";
+            _Comando.CommandText = "ClienteTurnoModificacionRechazar";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();

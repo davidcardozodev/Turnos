@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRegistrarPresencia = new System.Windows.Forms.Button();
+            this.btnClienteRegistrarPresencia = new System.Windows.Forms.Button();
             this.btnTurnosEnCurso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnRegistrarPresencia);
+            this.panel1.Controls.Add(this.btnClienteRegistrarPresencia);
             this.panel1.Controls.Add(this.btnTurnosEnCurso);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -44,16 +44,16 @@
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // btnRegistrarPresencia
+            // btnClienteRegistrarPresencia
             // 
-            this.btnRegistrarPresencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarPresencia.Location = new System.Drawing.Point(433, 148);
-            this.btnRegistrarPresencia.Name = "btnRegistrarPresencia";
-            this.btnRegistrarPresencia.Size = new System.Drawing.Size(336, 111);
-            this.btnRegistrarPresencia.TabIndex = 4;
-            this.btnRegistrarPresencia.Text = "Registrar presencia";
-            this.btnRegistrarPresencia.UseVisualStyleBackColor = true;
-            this.btnRegistrarPresencia.Click += new System.EventHandler(this.btnRegistrarPresencia_Click);
+            this.btnClienteRegistrarPresencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClienteRegistrarPresencia.Location = new System.Drawing.Point(433, 148);
+            this.btnClienteRegistrarPresencia.Name = "btnClienteRegistrarPresencia";
+            this.btnClienteRegistrarPresencia.Size = new System.Drawing.Size(336, 111);
+            this.btnClienteRegistrarPresencia.TabIndex = 4;
+            this.btnClienteRegistrarPresencia.Text = "Registrar presencia";
+            this.btnClienteRegistrarPresencia.UseVisualStyleBackColor = true;
+            this.btnClienteRegistrarPresencia.Click += new System.EventHandler(this.btnClienteRegistrarPresencia_Click);
             // 
             // btnTurnosEnCurso
             // 
@@ -84,6 +84,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnTurnosEnCurso;
-        private System.Windows.Forms.Button btnRegistrarPresencia;
+        private System.Windows.Forms.Button btnClienteRegistrarPresencia;
     }
 }

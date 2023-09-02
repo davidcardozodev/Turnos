@@ -118,10 +118,10 @@ namespace CapaDeDatos
 
         #region "Pantalla llamador"
 
-        public List<FormatoTurnos> TurnoCargarProveedorAsignado(int IdProveedor)
+        public List<FormatoTurnos> ProveedorCargarTurnoAsignado(int IdProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarProveedorAsignado";
+            _Comando.CommandText = "ProveedorCargarTurnoAsignado";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("IdProveedor", IdProveedor);
 
@@ -166,10 +166,10 @@ namespace CapaDeDatos
             return _Valores;
         }
 
-        public List<FormatoTurnos> TurnoCargarProveedorEnCurso(int IdProveedor)
+        public List<FormatoTurnos> ProveedorCargarTurnoEnCurso(int IdProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoCargarProveedorEnCurso";
+            _Comando.CommandText = "ProveedorCargarTurnoEnCurso";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("IdProveedor", IdProveedor);
 
@@ -227,10 +227,10 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void TurnoProveedorFinalizar(int IdTurno)
+        public void ProveedorFinalizarTurno(int IdTurno)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "TurnoProveedorFinalizar";
+            _Comando.CommandText = "ProveedorFinalizarTurno";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
             _Comando.ExecuteNonQuery();

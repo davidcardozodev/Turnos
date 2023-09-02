@@ -11,9 +11,9 @@ namespace CapaDeEntidades
 
         ConsultasAdmin _ConsultasAdmin = new ConsultasAdmin();
 
-        public List<FormatoTurnos> TurnoCargarAdmin()
+        public List<FormatoTurnos> AdminCargarTurno()
         {
-            return _ConsultasAdmin.TurnoCargarAdmin();
+            return _ConsultasAdmin.AdminCargarTurno();
         }
 
         public List<DatosUsuarioItem> AdminCargarUsuario()
@@ -21,9 +21,9 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuario();
         }
 
-        public List<FormatoTurnos> TurnoCargarEstadoFiltradoAdmin(string Estado)
+        public List<FormatoTurnos> AdminCargarTurnoEstadoFiltrado(string Estado)
         {
-            return _ConsultasAdmin.TurnoCargarEstadoFiltradoAdmin(Estado);
+            return _ConsultasAdmin.AdminCargarTurnoEstadoFiltrado(Estado);
         }
 
         public List<DatosUsuarioItem> AdminCargarUsuarioFiltrado(string Rol)
@@ -31,9 +31,9 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuarioFiltrado(Rol);
         }
 
-        public List<FormatoTurnos> TurnoCargarBusquedaAdmin(string Busqueda)
+        public List<FormatoTurnos> AdminCargarTurnoBusqueda(string Busqueda)
         {
-            return _ConsultasAdmin.TurnoCargarBusquedaAdmin(Busqueda);
+            return _ConsultasAdmin.AdminCargarTurnoBusqueda(Busqueda);
         }
 
         public List<DatosUsuarioItem> AdminCargarUsuarioBusqueda(string Busqueda)
