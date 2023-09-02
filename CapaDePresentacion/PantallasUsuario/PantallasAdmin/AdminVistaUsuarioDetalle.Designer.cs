@@ -201,9 +201,9 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(31, 91);
+            this.lblNombre.Location = new System.Drawing.Point(108, 91);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(200, 32);
+            this.lblNombre.Size = new System.Drawing.Size(114, 32);
             this.lblNombre.TabIndex = 18;
             this.lblNombre.Text = "Nombre";
             // 
