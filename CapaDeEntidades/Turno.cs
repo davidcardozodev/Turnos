@@ -1,6 +1,4 @@
-﻿using CapaComun;
-using CapaDeDatos;
-using System.Collections.Generic;
+﻿using CapaDeDatos;
 
 namespace CapaDeEntidades
 {
@@ -15,14 +13,6 @@ namespace CapaDeEntidades
             _ConsultasTurno.TurnoDarBaja(IdTurno);
         }
 
-        public List<FormatoTurnos> TurnoFiltrarEstado(int IdCliente, string Estado)
-        {
-            return _ConsultasTurno.TurnoFiltrarEstado(IdCliente, Estado);
-        }
 
-        public List<FormatoTurnos> TurnoModificacionFiltrarEstado(int IdCliente, string Estado)
-        {
-            return _ConsultasTurno.TurnoModificacionFiltrarEstado(IdCliente, Estado);
-        }
     }
 }

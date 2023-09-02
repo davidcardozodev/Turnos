@@ -128,13 +128,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void CargarTurnoEstadoFiltrado()
         {
-            Turno turno = new Turno();
+            Cliente cliente = new Cliente();
 
             LimpiarTurnos();
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = turno.TurnoFiltrarEstado(DatosUsuario.Id, comboEstado.Text);
+            ListaTurnos = cliente.ClienteCargarTurnoFiltrado(DatosUsuario.Id, comboEstado.Text);
 
             DatosTurno(ListaTurnos);
         }

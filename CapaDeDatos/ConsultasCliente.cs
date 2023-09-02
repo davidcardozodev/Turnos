@@ -59,6 +59,47 @@ namespace CapaDeDatos
             return _Valores;
         }
 
+        public List<FormatoTurnos> ClienteCargarTurnoFiltrado(int IdCliente_, string Estado_)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ClienteCargarTurnoFiltrado";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdCliente", IdCliente_);
+            _Comando.Parameters.AddWithValue("@Estado", Estado_);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
+                string Hora = _Lector["Hora"].ToString();
+                string Descripcion = _Lector["Descripcion"].ToString();
+                string Estado = _Lector["Estado"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = Id,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
+                    Hora = Hora,
+                    Descripcion = Descripcion,
+                    Estado = Estado,
+                    NombreProveedor = NombreProveedor,
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
         private void CamposTurno()
         {
             while (_Lector.Read())
@@ -114,6 +155,43 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
             _Lector = _Comando.ExecuteReader();
             CamposTurnoModificacion();
+            _Conexion.ConexionCerrar();
+
+            return _Valores;
+        }
+
+        public List<FormatoTurnos> ClienteCargarTurnoModificacionFiltrado(int IdCliente_, string Estado_)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ClienteCargarTurnoModificacionFiltrado";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdCliente", IdCliente_);
+            _Comando.Parameters.AddWithValue("@Estado", Estado_);
+
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string DiaNombre = _Lector["DiaNombre"].ToString();
+                string DiaNumero = _Lector["DiaNumero"].ToString();
+                string Mes = _Lector["Mes"].ToString();
+                string Anio = _Lector["Anio"].ToString();
+                string Estado = _Lector["Estado"].ToString();
+                string NombreProveedor = _Lector["NombreProveedor"].ToString();
+
+                _Valores.Add(new FormatoTurnos
+                {
+                    Id = Id,
+                    DiaNombre = DiaNombre,
+                    DiaNumero = DiaNumero,
+                    Mes = Mes,
+                    Anio = Anio,
+                    Estado = Estado,
+                    NombreProveedor = NombreProveedor,
+                });
+            }
+
             _Conexion.ConexionCerrar();
 
             return _Valores;

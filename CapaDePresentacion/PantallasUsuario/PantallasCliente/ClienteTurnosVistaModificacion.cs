@@ -40,7 +40,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
             ListaTurnos = cliente.ClienteCargarTurnoModificacion(DatosUsuario.Id);
-            
+
             DatosTurno(ListaTurnos);
         }
 
@@ -84,13 +84,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void CargarTurnoModificacionEstadoFiltrado()
         {
-            Turno turno = new Turno();
+            Cliente cliente = new Cliente();
 
             LimpiarTurnos();
 
             List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
 
-            ListaTurnos = turno.TurnoModificacionFiltrarEstado(DatosUsuario.Id, comboEstado.Text);
+            ListaTurnos = cliente.ClienteCargarTurnoModificacionFiltrado(DatosUsuario.Id, comboEstado.Text);
 
             DatosTurno(ListaTurnos);
         }

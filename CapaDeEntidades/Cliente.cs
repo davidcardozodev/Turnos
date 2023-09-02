@@ -80,5 +80,15 @@ namespace CapaDeEntidades
         {
             return _ConsultasCliente.ClienteCargarEstablecimiento();
         }
+
+        public List<FormatoTurnos> ClienteCargarTurnoFiltrado(int IdCliente, string Estado)
+        {
+            return _ConsultasCliente.ClienteCargarTurnoFiltrado(IdCliente, Estado);
+        }
+
+        public List<FormatoTurnos> ClienteCargarTurnoModificacionFiltrado(int IdCliente, string Estado)
+        {
+            return _ConsultasCliente.ClienteCargarTurnoModificacionFiltrado(IdCliente, Estado);
+        }
     }
 }
