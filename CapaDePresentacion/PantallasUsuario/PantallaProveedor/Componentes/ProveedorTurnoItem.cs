@@ -21,8 +21,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Descripcion { get; set; }
         public string Estado { get; set; }
         public string Usuario { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
         public string PresenciaEstado { get; set; }
         public string TipoPlan { get; set; }
 
@@ -36,7 +35,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             lblPresencia.Text = PresenciaEstado;
 
-            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + Espacio + Hora + Espacio + TipoPlan;
+            lblInformacion.Text = Nombre + Espacio + Hora + Espacio + TipoPlan;
         }
 
         private void ProveedorTurnoItem_Load(object sender, System.EventArgs e)
@@ -61,8 +60,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             turnoDetalle.Descripcion = Descripcion;
             turnoDetalle.Estado = Estado;
             turnoDetalle.Usuario = Usuario;
-            turnoDetalle.PrimerNombre = PrimerNombre;
-            turnoDetalle.SegundoNombre = SegundoNombre;
+            turnoDetalle.Nombre = Nombre;
             turnoDetalle.Presencia = PresenciaEstado;
 
             turnoDetalle.Show();

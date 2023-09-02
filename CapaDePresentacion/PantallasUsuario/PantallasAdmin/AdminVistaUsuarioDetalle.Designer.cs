@@ -40,10 +40,8 @@
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtSegundoNombre = new System.Windows.Forms.TextBox();
-            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.lblSegundoNombre = new System.Windows.Forms.Label();
-            this.lblPrimerNombre = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblFechaCategoria = new System.Windows.Forms.Label();
@@ -76,10 +74,8 @@
             this.panel1.Controls.Add(this.txtClave);
             this.panel1.Controls.Add(this.lblClave);
             this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtSegundoNombre);
-            this.panel1.Controls.Add(this.txtPrimerNombre);
-            this.panel1.Controls.Add(this.lblSegundoNombre);
-            this.panel1.Controls.Add(this.lblPrimerNombre);
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.lblFechaCategoria);
@@ -107,7 +103,7 @@
             this.comboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPlan.FormattingEnabled = true;
-            this.comboPlan.Location = new System.Drawing.Point(242, 220);
+            this.comboPlan.Location = new System.Drawing.Point(667, 25);
             this.comboPlan.Name = "comboPlan";
             this.comboPlan.Size = new System.Drawing.Size(294, 40);
             this.comboPlan.TabIndex = 31;
@@ -116,7 +112,7 @@
             // 
             this.lblTipoPlan.AutoSize = true;
             this.lblTipoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoPlan.Location = new System.Drawing.Point(156, 220);
+            this.lblTipoPlan.Location = new System.Drawing.Point(581, 25);
             this.lblTipoPlan.Name = "lblTipoPlan";
             this.lblTipoPlan.Size = new System.Drawing.Size(72, 32);
             this.lblTipoPlan.TabIndex = 30;
@@ -170,7 +166,7 @@
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(667, 25);
+            this.txtClave.Location = new System.Drawing.Point(242, 146);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(294, 39);
             this.txtClave.TabIndex = 24;
@@ -179,7 +175,7 @@
             // 
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.Location = new System.Drawing.Point(560, 24);
+            this.lblClave.Location = new System.Drawing.Point(135, 145);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(87, 32);
             this.lblClave.TabIndex = 23;
@@ -188,46 +184,28 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(667, 88);
+            this.txtEmail.Location = new System.Drawing.Point(242, 211);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(294, 39);
             this.txtEmail.TabIndex = 22;
             // 
-            // txtSegundoNombre
+            // txtNombre
             // 
-            this.txtSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSegundoNombre.Location = new System.Drawing.Point(242, 155);
-            this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(294, 39);
-            this.txtSegundoNombre.TabIndex = 21;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(242, 91);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(294, 39);
+            this.txtNombre.TabIndex = 20;
             // 
-            // txtPrimerNombre
+            // lblNombre
             // 
-            this.txtPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerNombre.Location = new System.Drawing.Point(242, 91);
-            this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(294, 39);
-            this.txtPrimerNombre.TabIndex = 20;
-            // 
-            // lblSegundoNombre
-            // 
-            this.lblSegundoNombre.AutoSize = true;
-            this.lblSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoNombre.Location = new System.Drawing.Point(4, 155);
-            this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(232, 32);
-            this.lblSegundoNombre.TabIndex = 19;
-            this.lblSegundoNombre.Text = "Segundo nombre";
-            // 
-            // lblPrimerNombre
-            // 
-            this.lblPrimerNombre.AutoSize = true;
-            this.lblPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombre.Location = new System.Drawing.Point(31, 91);
-            this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(200, 32);
-            this.lblPrimerNombre.TabIndex = 18;
-            this.lblPrimerNombre.Text = "Primer nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(31, 91);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(200, 32);
+            this.lblNombre.TabIndex = 18;
+            this.lblNombre.Text = "Nombre";
             // 
             // txtUsuario
             // 
@@ -261,7 +239,7 @@
             this.comboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboRol.FormattingEnabled = true;
-            this.comboRol.Location = new System.Drawing.Point(242, 283);
+            this.comboRol.Location = new System.Drawing.Point(667, 88);
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(294, 40);
             this.comboRol.TabIndex = 17;
@@ -271,7 +249,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(560, 87);
+            this.lblEmail.Location = new System.Drawing.Point(135, 210);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(86, 32);
             this.lblEmail.TabIndex = 9;
@@ -281,7 +259,7 @@
             // 
             this.lblRolCategoria.AutoSize = true;
             this.lblRolCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolCategoria.Location = new System.Drawing.Point(171, 286);
+            this.lblRolCategoria.Location = new System.Drawing.Point(596, 91);
             this.lblRolCategoria.Name = "lblRolCategoria";
             this.lblRolCategoria.Size = new System.Drawing.Size(57, 32);
             this.lblRolCategoria.TabIndex = 7;
@@ -291,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1014, 548);
+            this.ClientSize = new System.Drawing.Size(1014, 501);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "AdminVistaUsuarioDetalle";
@@ -321,10 +299,8 @@
         private System.Windows.Forms.Label lblInicio;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtSegundoNombre;
-        private System.Windows.Forms.TextBox txtPrimerNombre;
-        private System.Windows.Forms.Label lblSegundoNombre;
-        private System.Windows.Forms.Label lblPrimerNombre;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.ComboBox comboPlan;

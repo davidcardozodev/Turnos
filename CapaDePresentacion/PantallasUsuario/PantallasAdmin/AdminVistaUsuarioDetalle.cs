@@ -17,8 +17,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         public int Id { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
         public string Email { get; set; }
         public string RolUsuario { get; set; }
         public string TipoPlan { get; set; }
@@ -103,8 +102,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             txtUsuario.Text = Usuario;
             txtClave.Text = Clave;
-            txtPrimerNombre.Text = PrimerNombre;
-            txtSegundoNombre.Text = SegundoNombre;
+            txtNombre.Text = Nombre;
             txtEmail.Text = Email;
             comboRol.SelectedItem = RolUsuario;
             comboPlan.SelectedItem = TipoPlan;
@@ -121,7 +119,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminModificarUsuario(Id, txtUsuario.Text, txtClave.Text, txtPrimerNombre.Text, txtSegundoNombre.Text, txtEmail.Text, comboRol.Text, comboPlan.Text);
+            admin.AdminModificarUsuario(Id, txtUsuario.Text, txtClave.Text, txtNombre.Text, txtEmail.Text, comboRol.Text, comboPlan.Text);
 
             Admin adminDisponibilidad = new Admin();
 

@@ -65,8 +65,7 @@ namespace CapaDeDatos
                 int Id = int.Parse(_Lector["Id"].ToString());
                 string Usuario = _Lector["Usuario"].ToString();
                 string Clave = _Lector["Clave"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Nombre = _Lector["Nombre"].ToString();
                 string Email = _Lector["Email"].ToString();
                 string Rol = _Lector["Rol"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
@@ -78,8 +77,7 @@ namespace CapaDeDatos
                     Id = Id,
                     Usuario = Usuario,
                     Clave = Clave,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
+                    Nombre = Nombre,
                     Email = Email,
                     Rol = Rol,
                     TipoPlan = TipoPlan,
@@ -145,8 +143,7 @@ namespace CapaDeDatos
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
                 string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Nombre = _Lector["Nombre"].ToString();
                 string NombreProveedor = _Lector["NombreProveedor"].ToString();
 
                 _Valores.Add(new FormatoTurnos
@@ -161,8 +158,7 @@ namespace CapaDeDatos
                     Descripcion = Descripcion,
                     Estado = Estado,
                     Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
+                    Nombre = Nombre,
                     NombreProveedor = NombreProveedor
                 });
             }
@@ -172,7 +168,7 @@ namespace CapaDeDatos
 
         #region "Guardar"
 
-        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string Plan)
+        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string Nombre, string Email, string Rol, string Plan)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminModificarUsuario";
@@ -180,8 +176,7 @@ namespace CapaDeDatos
             _Comando.Parameters.AddWithValue("@IdUsuario", IdUsuario);
             _Comando.Parameters.AddWithValue("@Usuario", Usuario);
             _Comando.Parameters.AddWithValue("@Clave", Clave);
-            _Comando.Parameters.AddWithValue("@PrimerNombre", PrimerNombre);
-            _Comando.Parameters.AddWithValue("@SegundoNombre", SegundoNombre);
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
             _Comando.Parameters.AddWithValue("@Email", Email);
             _Comando.Parameters.AddWithValue("@Rol", Rol);
             _Comando.Parameters.AddWithValue("@Plan", Plan);
@@ -218,15 +213,14 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, int HorarioInicio, int HorarioFin, string TipoPlan)
+        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string Nombre, string Email, string Rol, int HorarioInicio, int HorarioFin, string TipoPlan)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminRegistrarUsuario";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@NombreUsuario", NombreUsuario);
             _Comando.Parameters.AddWithValue("@Clave", Clave);
-            _Comando.Parameters.AddWithValue("@PrimerNombre", PrimerNombre);
-            _Comando.Parameters.AddWithValue("@SegundoNombre", SegundoNombre);
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
             _Comando.Parameters.AddWithValue("@Email", Email);
             _Comando.Parameters.AddWithValue("@Rol", Rol);
             _Comando.Parameters.AddWithValue("@HorarioInicio", HorarioInicio);

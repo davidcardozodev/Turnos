@@ -14,8 +14,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public int Id { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
         public string Email { get; set; }
         public string Rol { get; set; }
         public string TipoPlan { get; set; }
@@ -28,7 +27,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         {
             string Espacio = "      ";
 
-            lblInformacion.Text = Usuario + Espacio + PrimerNombre + " " + SegundoNombre + Espacio + Email + Espacio + Rol;
+            lblInformacion.Text = Usuario + Espacio + Nombre + Espacio + Email + Espacio + Rol;
         }
 
         private void linkModificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -38,8 +37,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             adminVistaUsuarioDetalle.Id = Id;
             adminVistaUsuarioDetalle.Usuario = Usuario;
             adminVistaUsuarioDetalle.Clave = Clave;
-            adminVistaUsuarioDetalle.PrimerNombre = PrimerNombre;
-            adminVistaUsuarioDetalle.SegundoNombre = SegundoNombre;
+            adminVistaUsuarioDetalle.Nombre = Nombre;
             adminVistaUsuarioDetalle.Email = Email;
             adminVistaUsuarioDetalle.RolUsuario = Rol;
             adminVistaUsuarioDetalle.TipoPlan = TipoPlan;

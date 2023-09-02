@@ -35,8 +35,7 @@ namespace CapaDeDatos
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
                 string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Nombre = _Lector["Nombre"].ToString();
                 string Presencia = _Lector["Presencia"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
 
@@ -48,8 +47,7 @@ namespace CapaDeDatos
                     Descripcion = Descripcion,
                     Estado = Estado,
                     Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
+                    Nombre = Nombre,
                     Presencia = Presencia,
                     TipoPlan = TipoPlan
                 });
@@ -89,8 +87,7 @@ namespace CapaDeDatos
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
                 string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Nombre = _Lector["Nombre"].ToString();
                 string Presencia = _Lector["Presencia"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
 
@@ -106,8 +103,7 @@ namespace CapaDeDatos
                     Descripcion = Descripcion,
                     Estado = Estado,
                     Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
+                    Nombre = Nombre,
                     Presencia = Presencia,
                     TipoPlan = TipoPlan
                 });
@@ -139,8 +135,7 @@ namespace CapaDeDatos
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
                 string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Nombre = _Lector["Nombre"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
 
                 _Valores.Add(new FormatoTurnos
@@ -155,8 +150,7 @@ namespace CapaDeDatos
                     Descripcion = Descripcion,
                     Estado = Estado,
                     Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre,
+                    Nombre = Nombre,
                     TipoPlan = TipoPlan
                 });
             }
@@ -187,8 +181,7 @@ namespace CapaDeDatos
                 string Descripcion = _Lector["Descripcion"].ToString();
                 string Estado = _Lector["Estado"].ToString();
                 string Usuario = _Lector["Usuario"].ToString();
-                string PrimerNombre = _Lector["PrimerNombre"].ToString();
-                string SegundoNombre = _Lector["SegundoNombre"].ToString();
+                string Nombre = _Lector["Nombre"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
@@ -202,8 +195,7 @@ namespace CapaDeDatos
                     Descripcion = Descripcion,
                     Estado = Estado,
                     Usuario = Usuario,
-                    PrimerNombre = PrimerNombre,
-                    SegundoNombre = SegundoNombre
+                    Nombre = Nombre
                 });
             }
 

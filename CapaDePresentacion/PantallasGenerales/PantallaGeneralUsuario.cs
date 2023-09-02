@@ -109,7 +109,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void CargarNombreUsuario()
         {
-            lblPrimerNombre.Text = DatosUsuario.PrimerNombre;
+            lblNombre.Text = DatosUsuario.Nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

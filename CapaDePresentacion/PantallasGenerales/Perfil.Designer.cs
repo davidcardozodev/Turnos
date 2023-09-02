@@ -32,14 +32,12 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblUsuarioCategoria = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblSegundoNombre = new System.Windows.Forms.Label();
-            this.lblSegundoNombreCategoria = new System.Windows.Forms.Label();
             this.lblEmailCategoria = new System.Windows.Forms.Label();
             this.lblRolCategoria = new System.Windows.Forms.Label();
-            this.lblPrimerNombre = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
-            this.lblPrimerNombreCategoria = new System.Windows.Forms.Label();
+            this.lblNombreCategoria = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tituloProfile
@@ -83,32 +81,11 @@
             this.lblTitulo.TabIndex = 37;
             this.lblTitulo.Text = "Perfil";
             // 
-            // lblSegundoNombre
-            // 
-            this.lblSegundoNombre.AutoSize = true;
-            this.lblSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblSegundoNombre.Location = new System.Drawing.Point(623, 232);
-            this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(260, 37);
-            this.lblSegundoNombre.TabIndex = 32;
-            this.lblSegundoNombre.Text = "SegundoNombre";
-            // 
-            // lblSegundoNombreCategoria
-            // 
-            this.lblSegundoNombreCategoria.AutoSize = true;
-            this.lblSegundoNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoNombreCategoria.Location = new System.Drawing.Point(332, 232);
-            this.lblSegundoNombreCategoria.Name = "lblSegundoNombreCategoria";
-            this.lblSegundoNombreCategoria.Size = new System.Drawing.Size(263, 37);
-            this.lblSegundoNombreCategoria.TabIndex = 31;
-            this.lblSegundoNombreCategoria.Text = "Segundo nombre";
-            // 
             // lblEmailCategoria
             // 
             this.lblEmailCategoria.AutoSize = true;
             this.lblEmailCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailCategoria.Location = new System.Drawing.Point(336, 294);
+            this.lblEmailCategoria.Location = new System.Drawing.Point(336, 230);
             this.lblEmailCategoria.Name = "lblEmailCategoria";
             this.lblEmailCategoria.Size = new System.Drawing.Size(97, 37);
             this.lblEmailCategoria.TabIndex = 33;
@@ -118,29 +95,29 @@
             // 
             this.lblRolCategoria.AutoSize = true;
             this.lblRolCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolCategoria.Location = new System.Drawing.Point(336, 342);
+            this.lblRolCategoria.Location = new System.Drawing.Point(336, 278);
             this.lblRolCategoria.Name = "lblRolCategoria";
             this.lblRolCategoria.Size = new System.Drawing.Size(64, 37);
             this.lblRolCategoria.TabIndex = 36;
             this.lblRolCategoria.Text = "Rol";
             // 
-            // lblPrimerNombre
+            // lblNombre
             // 
-            this.lblPrimerNombre.AutoSize = true;
-            this.lblPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPrimerNombre.Location = new System.Drawing.Point(623, 179);
-            this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(226, 37);
-            this.lblPrimerNombre.TabIndex = 30;
-            this.lblPrimerNombre.Text = "PrimerNombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNombre.Location = new System.Drawing.Point(623, 179);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(226, 37);
+            this.lblNombre.TabIndex = 30;
+            this.lblNombre.Text = "Nombre";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEmail.Location = new System.Drawing.Point(622, 294);
+            this.lblEmail.Location = new System.Drawing.Point(622, 230);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(97, 37);
             this.lblEmail.TabIndex = 34;
@@ -151,38 +128,36 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblRol.Location = new System.Drawing.Point(623, 342);
+            this.lblRol.Location = new System.Drawing.Point(623, 278);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(64, 37);
             this.lblRol.TabIndex = 35;
             this.lblRol.Text = "Rol";
             // 
-            // lblPrimerNombreCategoria
+            // lblNombreCategoria
             // 
-            this.lblPrimerNombreCategoria.AutoSize = true;
-            this.lblPrimerNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombreCategoria.Location = new System.Drawing.Point(336, 179);
-            this.lblPrimerNombreCategoria.Name = "lblPrimerNombreCategoria";
-            this.lblPrimerNombreCategoria.Size = new System.Drawing.Size(229, 37);
-            this.lblPrimerNombreCategoria.TabIndex = 29;
-            this.lblPrimerNombreCategoria.Text = "Primer nombre";
+            this.lblNombreCategoria.AutoSize = true;
+            this.lblNombreCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCategoria.Location = new System.Drawing.Point(336, 179);
+            this.lblNombreCategoria.Name = "lblNombreCategoria";
+            this.lblNombreCategoria.Size = new System.Drawing.Size(229, 37);
+            this.lblNombreCategoria.TabIndex = 29;
+            this.lblNombreCategoria.Text = "Nombre";
             // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 579);
+            this.ClientSize = new System.Drawing.Size(1172, 344);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblUsuarioCategoria);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblSegundoNombre);
-            this.Controls.Add(this.lblSegundoNombreCategoria);
             this.Controls.Add(this.lblEmailCategoria);
             this.Controls.Add(this.lblRolCategoria);
-            this.Controls.Add(this.lblPrimerNombre);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblRol);
-            this.Controls.Add(this.lblPrimerNombreCategoria);
+            this.Controls.Add(this.lblNombreCategoria);
             this.Controls.Add(this.tituloProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Perfil";
@@ -198,13 +173,11 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblUsuarioCategoria;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblSegundoNombre;
-        private System.Windows.Forms.Label lblSegundoNombreCategoria;
         private System.Windows.Forms.Label lblEmailCategoria;
         private System.Windows.Forms.Label lblRolCategoria;
-        private System.Windows.Forms.Label lblPrimerNombre;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label lblPrimerNombreCategoria;
+        private System.Windows.Forms.Label lblNombreCategoria;
     }
 }

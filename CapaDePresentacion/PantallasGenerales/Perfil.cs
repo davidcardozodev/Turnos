@@ -18,8 +18,7 @@ namespace CapaDePresentacion.PantallaGenerales
         private void DatosPerfil()
         {
             lblUsuario.Text = DatosUsuario.Usuario;
-            lblPrimerNombre.Text = DatosUsuario.PrimerNombre;
-            lblSegundoNombre.Text = DatosUsuario.SegundoNombre;
+            lblNombre.Text = DatosUsuario.Nombre;
             lblEmail.Text = DatosUsuario.Email;
             lblRol.Text = DatosUsuario.Rol;
         }

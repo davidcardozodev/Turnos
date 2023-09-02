@@ -55,8 +55,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 proveedorTurnoLlamador.Descripcion = Turno.Descripcion;
                 proveedorTurnoLlamador.Estado = Turno.Estado;
                 proveedorTurnoLlamador.Usuario = Turno.Usuario;
-                proveedorTurnoLlamador.PrimerNombre = Turno.PrimerNombre;
-                proveedorTurnoLlamador.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoLlamador.Nombre = Turno.Nombre;
                 proveedorTurnoLlamador.TipoPlan = Turno.TipoPlan;
 
                 flowLayoutPanel1.Controls.Add(proveedorTurnoLlamador);
@@ -89,8 +88,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 proveedorTurnoLlamadorEnCurso.Descripcion = Turno.Descripcion;
                 proveedorTurnoLlamadorEnCurso.Estado = Turno.Estado;
                 proveedorTurnoLlamadorEnCurso.Usuario = Turno.Usuario;
-                proveedorTurnoLlamadorEnCurso.PrimerNombre = Turno.PrimerNombre;
-                proveedorTurnoLlamadorEnCurso.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoLlamadorEnCurso.Nombre = Turno.Nombre;
 
                 flowLayoutPanel2.Controls.Add(proveedorTurnoLlamadorEnCurso);
             }

@@ -21,8 +21,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Descripcion { get; set; }
         public string Estado { get; set; }
         public string Usuario { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
         public string TipoPlan { get; set; }
 
         private string Prioridad = "Prioridad: ";
@@ -31,7 +30,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void CargarInformacion()
         {
-            lblCliente.Text = PrimerNombre + " " + SegundoNombre;
+            lblCliente.Text = Nombre;
             EstablecerPrioridad();
         }
 

@@ -46,7 +46,7 @@ namespace CapaDePresentacion.PantallaTurno
                 proveedores = admin.AdminCargarProveedores();
 
                 foreach (DataRow proveedor in proveedores.Rows)
-                    comboProveedores.Items.Add(proveedor["PrimerNombre"].ToString() + " " + proveedor["SegundoNombre"].ToString());
+                    comboProveedores.Items.Add(proveedor["Nombre"].ToString());
             }
         }
 
@@ -104,8 +104,7 @@ namespace CapaDePresentacion.PantallaTurno
         public string Descripcion { get; set; }
         public string Estado { get; set; }
         public string Usuario { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
         public string NombreProveedor { get; set; }
         public string Presencia { get; set; }
 
@@ -122,7 +121,7 @@ namespace CapaDePresentacion.PantallaTurno
         private void CargarInformacion()
         {
             lblFecha.Text = DiaNombre + " " + DiaNumero + ", " + Mes + ", " + Anio;
-            lblUsuario.Text = PrimerNombre + " " + SegundoNombre + " (" + Usuario + ")";
+            lblUsuario.Text = Nombre + " (" + Usuario + ")";
             lblHora.Text = Hora + ":00hs";
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;

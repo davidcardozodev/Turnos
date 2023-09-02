@@ -63,8 +63,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 usuarioItem.Id = Usuario.Id;
                 usuarioItem.Usuario = Usuario.Usuario;
                 usuarioItem.Clave = Usuario.Clave;
-                usuarioItem.PrimerNombre = Usuario.PrimerNombre;
-                usuarioItem.SegundoNombre = Usuario.SegundoNombre;
+                usuarioItem.Nombre = Usuario.Nombre;
                 usuarioItem.Email = Usuario.Email;
                 usuarioItem.Rol = Usuario.Rol;
                 usuarioItem.TipoPlan = Usuario.TipoPlan;

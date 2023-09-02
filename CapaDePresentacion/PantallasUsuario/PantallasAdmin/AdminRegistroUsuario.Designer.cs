@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblSegundoNombre = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
-            this.lblPrimerNombre = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.txtSegundoNombre = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.comboRol = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
@@ -64,21 +62,11 @@
             this.lblUsuario.TabIndex = 37;
             this.lblUsuario.Text = "Usuario";
             // 
-            // lblSegundoNombre
-            // 
-            this.lblSegundoNombre.AutoSize = true;
-            this.lblSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoNombre.Location = new System.Drawing.Point(11, 206);
-            this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(263, 37);
-            this.lblSegundoNombre.TabIndex = 39;
-            this.lblSegundoNombre.Text = "Segundo nombre";
-            // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(166, 275);
+            this.lblEmail.Location = new System.Drawing.Point(166, 210);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(97, 37);
             this.lblEmail.TabIndex = 40;
@@ -88,21 +76,21 @@
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(185, 346);
+            this.lblRol.Location = new System.Drawing.Point(185, 281);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(64, 37);
             this.lblRol.TabIndex = 41;
             this.lblRol.Text = "Rol";
             // 
-            // lblPrimerNombre
+            // lblNombre
             // 
-            this.lblPrimerNombre.AutoSize = true;
-            this.lblPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombre.Location = new System.Drawing.Point(45, 143);
-            this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(229, 37);
-            this.lblPrimerNombre.TabIndex = 38;
-            this.lblPrimerNombre.Text = "Primer nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(45, 143);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(229, 37);
+            this.lblNombre.TabIndex = 38;
+            this.lblNombre.Text = "Nombre";
             // 
             // txtUsuario
             // 
@@ -112,26 +100,18 @@
             this.txtUsuario.Size = new System.Drawing.Size(433, 39);
             this.txtUsuario.TabIndex = 42;
             // 
-            // txtPrimerNombre
+            // txtNombre
             // 
-            this.txtPrimerNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerNombre.Location = new System.Drawing.Point(294, 143);
-            this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(433, 39);
-            this.txtPrimerNombre.TabIndex = 43;
-            // 
-            // txtSegundoNombre
-            // 
-            this.txtSegundoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSegundoNombre.Location = new System.Drawing.Point(294, 206);
-            this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(433, 39);
-            this.txtSegundoNombre.TabIndex = 44;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(294, 143);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(433, 39);
+            this.txtNombre.TabIndex = 43;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(294, 275);
+            this.txtEmail.Location = new System.Drawing.Point(294, 210);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(433, 39);
             this.txtEmail.TabIndex = 45;
@@ -141,7 +121,7 @@
             this.comboRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboRol.FormattingEnabled = true;
-            this.comboRol.Location = new System.Drawing.Point(294, 343);
+            this.comboRol.Location = new System.Drawing.Point(294, 278);
             this.comboRol.Name = "comboRol";
             this.comboRol.Size = new System.Drawing.Size(433, 40);
             this.comboRol.TabIndex = 46;
@@ -150,7 +130,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(546, 485);
+            this.btnRegistrar.Location = new System.Drawing.Point(1043, 422);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(181, 59);
             this.btnRegistrar.TabIndex = 47;
@@ -187,20 +167,18 @@
             this.panel1.Controls.Add(this.comboTipoPlan);
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.txtClave);
-            this.panel1.Controls.Add(this.lblPrimerNombre);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.lblClave);
             this.panel1.Controls.Add(this.lblRol);
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.comboRol);
-            this.panel1.Controls.Add(this.lblSegundoNombre);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtUsuario);
-            this.panel1.Controls.Add(this.txtSegundoNombre);
-            this.panel1.Controls.Add(this.txtPrimerNombre);
+            this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Location = new System.Drawing.Point(12, 80);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1242, 573);
+            this.panel1.Size = new System.Drawing.Size(1242, 494);
             this.panel1.TabIndex = 50;
             // 
             // labelDisponibilidad
@@ -259,7 +237,7 @@
             // 
             this.lblTipoPlan.AutoSize = true;
             this.lblTipoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoPlan.Location = new System.Drawing.Point(55, 416);
+            this.lblTipoPlan.Location = new System.Drawing.Point(55, 351);
             this.lblTipoPlan.Name = "lblTipoPlan";
             this.lblTipoPlan.Size = new System.Drawing.Size(194, 37);
             this.lblTipoPlan.TabIndex = 50;
@@ -270,7 +248,7 @@
             this.comboTipoPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipoPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTipoPlan.FormattingEnabled = true;
-            this.comboTipoPlan.Location = new System.Drawing.Point(294, 413);
+            this.comboTipoPlan.Location = new System.Drawing.Point(294, 348);
             this.comboTipoPlan.Name = "comboTipoPlan";
             this.comboTipoPlan.Size = new System.Drawing.Size(433, 40);
             this.comboTipoPlan.TabIndex = 51;
@@ -300,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1272, 681);
+            this.ClientSize = new System.Drawing.Size(1272, 587);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.panel1);
@@ -318,13 +296,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblSegundoNombre;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label lblPrimerNombre;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPrimerNombre;
-        private System.Windows.Forms.TextBox txtSegundoNombre;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox comboRol;
         private System.Windows.Forms.Button btnRegistrar;

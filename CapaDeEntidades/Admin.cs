@@ -41,9 +41,9 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuarioBusqueda(Busqueda);
         }
 
-        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, string Plan)
+        public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string Nombre, string Email, string Rol, string Plan)
         {
-            _ConsultasAdmin.AdminModificarUsuario(IdUsuario, Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol, Plan);
+            _ConsultasAdmin.AdminModificarUsuario(IdUsuario, Usuario, Clave, Nombre, Email, Rol, Plan);
         }
 
         public void AdminGuardarDisponibilidad(int IdUsuario, int HorarioInicio, int HorarioFin)
@@ -61,9 +61,9 @@ namespace CapaDeEntidades
             _ConsultasAdmin.AdminGuardarModificacion(IdTurno, IdAdmin, IdCliente, DiaNombre, DiaNumero, Mes, Anio, NombreProveedor);
         }
 
-        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string PrimerNombre, string SegundoNombre, string Email, string Rol, int HorarioInicio, int HorarioFin, string TipoPlan)
+        public void AdminRegistrarUsuario(string NombreUsuario, string Clave, string Nombre, string Email, string Rol, int HorarioInicio, int HorarioFin, string TipoPlan)
         {
-            _ConsultasAdmin.AdminRegistrarUsuario(NombreUsuario, Clave, PrimerNombre, SegundoNombre, Email, Rol, HorarioInicio, HorarioFin, TipoPlan);
+            _ConsultasAdmin.AdminRegistrarUsuario(NombreUsuario, Clave, Nombre, Email, Rol, HorarioInicio, HorarioFin, TipoPlan);
         }
 
         public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)

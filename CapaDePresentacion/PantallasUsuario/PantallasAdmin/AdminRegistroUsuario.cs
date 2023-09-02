@@ -25,8 +25,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         #region "Atributos"
 
         private string Usuario;
-        private string PrimerNombre;
-        private string SegundoNombre;
+        private string Nombre;
         private string Email;
         private string Clave;
         private string Rol_;
@@ -70,8 +69,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private bool ComprobarCampos()
         {
             return !string.IsNullOrWhiteSpace(Usuario) &&
-                   !string.IsNullOrWhiteSpace(PrimerNombre) &&
-                   !string.IsNullOrWhiteSpace(SegundoNombre) &&
+                   !string.IsNullOrWhiteSpace(Nombre) &&
                    !string.IsNullOrWhiteSpace(Email) &&
                    !string.IsNullOrWhiteSpace(Clave);
         }
@@ -79,8 +77,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void AsignarDatos()
         {
             Usuario = txtUsuario.Text;
-            PrimerNombre = txtPrimerNombre.Text;
-            SegundoNombre = txtSegundoNombre.Text;
+            Nombre = txtNombre.Text;
             Email = txtEmail.Text;
             Clave = txtClave.Text;
             Rol_ = comboRol.Text;
@@ -91,7 +88,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             Admin admin = new Admin();
 
-            admin.AdminRegistrarUsuario(Usuario, Clave, PrimerNombre, SegundoNombre, Email, Rol_, HorarioInicio, HorarioFin, TipoPlan);
+            admin.AdminRegistrarUsuario(Usuario, Clave, Nombre, Email, Rol_, HorarioInicio, HorarioFin, TipoPlan);
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }

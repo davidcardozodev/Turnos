@@ -60,8 +60,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 adminTurnoItem.Descripcion = Turno.Descripcion;
                 adminTurnoItem.Estado = Turno.Estado;
                 adminTurnoItem.Usuario = Turno.Usuario;
-                adminTurnoItem.PrimerNombre = Turno.PrimerNombre;
-                adminTurnoItem.SegundoNombre = Turno.SegundoNombre;
+                adminTurnoItem.Nombre = Turno.Nombre;
                 adminTurnoItem.NombreProveedor = Turno.NombreProveedor;
 
                 flowLayoutPanel1.Controls.Add(adminTurnoItem);

@@ -24,8 +24,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         public string Descripcion { get; set; }
         public string Estado { get; set; }
         public string Usuario { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
         public string NombreProveedor { get; set; }
 
         #endregion
@@ -42,7 +41,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
             string Espacio = "      ";
 
-            lblInformacion.Text = PrimerNombre + " " + SegundoNombre + Espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + Espacio + Hora + ":00hs";
+            lblInformacion.Text = Nombre + Espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + Espacio + Hora + ":00hs";
         }
 
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -59,8 +58,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             turnoDetalle.Descripcion = Descripcion;
             turnoDetalle.Estado = Estado;
             turnoDetalle.Usuario = Usuario;
-            turnoDetalle.PrimerNombre = PrimerNombre;
-            turnoDetalle.SegundoNombre = SegundoNombre;
+            turnoDetalle.Nombre = Nombre;
             turnoDetalle.NombreProveedor = NombreProveedor;
 
             turnoDetalle.Show();

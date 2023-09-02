@@ -33,7 +33,7 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.linkPerfil = new System.Windows.Forms.LinkLabel();
-            this.lblPrimerNombre = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panelcontainer.SuspendLayout();
@@ -68,7 +68,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.Black;
             this.panelMenu.Controls.Add(this.linkCerrarSesion);
             this.panelMenu.Controls.Add(this.linkPerfil);
-            this.panelMenu.Controls.Add(this.lblPrimerNombre);
+            this.panelMenu.Controls.Add(this.lblNombre);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 51);
             this.panelMenu.Name = "panelMenu";
@@ -101,16 +101,16 @@
             this.linkPerfil.Text = "Mi perfil";
             this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
             // 
-            // lblPrimerNombre
+            // lblNombre
             // 
-            this.lblPrimerNombre.AutoSize = true;
-            this.lblPrimerNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPrimerNombre.Location = new System.Drawing.Point(59, 139);
-            this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(94, 27);
-            this.lblPrimerNombre.TabIndex = 1;
-            this.lblPrimerNombre.Text = "Usuario";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNombre.Location = new System.Drawing.Point(59, 139);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(94, 27);
+            this.lblNombre.TabIndex = 1;
+            this.lblNombre.Text = "Usuario";
             // 
             // panelTitulo
             // 
@@ -132,7 +132,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(554, 11);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(115, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(118, 37);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Turnos";
             // 
@@ -161,7 +161,7 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.LinkLabel linkCerrarSesion;
         private System.Windows.Forms.LinkLabel linkPerfil;
-        private System.Windows.Forms.Label lblPrimerNombre;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Label lblTitulo;
     }

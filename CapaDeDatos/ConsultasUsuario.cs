@@ -47,13 +47,12 @@ namespace CapaDeDatos
 
         private static void FormatoCamposCache(SqlDataReader Reader)
         {
-            DatosUsuario.Id = Reader.GetInt32(0);
-            DatosUsuario.Usuario = Reader.GetString(1);
-            DatosUsuario.Clave = Reader.GetString(2);
-            DatosUsuario.PrimerNombre = Reader.GetString(3);
-            DatosUsuario.SegundoNombre = Reader.GetString(4);
-            DatosUsuario.Email = Reader.GetString(5);
-            DatosUsuario.Rol = Reader.GetString(6);
+            DatosUsuario.Id = int.Parse(Reader["Id"].ToString());
+            DatosUsuario.Usuario = Reader["Usuario"].ToString();
+            DatosUsuario.Clave = Reader["Clave"].ToString();
+            DatosUsuario.Nombre = Reader["Nombre"].ToString();
+            DatosUsuario.Email = Reader["Email"].ToString();
+            DatosUsuario.Rol = Reader["Rol"].ToString();
         }
     }
 }

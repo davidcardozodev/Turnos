@@ -35,14 +35,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Descripcion { get; set; }
         public string Estado { get; set; }
         public string Usuario { get; set; }
-        public string PrimerNombre { get; set; }
-        public string SegundoNombre { get; set; }
+        public string Nombre { get; set; }
 
         #endregion
 
         private void CargarInformacion()
         {
-            lblCliente.Text = PrimerNombre + " " + SegundoNombre;
+            lblCliente.Text = Nombre;
         }
 
         private void btnFinalizar_Click(object sender, System.EventArgs e)

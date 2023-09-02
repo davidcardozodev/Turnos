@@ -42,8 +42,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 proveedorTurnoItem.Descripcion = Turno.Descripcion;
                 proveedorTurnoItem.Estado = Turno.Estado;
                 proveedorTurnoItem.Usuario = Turno.Usuario;
-                proveedorTurnoItem.PrimerNombre = Turno.PrimerNombre;
-                proveedorTurnoItem.SegundoNombre = Turno.SegundoNombre;
+                proveedorTurnoItem.Nombre = Turno.Nombre;
                 proveedorTurnoItem.PresenciaEstado = Turno.Presencia;
                 proveedorTurnoItem.TipoPlan = Turno.TipoPlan;
 
