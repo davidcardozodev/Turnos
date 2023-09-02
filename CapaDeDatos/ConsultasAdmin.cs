@@ -201,17 +201,6 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminGuardarProveedor(int IdTurno, string NombreProveedor)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminGuardarProveedor";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
-            _Comando.Parameters.AddWithValue("@NombreProveedor", NombreProveedor);
-            _Comando.ExecuteNonQuery();
-            _Conexion.ConexionCerrar();
-        }
-
         public void AdminGuardarModificacion(int IdTurno, int IdAdmin, int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string NombreProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
