@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,7 @@
     <Compile Include="Presencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rol.cs" />
+    <Compile Include="SelectorColor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaComun\CapaComun.csproj">
