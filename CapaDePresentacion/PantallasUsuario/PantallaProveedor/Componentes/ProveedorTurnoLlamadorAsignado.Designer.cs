@@ -43,6 +43,8 @@
             this.btnAgregarEnCurso.Text = "+";
             this.btnAgregarEnCurso.UseVisualStyleBackColor = true;
             this.btnAgregarEnCurso.Click += new System.EventHandler(this.btnAgregarEnCurso_Click);
+            this.btnAgregarEnCurso.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
+            this.btnAgregarEnCurso.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
             // 
             // lblCliente
             // 
@@ -53,6 +55,8 @@
             this.lblCliente.Size = new System.Drawing.Size(104, 32);
             this.lblCliente.TabIndex = 7;
             this.lblCliente.Text = "Cliente";
+            this.lblCliente.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
+            this.lblCliente.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
             // 
             // lblPrioridad
             // 
@@ -63,18 +67,22 @@
             this.lblPrioridad.Size = new System.Drawing.Size(129, 32);
             this.lblPrioridad.TabIndex = 19;
             this.lblPrioridad.Text = "Prioridad";
+            this.lblPrioridad.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
+            this.lblPrioridad.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
             // 
             // ProveedorTurnoLlamadorAsignado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
             this.Controls.Add(this.lblPrioridad);
             this.Controls.Add(this.btnAgregarEnCurso);
             this.Controls.Add(this.lblCliente);
             this.Name = "ProveedorTurnoLlamadorAsignado";
             this.Size = new System.Drawing.Size(446, 129);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamador_Load);
+            this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

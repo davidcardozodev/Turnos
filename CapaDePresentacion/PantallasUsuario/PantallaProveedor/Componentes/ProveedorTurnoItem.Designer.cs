@@ -42,6 +42,8 @@
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 19;
             this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.MouseEnter += new System.EventHandler(this.ProveedorTurnoItem_MouseEnter);
+            this.lblInformacion.MouseLeave += new System.EventHandler(this.ProveedorTurnoItem_MouseLeave);
             // 
             // lblPresencia
             // 
@@ -52,6 +54,8 @@
             this.lblPresencia.Size = new System.Drawing.Size(141, 32);
             this.lblPresencia.TabIndex = 20;
             this.lblPresencia.Text = "Presencia";
+            this.lblPresencia.MouseEnter += new System.EventHandler(this.ProveedorTurnoItem_MouseEnter);
+            this.lblPresencia.MouseLeave += new System.EventHandler(this.ProveedorTurnoItem_MouseLeave);
             // 
             // btnAsignar
             // 
@@ -64,6 +68,8 @@
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.UseVisualStyleBackColor = true;
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
+            this.btnAsignar.MouseEnter += new System.EventHandler(this.ProveedorTurnoItem_MouseEnter);
+            this.btnAsignar.MouseLeave += new System.EventHandler(this.ProveedorTurnoItem_MouseLeave);
             // 
             // ProveedorTurnoItem
             // 
@@ -76,6 +82,8 @@
             this.Name = "ProveedorTurnoItem";
             this.Size = new System.Drawing.Size(857, 69);
             this.Load += new System.EventHandler(this.ProveedorTurnoItem_Load);
+            this.MouseEnter += new System.EventHandler(this.ProveedorTurnoItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ProveedorTurnoItem_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

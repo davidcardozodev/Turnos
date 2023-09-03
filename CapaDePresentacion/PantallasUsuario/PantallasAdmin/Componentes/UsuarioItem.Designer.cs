@@ -43,6 +43,8 @@
             this.linkModificar.TabStop = true;
             this.linkModificar.Text = "Modificar";
             this.linkModificar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkModificar_LinkClicked);
+            this.linkModificar.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
+            this.linkModificar.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
             // lblInformacion
             // 
@@ -53,6 +55,8 @@
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 7;
             this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
+            this.lblInformacion.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
             // UsuarioItem
             // 
@@ -64,6 +68,8 @@
             this.Name = "UsuarioItem";
             this.Size = new System.Drawing.Size(1055, 76);
             this.Load += new System.EventHandler(this.UsuarioItem_Load);
+            this.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

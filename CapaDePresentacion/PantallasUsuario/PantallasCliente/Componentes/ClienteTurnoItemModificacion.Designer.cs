@@ -44,6 +44,8 @@
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 0;
             this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.lblInformacion.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // linkTurnoOriginal
             // 
@@ -56,6 +58,8 @@
             this.linkTurnoOriginal.TabStop = true;
             this.linkTurnoOriginal.Text = "Turno original";
             this.linkTurnoOriginal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkTurnoOriginal_LinkClicked);
+            this.linkTurnoOriginal.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.linkTurnoOriginal.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // btnAceptar
             // 
@@ -67,6 +71,8 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.btnAceptar.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // btnRechazar
             // 
@@ -78,6 +84,8 @@
             this.btnRechazar.Text = "Rechazar";
             this.btnRechazar.UseVisualStyleBackColor = true;
             this.btnRechazar.Click += new System.EventHandler(this.btnRechazar_Click);
+            this.btnRechazar.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.btnRechazar.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // lblEstado
             // 
@@ -88,6 +96,8 @@
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 4;
             this.lblEstado.Text = "Estado";
+            this.lblEstado.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.lblEstado.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // ClienteTurnoItemModificacion
             // 
@@ -102,6 +112,8 @@
             this.Name = "ClienteTurnoItemModificacion";
             this.Size = new System.Drawing.Size(1341, 90);
             this.Load += new System.EventHandler(this.ClienteTurnoItemModificacion_Load);
+            this.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

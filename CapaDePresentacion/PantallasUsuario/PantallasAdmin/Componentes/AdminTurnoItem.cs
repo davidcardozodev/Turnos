@@ -82,6 +82,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             }
         }
 
+        private void AdminTurnoItem_MouseEnter(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
 
+            this.BackColor = selectorColor.CambiarColor();
+        }
+
+        private void AdminTurnoItem_MouseLeave(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.RestaurarColor();
+        }
     }
 }

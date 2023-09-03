@@ -91,5 +91,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
+
+        private void ProveedorTurnoItem_MouseEnter(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.CambiarColor();
+        }
+
+        private void ProveedorTurnoItem_MouseLeave(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.RestaurarColor();
+        }
     }
 }

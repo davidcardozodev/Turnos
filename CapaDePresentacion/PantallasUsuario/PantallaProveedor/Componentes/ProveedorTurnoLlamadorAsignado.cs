@@ -1,4 +1,5 @@
 ﻿using CapaDeEntidades;
+using CapaDeNegocio;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
@@ -64,6 +65,20 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             proveedor.ProveedorAgregarEnCurso(Id);
 
             (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).ActualizarTurnos();
+        }
+
+        private void ProveedorTurnoLlamadorAsignado_MouseEnter(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.TurnoAsignado();
+        }
+
+        private void ProveedorTurnoLlamadorAsignado_MouseLeave(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.RestaurarColorTurnoAsignado();
         }
     }
 }

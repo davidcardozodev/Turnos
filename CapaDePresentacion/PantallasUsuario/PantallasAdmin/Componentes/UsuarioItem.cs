@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using CapaDeNegocio;
+using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 {
@@ -45,6 +46,20 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             adminVistaUsuarioDetalle.HorarioFin = HorarioFin;
 
             adminVistaUsuarioDetalle.Show();
+        }
+
+        private void UsuarioItem_MouseEnter(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.CambiarColor();
+        }
+
+        private void UsuarioItem_MouseLeave(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.RestaurarColor();
         }
     }
 }

@@ -44,6 +44,8 @@
             this.linkVerMas.TabStop = true;
             this.linkVerMas.Text = "Ver mas";
             this.linkVerMas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkVerMas_LinkClicked);
+            this.linkVerMas.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
+            this.linkVerMas.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // lblEstado
             // 
@@ -54,6 +56,8 @@
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 13;
             this.lblEstado.Text = "Estado";
+            this.lblEstado.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
+            this.lblEstado.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // lblInformacion
             // 
@@ -64,6 +68,8 @@
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 14;
             this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
+            this.lblInformacion.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // AdminTurnoItem
             // 
@@ -76,6 +82,8 @@
             this.Name = "AdminTurnoItem";
             this.Size = new System.Drawing.Size(1054, 75);
             this.Load += new System.EventHandler(this.AdminTurnoItem_Load);
+            this.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -174,5 +174,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             }
         }
 
+        private void ClienteTurnoItemModificacion_MouseEnter(object sender, EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.CambiarColor();
+        }
+
+        private void ClienteTurnoItemModificacion_MouseLeave(object sender, EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.RestaurarColor();
+        }
     }
 }

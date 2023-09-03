@@ -52,5 +52,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             (Application.OpenForms["ProveedorLlamador"] as ProveedorLlamador).ActualizarTurnos();
         }
+
+        private void ProveedorTurnoLlamadorEnCurso_MouseEnter(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.TurnoEnCurso();
+        }
+
+        private void ProveedorTurnoLlamadorEnCurso_MouseLeave(object sender, System.EventArgs e)
+        {
+            SelectorColor selectorColor = new SelectorColor();
+
+            this.BackColor = selectorColor.RestaurarColorTurnoEnCurso();
+        }
     }
 }

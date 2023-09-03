@@ -41,6 +41,8 @@
             this.lblCliente.Size = new System.Drawing.Size(104, 32);
             this.lblCliente.TabIndex = 6;
             this.lblCliente.Text = "Cliente";
+            this.lblCliente.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
+            this.lblCliente.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);
             // 
             // btnFinalizar
             // 
@@ -52,6 +54,8 @@
             this.btnFinalizar.Text = "-";
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            this.btnFinalizar.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
+            this.btnFinalizar.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);
             // 
             // ProveedorTurnoLlamadorEnCurso
             // 
@@ -63,6 +67,8 @@
             this.Name = "ProveedorTurnoLlamadorEnCurso";
             this.Size = new System.Drawing.Size(439, 120);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_Load);
+            this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
