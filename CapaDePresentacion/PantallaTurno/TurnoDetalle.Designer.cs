@@ -301,6 +301,7 @@
             this.Name = "TurnoDetalle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TurnoDetalle";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TurnoDetalle_FormClosed);
             this.Load += new System.EventHandler(this.TurnoDetalle_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

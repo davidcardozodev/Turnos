@@ -69,7 +69,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         #endregion
 
 
-        private void CargarTurnoItem()
+        public void CargarTurnoItem()
         {
             Cliente cliente = new Cliente();
 

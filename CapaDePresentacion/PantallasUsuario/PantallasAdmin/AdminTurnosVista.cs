@@ -31,7 +31,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         }
 
 
-        private void CargarTurnoItem()
+        public void CargarTurnoItem()
         {
             Admin admin = new Admin();
 

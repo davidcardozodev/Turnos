@@ -1,6 +1,8 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
+using CapaDePresentacion.PantallasUsuario.PantallasAdmin;
+using CapaDePresentacion.PantallasUsuario.PantallasCliente;
 using System;
 using System.Data;
 using System.Drawing;
@@ -133,7 +135,13 @@ namespace CapaDePresentacion.PantallaTurno
             DialogResult Alerta = MessageBox.Show("¿Quiere dar de baja el turno?", "Dar de baja", MessageBoxButtons.YesNo);
 
             if (Alerta == DialogResult.Yes)
+            {
                 DarBaja();
+                btnDarDeBaja.Enabled = false;
+                Estado = Estados.Cancelado;
+                lblEstado.Text = Estados.Cancelado;
+                CambiarColorEstado();
+            }
         }
 
         private void DarBaja()
@@ -215,6 +223,24 @@ namespace CapaDePresentacion.PantallaTurno
             MesGuardar = dtpFecha.Value.ToString("MMMM");
             DiaNombreGuardar = dtpFecha.Value.ToString("dddd");
             DiaNumeroGuardar = dtpFecha.Value.ToString("dd");
+        }
+
+        private void TurnoDetalle_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ActualizarPantallaAdminVistaTurno();
+            ActualizarPantallaClienteVistaTurno();
+        }
+
+        private static void ActualizarPantallaAdminVistaTurno()
+        {
+            if (DatosUsuario.Rol == Rol.Admin)
+                (Application.OpenForms["AdminTurnosVista"] as AdminTurnosVista).CargarTurnoItem();
+        }
+
+        private static void ActualizarPantallaClienteVistaTurno()
+        {
+            if (DatosUsuario.Rol == Rol.Cliente)
+                (Application.OpenForms["ClienteTurnosVista"] as ClienteTurnosVista).CargarTurnoItem();
         }
     }
 }
