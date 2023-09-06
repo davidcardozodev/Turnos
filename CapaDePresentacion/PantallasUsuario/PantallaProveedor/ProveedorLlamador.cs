@@ -47,14 +47,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 ProveedorTurnoLlamadorAsignado proveedorTurnoLlamador = new ProveedorTurnoLlamadorAsignado();
 
                 proveedorTurnoLlamador.Id = Turno.Id;
-                proveedorTurnoLlamador.DiaNombre = Turno.DiaNombre;
-                proveedorTurnoLlamador.DiaNumero = Turno.DiaNumero;
-                proveedorTurnoLlamador.Mes = Turno.Mes;
-                proveedorTurnoLlamador.Anio = Turno.Anio;
-                proveedorTurnoLlamador.Hora = Turno.Hora;
-                proveedorTurnoLlamador.Descripcion = Turno.Descripcion;
-                proveedorTurnoLlamador.Estado = Turno.Estado;
-                proveedorTurnoLlamador.Usuario = Turno.Usuario;
                 proveedorTurnoLlamador.Nombre = Turno.Nombre;
                 proveedorTurnoLlamador.TipoPlan = Turno.TipoPlan;
 
@@ -80,14 +72,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 ProveedorTurnoLlamadorEnCurso proveedorTurnoLlamadorEnCurso = new ProveedorTurnoLlamadorEnCurso();
 
                 proveedorTurnoLlamadorEnCurso.Id = Turno.Id;
-                proveedorTurnoLlamadorEnCurso.DiaNombre = Turno.DiaNombre;
-                proveedorTurnoLlamadorEnCurso.DiaNumero = Turno.DiaNumero;
-                proveedorTurnoLlamadorEnCurso.Mes = Turno.Mes;
-                proveedorTurnoLlamadorEnCurso.Anio = Turno.Anio;
-                proveedorTurnoLlamadorEnCurso.Hora = Turno.Hora;
-                proveedorTurnoLlamadorEnCurso.Descripcion = Turno.Descripcion;
-                proveedorTurnoLlamadorEnCurso.Estado = Turno.Estado;
-                proveedorTurnoLlamadorEnCurso.Usuario = Turno.Usuario;
                 proveedorTurnoLlamadorEnCurso.Nombre = Turno.Nombre;
                 proveedorTurnoLlamadorEnCurso.Lugar = Turno.Lugar;
 

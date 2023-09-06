@@ -37,13 +37,6 @@ namespace CapaDePresentacion.PantallaLlamador
                 ProveedorTurnoLlamadorEnCurso proveedorTurnoLlamadorEnCurso = new ProveedorTurnoLlamadorEnCurso();
 
                 proveedorTurnoLlamadorEnCurso.Id = Turno.Id;
-                proveedorTurnoLlamadorEnCurso.DiaNombre = Turno.DiaNombre;
-                proveedorTurnoLlamadorEnCurso.DiaNumero = Turno.DiaNumero;
-                proveedorTurnoLlamadorEnCurso.Mes = Turno.Mes;
-                proveedorTurnoLlamadorEnCurso.Anio = Turno.Anio;
-                proveedorTurnoLlamadorEnCurso.Hora = Turno.Hora;
-                proveedorTurnoLlamadorEnCurso.Descripcion = Turno.Descripcion;
-                proveedorTurnoLlamadorEnCurso.Estado = Turno.Estado;
                 proveedorTurnoLlamadorEnCurso.Usuario = Turno.Usuario;
                 proveedorTurnoLlamadorEnCurso.Nombre = Turno.Nombre;
 

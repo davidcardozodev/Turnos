@@ -126,30 +126,12 @@ namespace CapaDeDatos
             while (_Lector.Read())
             {
                 int Id = int.Parse(_Lector["Id"].ToString());
-                int IdCliente = int.Parse(_Lector["IdCliente"].ToString());
-                string DiaNombre = _Lector["DiaNombre"].ToString();
-                string DiaNumero = _Lector["DiaNumero"].ToString();
-                string Mes = _Lector["Mes"].ToString();
-                string Anio = _Lector["Anio"].ToString();
-                string Hora = _Lector["Hora"].ToString();
-                string Descripcion = _Lector["Descripcion"].ToString();
-                string Estado = _Lector["Estado"].ToString();
-                string Usuario = _Lector["Usuario"].ToString();
                 string Nombre = _Lector["Nombre"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
                     Id = Id,
-                    IdCliente = IdCliente,
-                    DiaNombre = DiaNombre,
-                    DiaNumero = DiaNumero,
-                    Mes = Mes,
-                    Anio = Anio,
-                    Hora = Hora,
-                    Descripcion = Descripcion,
-                    Estado = Estado,
-                    Usuario = Usuario,
                     Nombre = Nombre,
                     TipoPlan = TipoPlan
                 });
@@ -172,30 +154,12 @@ namespace CapaDeDatos
             while (_Lector.Read())
             {
                 int Id = int.Parse(_Lector["Id"].ToString());
-                int IdCliente = int.Parse(_Lector["IdCliente"].ToString());
-                string DiaNombre = _Lector["DiaNombre"].ToString();
-                string DiaNumero = _Lector["DiaNumero"].ToString();
-                string Mes = _Lector["Mes"].ToString();
-                string Anio = _Lector["Anio"].ToString();
-                string Hora = _Lector["Hora"].ToString();
-                string Descripcion = _Lector["Descripcion"].ToString();
-                string Estado = _Lector["Estado"].ToString();
-                string Usuario = _Lector["Usuario"].ToString();
                 string Nombre = _Lector["Nombre"].ToString();
                 string Lugar = _Lector["Lugar"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
                     Id = Id,
-                    IdCliente = IdCliente,
-                    DiaNombre = DiaNombre,
-                    DiaNumero = DiaNumero,
-                    Mes = Mes,
-                    Anio = Anio,
-                    Hora = Hora,
-                    Descripcion = Descripcion,
-                    Estado = Estado,
-                    Usuario = Usuario,
                     Nombre = Nombre,
                     Lugar = Lugar,
                 });
