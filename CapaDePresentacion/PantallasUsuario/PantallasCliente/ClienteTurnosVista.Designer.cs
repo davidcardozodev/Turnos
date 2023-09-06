@@ -30,15 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.btnNotificaciones = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCrearTurno = new System.Windows.Forms.Button();
+            this.btnCalendario = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.lblMostrar = new System.Windows.Forms.Label();
-            this.btnCalendario = new System.Windows.Forms.Button();
-            this.btnCrearTurno = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,17 +59,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1055, 456);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // btnVolverAtras
-            // 
-            this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(31, 73);
-            this.btnVolverAtras.Name = "btnVolverAtras";
-            this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
-            this.btnVolverAtras.TabIndex = 2;
-            this.btnVolverAtras.Text = "Volver atras";
-            this.btnVolverAtras.UseVisualStyleBackColor = true;
-            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
-            // 
             // btnNotificaciones
             // 
             this.btnNotificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,7 +78,6 @@
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.comboEstado);
             this.panel1.Controls.Add(this.lblMostrar);
-            this.panel1.Controls.Add(this.btnVolverAtras);
             this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Controls.Add(this.btnNotificaciones);
             this.panel1.Controls.Add(this.label1);
@@ -99,6 +86,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1248, 789);
             this.panel1.TabIndex = 5;
+            // 
+            // btnCrearTurno
+            // 
+            this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearTurno.Location = new System.Drawing.Point(588, 73);
+            this.btnCrearTurno.Name = "btnCrearTurno";
+            this.btnCrearTurno.Size = new System.Drawing.Size(204, 58);
+            this.btnCrearTurno.TabIndex = 11;
+            this.btnCrearTurno.Text = "Crear turno";
+            this.btnCrearTurno.UseVisualStyleBackColor = true;
+            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
+            // 
+            // btnCalendario
+            // 
+            this.btnCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalendario.Location = new System.Drawing.Point(804, 73);
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Size = new System.Drawing.Size(204, 58);
+            this.btnCalendario.TabIndex = 10;
+            this.btnCalendario.Text = "Calendario";
+            this.btnCalendario.UseVisualStyleBackColor = true;
+            this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
             // 
             // btnBuscar
             // 
@@ -140,28 +149,6 @@
             this.lblMostrar.TabIndex = 5;
             this.lblMostrar.Text = "Mostrar";
             // 
-            // btnCalendario
-            // 
-            this.btnCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalendario.Location = new System.Drawing.Point(804, 73);
-            this.btnCalendario.Name = "btnCalendario";
-            this.btnCalendario.Size = new System.Drawing.Size(204, 58);
-            this.btnCalendario.TabIndex = 10;
-            this.btnCalendario.Text = "Calendario";
-            this.btnCalendario.UseVisualStyleBackColor = true;
-            this.btnCalendario.Click += new System.EventHandler(this.btnCalendario_Click);
-            // 
-            // btnCrearTurno
-            // 
-            this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearTurno.Location = new System.Drawing.Point(588, 73);
-            this.btnCrearTurno.Name = "btnCrearTurno";
-            this.btnCrearTurno.Size = new System.Drawing.Size(204, 58);
-            this.btnCrearTurno.TabIndex = 11;
-            this.btnCrearTurno.Text = "Crear turno";
-            this.btnCrearTurno.UseVisualStyleBackColor = true;
-            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
-            // 
             // ClienteTurnosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -182,7 +169,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button btnVolverAtras;
         private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMostrar;
