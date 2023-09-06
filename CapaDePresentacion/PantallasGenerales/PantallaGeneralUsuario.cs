@@ -2,9 +2,9 @@
 using CapaDeNegocio;
 using CapaDePresentacion.PantallaGenerales;
 using CapaDePresentacion.PantallaLlamador;
-using CapaDePresentacion.PantallasUsuario;
 using CapaDePresentacion.PantallasUsuario.PantallaProveedor;
 using CapaDePresentacion.PantallasUsuario.PantallasAdmin;
+using CapaDePresentacion.PantallasUsuario.PantallasCliente;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -69,7 +69,7 @@ namespace CapaDePresentacion.PantallasGenerales
         private void CargarPantallaUsuario()
         {
             if (DatosUsuario.Rol == Rol.Cliente)
-                AbrirFormulario<ClientePrincipal>();
+                AbrirFormulario<ClienteTurnosVista>();
 
             if (DatosUsuario.Rol == Rol.Admin)
                 AbrirFormulario<AdminPrincipal>();

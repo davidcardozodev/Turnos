@@ -162,5 +162,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             DatosTurno(ListaTurnos);
         }
 
+        private void btnCrearTurno_Click(object sender, System.EventArgs e)
+        {
+            AbrirFormulario<ClienteCreacionTurno>();
+        }
+
+        private void btnCalendario_Click(object sender, System.EventArgs e)
+        {
+            AbrirFormulario<ClienteCalendario>();
+        }
     }
 }
