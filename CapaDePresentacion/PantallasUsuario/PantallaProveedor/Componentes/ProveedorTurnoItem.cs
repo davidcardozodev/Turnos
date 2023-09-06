@@ -24,6 +24,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Nombre { get; set; }
         public string PresenciaEstado { get; set; }
         public string TipoPlan { get; set; }
+        string Prioridad;
 
         #endregion
 
@@ -35,11 +36,28 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             lblPresencia.Text = PresenciaEstado;
 
-            lblInformacion.Text = Nombre + Espacio + Hora + Espacio + TipoPlan;
+            lblInformacion.Text = Nombre + Espacio + Hora + Espacio + TipoPlan + Espacio + Prioridad;
+        }
+
+        private void EstablecerPrioridad()
+        {
+            switch (TipoPlan)
+            {
+                case Plan.Basico:
+                    Prioridad = "Baja";
+                    break;
+                case Plan.Estandar:
+                    Prioridad = "Media";
+                    break;
+                case Plan.Premium:
+                    Prioridad = "Alta";
+                    break;
+            }
         }
 
         private void ProveedorTurnoItem_Load(object sender, System.EventArgs e)
         {
+            EstablecerPrioridad();
             CargarInformacion();
             CambiarColorPresencia();
             ActivarOpcionAsignar();
