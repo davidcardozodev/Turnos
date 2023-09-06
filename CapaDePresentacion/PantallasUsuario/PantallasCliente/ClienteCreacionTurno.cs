@@ -125,6 +125,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             cliente.ClienteCrearTurno(DatosUsuario.Id, DiaNombre, DiaNumero, Mes, Anio, Hora, Descripcion, Area, Establecimiento);
 
             MessageBox.Show(Mensajes.GuardadoTurno);
+            VolverAtras();
         }
     }
 }

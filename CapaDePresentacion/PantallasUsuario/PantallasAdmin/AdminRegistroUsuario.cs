@@ -106,6 +106,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             AdminGuardarLugarProveedor();
 
             MessageBox.Show(Mensajes.GuardadoCambios);
+            VolverAtras();
         }
 
         private void AdminGuardarLugarProveedor()
