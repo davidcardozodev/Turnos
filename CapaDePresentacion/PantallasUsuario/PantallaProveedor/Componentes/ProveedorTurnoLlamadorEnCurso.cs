@@ -36,12 +36,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Estado { get; set; }
         public string Usuario { get; set; }
         public string Nombre { get; set; }
+        public string Lugar { get; set; }
 
         #endregion
 
         private void CargarInformacion()
         {
-            lblCliente.Text = Nombre;
+            string espacio = "      ";
+            lblInformacion.Text = Nombre + espacio + Lugar;
         }
 
         private void btnFinalizar_Click(object sender, System.EventArgs e)

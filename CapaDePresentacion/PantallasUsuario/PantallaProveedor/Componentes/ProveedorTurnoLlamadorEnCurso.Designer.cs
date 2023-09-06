@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCliente = new System.Windows.Forms.Label();
+            this.lblInformacion = new System.Windows.Forms.Label();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblCliente
+            // lblInformacion
             // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(116, 44);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(104, 32);
-            this.lblCliente.TabIndex = 6;
-            this.lblCliente.Text = "Cliente";
-            this.lblCliente.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
-            this.lblCliente.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);
+            this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.Location = new System.Drawing.Point(116, 44);
+            this.lblInformacion.Name = "lblInformacion";
+            this.lblInformacion.Size = new System.Drawing.Size(162, 32);
+            this.lblInformacion.TabIndex = 6;
+            this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
+            this.lblInformacion.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);
             // 
             // btnFinalizar
             // 
@@ -63,9 +63,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.btnFinalizar);
-            this.Controls.Add(this.lblCliente);
+            this.Controls.Add(this.lblInformacion);
             this.Name = "ProveedorTurnoLlamadorEnCurso";
-            this.Size = new System.Drawing.Size(439, 120);
+            this.Size = new System.Drawing.Size(647, 120);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_Load);
             this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);
@@ -76,7 +76,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblCliente;
+        private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.Button btnFinalizar;
     }
 }

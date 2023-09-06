@@ -16,6 +16,7 @@
         public string NombreProveedor { get; set; }
         public string Presencia { get; set; }
         public string TipoPlan { get; set; }
+        public string Lugar { get; set; }
 
     }
 }

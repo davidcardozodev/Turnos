@@ -89,6 +89,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
                 proveedorTurnoLlamadorEnCurso.Estado = Turno.Estado;
                 proveedorTurnoLlamadorEnCurso.Usuario = Turno.Usuario;
                 proveedorTurnoLlamadorEnCurso.Nombre = Turno.Nombre;
+                proveedorTurnoLlamadorEnCurso.Lugar = Turno.Lugar;
 
                 flowLayoutPanel2.Controls.Add(proveedorTurnoLlamadorEnCurso);
             }

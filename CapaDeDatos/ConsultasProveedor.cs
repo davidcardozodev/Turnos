@@ -182,6 +182,7 @@ namespace CapaDeDatos
                 string Estado = _Lector["Estado"].ToString();
                 string Usuario = _Lector["Usuario"].ToString();
                 string Nombre = _Lector["Nombre"].ToString();
+                string Lugar = _Lector["Lugar"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
@@ -195,7 +196,8 @@ namespace CapaDeDatos
                     Descripcion = Descripcion,
                     Estado = Estado,
                     Usuario = Usuario,
-                    Nombre = Nombre
+                    Nombre = Nombre,
+                    Lugar = Lugar,
                 });
             }
 
