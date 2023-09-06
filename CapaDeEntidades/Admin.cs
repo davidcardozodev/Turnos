@@ -56,6 +56,11 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarProveedores();
         }
 
+        public DataTable AdminCargarLugares()
+        {
+            return _ConsultasAdmin.AdminCargarLugares();
+        }
+
         public void AdminGuardarModificacion(int IdTurno, int IdAdmin, int IdCliente, string DiaNombre, string DiaNumero, string Mes, string Anio, string NombreProveedor)
         {
             _ConsultasAdmin.AdminGuardarModificacion(IdTurno, IdAdmin, IdCliente, DiaNombre, DiaNumero, Mes, Anio, NombreProveedor);
@@ -69,6 +74,11 @@ namespace CapaDeEntidades
         public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)
         {
             _ConsultasAdmin.AdminGuardarBajaNotificacion(IdTurno, IdAdmin, IdCliente);
+        }
+
+        public void AdminGuardarLugarProveedor(int IdLugar)
+        {
+            _ConsultasAdmin.AdminGuardarLugarProveedor(IdLugar);
         }
     }
 }

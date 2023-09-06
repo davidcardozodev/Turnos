@@ -242,12 +242,38 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminGuardarLugarProveedor(int IdLugar)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminGuardarLugarProveedor";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdLugar", IdLugar);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
         #endregion
 
         public DataTable AdminCargarProveedores()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarProveedores";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.ExecuteNonQuery();
+
+            DataTable TablaFiltrada = new DataTable();
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+
+            adaptador.Fill(TablaFiltrada);
+
+            _Conexion.ConexionCerrar();
+            return TablaFiltrada;
+        }
+
+        public DataTable AdminCargarLugares()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarLugares";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.ExecuteNonQuery();
 

@@ -49,6 +49,8 @@
             this.comboTipoPlan = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnVolverAtras = new System.Windows.Forms.Button();
+            this.lblLugar = new System.Windows.Forms.Label();
+            this.comboLugar = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,6 +160,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblLugar);
+            this.panel1.Controls.Add(this.comboLugar);
             this.panel1.Controls.Add(this.labelDisponibilidad);
             this.panel1.Controls.Add(this.lblHorarioFin);
             this.panel1.Controls.Add(this.comboHorarioFin);
@@ -274,6 +278,27 @@
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
+            // lblLugar
+            // 
+            this.lblLugar.AutoSize = true;
+            this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugar.Location = new System.Drawing.Point(767, 210);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(100, 37);
+            this.lblLugar.TabIndex = 57;
+            this.lblLugar.Text = "Lugar";
+            // 
+            // comboLugar
+            // 
+            this.comboLugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboLugar.Enabled = false;
+            this.comboLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboLugar.FormattingEnabled = true;
+            this.comboLugar.Location = new System.Drawing.Point(885, 210);
+            this.comboLugar.Name = "comboLugar";
+            this.comboLugar.Size = new System.Drawing.Size(339, 40);
+            this.comboLugar.TabIndex = 58;
+            // 
             // AdminRegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -316,5 +341,7 @@
         private System.Windows.Forms.Label lblHorarioInicio;
         private System.Windows.Forms.ComboBox comboHorarioInicio;
         private System.Windows.Forms.Label labelDisponibilidad;
+        private System.Windows.Forms.Label lblLugar;
+        private System.Windows.Forms.ComboBox comboLugar;
     }
 }
