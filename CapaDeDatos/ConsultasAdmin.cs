@@ -252,6 +252,17 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminAsociarLugar(int IdLugar, int IdProveedor)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminAsociarLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdLugar", IdLugar);
+            _Comando.Parameters.AddWithValue("@IdProveedor", IdProveedor);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
         #endregion
 
         public DataTable AdminCargarProveedores()

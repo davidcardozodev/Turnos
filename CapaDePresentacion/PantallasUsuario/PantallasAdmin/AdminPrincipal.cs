@@ -66,5 +66,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             AbrirFormulario<AdminRegistroUsuario>();
         }
+
+        private void btnAdministrarLugares_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminVistaLugar>();
+        }
     }
 }

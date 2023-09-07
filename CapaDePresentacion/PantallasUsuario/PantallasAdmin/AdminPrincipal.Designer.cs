@@ -32,11 +32,13 @@
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnTurnosClientes = new System.Windows.Forms.Button();
+            this.btnAdministrarLugares = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAdministrarLugares);
             this.panel1.Controls.Add(this.btnAgregarUsuario);
             this.panel1.Controls.Add(this.btnListaUsuarios);
             this.panel1.Controls.Add(this.btnTurnosClientes);
@@ -79,6 +81,17 @@
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
             this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
             // 
+            // btnAdministrarLugares
+            // 
+            this.btnAdministrarLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrarLugares.Location = new System.Drawing.Point(50, 300);
+            this.btnAdministrarLugares.Name = "btnAdministrarLugares";
+            this.btnAdministrarLugares.Size = new System.Drawing.Size(310, 111);
+            this.btnAdministrarLugares.TabIndex = 3;
+            this.btnAdministrarLugares.Text = "Administrar lugares";
+            this.btnAdministrarLugares.UseVisualStyleBackColor = true;
+            this.btnAdministrarLugares.Click += new System.EventHandler(this.btnAdministrarLugares_Click);
+            // 
             // AdminPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Button btnTurnosClientes;
         private System.Windows.Forms.Button btnListaUsuarios;
         private System.Windows.Forms.Button btnAgregarUsuario;
+        private System.Windows.Forms.Button btnAdministrarLugares;
     }
 }
