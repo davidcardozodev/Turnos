@@ -14,6 +14,7 @@ namespace CapaDeDatos
         private SqlCommand _Comando = new SqlCommand();
         private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
         private List<DatosUsuarioItem> _Usuarios = new List<DatosUsuarioItem>();
+        private DataTable _Tabla = new DataTable();
 
         #endregion
 
@@ -253,6 +254,17 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminAsociarEstablecimientoArea(int IdEstablecimiento, int IdArea)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminAsociarEstablecimientoArea";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+            _Comando.Parameters.AddWithValue("@IdArea", IdArea);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
         #endregion
 
         public DataTable AdminCargarProveedores()
@@ -287,5 +299,32 @@ namespace CapaDeDatos
             return TablaFiltrada;
         }
 
+        public DataTable AdminCargarEstablecimiento()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarEstablecimiento";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.ExecuteNonQuery();
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+            adaptador.Fill(_Tabla);
+
+            _Conexion.ConexionCerrar();
+            return _Tabla;
+        }
+
+        public DataTable AdminCargarArea()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarArea";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.ExecuteNonQuery();
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+            adaptador.Fill(_Tabla);
+
+            _Conexion.ConexionCerrar();
+            return _Tabla;
+        }
     }
 }

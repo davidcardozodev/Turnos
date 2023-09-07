@@ -118,6 +118,12 @@
     <Compile Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoItem.Designer.cs">
       <DependentUpon>ProveedorTurnoItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.Designer.cs">
+      <DependentUpon>AdminAsociarEstablecimientoArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallaProveedor\Componentes\ProveedorTurnoItem.resx">
       <DependentUpon>ProveedorTurnoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.resx">
+      <DependentUpon>AdminAsociarEstablecimientoArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>

@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAsociarEstablecimientosAreas = new System.Windows.Forms.Button();
+            this.btnAdministrarLugares = new System.Windows.Forms.Button();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnTurnosClientes = new System.Windows.Forms.Button();
-            this.btnAdministrarLugares = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAsociarEstablecimientosAreas);
             this.panel1.Controls.Add(this.btnAdministrarLugares);
             this.panel1.Controls.Add(this.btnAgregarUsuario);
             this.panel1.Controls.Add(this.btnListaUsuarios);
@@ -47,6 +49,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1151, 450);
             this.panel1.TabIndex = 1;
+            // 
+            // btnAsociarEstablecimientosAreas
+            // 
+            this.btnAsociarEstablecimientosAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsociarEstablecimientosAreas.Location = new System.Drawing.Point(411, 300);
+            this.btnAsociarEstablecimientosAreas.Name = "btnAsociarEstablecimientosAreas";
+            this.btnAsociarEstablecimientosAreas.Size = new System.Drawing.Size(507, 111);
+            this.btnAsociarEstablecimientosAreas.TabIndex = 4;
+            this.btnAsociarEstablecimientosAreas.Text = "Asociar establecimientos y areas";
+            this.btnAsociarEstablecimientosAreas.UseVisualStyleBackColor = true;
+            this.btnAsociarEstablecimientosAreas.Click += new System.EventHandler(this.btnAsociarEstablecimientosAreas_Click);
+            // 
+            // btnAdministrarLugares
+            // 
+            this.btnAdministrarLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrarLugares.Location = new System.Drawing.Point(50, 300);
+            this.btnAdministrarLugares.Name = "btnAdministrarLugares";
+            this.btnAdministrarLugares.Size = new System.Drawing.Size(310, 111);
+            this.btnAdministrarLugares.TabIndex = 3;
+            this.btnAdministrarLugares.Text = "Administrar lugares";
+            this.btnAdministrarLugares.UseVisualStyleBackColor = true;
+            this.btnAdministrarLugares.Click += new System.EventHandler(this.btnAdministrarLugares_Click);
             // 
             // btnAgregarUsuario
             // 
@@ -81,17 +105,6 @@
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
             this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
             // 
-            // btnAdministrarLugares
-            // 
-            this.btnAdministrarLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrarLugares.Location = new System.Drawing.Point(50, 300);
-            this.btnAdministrarLugares.Name = "btnAdministrarLugares";
-            this.btnAdministrarLugares.Size = new System.Drawing.Size(310, 111);
-            this.btnAdministrarLugares.TabIndex = 3;
-            this.btnAdministrarLugares.Text = "Administrar lugares";
-            this.btnAdministrarLugares.UseVisualStyleBackColor = true;
-            this.btnAdministrarLugares.Click += new System.EventHandler(this.btnAdministrarLugares_Click);
-            // 
             // AdminPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -113,5 +126,6 @@
         private System.Windows.Forms.Button btnListaUsuarios;
         private System.Windows.Forms.Button btnAgregarUsuario;
         private System.Windows.Forms.Button btnAdministrarLugares;
+        private System.Windows.Forms.Button btnAsociarEstablecimientosAreas;
     }
 }

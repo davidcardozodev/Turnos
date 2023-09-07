@@ -71,5 +71,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             AbrirFormulario<AdminVistaLugar>();
         }
+
+        private void btnAsociarEstablecimientosAreas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminAsociarEstablecimientoArea>();
+        }
     }
 }
