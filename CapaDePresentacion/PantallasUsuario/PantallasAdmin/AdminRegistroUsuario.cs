@@ -1,7 +1,6 @@
 ﻿using CapaDeEntidades;
 using CapaDeNegocio;
 using System;
-using System.Data;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
@@ -20,7 +19,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             CargarRolTipoPlanDefecto();
             CargarValoresHorarioInicio();
             CargarValoresFinHorario();
-            AdminCargarLugares();
             ValorInicialHorarios();
         }
 
@@ -58,17 +56,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             comboRol.Items.Add(Rol.Admin);
         }
 
-        private void AdminCargarLugares()
-        {
-            Admin admin = new Admin();
-
-            DataTable Lugares = admin.AdminCargarLugares();
-
-            comboLugar.DataSource = Lugares;
-            comboLugar.DisplayMember = "Nombre";
-            comboLugar.ValueMember = "Id";
-        }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             AsignarDatos();
@@ -103,18 +90,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             admin.AdminRegistrarUsuario(Usuario, Clave, Nombre, Email, Rol_, HorarioInicio, HorarioFin, TipoPlan);
 
-            AdminGuardarLugarProveedor();
-
             MessageBox.Show(Mensajes.GuardadoCambios);
             VolverAtras();
-        }
-
-        private void AdminGuardarLugarProveedor()
-        {
-            Admin admin = new Admin();
-
-            if (comboRol.Text == Rol.Proveedor)
-                admin.AdminGuardarLugarProveedor((int)comboLugar.SelectedValue);
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
@@ -134,7 +111,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 comboHorarioInicio.Enabled = true;
                 comboHorarioFin.Enabled = true;
                 CambiarHorarioProveedor = true;
-                comboLugar.Enabled = true;
                 HorarioInicio = 8;
                 HorarioFin = 9;
             }
@@ -143,7 +119,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
                 comboHorarioInicio.Enabled = false;
                 comboHorarioFin.Enabled = false;
                 CambiarHorarioProveedor = false;
-                comboLugar.Enabled = false;
                 HorarioInicio = 0;
                 HorarioFin = 0;
             }

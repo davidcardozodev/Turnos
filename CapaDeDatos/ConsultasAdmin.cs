@@ -242,16 +242,6 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
-        public void AdminGuardarLugarProveedor(int IdLugar)
-        {
-            _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminGuardarLugarProveedor";
-            _Comando.CommandType = CommandType.StoredProcedure;
-            _Comando.Parameters.AddWithValue("@IdLugar", IdLugar);
-            _Comando.ExecuteNonQuery();
-            _Conexion.ConexionCerrar();
-        }
-
         public void AdminAsociarLugar(int IdLugar, int IdProveedor)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();

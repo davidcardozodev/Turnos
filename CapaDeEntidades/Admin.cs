@@ -76,11 +76,6 @@ namespace CapaDeEntidades
             _ConsultasAdmin.AdminGuardarBajaNotificacion(IdTurno, IdAdmin, IdCliente);
         }
 
-        public void AdminGuardarLugarProveedor(int IdLugar)
-        {
-            _ConsultasAdmin.AdminGuardarLugarProveedor(IdLugar);
-        }
-
         public void AdminAsociarLugar(int IdLugar, int IdProveedor)
         {
             _ConsultasAdmin.AdminAsociarLugar(IdLugar, IdProveedor);
