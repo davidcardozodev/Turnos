@@ -8,5 +8,6 @@
         public static string Nombre { get; set; }
         public static string Email { get; set; }
         public static string Rol { get; set; }
+        public static string Lugar { get; set; }
     }
 }

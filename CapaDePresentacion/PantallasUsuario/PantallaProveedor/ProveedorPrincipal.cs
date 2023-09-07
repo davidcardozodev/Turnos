@@ -65,6 +65,15 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
             Proveedor proveedor = new Proveedor();
 
             proveedor.ProveedorCargarDisponibilidad(DatosUsuario.Id);
+
+            ProveedorCargarLugar();
+        }
+
+        private void ProveedorCargarLugar()
+        {
+            Proveedor proveedor = new Proveedor();
+
+            proveedor.ProveedorCargarLugar(DatosUsuario.Id);
         }
     }
 }

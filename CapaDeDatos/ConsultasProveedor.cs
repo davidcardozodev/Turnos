@@ -110,6 +110,48 @@ namespace CapaDeDatos
             }
         }
 
+        public void ProveedorCargarLugar(int IdProveedor)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ProveedorCargarLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdProveedor", IdProveedor);
+
+            SqlDataReader Reader = _Comando.ExecuteReader();
+
+            LeerLugar(Reader, _Conexion);
+        }
+
+        private static bool LeerLugar(SqlDataReader Reader, Conexion _Conexion)
+        {
+            if (Reader.HasRows)
+            {
+                while (Reader.Read())
+                    DatosUsuario.Lugar = Reader["Nombre"].ToString();
+
+                _Conexion.ConexionCerrar();
+                return true;
+            }
+            else
+            {
+                _Conexion.ConexionCerrar();
+                return false;
+            }
+
+        }
+
+        public void ProveedorGuardarLugar(int IdTurno, string Lugar)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ProveedorGuardarLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdTurno", IdTurno);
+            _Comando.Parameters.AddWithValue("@Lugar", Lugar);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
+
         #endregion
 
         #region "Pantalla llamador"
@@ -128,12 +170,14 @@ namespace CapaDeDatos
                 int Id = int.Parse(_Lector["Id"].ToString());
                 string Nombre = _Lector["Nombre"].ToString();
                 string TipoPlan = _Lector["TipoPlan"].ToString();
+                string Lugar = _Lector["Lugar"].ToString();
 
                 _Valores.Add(new FormatoTurnos
                 {
                     Id = Id,
                     Nombre = Nombre,
-                    TipoPlan = TipoPlan
+                    TipoPlan = TipoPlan,
+                    Lugar = Lugar
                 });
             }
 

@@ -49,5 +49,15 @@ namespace CapaDeEntidades
         {
             _ConsultasProveedor.ProveedorCargarDisponibilidad(IdProveedor);
         }
+
+        public void ProveedorCargarLugar(int IdProveedor)
+        {
+            _ConsultasProveedor.ProveedorCargarLugar(IdProveedor);
+        }
+
+        public void ProveedorGuardarLugar(int IdTurno, string Lugar)
+        {
+            _ConsultasProveedor.ProveedorGuardarLugar(IdTurno, Lugar);
+        }
     }
 }

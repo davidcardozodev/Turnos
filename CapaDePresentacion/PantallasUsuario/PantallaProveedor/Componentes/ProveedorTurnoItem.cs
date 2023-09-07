@@ -90,6 +90,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
             (Application.OpenForms["ProveedorTurnosVista"] as ProveedorTurnosVista).CargarTurnoItem();
 
+            Proveedor proveedor2 = new Proveedor();
+
+            proveedor2.ProveedorGuardarLugar(Id, DatosUsuario.Lugar);
+
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
 

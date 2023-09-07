@@ -31,6 +31,7 @@
             this.btnAgregarEnCurso = new System.Windows.Forms.Button();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblPrioridad = new System.Windows.Forms.Label();
+            this.lblLugar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAgregarEnCurso
@@ -70,16 +71,27 @@
             this.lblPrioridad.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
             this.lblPrioridad.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
             // 
+            // lblLugar
+            // 
+            this.lblLugar.AutoSize = true;
+            this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugar.Location = new System.Drawing.Point(318, 27);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(87, 32);
+            this.lblLugar.TabIndex = 20;
+            this.lblLugar.Text = "Lugar";
+            // 
             // ProveedorTurnoLlamadorAsignado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
+            this.Controls.Add(this.lblLugar);
             this.Controls.Add(this.lblPrioridad);
             this.Controls.Add(this.btnAgregarEnCurso);
             this.Controls.Add(this.lblCliente);
             this.Name = "ProveedorTurnoLlamadorAsignado";
-            this.Size = new System.Drawing.Size(446, 129);
+            this.Size = new System.Drawing.Size(663, 129);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamador_Load);
             this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Button btnAgregarEnCurso;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblPrioridad;
+        private System.Windows.Forms.Label lblLugar;
     }
 }

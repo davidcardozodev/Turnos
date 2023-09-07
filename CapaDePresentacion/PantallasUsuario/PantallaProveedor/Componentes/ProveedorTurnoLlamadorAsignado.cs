@@ -17,12 +17,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public string Nombre { get; set; }
         public string TipoPlan { get; set; }
         private string Prioridad = "Prioridad: ";
+        public string Lugar { get; set; }
 
         #endregion
 
         private void CargarInformacion()
         {
             lblCliente.Text = Nombre;
+            lblLugar.Text = Lugar;
             EstablecerPrioridad();
         }
 
