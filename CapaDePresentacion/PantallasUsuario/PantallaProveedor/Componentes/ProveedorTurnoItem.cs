@@ -1,7 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
 using CapaDeNegocio;
-using CapaDePresentacion.PantallaTurno;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -68,22 +67,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             if (PresenciaEstado == Presencia.Presente)
                 btnAsignar.Enabled = true;
         }
-
-        private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            TurnoDetalle turnoDetalle = new TurnoDetalle();
-
-            turnoDetalle.Id = Id;
-            turnoDetalle.Hora = Hora;
-            turnoDetalle.Descripcion = Descripcion;
-            turnoDetalle.Estado = Estado;
-            turnoDetalle.Usuario = Usuario;
-            turnoDetalle.Nombre = Nombre;
-            turnoDetalle.Presencia = PresenciaEstado;
-
-            turnoDetalle.Show();
-        }
-
 
         private void CambiarColorPresencia()
         {
