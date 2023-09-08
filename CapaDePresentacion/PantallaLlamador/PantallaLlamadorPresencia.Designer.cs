@@ -41,7 +41,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(282, 22);
+            this.lblTitulo.Location = new System.Drawing.Point(622, 22);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(250, 37);
             this.lblTitulo.TabIndex = 10;
@@ -51,7 +51,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(76, 113);
+            this.lblUsuario.Location = new System.Drawing.Point(471, 144);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(128, 37);
             this.lblUsuario.TabIndex = 11;
@@ -61,7 +61,7 @@
             // 
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClave.Location = new System.Drawing.Point(76, 268);
+            this.lblClave.Location = new System.Drawing.Point(471, 299);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(97, 37);
             this.lblClave.TabIndex = 12;
@@ -70,7 +70,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(83, 178);
+            this.txtUsuario.Location = new System.Drawing.Point(478, 209);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(575, 44);
             this.txtUsuario.TabIndex = 13;
@@ -80,7 +80,7 @@
             // txtClave
             // 
             this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClave.Location = new System.Drawing.Point(83, 322);
+            this.txtClave.Location = new System.Drawing.Point(478, 353);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(575, 44);
             this.txtClave.TabIndex = 14;
@@ -90,9 +90,9 @@
             // btnAceptar
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(496, 417);
+            this.btnAceptar.Location = new System.Drawing.Point(478, 448);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(162, 65);
+            this.btnAceptar.Size = new System.Drawing.Size(575, 65);
             this.btnAceptar.TabIndex = 15;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 505);
+            this.ClientSize = new System.Drawing.Size(1375, 626);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtClave);

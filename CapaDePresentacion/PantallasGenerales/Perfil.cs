@@ -22,5 +22,15 @@ namespace CapaDePresentacion.PantallaGenerales
             lblEmail.Text = DatosUsuario.Email;
             lblRol.Text = DatosUsuario.Rol;
         }
+
+        private void btnVolverAtras_Click(object sender, System.EventArgs e)
+        {
+            VolverAtras();
+        }
+
+        private void VolverAtras()
+        {
+            this.Close();
+        }
     }
 }

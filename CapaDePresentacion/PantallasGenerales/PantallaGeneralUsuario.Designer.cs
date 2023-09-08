@@ -30,124 +30,84 @@
         {
             this.panelForm = new System.Windows.Forms.Panel();
             this.panelcontainer = new System.Windows.Forms.Panel();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
-            this.linkPerfil = new System.Windows.Forms.LinkLabel();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.panelTitulo = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.linkPerfil = new System.Windows.Forms.LinkLabel();
+            this.linkCerrarSesion = new System.Windows.Forms.LinkLabel();
             this.panelcontainer.SuspendLayout();
-            this.panelMenu.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelForm
             // 
-            this.panelForm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(200, 51);
+            this.panelForm.BackColor = System.Drawing.SystemColors.Control;
+            this.panelForm.Location = new System.Drawing.Point(126, 42);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1309, 599);
+            this.panelForm.Size = new System.Drawing.Size(1157, 615);
             this.panelForm.TabIndex = 2;
             // 
             // panelcontainer
             // 
-            this.panelcontainer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelcontainer.BackColor = System.Drawing.SystemColors.Control;
             this.panelcontainer.Controls.Add(this.panelForm);
-            this.panelcontainer.Controls.Add(this.panelMenu);
             this.panelcontainer.Controls.Add(this.panelTitulo);
             this.panelcontainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontainer.Location = new System.Drawing.Point(0, 0);
             this.panelcontainer.MinimumSize = new System.Drawing.Size(650, 650);
             this.panelcontainer.Name = "panelcontainer";
-            this.panelcontainer.Size = new System.Drawing.Size(1509, 650);
+            this.panelcontainer.Size = new System.Drawing.Size(1295, 669);
             this.panelcontainer.TabIndex = 1;
             // 
-            // panelMenu
+            // panelTitulo
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.linkCerrarSesion);
-            this.panelMenu.Controls.Add(this.linkPerfil);
-            this.panelMenu.Controls.Add(this.lblNombre);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 51);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 599);
-            this.panelMenu.TabIndex = 1;
+            this.panelTitulo.BackColor = System.Drawing.SystemColors.Control;
+            this.panelTitulo.Controls.Add(this.linkPerfil);
+            this.panelTitulo.Controls.Add(this.linkCerrarSesion);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(1295, 51);
+            this.panelTitulo.TabIndex = 0;
+            // 
+            // linkPerfil
+            // 
+            this.linkPerfil.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkPerfil.AutoSize = true;
+            this.linkPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkPerfil.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkPerfil.Location = new System.Drawing.Point(159, 9);
+            this.linkPerfil.Name = "linkPerfil";
+            this.linkPerfil.Size = new System.Drawing.Size(80, 32);
+            this.linkPerfil.TabIndex = 0;
+            this.linkPerfil.TabStop = true;
+            this.linkPerfil.Text = "Perfil";
+            this.linkPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
             // 
             // linkCerrarSesion
             // 
+            this.linkCerrarSesion.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
             this.linkCerrarSesion.AutoSize = true;
-            this.linkCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkCerrarSesion.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkCerrarSesion.Location = new System.Drawing.Point(12, 483);
+            this.linkCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkCerrarSesion.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkCerrarSesion.Location = new System.Drawing.Point(16, 9);
             this.linkCerrarSesion.Name = "linkCerrarSesion";
-            this.linkCerrarSesion.Size = new System.Drawing.Size(168, 30);
+            this.linkCerrarSesion.Size = new System.Drawing.Size(183, 32);
             this.linkCerrarSesion.TabIndex = 5;
             this.linkCerrarSesion.TabStop = true;
             this.linkCerrarSesion.Text = "Cerrar sesion";
             this.linkCerrarSesion.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCerrarSesion_LinkClicked);
             // 
-            // linkPerfil
-            // 
-            this.linkPerfil.AutoSize = true;
-            this.linkPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkPerfil.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.linkPerfil.Location = new System.Drawing.Point(12, 181);
-            this.linkPerfil.Name = "linkPerfil";
-            this.linkPerfil.Size = new System.Drawing.Size(104, 30);
-            this.linkPerfil.TabIndex = 0;
-            this.linkPerfil.TabStop = true;
-            this.linkPerfil.Text = "Mi perfil";
-            this.linkPerfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkPerfil_LinkClicked);
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNombre.Location = new System.Drawing.Point(59, 139);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(94, 27);
-            this.lblNombre.TabIndex = 1;
-            this.lblNombre.Text = "Usuario";
-            // 
-            // panelTitulo
-            // 
-            this.panelTitulo.BackColor = System.Drawing.Color.Black;
-            this.panelTitulo.Controls.Add(this.lblTitulo);
-            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1509, 51);
-            this.panelTitulo.TabIndex = 0;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.BackColor = System.Drawing.Color.Black;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(554, 11);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(118, 37);
-            this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Turnos";
-            // 
             // PantallaGeneralUsuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1509, 586);
+            this.ClientSize = new System.Drawing.Size(1295, 669);
             this.Controls.Add(this.panelcontainer);
             this.Name = "PantallaGeneralUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Turnos";
             this.Load += new System.EventHandler(this.PantallaGeneralUsuario_Load);
             this.panelcontainer.ResumeLayout(false);
-            this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
@@ -158,11 +118,8 @@
 
         private System.Windows.Forms.Panel panelForm;
         private System.Windows.Forms.Panel panelcontainer;
-        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.LinkLabel linkCerrarSesion;
         private System.Windows.Forms.LinkLabel linkPerfil;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panelTitulo;
-        private System.Windows.Forms.Label lblTitulo;
     }
 }

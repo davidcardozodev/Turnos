@@ -41,13 +41,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 450);
+            this.panel1.Size = new System.Drawing.Size(1404, 699);
             this.panel1.TabIndex = 2;
             // 
             // btnLlamador
             // 
             this.btnLlamador.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLlamador.Location = new System.Drawing.Point(401, 164);
+            this.btnLlamador.Location = new System.Drawing.Point(733, 278);
             this.btnLlamador.Name = "btnLlamador";
             this.btnLlamador.Size = new System.Drawing.Size(310, 111);
             this.btnLlamador.TabIndex = 3;
@@ -58,7 +58,7 @@
             // btnTurnosClientes
             // 
             this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosClientes.Location = new System.Drawing.Point(46, 164);
+            this.btnTurnosClientes.Location = new System.Drawing.Point(378, 278);
             this.btnTurnosClientes.Name = "btnTurnosClientes";
             this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
             this.btnTurnosClientes.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1404, 699);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProveedorPrincipal";

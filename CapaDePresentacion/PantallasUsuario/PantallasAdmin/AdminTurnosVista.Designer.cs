@@ -40,16 +40,16 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(45, 188);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(255, 193);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1088, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1088, 753);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(357, 25);
+            this.label1.Location = new System.Drawing.Point(567, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(496, 37);
             this.label1.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.comboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboEstado.FormattingEnabled = true;
-            this.comboEstado.Location = new System.Drawing.Point(170, 117);
+            this.comboEstado.Location = new System.Drawing.Point(380, 122);
             this.comboEstado.Name = "comboEstado";
             this.comboEstado.Size = new System.Drawing.Size(280, 40);
             this.comboEstado.TabIndex = 8;
@@ -81,7 +81,7 @@
             // 
             this.lblMostrar.AutoSize = true;
             this.lblMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrar.Location = new System.Drawing.Point(38, 117);
+            this.lblMostrar.Location = new System.Drawing.Point(248, 122);
             this.lblMostrar.Name = "lblMostrar";
             this.lblMostrar.Size = new System.Drawing.Size(126, 37);
             this.lblMostrar.TabIndex = 7;
@@ -90,7 +90,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(518, 107);
+            this.btnBuscar.Location = new System.Drawing.Point(728, 112);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(139, 58);
             this.btnBuscar.TabIndex = 11;
@@ -101,7 +101,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(663, 117);
+            this.txtBuscar.Location = new System.Drawing.Point(873, 122);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(344, 39);
             this.txtBuscar.TabIndex = 10;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 725);
+            this.ClientSize = new System.Drawing.Size(1367, 991);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.comboEstado);

@@ -49,16 +49,16 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(47, 184);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(171, 245);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1218, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1239, 581);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 21);
+            this.label1.Location = new System.Drawing.Point(577, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(496, 37);
             this.label1.TabIndex = 5;
@@ -67,7 +67,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(47, 104);
+            this.btnBuscar.Location = new System.Drawing.Point(171, 165);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(139, 58);
             this.btnBuscar.TabIndex = 15;
@@ -78,7 +78,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(192, 114);
+            this.txtBuscar.Location = new System.Drawing.Point(316, 175);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(344, 39);
             this.txtBuscar.TabIndex = 14;
@@ -87,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1305, 736);
+            this.ClientSize = new System.Drawing.Size(1422, 857);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnVolverAtras);

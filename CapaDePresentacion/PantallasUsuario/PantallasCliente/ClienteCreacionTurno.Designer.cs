@@ -49,7 +49,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(327, 31);
+            this.lblTitulo.Location = new System.Drawing.Point(609, 42);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(272, 37);
             this.lblTitulo.TabIndex = 1;
@@ -98,7 +98,7 @@
             this.panel1.Controls.Add(this.lblHora);
             this.panel1.Controls.Add(this.lblFecha);
             this.panel1.Controls.Add(this.dtpFecha);
-            this.panel1.Location = new System.Drawing.Point(52, 134);
+            this.panel1.Location = new System.Drawing.Point(334, 166);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(739, 449);
             this.panel1.TabIndex = 7;
@@ -106,9 +106,9 @@
             // btnCrearTurno
             // 
             this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearTurno.Location = new System.Drawing.Point(514, 370);
+            this.btnCrearTurno.Location = new System.Drawing.Point(282, 370);
             this.btnCrearTurno.Name = "btnCrearTurno";
-            this.btnCrearTurno.Size = new System.Drawing.Size(204, 58);
+            this.btnCrearTurno.Size = new System.Drawing.Size(436, 58);
             this.btnCrearTurno.TabIndex = 8;
             this.btnCrearTurno.Text = "Crear turno";
             this.btnCrearTurno.UseVisualStyleBackColor = true;
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 619);
+            this.ClientSize = new System.Drawing.Size(1388, 700);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lblTitulo);

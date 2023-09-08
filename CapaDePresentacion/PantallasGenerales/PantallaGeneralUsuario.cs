@@ -56,8 +56,6 @@ namespace CapaDePresentacion.PantallasGenerales
 
         #endregion
 
-        private bool Perfil = false;
-
         #region "Cargar datos principales"
 
         private void PantallaGeneralUsuario_Load(object sender, EventArgs e)
@@ -87,29 +85,17 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void linkPerfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (!Perfil)
-                CargarPantallaPerfil();
-            else
-                CerrarPantallaPerfil();
+            CargarPantallaPerfil();
         }
 
         private void CargarPantallaPerfil()
         {
             AbrirFormulario<Perfil>();
-            linkPerfil.Text = "Cerrar perfil";
-            Perfil = true;
-        }
-
-        private void CerrarPantallaPerfil()
-        {
-            CargarPantallaUsuario();
-            linkPerfil.Text = "Mi perfil";
-            Perfil = false;
         }
 
         private void CargarNombreUsuario()
         {
-            lblNombre.Text = DatosUsuario.Nombre;
+            linkPerfil.Text = DatosUsuario.Nombre;
         }
 
         private void linkCerrarSesion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

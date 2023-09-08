@@ -52,14 +52,14 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 199);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(630, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(701, 518);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(501, 26);
+            this.label1.Location = new System.Drawing.Point(671, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 8;
@@ -68,16 +68,16 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(704, 199);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(752, 197);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(630, 518);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(697, 518);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // lblTurnosPendientes
             // 
             this.lblTurnosPendientes.AutoSize = true;
             this.lblTurnosPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosPendientes.Location = new System.Drawing.Point(16, 147);
+            this.lblTurnosPendientes.Location = new System.Drawing.Point(222, 145);
             this.lblTurnosPendientes.Name = "lblTurnosPendientes";
             this.lblTurnosPendientes.Size = new System.Drawing.Size(282, 37);
             this.lblTurnosPendientes.TabIndex = 11;
@@ -87,7 +87,7 @@
             // 
             this.lblTurnosCurso.AutoSize = true;
             this.lblTurnosCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosCurso.Location = new System.Drawing.Point(697, 137);
+            this.lblTurnosCurso.Location = new System.Drawing.Point(1011, 133);
             this.lblTurnosCurso.Name = "lblTurnosCurso";
             this.lblTurnosCurso.Size = new System.Drawing.Size(250, 37);
             this.lblTurnosCurso.TabIndex = 12;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 719);
+            this.ClientSize = new System.Drawing.Size(1471, 719);
             this.Controls.Add(this.lblTurnosCurso);
             this.Controls.Add(this.lblTurnosPendientes);
             this.Controls.Add(this.flowLayoutPanel2);

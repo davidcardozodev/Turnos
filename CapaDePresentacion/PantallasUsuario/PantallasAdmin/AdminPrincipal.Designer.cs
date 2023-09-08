@@ -47,15 +47,15 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1151, 450);
+            this.panel1.Size = new System.Drawing.Size(1414, 673);
             this.panel1.TabIndex = 1;
             // 
             // btnAsociarEstablecimientosAreas
             // 
             this.btnAsociarEstablecimientosAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsociarEstablecimientosAreas.Location = new System.Drawing.Point(411, 300);
+            this.btnAsociarEstablecimientosAreas.Location = new System.Drawing.Point(687, 368);
             this.btnAsociarEstablecimientosAreas.Name = "btnAsociarEstablecimientosAreas";
-            this.btnAsociarEstablecimientosAreas.Size = new System.Drawing.Size(507, 111);
+            this.btnAsociarEstablecimientosAreas.Size = new System.Drawing.Size(683, 111);
             this.btnAsociarEstablecimientosAreas.TabIndex = 4;
             this.btnAsociarEstablecimientosAreas.Text = "Asociar establecimientos y areas";
             this.btnAsociarEstablecimientosAreas.UseVisualStyleBackColor = true;
@@ -64,7 +64,7 @@
             // btnAdministrarLugares
             // 
             this.btnAdministrarLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrarLugares.Location = new System.Drawing.Point(50, 300);
+            this.btnAdministrarLugares.Location = new System.Drawing.Point(326, 368);
             this.btnAdministrarLugares.Name = "btnAdministrarLugares";
             this.btnAdministrarLugares.Size = new System.Drawing.Size(310, 111);
             this.btnAdministrarLugares.TabIndex = 3;
@@ -75,7 +75,7 @@
             // btnAgregarUsuario
             // 
             this.btnAgregarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(784, 138);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(1060, 206);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(310, 111);
             this.btnAgregarUsuario.TabIndex = 2;
@@ -86,7 +86,7 @@
             // btnListaUsuarios
             // 
             this.btnListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaUsuarios.Location = new System.Drawing.Point(411, 138);
+            this.btnListaUsuarios.Location = new System.Drawing.Point(687, 206);
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.Size = new System.Drawing.Size(310, 111);
             this.btnListaUsuarios.TabIndex = 1;
@@ -97,7 +97,7 @@
             // btnTurnosClientes
             // 
             this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosClientes.Location = new System.Drawing.Point(50, 138);
+            this.btnTurnosClientes.Location = new System.Drawing.Point(326, 206);
             this.btnTurnosClientes.Name = "btnTurnosClientes";
             this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
             this.btnTurnosClientes.TabIndex = 0;
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 450);
+            this.ClientSize = new System.Drawing.Size(1414, 673);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminPrincipal";
