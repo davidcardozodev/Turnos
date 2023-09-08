@@ -21,27 +21,28 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             ValorInicialHorario();
             CargarAreas();
             CargarValorPredeterminadoListas();
-            CargarEstablecimientos();
         }
 
         private void CargarAreas()
         {
             Cliente cliente = new Cliente();
 
-            DataTable Areas = cliente.ClienteCargarArea();
+            DataTable Area = cliente.ClienteCargarArea();
 
-            foreach (DataRow proveedor in Areas.Rows)
-                comboArea.Items.Add(proveedor["Nombre"].ToString());
+            comboArea.DataSource = Area;
+            comboArea.DisplayMember = "Nombre";
+            comboArea.ValueMember = "Id";
         }
 
         private void CargarEstablecimientos()
         {
             Cliente cliente = new Cliente();
 
-            DataTable Establecimiento = cliente.ClienteCargarEstablecimiento();
+            DataTable Establecimiento = cliente.ClienteCargarAsociacionEstablecimientoLugar((int)comboArea.SelectedValue);
 
-            foreach (DataRow proveedor in Establecimiento.Rows)
-                comboEstablecimiento.Items.Add(proveedor["Nombre"].ToString());
+            comboEstablecimiento.DataSource = Establecimiento;
+            comboEstablecimiento.DisplayMember = "Nombre";
+            comboEstablecimiento.ValueMember = "Id";
         }
 
         private const int CB_SETCUEBANNER = 0x1703;
@@ -68,6 +69,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         #region "Datos del turno"
 
         private string Anio, Mes, DiaNombre, DiaNumero, Hora, Descripcion, Area, Establecimiento;
+
+        private void comboArea_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            CargarEstablecimientos();
+            comboEstablecimiento.Enabled = true;
+        }
 
         private void ValorInicialHorario()
         {

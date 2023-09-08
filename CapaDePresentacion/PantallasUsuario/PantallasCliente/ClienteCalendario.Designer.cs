@@ -32,6 +32,8 @@
             this.btnAbrir = new System.Windows.Forms.Button();
             this.btnCrearTurno = new System.Windows.Forms.Button();
             this.panelCalendario = new System.Windows.Forms.Panel();
+            this.lblEstablecimiento = new System.Windows.Forms.Label();
+            this.comboEstablecimiento = new System.Windows.Forms.ComboBox();
             this.lblArea = new System.Windows.Forms.Label();
             this.comboArea = new System.Windows.Forms.ComboBox();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFechaCategoria = new System.Windows.Forms.Label();
             this.btnVolverAtras = new System.Windows.Forms.Button();
-            this.lblEstablecimiento = new System.Windows.Forms.Label();
-            this.comboEstablecimiento = new System.Windows.Forms.ComboBox();
             this.panelCalendario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +94,27 @@
             this.panelCalendario.Size = new System.Drawing.Size(738, 438);
             this.panelCalendario.TabIndex = 11;
             // 
+            // lblEstablecimiento
+            // 
+            this.lblEstablecimiento.AutoSize = true;
+            this.lblEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstablecimiento.Location = new System.Drawing.Point(12, 216);
+            this.lblEstablecimiento.Name = "lblEstablecimiento";
+            this.lblEstablecimiento.Size = new System.Drawing.Size(242, 37);
+            this.lblEstablecimiento.TabIndex = 16;
+            this.lblEstablecimiento.Text = "Establecimiento";
+            // 
+            // comboEstablecimiento
+            // 
+            this.comboEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstablecimiento.Enabled = false;
+            this.comboEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstablecimiento.FormattingEnabled = true;
+            this.comboEstablecimiento.Location = new System.Drawing.Point(282, 219);
+            this.comboEstablecimiento.Name = "comboEstablecimiento";
+            this.comboEstablecimiento.Size = new System.Drawing.Size(436, 37);
+            this.comboEstablecimiento.TabIndex = 15;
+            // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
@@ -113,6 +134,7 @@
             this.comboArea.Name = "comboArea";
             this.comboArea.Size = new System.Drawing.Size(436, 37);
             this.comboArea.TabIndex = 13;
+            this.comboArea.SelectionChangeCommitted += new System.EventHandler(this.comboArea_SelectionChangeCommitted);
             // 
             // lblFecha
             // 
@@ -183,26 +205,6 @@
             this.btnVolverAtras.Text = "Volver atras";
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
-            // 
-            // lblEstablecimiento
-            // 
-            this.lblEstablecimiento.AutoSize = true;
-            this.lblEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstablecimiento.Location = new System.Drawing.Point(12, 216);
-            this.lblEstablecimiento.Name = "lblEstablecimiento";
-            this.lblEstablecimiento.Size = new System.Drawing.Size(242, 37);
-            this.lblEstablecimiento.TabIndex = 16;
-            this.lblEstablecimiento.Text = "Establecimiento";
-            // 
-            // comboEstablecimiento
-            // 
-            this.comboEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboEstablecimiento.FormattingEnabled = true;
-            this.comboEstablecimiento.Location = new System.Drawing.Point(282, 219);
-            this.comboEstablecimiento.Name = "comboEstablecimiento";
-            this.comboEstablecimiento.Size = new System.Drawing.Size(436, 37);
-            this.comboEstablecimiento.TabIndex = 15;
             // 
             // ClienteCalendario
             // 

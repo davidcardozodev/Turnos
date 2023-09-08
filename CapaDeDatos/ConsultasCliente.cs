@@ -359,5 +359,19 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
             return _Tabla;
         }
+
+        public DataTable ClienteCargarAsociacionEstablecimientoLugar(int IdArea)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "ClienteCargarAsociacionEstablecimientoLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdArea", IdArea);
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(_Comando);
+            adaptador.Fill(_Tabla);
+
+            _Conexion.ConexionCerrar();
+            return _Tabla;
+        }
     }
 }

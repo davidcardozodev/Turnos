@@ -33,15 +33,15 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCrearTurno = new System.Windows.Forms.Button();
+            this.lblEstablecimiento = new System.Windows.Forms.Label();
+            this.comboEstablecimiento = new System.Windows.Forms.ComboBox();
             this.lblArea = new System.Windows.Forms.Label();
             this.comboArea = new System.Windows.Forms.ComboBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.comboHora = new System.Windows.Forms.ComboBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.btnCrearTurno = new System.Windows.Forms.Button();
-            this.lblEstablecimiento = new System.Windows.Forms.Label();
-            this.comboEstablecimiento = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +103,38 @@
             this.panel1.Size = new System.Drawing.Size(739, 449);
             this.panel1.TabIndex = 7;
             // 
+            // btnCrearTurno
+            // 
+            this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearTurno.Location = new System.Drawing.Point(514, 370);
+            this.btnCrearTurno.Name = "btnCrearTurno";
+            this.btnCrearTurno.Size = new System.Drawing.Size(204, 58);
+            this.btnCrearTurno.TabIndex = 8;
+            this.btnCrearTurno.Text = "Crear turno";
+            this.btnCrearTurno.UseVisualStyleBackColor = true;
+            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
+            // 
+            // lblEstablecimiento
+            // 
+            this.lblEstablecimiento.AutoSize = true;
+            this.lblEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstablecimiento.Location = new System.Drawing.Point(12, 224);
+            this.lblEstablecimiento.Name = "lblEstablecimiento";
+            this.lblEstablecimiento.Size = new System.Drawing.Size(242, 37);
+            this.lblEstablecimiento.TabIndex = 14;
+            this.lblEstablecimiento.Text = "Establecimiento";
+            // 
+            // comboEstablecimiento
+            // 
+            this.comboEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstablecimiento.Enabled = false;
+            this.comboEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboEstablecimiento.FormattingEnabled = true;
+            this.comboEstablecimiento.Location = new System.Drawing.Point(282, 227);
+            this.comboEstablecimiento.Name = "comboEstablecimiento";
+            this.comboEstablecimiento.Size = new System.Drawing.Size(436, 37);
+            this.comboEstablecimiento.TabIndex = 13;
+            // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
@@ -122,6 +154,7 @@
             this.comboArea.Name = "comboArea";
             this.comboArea.Size = new System.Drawing.Size(436, 37);
             this.comboArea.TabIndex = 11;
+            this.comboArea.SelectionChangeCommitted += new System.EventHandler(this.comboArea_SelectionChangeCommitted);
             // 
             // txtDescripcion
             // 
@@ -160,37 +193,6 @@
             this.lblHora.Size = new System.Drawing.Size(87, 37);
             this.lblHora.TabIndex = 7;
             this.lblHora.Text = "Hora";
-            // 
-            // btnCrearTurno
-            // 
-            this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearTurno.Location = new System.Drawing.Point(514, 370);
-            this.btnCrearTurno.Name = "btnCrearTurno";
-            this.btnCrearTurno.Size = new System.Drawing.Size(204, 58);
-            this.btnCrearTurno.TabIndex = 8;
-            this.btnCrearTurno.Text = "Crear turno";
-            this.btnCrearTurno.UseVisualStyleBackColor = true;
-            this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
-            // 
-            // lblEstablecimiento
-            // 
-            this.lblEstablecimiento.AutoSize = true;
-            this.lblEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstablecimiento.Location = new System.Drawing.Point(12, 224);
-            this.lblEstablecimiento.Name = "lblEstablecimiento";
-            this.lblEstablecimiento.Size = new System.Drawing.Size(242, 37);
-            this.lblEstablecimiento.TabIndex = 14;
-            this.lblEstablecimiento.Text = "Establecimiento";
-            // 
-            // comboEstablecimiento
-            // 
-            this.comboEstablecimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboEstablecimiento.FormattingEnabled = true;
-            this.comboEstablecimiento.Location = new System.Drawing.Point(282, 227);
-            this.comboEstablecimiento.Name = "comboEstablecimiento";
-            this.comboEstablecimiento.Size = new System.Drawing.Size(436, 37);
-            this.comboEstablecimiento.TabIndex = 13;
             // 
             // ClienteCreacionTurno
             // 

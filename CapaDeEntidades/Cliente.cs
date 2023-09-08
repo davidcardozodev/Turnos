@@ -81,6 +81,11 @@ namespace CapaDeEntidades
             return _ConsultasCliente.ClienteCargarEstablecimiento();
         }
 
+        public DataTable ClienteCargarAsociacionEstablecimientoLugar(int IdArea)
+        {
+            return _ConsultasCliente.ClienteCargarAsociacionEstablecimientoLugar(IdArea);
+        }
+
         public List<FormatoTurnos> ClienteCargarTurnoFiltrado(int IdCliente, string Estado)
         {
             return _ConsultasCliente.ClienteCargarTurnoFiltrado(IdCliente, Estado);

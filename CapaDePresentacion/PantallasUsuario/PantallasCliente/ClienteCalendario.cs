@@ -23,7 +23,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             ValorInicialHorario();
             CargarAreas();
             CargarValorPredeterminadoListas();
-            CargarEstablecimientos();
         }
 
         #region "Atributos"
@@ -46,20 +45,22 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             Cliente cliente = new Cliente();
 
-            DataTable Areas = cliente.ClienteCargarArea();
+            DataTable Area = cliente.ClienteCargarArea();
 
-            foreach (DataRow proveedor in Areas.Rows)
-                comboArea.Items.Add(proveedor["Nombre"].ToString());
+            comboArea.DataSource = Area;
+            comboArea.DisplayMember = "Nombre";
+            comboArea.ValueMember = "Id";
         }
 
         private void CargarEstablecimientos()
         {
             Cliente cliente = new Cliente();
 
-            DataTable Establecimiento = cliente.ClienteCargarEstablecimiento();
+            DataTable Establecimiento = cliente.ClienteCargarAsociacionEstablecimientoLugar((int)comboArea.SelectedValue);
 
-            foreach (DataRow proveedor in Establecimiento.Rows)
-                comboEstablecimiento.Items.Add(proveedor["Nombre"].ToString());
+            comboEstablecimiento.DataSource = Establecimiento;
+            comboEstablecimiento.DisplayMember = "Nombre";
+            comboEstablecimiento.ValueMember = "Id";
         }
 
 
@@ -175,6 +176,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void VolverAtras()
         {
             this.Close();
+        }
+
+        private void comboArea_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            CargarEstablecimientos();
+            comboEstablecimiento.Enabled = true;
         }
     }
 }
