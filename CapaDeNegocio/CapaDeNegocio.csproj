@@ -45,6 +45,7 @@
     <Compile Include="Campo.cs" />
     <Compile Include="Estados.cs" />
     <Compile Include="Mensajes.cs" />
+    <Compile Include="PlaceHolder.cs" />
     <Compile Include="Plan.cs" />
     <Compile Include="Presencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

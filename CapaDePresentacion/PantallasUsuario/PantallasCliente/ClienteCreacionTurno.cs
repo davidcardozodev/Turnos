@@ -29,9 +29,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             DataTable Area = cliente.ClienteCargarArea();
 
-            comboArea.DataSource = Area;
+            DataRow placeHolder = Area.NewRow();
+            placeHolder["Nombre"] = PlaceHolder.SeleccionarArea;
+            placeHolder["Id"] = 0;
+
+            Area.Rows.InsertAt(placeHolder, 0);
+
             comboArea.DisplayMember = "Nombre";
             comboArea.ValueMember = "Id";
+            comboArea.DataSource = Area;
+            comboArea.SelectedIndex = 0;
         }
 
         private void CargarEstablecimientos()
@@ -78,11 +85,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void ValorInicialHorario()
         {
-            comboHora.SelectedItem = 8;
+            comboHora.SelectedItem = PlaceHolder.SeleccionarHorario;
         }
 
         private void CargarHorarios()
         {
+            comboHora.Items.Add(PlaceHolder.SeleccionarHorario);
+
             for (int i = 8; i <= 22; i++)
                 comboHora.Items.Add(i);
         }

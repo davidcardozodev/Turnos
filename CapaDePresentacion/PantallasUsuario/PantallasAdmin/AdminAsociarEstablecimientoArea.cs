@@ -25,9 +25,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DataTable Establecimiento = admin.AdminCargarEstablecimiento();
 
-            comboEstablecimiento.DataSource = Establecimiento;
+            DataRow placeHolder = Establecimiento.NewRow();
+            placeHolder["Nombre"] = PlaceHolder.SeleccionarEstablecimiento;
+            placeHolder["Id"] = 0;
+
+            Establecimiento.Rows.InsertAt(placeHolder, 0);
+
             comboEstablecimiento.DisplayMember = "Nombre";
             comboEstablecimiento.ValueMember = "Id";
+            comboEstablecimiento.DataSource = Establecimiento;
+            comboEstablecimiento.SelectedIndex = 0;
         }
 
         private void CargarAreas()
@@ -36,9 +43,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DataTable Area = admin.AdminCargarArea();
 
-            comboArea.DataSource = Area;
+            DataRow placeHolder = Area.NewRow();
+            placeHolder["Nombre"] = PlaceHolder.SeleccionarArea;
+            placeHolder["Id"] = 0;
+
+            Area.Rows.InsertAt(placeHolder, 0);
+
             comboArea.DisplayMember = "Nombre";
             comboArea.ValueMember = "Id";
+            comboArea.DataSource = Area;
+            comboArea.SelectedIndex = 0;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

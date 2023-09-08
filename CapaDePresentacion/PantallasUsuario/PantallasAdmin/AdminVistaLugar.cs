@@ -25,9 +25,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DataTable Lugares = admin.AdminCargarLugares();
 
-            comboLugar.DataSource = Lugares;
+            DataRow placeHolder = Lugares.NewRow();
+
+            placeHolder["Nombre"] = PlaceHolder.SeleccionarLugar;
+            placeHolder["Id"] = 0;
+
+            Lugares.Rows.InsertAt(placeHolder, 0);
+
             comboLugar.DisplayMember = "Nombre";
             comboLugar.ValueMember = "Id";
+            comboLugar.DataSource = Lugares;
+            comboLugar.SelectedIndex = 0;
         }
 
         private void AdminCargarProveedores()
@@ -36,9 +44,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DataTable Proveedores = admin.AdminCargarProveedores();
 
-            comboProveedor.DataSource = Proveedores;
+            DataRow placeHolder = Proveedores.NewRow();
+
+            placeHolder["Nombre"] = PlaceHolder.SeleccionarProveedor;
+            placeHolder["Id"] = 0;
+
+            Proveedores.Rows.InsertAt(placeHolder, 0);
+
             comboProveedor.DisplayMember = "Nombre";
             comboProveedor.ValueMember = "Id";
+            comboProveedor.DataSource = Proveedores;
+            comboProveedor.SelectedIndex = 0;
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)

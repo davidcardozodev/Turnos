@@ -54,7 +54,7 @@
             this.comboEstablecimiento.FormattingEnabled = true;
             this.comboEstablecimiento.Location = new System.Drawing.Point(303, 167);
             this.comboEstablecimiento.Name = "comboEstablecimiento";
-            this.comboEstablecimiento.Size = new System.Drawing.Size(339, 40);
+            this.comboEstablecimiento.Size = new System.Drawing.Size(495, 40);
             this.comboEstablecimiento.TabIndex = 67;
             // 
             // lblArea
@@ -74,13 +74,13 @@
             this.comboArea.FormattingEnabled = true;
             this.comboArea.Location = new System.Drawing.Point(303, 238);
             this.comboArea.Name = "comboArea";
-            this.comboArea.Size = new System.Drawing.Size(339, 40);
+            this.comboArea.Size = new System.Drawing.Size(495, 40);
             this.comboArea.TabIndex = 65;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(461, 344);
+            this.btnRegistrar.Location = new System.Drawing.Point(617, 332);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(181, 59);
             this.btnRegistrar.TabIndex = 63;
@@ -103,7 +103,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(363, 41);
+            this.label1.Location = new System.Drawing.Point(465, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 37);
             this.label1.TabIndex = 61;
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 450);
+            this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.lblEstablecimiento);
             this.Controls.Add(this.comboEstablecimiento);
             this.Controls.Add(this.lblArea);
