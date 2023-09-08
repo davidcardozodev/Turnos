@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Campo.cs" />
+    <Compile Include="ComprobacionCampo.cs" />
     <Compile Include="Estados.cs" />
+    <Compile Include="Fecha.cs" />
     <Compile Include="Mensajes.cs" />
     <Compile Include="PlaceHolder.cs" />
     <Compile Include="Plan.cs" />
