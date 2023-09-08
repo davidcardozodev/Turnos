@@ -25,7 +25,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "")
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
                 txtUsuario.Text = "Usuario";
                 txtUsuario.ForeColor = Color.DimGray;
@@ -44,7 +44,7 @@ namespace CapaDePresentacion.PantallasGenerales
 
         private void txtClave_Leave(object sender, EventArgs e)
         {
-            if (txtClave.Text == "")
+            if (string.IsNullOrWhiteSpace(txtClave.Text))
             {
                 txtClave.Text = "Clave";
                 txtClave.ForeColor = Color.DimGray;
