@@ -34,11 +34,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void CargarInformacion()
         {
-            string Espacio = "    ";
-            string de = " de ";
-
             lblEstado.Text = Estado;
-            lblInformacion.Text = DiaNombre + " " + DiaNumero + de + Mes + de + Anio + Espacio + Hora + ":00hs";
+            lblInformacion.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.De + Mes + Campo.De + Anio + Campo.EspacioDoble + Hora + Campo.Hora;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

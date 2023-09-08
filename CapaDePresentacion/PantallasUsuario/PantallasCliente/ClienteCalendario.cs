@@ -48,8 +48,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             DataTable Area = cliente.ClienteCargarArea();
 
             comboArea.DataSource = Area;
-            comboArea.DisplayMember = "Nombre";
-            comboArea.ValueMember = "Id";
+            comboArea.DisplayMember = Campo.Nombre;
+            comboArea.ValueMember = Campo.Id;
         }
 
         private void CargarEstablecimientos()
@@ -59,8 +59,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             DataTable Establecimiento = cliente.ClienteCargarAsociacionEstablecimientoLugar((int)comboArea.SelectedValue);
 
             comboEstablecimiento.DataSource = Establecimiento;
-            comboEstablecimiento.DisplayMember = "Nombre";
-            comboEstablecimiento.ValueMember = "Id";
+            comboEstablecimiento.DisplayMember = Campo.Nombre;
+            comboEstablecimiento.ValueMember = Campo.Id;
         }
 
 
@@ -83,15 +83,15 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void ActualizarFecha()
         {
-            DiaNombre = monthCalendar1.SelectionRange.Start.ToString("dddd");
-            DiaNumero = monthCalendar1.SelectionRange.Start.ToString("dd");
-            Mes = monthCalendar1.SelectionRange.Start.ToString("MMMM");
-            Anio = monthCalendar1.SelectionRange.Start.ToString("yyyy");
+            DiaNombre = monthCalendar1.SelectionRange.Start.ToString(Fecha.dddd);
+            DiaNumero = monthCalendar1.SelectionRange.Start.ToString(Fecha.dd);
+            Mes = monthCalendar1.SelectionRange.Start.ToString(Fecha.MMMM);
+            Anio = monthCalendar1.SelectionRange.Start.ToString(Fecha.yyyy);
         }
 
         private void CargarFecha()
         {
-            lblFecha.Text = DiaNombre + " " + DiaNumero + ", " + Mes + ", " + Anio;
+            lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + ", " + Mes + ", " + Anio;
         }
 
         private void btnAbrir_Click(object sender, System.EventArgs e)
@@ -104,14 +104,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void MostrarCalendario()
         {
-            btnAbrir.Text = "-";
+            btnAbrir.Text = PlaceHolder.CerrarCreacionTurno;
             panelCalendario.Visible = true;
             Calendario = true;
         }
 
         private void OcultarCalendario()
         {
-            btnAbrir.Text = "+";
+            btnAbrir.Text = PlaceHolder.AbrirCreacionTurno;
             panelCalendario.Visible = false;
             Calendario = false;
         }
@@ -138,7 +138,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void VerificarCampos()
         {
-            string mensajeError = "";
+            string mensajeError = Campo.Vacio;
 
             if (string.IsNullOrEmpty(Area))
                 mensajeError += Mensajes.ErrorArea + Environment.NewLine;

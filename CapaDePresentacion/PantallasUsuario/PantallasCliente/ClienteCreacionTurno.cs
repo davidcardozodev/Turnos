@@ -30,13 +30,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             DataTable Area = cliente.ClienteCargarArea();
 
             DataRow placeHolder = Area.NewRow();
-            placeHolder["Nombre"] = PlaceHolder.SeleccionarArea;
-            placeHolder["Id"] = 0;
+            placeHolder[Campo.Nombre] = PlaceHolder.SeleccionarArea;
+            placeHolder[Campo.Id] = 0;
 
             Area.Rows.InsertAt(placeHolder, 0);
 
-            comboArea.DisplayMember = "Nombre";
-            comboArea.ValueMember = "Id";
+            comboArea.DisplayMember = Campo.Nombre;
+            comboArea.ValueMember = Campo.Id;
             comboArea.DataSource = Area;
             comboArea.SelectedIndex = 0;
         }
@@ -48,8 +48,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             DataTable Establecimiento = cliente.ClienteCargarAsociacionEstablecimientoLugar((int)comboArea.SelectedValue);
 
             comboEstablecimiento.DataSource = Establecimiento;
-            comboEstablecimiento.DisplayMember = "Nombre";
-            comboEstablecimiento.ValueMember = "Id";
+            comboEstablecimiento.DisplayMember = Campo.Nombre;
+            comboEstablecimiento.ValueMember = Campo.Id;
         }
 
         private const int CB_SETCUEBANNER = 0x1703;
@@ -103,10 +103,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
             Area = comboArea.Text;
             Establecimiento = comboEstablecimiento.Text;
 
-            Anio = dtpFecha.Value.ToString("yyyy");
-            Mes = dtpFecha.Value.ToString("MMMM");
-            DiaNombre = dtpFecha.Value.ToString("dddd");
-            DiaNumero = dtpFecha.Value.ToString("dd");
+            Anio = dtpFecha.Value.ToString(Fecha.yyyy);
+            Mes = dtpFecha.Value.ToString(Fecha.MMMM);
+            DiaNombre = dtpFecha.Value.ToString(Fecha.dddd);
+            DiaNumero = dtpFecha.Value.ToString(Fecha.dd);
         }
 
         #endregion
@@ -119,7 +119,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void VerificarCampos()
         {
-            string mensajeError = "";
+            string mensajeError = Campo.Vacio;
 
             if (string.IsNullOrEmpty(Area))
                 mensajeError += Mensajes.ErrorArea + Environment.NewLine;

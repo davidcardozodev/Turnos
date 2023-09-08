@@ -22,18 +22,18 @@ namespace CapaDePresentacion.PantallaLlamador
 
         private void RellenarCampos()
         {
-            txtUsuario.Text = "Usuario";
+            txtUsuario.Text = Campo.Usuario;
             txtUsuario.ForeColor = Color.DimGray;
             txtClave.UseSystemPasswordChar = false;
-            txtClave.Text = "Clave";
+            txtClave.Text = Campo.Clave;
             txtClave.ForeColor = Color.DimGray;
         }
 
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Usuario")
+            if (txtUsuario.Text == Campo.Usuario)
             {
-                txtUsuario.Text = "";
+                txtUsuario.Text = Campo.Vacio;
                 txtUsuario.ForeColor = Color.Black;
             }
         }
@@ -42,16 +42,16 @@ namespace CapaDePresentacion.PantallaLlamador
         {
             if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
-                txtUsuario.Text = "Usuario";
+                txtUsuario.Text = Campo.Usuario;
                 txtUsuario.ForeColor = Color.DimGray;
             }
         }
 
         private void txtClave_Enter(object sender, EventArgs e)
         {
-            if (txtClave.Text == "Clave")
+            if (txtClave.Text == Campo.Clave)
             {
-                txtClave.Text = "";
+                txtClave.Text = Campo.Vacio;
                 txtClave.ForeColor = Color.Black;
                 txtClave.UseSystemPasswordChar = true;
             }
@@ -61,7 +61,7 @@ namespace CapaDePresentacion.PantallaLlamador
         {
             if (string.IsNullOrWhiteSpace(txtClave.Text))
             {
-                txtClave.Text = "Clave";
+                txtClave.Text = Campo.Clave;
                 txtClave.ForeColor = Color.DimGray;
                 txtClave.UseSystemPasswordChar = false;
             }
@@ -76,23 +76,23 @@ namespace CapaDePresentacion.PantallaLlamador
 
         private void VerificarCampos()
         {
-            Campo campo = new Campo();
-            var Result = campo.VerificarCamposIndividuales(txtUsuario.Text);
-            Result = campo.VerificarCamposIndividuales(txtClave.Text);
-            Result = campo.VerficarTodosCampos(txtUsuario.Text, txtClave.Text);
+            ComprobacionCampo comprobacionCampo = new ComprobacionCampo();
+            var ResultadoCampo = comprobacionCampo.VerificarCamposIndividuales(txtUsuario.Text);
+            ResultadoCampo = comprobacionCampo.VerificarCamposIndividuales(txtClave.Text);
+            ResultadoCampo = comprobacionCampo.VerficarTodosCampos(txtUsuario.Text, txtClave.Text);
 
-            if (Result != "")
-                MensajeError(Result);
+            if (ResultadoCampo != Campo.Vacio)
+                MensajeError(ResultadoCampo);
         }
 
         private void MensajeError(string Mensaje)
         {
-            MessageBox.Show("Error: " + Mensaje);
+            MessageBox.Show(Mensaje);
         }
 
         private void UsuarioIniciarSesion()
         {
-            if (txtUsuario.Text != "Usuario" && txtClave.Text != "Clave")
+            if (txtUsuario.Text != Campo.Usuario && txtClave.Text != Campo.Clave)
                 BusquedaUsuario();
         }
 
@@ -118,11 +118,11 @@ namespace CapaDePresentacion.PantallaLlamador
             if (inicioSesionValidado)
             {
                 cliente.ClienteRegistrarPresencia(txtUsuario.Text);
-                MessageBox.Show("Se registro correctamente");
+                MessageBox.Show(Mensajes.GuardadoRegistro);
                 RellenarCampos();
             }
             else
-                MensajeError("Usuario o Clave incorrecta");
+                MensajeError(Mensajes.ErrorSesion);
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)

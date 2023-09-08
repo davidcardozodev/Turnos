@@ -56,11 +56,11 @@
             // btnAbrir
             // 
             this.btnAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrir.Location = new System.Drawing.Point(349, 95);
+            this.btnAbrir.Location = new System.Drawing.Point(421, 95);
             this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(64, 52);
+            this.btnAbrir.Size = new System.Drawing.Size(229, 52);
             this.btnAbrir.TabIndex = 1;
-            this.btnAbrir.Text = "+";
+            this.btnAbrir.Text = "Abrir turno";
             this.btnAbrir.UseVisualStyleBackColor = true;
             this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
@@ -89,7 +89,7 @@
             this.panelCalendario.Controls.Add(this.lblDescripcion);
             this.panelCalendario.Controls.Add(this.lblHora);
             this.panelCalendario.Controls.Add(this.lblFechaCategoria);
-            this.panelCalendario.Location = new System.Drawing.Point(466, 95);
+            this.panelCalendario.Location = new System.Drawing.Point(421, 222);
             this.panelCalendario.Name = "panelCalendario";
             this.panelCalendario.Size = new System.Drawing.Size(738, 438);
             this.panelCalendario.TabIndex = 11;
@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 571);
+            this.ClientSize = new System.Drawing.Size(1367, 727);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.panelCalendario);
             this.Controls.Add(this.btnAbrir);

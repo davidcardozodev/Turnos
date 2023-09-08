@@ -39,9 +39,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         {
             lblEstado.Text = Estado;
 
-            string Espacio = "      ";
-
-            lblInformacion.Text = Nombre + Espacio + DiaNombre + " " + DiaNumero + " " + Mes + " " + Anio + Espacio + Hora + ":00hs";
+            lblInformacion.Text = Nombre + Campo.EspacioDoble + DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.EspacioSimple + Mes + Campo.EspacioSimple + Anio + Campo.EspacioDoble + Hora + Campo.Hora;
         }
 
         private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

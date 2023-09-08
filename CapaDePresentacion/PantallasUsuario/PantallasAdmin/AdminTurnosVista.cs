@@ -22,12 +22,12 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarEstadosTurno()
         {
-            comboEstado.Items.Add("Mostrar todo");
+            comboEstado.Items.Add(Campo.MostrarTodo);
             comboEstado.Items.Add(Estados.Asignado);
             comboEstado.Items.Add(Estados.Cancelado);
             comboEstado.Items.Add(Estados.EnCurso);
             comboEstado.Items.Add(Estados.Pendiente);
-            comboEstado.SelectedItem = "Mostrar todo";
+            comboEstado.SelectedItem = Campo.MostrarTodo;
         }
 
 
@@ -97,7 +97,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void comboEstado_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (comboEstado.Text == "Mostrar todo")
+            if (comboEstado.Text == Campo.MostrarTodo)
                 CargarTurnoItem();
             else
                 CargarTurnoEstadoFiltrado();

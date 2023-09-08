@@ -29,13 +29,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void CargarInformacion()
         {
-            string Espacio = "      ";
-
-            Hora += ":00hs";
+            Hora += Campo.Hora;
 
             lblPresencia.Text = PresenciaEstado;
 
-            lblInformacion.Text = Nombre + Espacio + Hora + Espacio + TipoPlan + Espacio + Prioridad;
+            lblInformacion.Text = Nombre + Campo.EspacioDoble + Hora + Campo.EspacioDoble + TipoPlan + Campo.EspacioDoble + Prioridad;
         }
 
         private void EstablecerPrioridad()
@@ -43,13 +41,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             switch (TipoPlan)
             {
                 case Plan.Basico:
-                    Prioridad = "Baja";
+                    Prioridad = Prioridades.Baja;
                     break;
                 case Plan.Estandar:
-                    Prioridad = "Media";
+                    Prioridad = Prioridades.Media;
                     break;
                 case Plan.Premium:
-                    Prioridad = "Alta";
+                    Prioridad = Prioridades.Alta;
                     break;
             }
         }

@@ -21,11 +21,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void CargarRoles()
         {
-            comboRol.Items.Add("Mostrar todo");
+            comboRol.Items.Add(Campo.MostrarTodo);
             comboRol.Items.Add(Rol.Admin);
             comboRol.Items.Add(Rol.Cliente);
             comboRol.Items.Add(Rol.Proveedor);
-            comboRol.SelectedItem = "Mostrar todo";
+            comboRol.SelectedItem = Campo.MostrarTodo;
         }
 
         private void AdminCargarUsuario()
@@ -86,7 +86,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void comboRol_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (comboRol.Text == "Mostrar todo")
+            if (comboRol.Text == Campo.MostrarTodo)
                 AdminCargarUsuario();
             else
                 AdminCargarUsuarioFiltrado();

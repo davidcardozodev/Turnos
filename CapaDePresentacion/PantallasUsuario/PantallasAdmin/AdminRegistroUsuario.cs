@@ -63,7 +63,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             if (ComprobarCampos())
                 RegistrarUsuario();
             else
-                MessageBox.Show("Todos los campos deben estar llenos");
+                MessageBox.Show(Mensajes.ErrorCamposFaltantes);
         }
 
         private bool ComprobarCampos()

@@ -5,7 +5,6 @@ using CapaDePresentacion.PantallasUsuario.PantallasAdmin;
 using CapaDePresentacion.PantallasUsuario.PantallasCliente;
 using System;
 using System.Data;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -30,7 +29,7 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void DesactivarOpcionDarBaja()
         {
-            if (Estado == "Pendiente")
+            if (Estado == Estados.Pendiente)
                 btnDarDeBaja.Enabled = true;
         }
 
@@ -48,7 +47,7 @@ namespace CapaDePresentacion.PantallaTurno
                 proveedores = admin.AdminCargarProveedores();
 
                 foreach (DataRow proveedor in proveedores.Rows)
-                    comboProveedores.Items.Add(proveedor["Nombre"].ToString());
+                    comboProveedores.Items.Add(proveedor[Campo.Nombre].ToString());
             }
         }
 
@@ -110,10 +109,10 @@ namespace CapaDePresentacion.PantallaTurno
         public string NombreProveedor { get; set; }
         public string Presencia { get; set; }
 
-        string AnioGuardar = "";
-        string MesGuardar = "";
-        string DiaNombreGuardar = "";
-        string DiaNumeroGuardar = "";
+        string AnioGuardar;
+        string MesGuardar;
+        string DiaNombreGuardar;
+        string DiaNumeroGuardar;
 
         private bool GuardarProveedor = false;
         private bool GuardarFecha = false;
@@ -122,9 +121,9 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void CargarInformacion()
         {
-            lblFecha.Text = DiaNombre + " " + DiaNumero + ", " + Mes + ", " + Anio;
+            lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + ", " + Mes + ", " + Anio;
             lblUsuario.Text = Nombre + " (" + Usuario + ")";
-            lblHora.Text = Hora + ":00hs";
+            lblHora.Text = Hora + Campo.Hora;
             rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
             lblProveedor.Text = NombreProveedor;
@@ -132,7 +131,7 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void btnDarDeBaja_Click(object sender, System.EventArgs e)
         {
-            DialogResult Alerta = MessageBox.Show("¿Quiere dar de baja el turno?", "Dar de baja", MessageBoxButtons.YesNo);
+            DialogResult Alerta = MessageBox.Show(Mensajes.AlertaBajaOpcion, Mensajes.AlertaBajaTitulo, MessageBoxButtons.YesNo);
 
             if (Alerta == DialogResult.Yes)
             {
@@ -221,10 +220,10 @@ namespace CapaDePresentacion.PantallaTurno
 
         private void GuardarNuevaFecha()
         {
-            AnioGuardar = dtpFecha.Value.ToString("yyyy");
-            MesGuardar = dtpFecha.Value.ToString("MMMM");
-            DiaNombreGuardar = dtpFecha.Value.ToString("dddd");
-            DiaNumeroGuardar = dtpFecha.Value.ToString("dd");
+            AnioGuardar = dtpFecha.Value.ToString(Fecha.yyyy);
+            MesGuardar = dtpFecha.Value.ToString(Fecha.MMMM);
+            DiaNombreGuardar = dtpFecha.Value.ToString(Fecha.dddd);
+            DiaNumeroGuardar = dtpFecha.Value.ToString(Fecha.dd);
         }
 
         private void TurnoDetalle_FormClosed(object sender, FormClosedEventArgs e)

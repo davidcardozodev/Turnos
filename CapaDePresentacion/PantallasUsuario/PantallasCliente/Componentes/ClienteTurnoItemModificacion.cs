@@ -4,7 +4,6 @@ using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
@@ -28,8 +27,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         public string Estado { get; set; }
         public string NombreProveedor { get; set; }
 
-        private string Espacio = "   ";
-
         #endregion
 
         #region "Cargar informacion"
@@ -44,7 +41,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void RellenarTextoInformacion()
         {
-            lblInformacion.Text = "";
+            lblInformacion.Text = Campo.Vacio;
             lblEstado.Text = Estado;
             RellenarInformacionProveedor();
             RellenarInformacionFecha();
@@ -52,17 +49,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void RellenarInformacionFecha()
         {
-            string de = " de ";
-
-
-            if (DiaNombre != "")
-                lblInformacion.Text += DiaNombre + " " + DiaNumero + de + Mes + de + Anio + Espacio;
+            if (DiaNombre != Campo.Vacio)
+                lblInformacion.Text += DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.De + Mes + Campo.De + Anio + Campo.EspacioDoble;
         }
 
         private void RellenarInformacionProveedor()
         {
             if (NombreProveedor != Estados.SinDefinir)
-                lblInformacion.Text += NombreProveedor + Espacio;
+                lblInformacion.Text += NombreProveedor + Campo.EspacioDoble;
         }
 
         private void CargarTurnoItem()
@@ -110,7 +104,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         private void MostrarNotificacionBaja()
         {
             if (Estado == Estados.Cancelado)
-                lblInformacion.Text = "Dado de baja por el administrador";
+                lblInformacion.Text = Mensajes.AdministradorBaja;
         }
 
         #region "Aceptar cambios"
@@ -128,7 +122,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void CambiarFecha()
         {
-            if (DiaNombre != "")
+            if (DiaNombre != Campo.Vacio)
             {
                 Cliente clienteTurnoModificacionCambiarFecha = new Cliente();
 

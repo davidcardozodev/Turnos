@@ -27,13 +27,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DataRow placeHolder = Lugares.NewRow();
 
-            placeHolder["Nombre"] = PlaceHolder.SeleccionarLugar;
-            placeHolder["Id"] = 0;
+            placeHolder[Campo.Nombre] = PlaceHolder.SeleccionarLugar;
+            placeHolder[Campo.Id] = 0;
 
             Lugares.Rows.InsertAt(placeHolder, 0);
 
-            comboLugar.DisplayMember = "Nombre";
-            comboLugar.ValueMember = "Id";
+            comboLugar.DisplayMember = Campo.Nombre;
+            comboLugar.ValueMember = Campo.Id;
             comboLugar.DataSource = Lugares;
             comboLugar.SelectedIndex = 0;
         }
@@ -46,13 +46,13 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DataRow placeHolder = Proveedores.NewRow();
 
-            placeHolder["Nombre"] = PlaceHolder.SeleccionarProveedor;
-            placeHolder["Id"] = 0;
+            placeHolder[Campo.Nombre] = PlaceHolder.SeleccionarProveedor;
+            placeHolder[Campo.Id] = 0;
 
             Proveedores.Rows.InsertAt(placeHolder, 0);
 
-            comboProveedor.DisplayMember = "Nombre";
-            comboProveedor.ValueMember = "Id";
+            comboProveedor.DisplayMember = Campo.Nombre;
+            comboProveedor.ValueMember = Campo.Id;
             comboProveedor.DataSource = Proveedores;
             comboProveedor.SelectedIndex = 0;
         }
