@@ -14,24 +14,19 @@ namespace CapaDeNegocio
             return Color.FromArgb(255, 255, 255);
         }
 
-        public Color TurnoAsignado()
+        public Color PrioridadBaja()
         {
-            return Color.FromArgb(16, 196, 192);
+            return Color.FromArgb(23, 176, 1);
         }
 
-        public Color RestaurarColorTurnoAsignado()
+        public Color PrioridadMedia()
         {
-            return Color.FromArgb(180, 250, 243);
+            return Color.FromArgb(255, 163, 14);
         }
 
-        public Color TurnoEnCurso()
+        public Color PrioridadAlta()
         {
-            return Color.FromArgb(11, 133, 16);
-        }
-
-        public Color RestaurarColorTurnoEnCurso()
-        {
-            return Color.FromArgb(192, 255, 192);
+            return Color.FromArgb(255, 64, 14);
         }
     }
 }
