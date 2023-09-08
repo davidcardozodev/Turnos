@@ -12,6 +12,7 @@
         public const string ErrorClave = "Error: Usuario o clave incorrecta";
         public const string ErrorUsuario = "Error: Usuario o clave incorrecta";
         public const string ErrorCamposFaltantes = "Error: Todos los campos deben estar llenos";
+        public const string ErrorHorario = "Error: Debe seleccionar un horario";
         public const string AlertaBajaOpcion = "¿Quiere dar de baja el turno?";
         public const string AlertaBajaTitulo = "¿Quiere dar de baja el turno?";
         public const string AdministradorBaja = "Dado de baja por el administrador";
