@@ -34,6 +34,10 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTurnosPendientes = new System.Windows.Forms.Label();
             this.lblTurnosCurso = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblLugar = new System.Windows.Forms.Label();
+            this.lblPrioridad = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVolverAtras
@@ -50,9 +54,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 199);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 245);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(701, 518);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(825, 518);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // label1
@@ -68,16 +72,16 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(752, 197);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(888, 245);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(697, 518);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(802, 518);
             this.flowLayoutPanel2.TabIndex = 10;
             // 
             // lblTurnosPendientes
             // 
             this.lblTurnosPendientes.AutoSize = true;
             this.lblTurnosPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosPendientes.Location = new System.Drawing.Point(222, 145);
+            this.lblTurnosPendientes.Location = new System.Drawing.Point(24, 134);
             this.lblTurnosPendientes.Name = "lblTurnosPendientes";
             this.lblTurnosPendientes.Size = new System.Drawing.Size(282, 37);
             this.lblTurnosPendientes.TabIndex = 11;
@@ -87,17 +91,61 @@
             // 
             this.lblTurnosCurso.AutoSize = true;
             this.lblTurnosCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosCurso.Location = new System.Drawing.Point(1011, 133);
+            this.lblTurnosCurso.Location = new System.Drawing.Point(881, 134);
             this.lblTurnosCurso.Name = "lblTurnosCurso";
             this.lblTurnosCurso.Size = new System.Drawing.Size(250, 37);
             this.lblTurnosCurso.TabIndex = 12;
             this.lblTurnosCurso.Text = "Turnos en curso";
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(1181, 199);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(132, 37);
+            this.lblNombre.TabIndex = 13;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // lblLugar
+            // 
+            this.lblLugar.AutoSize = true;
+            this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLugar.Location = new System.Drawing.Point(1464, 199);
+            this.lblLugar.Name = "lblLugar";
+            this.lblLugar.Size = new System.Drawing.Size(100, 37);
+            this.lblLugar.TabIndex = 14;
+            this.lblLugar.Text = "Lugar";
+            // 
+            // lblPrioridad
+            // 
+            this.lblPrioridad.AutoSize = true;
+            this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrioridad.Location = new System.Drawing.Point(612, 199);
+            this.lblPrioridad.Name = "lblPrioridad";
+            this.lblPrioridad.Size = new System.Drawing.Size(146, 37);
+            this.lblPrioridad.TabIndex = 16;
+            this.lblPrioridad.Text = "Prioridad";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(329, 199);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 37);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Nombre";
+            // 
             // ProveedorLlamador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1471, 719);
+            this.ClientSize = new System.Drawing.Size(1746, 776);
+            this.Controls.Add(this.lblPrioridad);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblLugar);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblTurnosCurso);
             this.Controls.Add(this.lblTurnosPendientes);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -121,5 +169,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label lblTurnosPendientes;
         private System.Windows.Forms.Label lblTurnosCurso;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblLugar;
+        private System.Windows.Forms.Label lblPrioridad;
+        private System.Windows.Forms.Label label3;
     }
 }

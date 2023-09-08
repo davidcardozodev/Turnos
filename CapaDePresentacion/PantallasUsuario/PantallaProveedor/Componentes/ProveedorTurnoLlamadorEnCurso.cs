@@ -35,8 +35,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void CargarInformacion()
         {
-            string espacio = "      ";
-            lblInformacion.Text = Nombre + espacio + Lugar;
+            lblInformacion.Text = Nombre;
+            lblLugar.Text = Lugar;
         }
 
         private void btnFinalizar_Click(object sender, System.EventArgs e)
@@ -52,14 +52,14 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         {
             SelectorColor selectorColor = new SelectorColor();
 
-            this.BackColor = selectorColor.TurnoEnCurso();
+            this.BackColor = selectorColor.CambiarColor();
         }
 
         private void ProveedorTurnoLlamadorEnCurso_MouseLeave(object sender, System.EventArgs e)
         {
             SelectorColor selectorColor = new SelectorColor();
 
-            this.BackColor = selectorColor.RestaurarColorTurnoEnCurso();
+            this.BackColor = selectorColor.RestaurarColor();
         }
     }
 }

@@ -31,7 +31,6 @@
             this.btnAgregarEnCurso = new System.Windows.Forms.Button();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblPrioridad = new System.Windows.Forms.Label();
-            this.lblLugar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAgregarEnCurso
@@ -39,9 +38,9 @@
             this.btnAgregarEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarEnCurso.Location = new System.Drawing.Point(19, 17);
             this.btnAgregarEnCurso.Name = "btnAgregarEnCurso";
-            this.btnAgregarEnCurso.Size = new System.Drawing.Size(64, 52);
+            this.btnAgregarEnCurso.Size = new System.Drawing.Size(275, 52);
             this.btnAgregarEnCurso.TabIndex = 8;
-            this.btnAgregarEnCurso.Text = "+";
+            this.btnAgregarEnCurso.Text = "Agregar en curso";
             this.btnAgregarEnCurso.UseVisualStyleBackColor = true;
             this.btnAgregarEnCurso.Click += new System.EventHandler(this.btnAgregarEnCurso_Click);
             this.btnAgregarEnCurso.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
@@ -51,7 +50,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(100, 27);
+            this.lblCliente.Location = new System.Drawing.Point(342, 27);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(104, 32);
             this.lblCliente.TabIndex = 7;
@@ -63,7 +62,7 @@
             // 
             this.lblPrioridad.AutoSize = true;
             this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(100, 81);
+            this.lblPrioridad.Location = new System.Drawing.Point(625, 27);
             this.lblPrioridad.Name = "lblPrioridad";
             this.lblPrioridad.Size = new System.Drawing.Size(129, 32);
             this.lblPrioridad.TabIndex = 19;
@@ -71,27 +70,16 @@
             this.lblPrioridad.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
             this.lblPrioridad.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
             // 
-            // lblLugar
-            // 
-            this.lblLugar.AutoSize = true;
-            this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(318, 27);
-            this.lblLugar.Name = "lblLugar";
-            this.lblLugar.Size = new System.Drawing.Size(87, 32);
-            this.lblLugar.TabIndex = 20;
-            this.lblLugar.Text = "Lugar";
-            // 
             // ProveedorTurnoLlamadorAsignado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(250)))), ((int)(((byte)(243)))));
-            this.Controls.Add(this.lblLugar);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblPrioridad);
             this.Controls.Add(this.btnAgregarEnCurso);
             this.Controls.Add(this.lblCliente);
             this.Name = "ProveedorTurnoLlamadorAsignado";
-            this.Size = new System.Drawing.Size(663, 129);
+            this.Size = new System.Drawing.Size(806, 92);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamador_Load);
             this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);
@@ -105,6 +93,5 @@
         private System.Windows.Forms.Button btnAgregarEnCurso;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblPrioridad;
-        private System.Windows.Forms.Label lblLugar;
     }
 }

@@ -16,7 +16,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string TipoPlan { get; set; }
-        private string Prioridad = "Prioridad: ";
+        private string Prioridad;
         public string Lugar { get; set; }
 
         #endregion
@@ -24,22 +24,28 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         private void CargarInformacion()
         {
             lblCliente.Text = Nombre;
-            lblLugar.Text = Lugar;
             EstablecerPrioridad();
         }
 
         private void EstablecerPrioridad()
         {
+            SelectorColor selectorColor = new SelectorColor();
+
             switch (TipoPlan)
             {
-                case "Basico":
-                    Prioridad += "Baja";
+                case Plan.Basico:
+                    Prioridad = Prioridades.Baja;
+                    lblPrioridad.ForeColor = selectorColor.PrioridadBaja();
                     break;
-                case "Estandar":
-                    Prioridad += "Media";
+
+                case Plan.Estandar:
+                    Prioridad = Prioridades.Media;
+                    lblPrioridad.ForeColor = selectorColor.PrioridadMedia();
                     break;
-                case "Premium":
-                    Prioridad += "Alta";
+
+                case Plan.Premium:
+                    Prioridad = Prioridades.Alta;
+                    lblPrioridad.ForeColor = selectorColor.PrioridadAlta();
                     break;
             }
 
@@ -64,14 +70,15 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
         {
             SelectorColor selectorColor = new SelectorColor();
 
-            this.BackColor = selectorColor.TurnoAsignado();
+            this.BackColor = selectorColor.CambiarColor();
         }
 
         private void ProveedorTurnoLlamadorAsignado_MouseLeave(object sender, System.EventArgs e)
         {
             SelectorColor selectorColor = new SelectorColor();
 
-            this.BackColor = selectorColor.RestaurarColorTurnoAsignado();
+            this.BackColor = selectorColor.RestaurarColor();
         }
+
     }
 }
