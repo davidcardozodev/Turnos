@@ -2,30 +2,15 @@
 {
     public class Campo
     {
-
-        private string _Mensaje = "";
-
-        #region "Campos"
-
-        public string VerificarCamposIndividuales(string Campo)
-        {
-            if (Campo == "Usuario")
-                _Mensaje = "Ingrese su nombre de usuario";
-
-            if (Campo == "Clave")
-                _Mensaje = "Ingrese su clave";
-
-            return _Mensaje;
-        }
-
-        public string VerficarTodosCampos(string CampoUsuario, string CampoClave)
-        {
-            if (CampoUsuario == "Usuario" && CampoClave == "Clave")
-                _Mensaje = "Todos los campos deben estar llenos";
-
-            return _Mensaje;
-        }
-
-        #endregion
+        public const string Usuario = "Usuario";
+        public const string Clave = "Clave";
+        public const string Vacio = "";
+        public const string MostrarTodo = "Mostrar todo";
+        public const string Hora = ":00hs";
+        public const string EspacioDoble = "   ";
+        public const string EspacioSimple = " ";
+        public const string Nombre = "Nombre";
+        public const string Id = "Id";
+        public const string De = " de ";
     }
 }
