@@ -70,14 +70,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void CambiarColorPresencia()
         {
+            SelectorColor selectorColor = new SelectorColor();
+
             switch (PresenciaEstado)
             {
                 case Presencia.Ausente:
-                    lblPresencia.ForeColor = Color.FromArgb(255, 0, 0);
+                    lblPresencia.ForeColor = selectorColor.Rojo();
                     break;
 
                 case Presencia.Presente:
-                    lblPresencia.ForeColor = Color.FromArgb(0, 255, 0);
+                    lblPresencia.ForeColor = selectorColor.Verde();
                     break;
             }
         }

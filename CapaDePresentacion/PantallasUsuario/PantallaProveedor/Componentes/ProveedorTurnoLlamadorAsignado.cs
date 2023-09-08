@@ -35,17 +35,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
             {
                 case Plan.Basico:
                     Prioridad = Prioridades.Baja;
-                    lblPrioridad.ForeColor = selectorColor.PrioridadBaja();
+                    lblPrioridad.ForeColor = selectorColor.Verde();
                     break;
 
                 case Plan.Estandar:
                     Prioridad = Prioridades.Media;
-                    lblPrioridad.ForeColor = selectorColor.PrioridadMedia();
+                    lblPrioridad.ForeColor = selectorColor.Naranja();
                     break;
 
                 case Plan.Premium:
                     Prioridad = Prioridades.Alta;
-                    lblPrioridad.ForeColor = selectorColor.PrioridadAlta();
+                    lblPrioridad.ForeColor = selectorColor.Rojo();
                     break;
             }
 

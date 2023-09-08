@@ -60,18 +60,20 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void CambiarColorEstado()
         {
+            SelectorColor selectorColor = new SelectorColor();
+
             switch (Estado)
             {
                 case Estados.Cancelado:
-                    lblEstado.ForeColor = Color.FromArgb(255, 0, 0);
+                    lblEstado.ForeColor = selectorColor.Rojo();
                     break;
                 case Estados.Finalizado:
-                    lblEstado.ForeColor = Color.FromArgb(0, 255, 0);
+                    lblEstado.ForeColor = selectorColor.Verde();
                     break;
                 case Estados.Pendiente:
                 case Estados.Asignado:
                 case Estados.EnCurso:
-                    lblEstado.ForeColor = Color.FromArgb(0, 0, 255);
+                    lblEstado.ForeColor = selectorColor.Azul();
                     break;
             }
         }
