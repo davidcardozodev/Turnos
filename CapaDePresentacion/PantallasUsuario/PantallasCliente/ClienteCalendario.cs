@@ -47,9 +47,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             DataTable Area = cliente.ClienteCargarArea();
 
-            comboArea.DataSource = Area;
+            DataRow placeHolder = Area.NewRow();
+            placeHolder[Campo.Nombre] = PlaceHolder.SeleccionarArea;
+            placeHolder[Campo.Id] = 0;
+
+            Area.Rows.InsertAt(placeHolder, 0);
+
             comboArea.DisplayMember = Campo.Nombre;
             comboArea.ValueMember = Campo.Id;
+            comboArea.DataSource = Area;
+            comboArea.SelectedIndex = 0;
         }
 
         private void CargarEstablecimientos()
@@ -58,9 +65,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             DataTable Establecimiento = cliente.ClienteCargarAsociacionEstablecimientoLugar((int)comboArea.SelectedValue);
 
-            comboEstablecimiento.DataSource = Establecimiento;
+            DataRow placeHolder = Establecimiento.NewRow();
+            placeHolder[Campo.Nombre] = PlaceHolder.SeleccionarEstablecimiento;
+            placeHolder[Campo.Id] = 0;
+
+            Establecimiento.Rows.InsertAt(placeHolder, 0);
+
             comboEstablecimiento.DisplayMember = Campo.Nombre;
             comboEstablecimiento.ValueMember = Campo.Id;
+            comboEstablecimiento.DataSource = Establecimiento;
+            comboEstablecimiento.SelectedIndex = 0;
         }
 
 
@@ -126,6 +140,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void CargarValoresHorario()
         {
+            comboHora.Items.Add(PlaceHolder.SeleccionarHorario);
+
             for (int i = 8; i <= 22; i++)
                 comboHora.Items.Add(i);
         }
@@ -140,16 +156,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             string mensajeError = Campo.Vacio;
 
-            if (string.IsNullOrEmpty(Area))
+            if (Area == PlaceHolder.SeleccionarArea)
                 mensajeError += Mensajes.ErrorArea + Environment.NewLine;
 
             if (string.IsNullOrEmpty(Establecimiento))
-                mensajeError += Mensajes.ErrorEstablecimiento;
+                mensajeError += Mensajes.ErrorEstablecimiento + Environment.NewLine;
 
-            if (string.IsNullOrEmpty(Area) || string.IsNullOrEmpty(Establecimiento))
+            if (Hora == PlaceHolder.SeleccionarHorario)
+                mensajeError += Mensajes.ErrorHorario + Environment.NewLine;
+
+            if (Area == PlaceHolder.SeleccionarArea || string.IsNullOrEmpty(Establecimiento) || Hora == PlaceHolder.SeleccionarHorario)
                 MessageBox.Show(mensajeError);
 
-            if (!string.IsNullOrEmpty(Area) && !string.IsNullOrEmpty(Establecimiento))
+            if (Area != PlaceHolder.SeleccionarArea && !string.IsNullOrEmpty(Establecimiento) && Hora != PlaceHolder.SeleccionarHorario)
                 GuardarTurno();
         }
 
@@ -165,7 +184,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
         private void ValorInicialHorario()
         {
-            comboHora.SelectedItem = 8;
+            comboHora.SelectedItem = PlaceHolder.SeleccionarHorario;
         }
 
         private void btnVolverAtras_Click(object sender, System.EventArgs e)

@@ -47,9 +47,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
 
             DataTable Establecimiento = cliente.ClienteCargarAsociacionEstablecimientoLugar((int)comboArea.SelectedValue);
 
-            comboEstablecimiento.DataSource = Establecimiento;
+            DataRow placeHolder = Establecimiento.NewRow();
+            placeHolder[Campo.Nombre] = PlaceHolder.SeleccionarEstablecimiento;
+            placeHolder[Campo.Id] = 0;
+
+            Establecimiento.Rows.InsertAt(placeHolder, 0);
+
             comboEstablecimiento.DisplayMember = Campo.Nombre;
             comboEstablecimiento.ValueMember = Campo.Id;
+            comboEstablecimiento.DataSource = Establecimiento;
+            comboEstablecimiento.SelectedIndex = 0;
         }
 
         private const int CB_SETCUEBANNER = 0x1703;
@@ -121,16 +128,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             string mensajeError = Campo.Vacio;
 
-            if (string.IsNullOrEmpty(Area))
+            if (Area == PlaceHolder.SeleccionarArea)
                 mensajeError += Mensajes.ErrorArea + Environment.NewLine;
 
             if (string.IsNullOrEmpty(Establecimiento))
-                mensajeError += Mensajes.ErrorEstablecimiento;
+                mensajeError += Mensajes.ErrorEstablecimiento + Environment.NewLine;
 
-            if (string.IsNullOrEmpty(Area) || string.IsNullOrEmpty(Establecimiento))
+            if (Hora == PlaceHolder.SeleccionarHorario)
+                mensajeError += Mensajes.ErrorHorario + Environment.NewLine;
+
+            if (Area == PlaceHolder.SeleccionarArea || string.IsNullOrEmpty(Establecimiento) || Hora == PlaceHolder.SeleccionarHorario)
                 MessageBox.Show(mensajeError);
 
-            if (!string.IsNullOrEmpty(Area) && !string.IsNullOrEmpty(Establecimiento))
+            if (Area != PlaceHolder.SeleccionarArea && !string.IsNullOrEmpty(Establecimiento) && Hora != PlaceHolder.SeleccionarHorario)
                 GuardarTurno();
         }
 
