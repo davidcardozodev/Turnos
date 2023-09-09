@@ -12,5 +12,7 @@
         public const string Nombre = "Nombre";
         public const string Id = "Id";
         public const string De = " de ";
+        public const string SinModificacion = "Sin modificacion";
+        public const string CambioNulo = "-";
     }
 }
