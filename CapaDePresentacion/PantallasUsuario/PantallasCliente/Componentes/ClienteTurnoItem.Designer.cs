@@ -30,7 +30,8 @@
         {
             this.linkVerMas = new System.Windows.Forms.LinkLabel();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.lblInformacion = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // linkVerMas
@@ -51,7 +52,7 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(160, 23);
+            this.lblEstado.Location = new System.Drawing.Point(301, 23);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 12;
@@ -59,28 +60,39 @@
             this.lblEstado.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
             this.lblEstado.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
             // 
-            // lblInformacion
+            // lblFecha
             // 
-            this.lblInformacion.AutoSize = true;
-            this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion.Location = new System.Drawing.Point(321, 23);
-            this.lblInformacion.Name = "lblInformacion";
-            this.lblInformacion.Size = new System.Drawing.Size(162, 32);
-            this.lblInformacion.TabIndex = 13;
-            this.lblInformacion.Text = "Informacion";
-            this.lblInformacion.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
-            this.lblInformacion.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(701, 23);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(93, 32);
+            this.lblFecha.TabIndex = 13;
+            this.lblFecha.Text = "Fecha";
+            this.lblFecha.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
+            this.lblFecha.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.Location = new System.Drawing.Point(1521, 23);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(75, 32);
+            this.lblHora.TabIndex = 14;
+            this.lblHora.Text = "Hora";
             // 
             // ClienteTurnoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(this.lblHora);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.linkVerMas);
             this.Name = "ClienteTurnoItem";
-            this.Size = new System.Drawing.Size(1012, 67);
+            this.Size = new System.Drawing.Size(1713, 67);
             this.Load += new System.EventHandler(this.ClienteTurnoItem_Load);
             this.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
@@ -92,6 +104,7 @@
         #endregion
         private System.Windows.Forms.LinkLabel linkVerMas;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblInformacion;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblHora;
     }
 }

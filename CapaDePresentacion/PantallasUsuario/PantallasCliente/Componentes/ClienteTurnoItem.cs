@@ -1,6 +1,5 @@
 ﻿using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
@@ -35,7 +34,8 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         private void CargarInformacion()
         {
             lblEstado.Text = Estado;
-            lblInformacion.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.De + Mes + Campo.De + Anio + Campo.EspacioDoble + Hora + Campo.Hora;
+            lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.De + Mes + Campo.De + Anio;
+            lblHora.Text = Hora + Campo.Hora;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -4,6 +4,7 @@ using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
@@ -41,7 +42,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void RellenarTextoInformacion()
         {
-            lblInformacion.Text = Campo.Vacio;
+            lblProveedor.Text = Campo.Vacio;
             lblEstado.Text = Estado;
             RellenarInformacionProveedor();
             RellenarInformacionFecha();
@@ -50,13 +51,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
         private void RellenarInformacionFecha()
         {
             if (DiaNombre != Campo.Vacio)
-                lblInformacion.Text += DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.De + Mes + Campo.De + Anio + Campo.EspacioDoble;
+                lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.De + Mes + Campo.De + Anio + Campo.EspacioDoble;
+            else
+                lblFecha.Text = Campo.SinModificacion;
         }
 
         private void RellenarInformacionProveedor()
         {
             if (NombreProveedor != Estados.SinDefinir)
-                lblInformacion.Text += NombreProveedor + Campo.EspacioDoble;
+                lblProveedor.Text = NombreProveedor + Campo.EspacioDoble;
+            else
+                lblFecha.Text = Campo.SinModificacion;
         }
 
         private void CargarTurnoItem()
@@ -103,8 +108,15 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void MostrarNotificacionBaja()
         {
+            Mensajes mensajes = new Mensajes();
+
             if (Estado == Estados.Cancelado)
-                lblInformacion.Text = Mensajes.AdministradorBaja;
+            {
+                lblEstado.Text = mensajes.AdministradorBaja;
+                this.lblEstado.Location = new Point(this.lblEstado.Location.X, this.lblEstado.Location.Y - 10);
+                lblProveedor.Text = Campo.CambioNulo;
+                lblFecha.Text = Campo.CambioNulo;
+            }
         }
 
         #region "Aceptar cambios"

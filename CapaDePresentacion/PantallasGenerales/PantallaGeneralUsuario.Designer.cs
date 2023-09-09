@@ -40,9 +40,9 @@
             // panelForm
             // 
             this.panelForm.BackColor = System.Drawing.SystemColors.Control;
-            this.panelForm.Location = new System.Drawing.Point(126, 42);
+            this.panelForm.Location = new System.Drawing.Point(16, 42);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(1157, 615);
+            this.panelForm.Size = new System.Drawing.Size(1762, 615);
             this.panelForm.TabIndex = 2;
             // 
             // panelcontainer
@@ -54,7 +54,7 @@
             this.panelcontainer.Location = new System.Drawing.Point(0, 0);
             this.panelcontainer.MinimumSize = new System.Drawing.Size(650, 650);
             this.panelcontainer.Name = "panelcontainer";
-            this.panelcontainer.Size = new System.Drawing.Size(1295, 669);
+            this.panelcontainer.Size = new System.Drawing.Size(1829, 669);
             this.panelcontainer.TabIndex = 1;
             // 
             // panelTitulo
@@ -65,7 +65,7 @@
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitulo.Location = new System.Drawing.Point(0, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(1295, 51);
+            this.panelTitulo.Size = new System.Drawing.Size(1829, 51);
             this.panelTitulo.TabIndex = 0;
             // 
             // linkPerfil
@@ -75,7 +75,7 @@
             this.linkPerfil.AutoSize = true;
             this.linkPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkPerfil.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkPerfil.Location = new System.Drawing.Point(159, 9);
+            this.linkPerfil.Location = new System.Drawing.Point(426, 9);
             this.linkPerfil.Name = "linkPerfil";
             this.linkPerfil.Size = new System.Drawing.Size(80, 32);
             this.linkPerfil.TabIndex = 0;
@@ -101,7 +101,7 @@
             // PantallaGeneralUsuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1295, 669);
+            this.ClientSize = new System.Drawing.Size(1829, 669);
             this.Controls.Add(this.panelcontainer);
             this.Name = "PantallaGeneralUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
