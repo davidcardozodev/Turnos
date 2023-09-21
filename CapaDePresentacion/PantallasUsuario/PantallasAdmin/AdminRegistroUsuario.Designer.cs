@@ -176,7 +176,7 @@
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Location = new System.Drawing.Point(341, 120);
+            this.panel1.Location = new System.Drawing.Point(483, 120);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(754, 702);
             this.panel1.TabIndex = 50;
@@ -257,7 +257,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(694, 19);
+            this.lblTitulo.Location = new System.Drawing.Point(836, 19);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(261, 37);
             this.lblTitulo.TabIndex = 51;
