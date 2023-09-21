@@ -38,7 +38,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             lblHora.Text = Hora + Campo.Hora;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void AbrirTurno()
         {
             TurnoDetalle turnoDetalle = new TurnoDetalle();
 
@@ -87,6 +87,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             SelectorColor selectorColor = new SelectorColor();
 
             this.BackColor = selectorColor.RestaurarColor();
+        }
+
+        private void ClienteTurnoItem_Click(object sender, System.EventArgs e)
+        {
+            AbrirTurno();
         }
     }
 }

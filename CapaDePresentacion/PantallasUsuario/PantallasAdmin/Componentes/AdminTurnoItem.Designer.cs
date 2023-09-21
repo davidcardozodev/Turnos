@@ -36,6 +36,7 @@
             // linkVerMas
             // 
             this.linkVerMas.AutoSize = true;
+            this.linkVerMas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkVerMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkVerMas.Location = new System.Drawing.Point(19, 27);
             this.linkVerMas.Name = "linkVerMas";
@@ -43,31 +44,35 @@
             this.linkVerMas.TabIndex = 9;
             this.linkVerMas.TabStop = true;
             this.linkVerMas.Text = "Ver mas";
-            this.linkVerMas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkVerMas_LinkClicked);
+            this.linkVerMas.Click += new System.EventHandler(this.AdminTurnoItem_Click);
             this.linkVerMas.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
             this.linkVerMas.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
+            this.lblEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(166, 27);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 13;
             this.lblEstado.Text = "Estado";
+            this.lblEstado.Click += new System.EventHandler(this.AdminTurnoItem_Click);
             this.lblEstado.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
             this.lblEstado.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInformacion.Location = new System.Drawing.Point(318, 27);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 14;
             this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.Click += new System.EventHandler(this.AdminTurnoItem_Click);
             this.lblInformacion.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
             this.lblInformacion.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
@@ -79,9 +84,11 @@
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.linkVerMas);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "AdminTurnoItem";
             this.Size = new System.Drawing.Size(1054, 75);
             this.Load += new System.EventHandler(this.AdminTurnoItem_Load);
+            this.Click += new System.EventHandler(this.AdminTurnoItem_Click);
             this.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             this.ResumeLayout(false);

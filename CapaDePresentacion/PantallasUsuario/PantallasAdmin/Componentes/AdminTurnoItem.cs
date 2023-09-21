@@ -1,6 +1,5 @@
 ﻿using CapaDeNegocio;
 using CapaDePresentacion.PantallaTurno;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
@@ -42,7 +41,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             lblInformacion.Text = Nombre + Campo.EspacioDoble + DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.EspacioSimple + Mes + Campo.EspacioSimple + Anio + Campo.EspacioDoble + Hora + Campo.Hora;
         }
 
-        private void linkVerMas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void AbrirTurno()
         {
             TurnoDetalle turnoDetalle = new TurnoDetalle();
 
@@ -65,7 +64,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         private void CambiarColorEstado()
         {
             SelectorColor selectorColor = new SelectorColor();
-            
+
             switch (Estado)
             {
                 case Estados.Cancelado:
@@ -94,6 +93,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             SelectorColor selectorColor = new SelectorColor();
 
             this.BackColor = selectorColor.RestaurarColor();
+        }
+
+        private void AdminTurnoItem_Click(object sender, System.EventArgs e)
+        {
+            AbrirTurno();
         }
     }
 }

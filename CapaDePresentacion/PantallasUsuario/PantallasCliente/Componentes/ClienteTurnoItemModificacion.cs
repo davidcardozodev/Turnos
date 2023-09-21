@@ -92,11 +92,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         #endregion
 
-        private void linkTurnoOriginal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            CargarTurnoItem();
-        }
-
         private void DesactivarOpcionesTurnoEstado()
         {
             if (Estado != Estados.Pendiente)
@@ -194,6 +189,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
             SelectorColor selectorColor = new SelectorColor();
 
             this.BackColor = selectorColor.RestaurarColor();
+        }
+
+        private void ClienteTurnoItemModificacion_Click(object sender, EventArgs e)
+        {
+            CargarTurnoItem();
         }
     }
 }

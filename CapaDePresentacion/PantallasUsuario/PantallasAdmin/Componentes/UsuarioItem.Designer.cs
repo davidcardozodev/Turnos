@@ -35,6 +35,7 @@
             // linkModificar
             // 
             this.linkModificar.AutoSize = true;
+            this.linkModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.linkModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkModificar.Location = new System.Drawing.Point(24, 29);
             this.linkModificar.Name = "linkModificar";
@@ -42,19 +43,21 @@
             this.linkModificar.TabIndex = 6;
             this.linkModificar.TabStop = true;
             this.linkModificar.Text = "Modificar";
-            this.linkModificar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkModificar_LinkClicked);
+            this.linkModificar.Click += new System.EventHandler(this.UsuarioItem_Click);
             this.linkModificar.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
             this.linkModificar.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
+            this.lblInformacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInformacion.Location = new System.Drawing.Point(187, 29);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 7;
             this.lblInformacion.Text = "Informacion";
+            this.lblInformacion.Click += new System.EventHandler(this.UsuarioItem_Click);
             this.lblInformacion.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
             this.lblInformacion.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
@@ -65,9 +68,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.linkModificar);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UsuarioItem";
             this.Size = new System.Drawing.Size(1055, 76);
             this.Load += new System.EventHandler(this.UsuarioItem_Load);
+            this.Click += new System.EventHandler(this.UsuarioItem_Click);
             this.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             this.ResumeLayout(false);

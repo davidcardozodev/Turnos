@@ -34,17 +34,21 @@
             this.btnRechazar = new System.Windows.Forms.Button();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.Location = new System.Drawing.Point(636, 26);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(145, 32);
             this.lblProveedor.TabIndex = 0;
             this.lblProveedor.Text = "Proveedor";
+            this.lblProveedor.Click += new System.EventHandler(this.ClienteTurnoItemModificacion_Click);
             this.lblProveedor.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
             this.lblProveedor.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
@@ -58,7 +62,7 @@
             this.linkTurnoOriginal.TabIndex = 1;
             this.linkTurnoOriginal.TabStop = true;
             this.linkTurnoOriginal.Text = "Turno original";
-            this.linkTurnoOriginal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkTurnoOriginal_LinkClicked);
+            this.linkTurnoOriginal.Click += new System.EventHandler(this.ClienteTurnoItemModificacion_Click);
             this.linkTurnoOriginal.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
             this.linkTurnoOriginal.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
@@ -91,6 +95,7 @@
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
+            this.lblEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(300, 26);
             this.lblEstado.Name = "lblEstado";
@@ -98,37 +103,55 @@
             this.lblEstado.TabIndex = 4;
             this.lblEstado.Text = "Estado";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.lblEstado.Click += new System.EventHandler(this.ClienteTurnoItemModificacion_Click);
             this.lblEstado.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
             this.lblEstado.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
+            this.lblFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(947, 26);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(93, 32);
             this.lblFecha.TabIndex = 5;
             this.lblFecha.Text = "Fecha";
+            this.lblFecha.Click += new System.EventHandler(this.ClienteTurnoItemModificacion_Click);
+            this.lblFecha.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.lblFecha.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linkTurnoOriginal);
+            this.panel1.Controls.Add(this.lblFecha);
+            this.panel1.Controls.Add(this.lblProveedor);
+            this.panel1.Controls.Add(this.lblEstado);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1491, 94);
+            this.panel1.TabIndex = 6;
+            this.panel1.Click += new System.EventHandler(this.ClienteTurnoItemModificacion_Click);
+            this.panel1.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
+            this.panel1.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
             // 
             // ClienteTurnoItemModificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblEstado);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRechazar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.linkTurnoOriginal);
-            this.Controls.Add(this.lblProveedor);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ClienteTurnoItemModificacion";
             this.Size = new System.Drawing.Size(1790, 95);
             this.Load += new System.EventHandler(this.ClienteTurnoItemModificacion_Load);
             this.MouseEnter += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ClienteTurnoItemModificacion_MouseLeave);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -140,5 +163,6 @@
         private System.Windows.Forms.Button btnRechazar;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Panel panel1;
     }
 }

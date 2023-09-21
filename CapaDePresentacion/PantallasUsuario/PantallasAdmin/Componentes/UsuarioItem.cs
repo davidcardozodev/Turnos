@@ -29,7 +29,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             lblInformacion.Text = Usuario + Campo.EspacioDoble + Nombre + Campo.EspacioDoble + Email + Campo.EspacioDoble + Rol;
         }
 
-        private void linkModificar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void AbrirTurno()
         {
             AdminVistaUsuarioDetalle adminVistaUsuarioDetalle = new AdminVistaUsuarioDetalle();
 
@@ -58,6 +58,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             SelectorColor selectorColor = new SelectorColor();
 
             this.BackColor = selectorColor.RestaurarColor();
+        }
+
+        private void UsuarioItem_Click(object sender, System.EventArgs e)
+        {
+            AbrirTurno();
         }
     }
 }

@@ -44,43 +44,51 @@
             this.linkVerMas.TabIndex = 7;
             this.linkVerMas.TabStop = true;
             this.linkVerMas.Text = "Ver mas";
-            this.linkVerMas.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkVerMas.Click += new System.EventHandler(this.ClienteTurnoItem_Click);
             this.linkVerMas.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
             this.linkVerMas.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
+            this.lblEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.Location = new System.Drawing.Point(301, 23);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 12;
             this.lblEstado.Text = "Estado";
+            this.lblEstado.Click += new System.EventHandler(this.ClienteTurnoItem_Click);
             this.lblEstado.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
             this.lblEstado.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
             // 
             // lblFecha
             // 
             this.lblFecha.AutoSize = true;
+            this.lblFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.Location = new System.Drawing.Point(701, 23);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(93, 32);
             this.lblFecha.TabIndex = 13;
             this.lblFecha.Text = "Fecha";
+            this.lblFecha.Click += new System.EventHandler(this.ClienteTurnoItem_Click);
             this.lblFecha.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
             this.lblFecha.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
             // 
             // lblHora
             // 
             this.lblHora.AutoSize = true;
+            this.lblHora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.Location = new System.Drawing.Point(1521, 23);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(75, 32);
             this.lblHora.TabIndex = 14;
             this.lblHora.Text = "Hora";
+            this.lblHora.Click += new System.EventHandler(this.ClienteTurnoItem_Click);
+            this.lblHora.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
+            this.lblHora.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
             // 
             // ClienteTurnoItem
             // 
@@ -91,9 +99,11 @@
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.linkVerMas);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ClienteTurnoItem";
             this.Size = new System.Drawing.Size(1713, 67);
             this.Load += new System.EventHandler(this.ClienteTurnoItem_Load);
+            this.Click += new System.EventHandler(this.ClienteTurnoItem_Click);
             this.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ClienteTurnoItem_MouseLeave);
             this.ResumeLayout(false);
