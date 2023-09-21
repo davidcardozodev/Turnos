@@ -1,6 +1,6 @@
 ﻿using CapaComun;
 using CapaDeEntidades;
-using CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes;
+using CapaDePresentacion.PantallaLlamador.Componentes;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -34,14 +34,12 @@ namespace CapaDePresentacion.PantallaLlamador
         {
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
-                ProveedorTurnoLlamadorEnCurso proveedorTurnoLlamadorEnCurso = new ProveedorTurnoLlamadorEnCurso();
+                LlamadorTurnoEnCurso llamadorTurnoEnCurso = new LlamadorTurnoEnCurso();
 
-                proveedorTurnoLlamadorEnCurso.Id = Turno.Id;
-                proveedorTurnoLlamadorEnCurso.Usuario = Turno.Usuario;
-                proveedorTurnoLlamadorEnCurso.Nombre = Turno.Nombre;
-                proveedorTurnoLlamadorEnCurso.Lugar = Turno.Lugar;
+                llamadorTurnoEnCurso.Nombre = Turno.Nombre;
+                llamadorTurnoEnCurso.Lugar = Turno.Lugar;
 
-                flowLayoutPanel1.Controls.Add(proveedorTurnoLlamadorEnCurso);
+                flowLayoutPanel1.Controls.Add(llamadorTurnoEnCurso);
             }
         }
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallaLlamador\Componentes\LlamadorTurnoEnCurso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaLlamador\Componentes\LlamadorTurnoEnCurso.Designer.cs">
+      <DependentUpon>LlamadorTurnoEnCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaLlamador\PantallaLlamadorEnCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     <Compile Include="PantallaTurno\TurnoDetalle.Designer.cs">
       <DependentUpon>TurnoDetalle.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PantallaLlamador\Componentes\LlamadorTurnoEnCurso.resx">
+      <DependentUpon>LlamadorTurnoEnCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaLlamador\PantallaLlamadorEnCurso.resx">
       <DependentUpon>PantallaLlamadorEnCurso.cs</DependentUpon>
     </EmbeddedResource>
