@@ -40,7 +40,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
         private void AbrirTurno()
         {
-            TurnoDetalle turnoDetalle = new TurnoDetalle();
+            TurnoCliente turnoDetalle = new TurnoCliente();
 
             turnoDetalle.Id = Id;
             turnoDetalle.DiaNombre = DiaNombre;

@@ -4,20 +4,26 @@ using CapaDeNegocio;
 using CapaDePresentacion.PantallasUsuario.PantallasAdmin;
 using CapaDePresentacion.PantallasUsuario.PantallasCliente;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaDePresentacion.PantallaTurno
 {
-    public partial class TurnoDetalle : Form
+    public partial class TurnoAdmin : Form
     {
-        public TurnoDetalle()
+        public TurnoAdmin()
         {
             InitializeComponent();
         }
 
-        private void TurnoDetalle_Load(object sender, EventArgs e)
+        private void TurnoAdmin_Load(object sender, EventArgs e)
         {
             CargarInformacion();
             CambiarColorEstado();
@@ -102,12 +108,10 @@ namespace CapaDePresentacion.PantallaTurno
         public string Mes { get; set; }
         public string Anio { get; set; }
         public string Hora { get; set; }
-        public string Descripcion { get; set; }
         public string Estado { get; set; }
         public string Usuario { get; set; }
         public string Nombre { get; set; }
         public string NombreProveedor { get; set; }
-        public string Presencia { get; set; }
 
         string AnioGuardar;
         string MesGuardar;
@@ -124,23 +128,8 @@ namespace CapaDePresentacion.PantallaTurno
             lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + ", " + Mes + ", " + Anio;
             lblUsuario.Text = Nombre + " (" + Usuario + ")";
             lblHora.Text = Hora + Campo.Hora;
-            rtxtDecripcion.Text = Descripcion;
             lblEstado.Text = Estado;
             lblProveedor.Text = NombreProveedor;
-        }
-
-        private void btnDarDeBaja_Click(object sender, System.EventArgs e)
-        {
-            DialogResult Alerta = MessageBox.Show(Mensajes.AlertaBajaOpcion, Mensajes.AlertaBajaTitulo, MessageBoxButtons.YesNo);
-
-            if (Alerta == DialogResult.Yes)
-            {
-                DarBaja();
-                btnDarDeBaja.Enabled = false;
-                Estado = Estados.Cancelado;
-                lblEstado.Text = Estados.Cancelado;
-                CambiarColorEstado();
-            }
         }
 
         private void DarBaja()
@@ -181,30 +170,6 @@ namespace CapaDePresentacion.PantallaTurno
             }
         }
 
-        private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GuardarProveedor = true;
-            btnGuardar.Enabled = true;
-
-            if (comboProveedores.Text != Estados.SinDefinir || GuardarFecha == true)
-                btnGuardar.Enabled = true;
-            else
-                btnGuardar.Enabled = false;
-        }
-
-        private void dtpFecha_ValueChanged(object sender, EventArgs e)
-        {
-            GuardarFecha = true;
-            btnGuardar.Enabled = true;
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            AdminGuardarModificacion();
-
-            MessageBox.Show(Mensajes.GuardadoCambios);
-        }
-
         private void AdminGuardarModificacion()
         {
             Admin admin = new Admin();
@@ -226,22 +191,53 @@ namespace CapaDePresentacion.PantallaTurno
             DiaNumeroGuardar = dtpFecha.Value.ToString(Fecha.dd);
         }
 
-        private void TurnoDetalle_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            ActualizarPantallaAdminVistaTurno();
-            ActualizarPantallaClienteVistaTurno();
-        }
-
         private static void ActualizarPantallaAdminVistaTurno()
         {
             if (DatosUsuario.Rol == Rol.Admin)
                 (Application.OpenForms["AdminTurnosVista"] as AdminTurnosVista).CargarTurnoItem();
         }
 
-        private static void ActualizarPantallaClienteVistaTurno()
+        private void comboProveedores_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DatosUsuario.Rol == Rol.Cliente)
-                (Application.OpenForms["ClienteTurnosVista"] as ClienteTurnosVista).CargarTurnoItem();
+            GuardarProveedor = true;
+            btnGuardar.Enabled = true;
+
+            if (comboProveedores.Text != Estados.SinDefinir || GuardarFecha == true)
+                btnGuardar.Enabled = true;
+            else
+                btnGuardar.Enabled = false;
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            GuardarFecha = true;
+            btnGuardar.Enabled = true;
+        }
+
+        private void btnDarDeBaja_Click(object sender, EventArgs e)
+        {
+            DialogResult Alerta = MessageBox.Show(Mensajes.AlertaBajaOpcion, Mensajes.AlertaBajaTitulo, MessageBoxButtons.YesNo);
+
+            if (Alerta == DialogResult.Yes)
+            {
+                DarBaja();
+                btnDarDeBaja.Enabled = false;
+                Estado = Estados.Cancelado;
+                lblEstado.Text = Estados.Cancelado;
+                CambiarColorEstado();
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            AdminGuardarModificacion();
+
+            MessageBox.Show(Mensajes.GuardadoCambios);
+        }
+
+        private void TurnoAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ActualizarPantallaAdminVistaTurno();
         }
     }
 }

@@ -74,7 +74,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente.Componentes
 
             foreach (FormatoTurnos Turno in ListaTurnos)
             {
-                TurnoDetalle turnoDetalle = new TurnoDetalle();
+                TurnoCliente turnoDetalle = new TurnoCliente();
 
                 turnoDetalle.Id = Turno.Id;
                 turnoDetalle.DiaNombre = Turno.DiaNombre;

@@ -43,7 +43,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
         private void AbrirTurno()
         {
-            TurnoDetalle turnoDetalle = new TurnoDetalle();
+            TurnoAdmin turnoDetalle = new TurnoAdmin();
 
             turnoDetalle.Id = Id;
             turnoDetalle.IdCliente = IdCliente;
@@ -52,7 +52,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
             turnoDetalle.Mes = Mes;
             turnoDetalle.Anio = Anio;
             turnoDetalle.Hora = Hora;
-            turnoDetalle.Descripcion = Descripcion;
             turnoDetalle.Estado = Estado;
             turnoDetalle.Usuario = Usuario;
             turnoDetalle.Nombre = Nombre;
