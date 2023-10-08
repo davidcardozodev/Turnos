@@ -89,7 +89,7 @@
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.ForeColor = System.Drawing.Color.DimGray;
-            this.lblProveedor.Location = new System.Drawing.Point(206, 333);
+            this.lblProveedor.Location = new System.Drawing.Point(209, 281);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(145, 32);
             this.lblProveedor.TabIndex = 18;
@@ -99,7 +99,7 @@
             // 
             this.lblProveedorCategoria.AutoSize = true;
             this.lblProveedorCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedorCategoria.Location = new System.Drawing.Point(26, 333);
+            this.lblProveedorCategoria.Location = new System.Drawing.Point(29, 281);
             this.lblProveedorCategoria.Name = "lblProveedorCategoria";
             this.lblProveedorCategoria.Size = new System.Drawing.Size(145, 32);
             this.lblProveedorCategoria.TabIndex = 17;
@@ -130,7 +130,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEstado.Location = new System.Drawing.Point(206, 278);
+            this.lblEstado.Location = new System.Drawing.Point(209, 330);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(103, 32);
             this.lblEstado.TabIndex = 13;
@@ -140,7 +140,7 @@
             // 
             this.lblEstadoCategoria.AutoSize = true;
             this.lblEstadoCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCategoria.Location = new System.Drawing.Point(68, 278);
+            this.lblEstadoCategoria.Location = new System.Drawing.Point(71, 330);
             this.lblEstadoCategoria.Name = "lblEstadoCategoria";
             this.lblEstadoCategoria.Size = new System.Drawing.Size(103, 32);
             this.lblEstadoCategoria.TabIndex = 9;
