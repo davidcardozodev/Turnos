@@ -38,7 +38,7 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblTurno = new System.Windows.Forms.Label();
+            this.lblAccion = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -141,15 +141,15 @@
             this.lblUsuario.TabIndex = 63;
             this.lblUsuario.Text = "Usuario";
             // 
-            // lblTurno
+            // lblAccion
             // 
-            this.lblTurno.AutoSize = true;
-            this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurno.Location = new System.Drawing.Point(202, 223);
-            this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(102, 37);
-            this.lblTurno.TabIndex = 62;
-            this.lblTurno.Text = "Turno";
+            this.lblAccion.AutoSize = true;
+            this.lblAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccion.Location = new System.Drawing.Point(202, 223);
+            this.lblAccion.Name = "lblAccion";
+            this.lblAccion.Size = new System.Drawing.Size(114, 37);
+            this.lblAccion.TabIndex = 62;
+            this.lblAccion.Text = "Accion";
             // 
             // lblRol
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.lblTurno);
+            this.Controls.Add(this.lblAccion);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.comboRol);
@@ -199,7 +199,7 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Label lblRol;
     }
 }
