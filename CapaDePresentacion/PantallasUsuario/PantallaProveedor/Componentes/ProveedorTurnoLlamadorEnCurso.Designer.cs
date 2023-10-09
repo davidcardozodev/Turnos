@@ -38,7 +38,7 @@
             this.lblInformacion.AutoSize = true;
             this.lblInformacion.BackColor = System.Drawing.Color.Transparent;
             this.lblInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion.Location = new System.Drawing.Point(322, 44);
+            this.lblInformacion.Location = new System.Drawing.Point(31, 44);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(162, 32);
             this.lblInformacion.TabIndex = 6;
@@ -49,7 +49,7 @@
             // btnFinalizar
             // 
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(23, 34);
+            this.btnFinalizar.Location = new System.Drawing.Point(483, 34);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(246, 52);
             this.btnFinalizar.TabIndex = 7;
@@ -64,7 +64,7 @@
             this.lblLugar.AutoSize = true;
             this.lblLugar.BackColor = System.Drawing.Color.Transparent;
             this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(574, 44);
+            this.lblLugar.Location = new System.Drawing.Point(283, 44);
             this.lblLugar.Name = "lblLugar";
             this.lblLugar.Size = new System.Drawing.Size(87, 32);
             this.lblLugar.TabIndex = 8;
@@ -81,7 +81,7 @@
             this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.lblInformacion);
             this.Name = "ProveedorTurnoLlamadorEnCurso";
-            this.Size = new System.Drawing.Size(755, 120);
+            this.Size = new System.Drawing.Size(755, 119);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_Load);
             this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);

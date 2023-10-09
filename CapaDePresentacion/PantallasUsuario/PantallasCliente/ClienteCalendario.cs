@@ -18,7 +18,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void ClienteCalendario_Load(object sender, System.EventArgs e)
         {
             ActualizarFecha();
-            OcultarCalendario();
             CargarValoresHorario();
             ValorInicialHorario();
             CargarAreas();
@@ -106,28 +105,6 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         private void CargarFecha()
         {
             lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + ", " + Mes + ", " + Anio;
-        }
-
-        private void btnAbrir_Click(object sender, System.EventArgs e)
-        {
-            if (!Calendario)
-                MostrarCalendario();
-            else
-                OcultarCalendario();
-        }
-
-        private void MostrarCalendario()
-        {
-            btnAbrir.Text = PlaceHolder.CerrarCreacionTurno;
-            panelCalendario.Visible = true;
-            Calendario = true;
-        }
-
-        private void OcultarCalendario()
-        {
-            btnAbrir.Text = PlaceHolder.AbrirCreacionTurno;
-            panelCalendario.Visible = false;
-            Calendario = false;
         }
 
         private void GuardarDatos()

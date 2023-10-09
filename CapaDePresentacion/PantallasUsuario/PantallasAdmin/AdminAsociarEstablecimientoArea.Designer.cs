@@ -42,7 +42,7 @@
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(40, 45);
+            this.btnVolverAtras.Location = new System.Drawing.Point(222, 29);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
             this.btnVolverAtras.TabIndex = 62;
@@ -116,11 +116,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(967, 30);
+            this.label1.Location = new System.Drawing.Point(770, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 37);
+            this.label1.Size = new System.Drawing.Size(452, 37);
             this.label1.TabIndex = 71;
-            this.label1.Text = "Lugar";
+            this.label1.Text = "Asociar establecimiento y area";
             // 
             // AdminAsociarEstablecimientoArea
             // 

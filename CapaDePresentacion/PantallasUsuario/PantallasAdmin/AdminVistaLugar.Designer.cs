@@ -40,7 +40,7 @@
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(28, 29);
+            this.btnVolverAtras.Location = new System.Drawing.Point(222, 29);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
             this.btnVolverAtras.TabIndex = 6;
@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(703, 29);
+            this.label1.Location = new System.Drawing.Point(945, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 37);
             this.label1.TabIndex = 5;
@@ -62,7 +62,7 @@
             // 
             this.lblLugar.AutoSize = true;
             this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(499, 287);
+            this.lblLugar.Location = new System.Drawing.Point(703, 326);
             this.lblLugar.Name = "lblLugar";
             this.lblLugar.Size = new System.Drawing.Size(100, 37);
             this.lblLugar.TabIndex = 59;
@@ -73,7 +73,7 @@
             this.comboLugar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLugar.FormattingEnabled = true;
-            this.comboLugar.Location = new System.Drawing.Point(627, 287);
+            this.comboLugar.Location = new System.Drawing.Point(831, 326);
             this.comboLugar.Name = "comboLugar";
             this.comboLugar.Size = new System.Drawing.Size(420, 40);
             this.comboLugar.TabIndex = 60;
@@ -82,7 +82,7 @@
             // 
             this.lblProveedor.AutoSize = true;
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedor.Location = new System.Drawing.Point(436, 226);
+            this.lblProveedor.Location = new System.Drawing.Point(640, 265);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(163, 37);
             this.lblProveedor.TabIndex = 57;
@@ -93,7 +93,7 @@
             this.comboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboProveedor.FormattingEnabled = true;
-            this.comboProveedor.Location = new System.Drawing.Point(627, 223);
+            this.comboProveedor.Location = new System.Drawing.Point(831, 262);
             this.comboProveedor.Name = "comboProveedor";
             this.comboProveedor.Size = new System.Drawing.Size(420, 40);
             this.comboProveedor.TabIndex = 58;
@@ -101,7 +101,7 @@
             // btnRegistrar
             // 
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(627, 378);
+            this.btnRegistrar.Location = new System.Drawing.Point(831, 417);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(420, 59);
             this.btnRegistrar.TabIndex = 56;
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1388, 479);
+            this.ClientSize = new System.Drawing.Size(1388, 547);
             this.Controls.Add(this.lblLugar);
             this.Controls.Add(this.comboLugar);
             this.Controls.Add(this.lblProveedor);

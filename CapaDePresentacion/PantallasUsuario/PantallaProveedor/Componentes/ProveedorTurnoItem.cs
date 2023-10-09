@@ -29,11 +29,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor.Componentes
 
         private void CargarInformacion()
         {
-            Hora += Campo.Hora;
-
             lblPresencia.Text = PresenciaEstado;
-
-            lblInformacion.Text = Nombre + Campo.EspacioDoble + Hora + Campo.EspacioDoble + TipoPlan + Campo.EspacioDoble + Prioridad;
+            lblNombre.Text = Nombre;
+            lblHora.Text = Hora + Campo.Hora;
+            lblTipoPlan.Text = TipoPlan;
+            lblPrioridad.Text = Prioridad;
         }
 
         private void EstablecerPrioridad()

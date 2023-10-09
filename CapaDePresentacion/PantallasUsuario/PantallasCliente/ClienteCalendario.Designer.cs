@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.btnAbrir = new System.Windows.Forms.Button();
             this.btnCrearTurno = new System.Windows.Forms.Button();
             this.panelCalendario = new System.Windows.Forms.Panel();
             this.lblEstablecimiento = new System.Windows.Forms.Label();
@@ -43,26 +42,16 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFechaCategoria = new System.Windows.Forms.Label();
             this.btnVolverAtras = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panelCalendario.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(49, 95);
+            this.monthCalendar1.Location = new System.Drawing.Point(424, 227);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
-            // 
-            // btnAbrir
-            // 
-            this.btnAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrir.Location = new System.Drawing.Point(421, 95);
-            this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(229, 52);
-            this.btnAbrir.TabIndex = 1;
-            this.btnAbrir.Text = "Abrir turno";
-            this.btnAbrir.UseVisualStyleBackColor = true;
-            this.btnAbrir.Click += new System.EventHandler(this.btnAbrir_Click);
             // 
             // btnCrearTurno
             // 
@@ -89,7 +78,7 @@
             this.panelCalendario.Controls.Add(this.lblDescripcion);
             this.panelCalendario.Controls.Add(this.lblHora);
             this.panelCalendario.Controls.Add(this.lblFechaCategoria);
-            this.panelCalendario.Location = new System.Drawing.Point(421, 222);
+            this.panelCalendario.Location = new System.Drawing.Point(752, 138);
             this.panelCalendario.Name = "panelCalendario";
             this.panelCalendario.Size = new System.Drawing.Size(738, 438);
             this.panelCalendario.TabIndex = 11;
@@ -198,7 +187,7 @@
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(49, 25);
+            this.btnVolverAtras.Location = new System.Drawing.Point(222, 29);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
             this.btnVolverAtras.TabIndex = 12;
@@ -206,14 +195,24 @@
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(836, 19);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(172, 37);
+            this.lblTitulo.TabIndex = 13;
+            this.lblTitulo.Text = "Calendario";
+            // 
             // ClienteCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1367, 727);
+            this.ClientSize = new System.Drawing.Size(1541, 727);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.panelCalendario);
-            this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.monthCalendar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClienteCalendario";
@@ -223,13 +222,13 @@
             this.panelCalendario.ResumeLayout(false);
             this.panelCalendario.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.Button btnCrearTurno;
         private System.Windows.Forms.Panel panelCalendario;
         private System.Windows.Forms.Label lblFecha;
@@ -243,5 +242,6 @@
         private System.Windows.Forms.ComboBox comboArea;
         private System.Windows.Forms.Label lblEstablecimiento;
         private System.Windows.Forms.ComboBox comboEstablecimiento;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

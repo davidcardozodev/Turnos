@@ -36,7 +36,7 @@
             // btnAgregarEnCurso
             // 
             this.btnAgregarEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarEnCurso.Location = new System.Drawing.Point(19, 17);
+            this.btnAgregarEnCurso.Location = new System.Drawing.Point(510, 18);
             this.btnAgregarEnCurso.Name = "btnAgregarEnCurso";
             this.btnAgregarEnCurso.Size = new System.Drawing.Size(275, 52);
             this.btnAgregarEnCurso.TabIndex = 8;
@@ -50,7 +50,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliente.Location = new System.Drawing.Point(342, 27);
+            this.lblCliente.Location = new System.Drawing.Point(28, 28);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(104, 32);
             this.lblCliente.TabIndex = 7;
@@ -62,7 +62,7 @@
             // 
             this.lblPrioridad.AutoSize = true;
             this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(625, 27);
+            this.lblPrioridad.Location = new System.Drawing.Point(311, 28);
             this.lblPrioridad.Name = "lblPrioridad";
             this.lblPrioridad.Size = new System.Drawing.Size(129, 32);
             this.lblPrioridad.TabIndex = 19;
@@ -79,7 +79,7 @@
             this.Controls.Add(this.btnAgregarEnCurso);
             this.Controls.Add(this.lblCliente);
             this.Name = "ProveedorTurnoLlamadorAsignado";
-            this.Size = new System.Drawing.Size(806, 92);
+            this.Size = new System.Drawing.Size(806, 90);
             this.Load += new System.EventHandler(this.ProveedorTurnoLlamador_Load);
             this.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorAsignado_MouseLeave);

@@ -41,13 +41,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1382, 450);
+            this.panel1.Size = new System.Drawing.Size(1432, 450);
             this.panel1.TabIndex = 0;
             // 
             // btnClienteRegistrarPresencia
             // 
             this.btnClienteRegistrarPresencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClienteRegistrarPresencia.Location = new System.Drawing.Point(755, 218);
+            this.btnClienteRegistrarPresencia.Location = new System.Drawing.Point(953, 327);
             this.btnClienteRegistrarPresencia.Name = "btnClienteRegistrarPresencia";
             this.btnClienteRegistrarPresencia.Size = new System.Drawing.Size(336, 111);
             this.btnClienteRegistrarPresencia.TabIndex = 4;
@@ -58,7 +58,7 @@
             // btnTurnosEnCurso
             // 
             this.btnTurnosEnCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosEnCurso.Location = new System.Drawing.Point(364, 218);
+            this.btnTurnosEnCurso.Location = new System.Drawing.Point(562, 327);
             this.btnTurnosEnCurso.Name = "btnTurnosEnCurso";
             this.btnTurnosEnCurso.Size = new System.Drawing.Size(310, 111);
             this.btnTurnosEnCurso.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 450);
+            this.ClientSize = new System.Drawing.Size(1432, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PantallaLlamadorPrincipal";

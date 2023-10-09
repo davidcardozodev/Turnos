@@ -81,7 +81,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(1521, 23);
+            this.lblHora.Location = new System.Drawing.Point(1328, 23);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(75, 32);
             this.lblHora.TabIndex = 14;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.linkVerMas);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ClienteTurnoItem";
-            this.Size = new System.Drawing.Size(1713, 67);
+            this.Size = new System.Drawing.Size(1480, 67);
             this.Load += new System.EventHandler(this.ClienteTurnoItem_Load);
             this.Click += new System.EventHandler(this.ClienteTurnoItem_Click);
             this.MouseEnter += new System.EventHandler(this.ClienteTurnoItem_MouseEnter);

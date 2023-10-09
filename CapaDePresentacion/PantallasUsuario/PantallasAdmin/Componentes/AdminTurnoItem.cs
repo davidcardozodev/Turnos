@@ -38,7 +38,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
         {
             lblEstado.Text = Estado;
 
-            lblInformacion.Text = Nombre + Campo.EspacioDoble + DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.EspacioSimple + Mes + Campo.EspacioSimple + Anio + Campo.EspacioDoble + Hora + Campo.Hora;
+            lblUsuario.Text = Nombre + Campo.EspacioDoble;
+            lblEstado.Text = Estado;
+            lblFecha.Text = DiaNombre + Campo.EspacioSimple + DiaNumero + Campo.EspacioSimple + Mes + Campo.EspacioSimple + Anio;
+            lblHora.Text = Hora + Campo.Hora;
         }
 
         private void AbrirTurno()

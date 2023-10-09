@@ -38,12 +38,14 @@
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblPrioridad = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblAccion = new System.Windows.Forms.Label();
+            this.lblAccion2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(23, 26);
+            this.btnVolverAtras.Location = new System.Drawing.Point(126, 26);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
             this.btnVolverAtras.TabIndex = 10;
@@ -54,7 +56,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(23, 245);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(126, 307);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(825, 518);
             this.flowLayoutPanel1.TabIndex = 9;
@@ -63,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(671, 26);
+            this.label1.Location = new System.Drawing.Point(887, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 37);
             this.label1.TabIndex = 8;
@@ -72,7 +74,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(888, 245);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(991, 307);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(802, 518);
             this.flowLayoutPanel2.TabIndex = 10;
@@ -81,7 +83,7 @@
             // 
             this.lblTurnosPendientes.AutoSize = true;
             this.lblTurnosPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosPendientes.Location = new System.Drawing.Point(24, 134);
+            this.lblTurnosPendientes.Location = new System.Drawing.Point(127, 162);
             this.lblTurnosPendientes.Name = "lblTurnosPendientes";
             this.lblTurnosPendientes.Size = new System.Drawing.Size(282, 37);
             this.lblTurnosPendientes.TabIndex = 11;
@@ -91,7 +93,7 @@
             // 
             this.lblTurnosCurso.AutoSize = true;
             this.lblTurnosCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosCurso.Location = new System.Drawing.Point(881, 134);
+            this.lblTurnosCurso.Location = new System.Drawing.Point(984, 162);
             this.lblTurnosCurso.Name = "lblTurnosCurso";
             this.lblTurnosCurso.Size = new System.Drawing.Size(250, 37);
             this.lblTurnosCurso.TabIndex = 12;
@@ -101,7 +103,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(1181, 199);
+            this.lblNombre.Location = new System.Drawing.Point(1003, 256);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(132, 37);
             this.lblNombre.TabIndex = 13;
@@ -111,7 +113,7 @@
             // 
             this.lblLugar.AutoSize = true;
             this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(1464, 199);
+            this.lblLugar.Location = new System.Drawing.Point(1286, 256);
             this.lblLugar.Name = "lblLugar";
             this.lblLugar.Size = new System.Drawing.Size(100, 37);
             this.lblLugar.TabIndex = 14;
@@ -121,7 +123,7 @@
             // 
             this.lblPrioridad.AutoSize = true;
             this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(612, 199);
+            this.lblPrioridad.Location = new System.Drawing.Point(424, 256);
             this.lblPrioridad.Name = "lblPrioridad";
             this.lblPrioridad.Size = new System.Drawing.Size(146, 37);
             this.lblPrioridad.TabIndex = 16;
@@ -131,17 +133,39 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(329, 199);
+            this.label3.Location = new System.Drawing.Point(141, 256);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 37);
             this.label3.TabIndex = 15;
             this.label3.Text = "Nombre";
             // 
+            // lblAccion
+            // 
+            this.lblAccion.AutoSize = true;
+            this.lblAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccion.Location = new System.Drawing.Point(742, 256);
+            this.lblAccion.Name = "lblAccion";
+            this.lblAccion.Size = new System.Drawing.Size(114, 37);
+            this.lblAccion.TabIndex = 17;
+            this.lblAccion.Text = "Accion";
+            // 
+            // lblAccion2
+            // 
+            this.lblAccion2.AutoSize = true;
+            this.lblAccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccion2.Location = new System.Drawing.Point(1550, 256);
+            this.lblAccion2.Name = "lblAccion2";
+            this.lblAccion2.Size = new System.Drawing.Size(114, 37);
+            this.lblAccion2.TabIndex = 18;
+            this.lblAccion2.Text = "Accion";
+            // 
             // ProveedorLlamador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1746, 776);
+            this.ClientSize = new System.Drawing.Size(1946, 776);
+            this.Controls.Add(this.lblAccion2);
+            this.Controls.Add(this.lblAccion);
             this.Controls.Add(this.lblPrioridad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblLugar);
@@ -173,5 +197,7 @@
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblPrioridad;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblAccion;
+        private System.Windows.Forms.Label lblAccion2;
     }
 }

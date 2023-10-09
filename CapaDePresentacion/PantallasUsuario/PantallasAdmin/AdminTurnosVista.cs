@@ -120,6 +120,5 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DatosTurnos(ListaTurnos);
         }
-
     }
 }

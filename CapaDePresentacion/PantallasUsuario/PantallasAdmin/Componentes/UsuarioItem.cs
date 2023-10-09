@@ -26,7 +26,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 
         private void UsuarioItem_Load(object sender, System.EventArgs e)
         {
-            lblInformacion.Text = Usuario + Campo.EspacioDoble + Nombre + Campo.EspacioDoble + Email + Campo.EspacioDoble + Rol;
+            lblUsuario.Text = Usuario;
+            lblNombre.Text = Nombre;
+            lblEmail.Text = Email;
+            lblRol.Text = Rol;
         }
 
         private void AbrirTurno()
