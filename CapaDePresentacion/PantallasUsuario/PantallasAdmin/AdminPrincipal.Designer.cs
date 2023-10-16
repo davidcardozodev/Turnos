@@ -34,11 +34,13 @@
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnTurnosClientes = new System.Windows.Forms.Button();
+            this.btnVerAreas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnVerAreas);
             this.panel1.Controls.Add(this.btnAsociarEstablecimientosAreas);
             this.panel1.Controls.Add(this.btnAdministrarLugares);
             this.panel1.Controls.Add(this.btnAgregarUsuario);
@@ -47,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1604, 673);
+            this.panel1.Size = new System.Drawing.Size(1604, 744);
             this.panel1.TabIndex = 1;
             // 
             // btnAsociarEstablecimientosAreas
@@ -105,11 +107,22 @@
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
             this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
             // 
+            // btnVerAreas
+            // 
+            this.btnVerAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerAreas.Location = new System.Drawing.Point(437, 571);
+            this.btnVerAreas.Name = "btnVerAreas";
+            this.btnVerAreas.Size = new System.Drawing.Size(310, 111);
+            this.btnVerAreas.TabIndex = 5;
+            this.btnVerAreas.Text = "Ver areas";
+            this.btnVerAreas.UseVisualStyleBackColor = true;
+            this.btnVerAreas.Click += new System.EventHandler(this.btnVerAreas_Click);
+            // 
             // AdminPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1604, 673);
+            this.ClientSize = new System.Drawing.Size(1604, 744);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminPrincipal";
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button btnAgregarUsuario;
         private System.Windows.Forms.Button btnAdministrarLugares;
         private System.Windows.Forms.Button btnAsociarEstablecimientosAreas;
+        private System.Windows.Forms.Button btnVerAreas;
     }
 }

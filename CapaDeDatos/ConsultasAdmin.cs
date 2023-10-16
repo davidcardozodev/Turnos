@@ -13,6 +13,7 @@ namespace CapaDeDatos
         private SqlDataReader _Lector;
         private SqlCommand _Comando = new SqlCommand();
         private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
+        private List<FormatoArea> _Areas = new List<FormatoArea>();
         private List<DatosUsuarioItem> _Usuarios = new List<DatosUsuarioItem>();
         private DataTable _Tabla = new DataTable();
 
@@ -265,6 +266,18 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminModificarArea(int IdArea, string Nombre)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminModificarArea";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdArea", IdArea);
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
+
         #endregion
 
         public DataTable AdminCargarProveedores()
@@ -325,6 +338,30 @@ namespace CapaDeDatos
 
             _Conexion.ConexionCerrar();
             return _Tabla;
+        }
+
+        public List<FormatoArea> AdminCargarAreaItem()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarAreaItem";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Nombre = _Lector["Nombre"].ToString();
+
+                _Areas.Add(new FormatoArea
+                {
+                    Id = Id,
+                    Nombre = Nombre
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Areas;
         }
     }
 }

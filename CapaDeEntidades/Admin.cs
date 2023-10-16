@@ -41,6 +41,11 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuarioBusqueda(Busqueda);
         }
 
+        public List<FormatoArea> AdminCargarAreaItem()
+        {
+            return _ConsultasAdmin.AdminCargarAreaItem();
+        }
+
         public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string Nombre, string Email, string Rol, string Plan)
         {
             _ConsultasAdmin.AdminModificarUsuario(IdUsuario, Usuario, Clave, Nombre, Email, Rol, Plan);
@@ -94,6 +99,11 @@ namespace CapaDeEntidades
         public void AdminAsociarEstablecimientoArea(int IdEstablecimiento, int IdArea)
         {
             _ConsultasAdmin.AdminAsociarEstablecimientoArea(IdEstablecimiento, IdArea);
+        }
+
+        public void AdminModificarArea(int IdArea, string Nombre)
+        {
+            _ConsultasAdmin.AdminModificarArea(IdArea, Nombre);
         }
 
     }
