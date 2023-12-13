@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVerAreas = new System.Windows.Forms.Button();
             this.btnAsociarEstablecimientosAreas = new System.Windows.Forms.Button();
             this.btnAdministrarLugares = new System.Windows.Forms.Button();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnTurnosClientes = new System.Windows.Forms.Button();
-            this.btnVerAreas = new System.Windows.Forms.Button();
+            this.btnVerLugares = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnVerLugares);
             this.panel1.Controls.Add(this.btnVerAreas);
             this.panel1.Controls.Add(this.btnAsociarEstablecimientosAreas);
             this.panel1.Controls.Add(this.btnAdministrarLugares);
@@ -51,6 +53,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1604, 744);
             this.panel1.TabIndex = 1;
+            // 
+            // btnVerAreas
+            // 
+            this.btnVerAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerAreas.Location = new System.Drawing.Point(437, 571);
+            this.btnVerAreas.Name = "btnVerAreas";
+            this.btnVerAreas.Size = new System.Drawing.Size(310, 111);
+            this.btnVerAreas.TabIndex = 5;
+            this.btnVerAreas.Text = "Ver areas";
+            this.btnVerAreas.UseVisualStyleBackColor = true;
+            this.btnVerAreas.Click += new System.EventHandler(this.btnVerAreas_Click);
             // 
             // btnAsociarEstablecimientosAreas
             // 
@@ -107,16 +120,16 @@
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
             this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
             // 
-            // btnVerAreas
+            // btnVerLugares
             // 
-            this.btnVerAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerAreas.Location = new System.Drawing.Point(437, 571);
-            this.btnVerAreas.Name = "btnVerAreas";
-            this.btnVerAreas.Size = new System.Drawing.Size(310, 111);
-            this.btnVerAreas.TabIndex = 5;
-            this.btnVerAreas.Text = "Ver areas";
-            this.btnVerAreas.UseVisualStyleBackColor = true;
-            this.btnVerAreas.Click += new System.EventHandler(this.btnVerAreas_Click);
+            this.btnVerLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerLugares.Location = new System.Drawing.Point(798, 571);
+            this.btnVerLugares.Name = "btnVerLugares";
+            this.btnVerLugares.Size = new System.Drawing.Size(310, 111);
+            this.btnVerLugares.TabIndex = 6;
+            this.btnVerLugares.Text = "Ver lugares";
+            this.btnVerLugares.UseVisualStyleBackColor = true;
+            this.btnVerLugares.Click += new System.EventHandler(this.btnVerLugares_Click);
             // 
             // AdminPrincipal
             // 
@@ -141,5 +154,6 @@
         private System.Windows.Forms.Button btnAdministrarLugares;
         private System.Windows.Forms.Button btnAsociarEstablecimientosAreas;
         private System.Windows.Forms.Button btnVerAreas;
+        private System.Windows.Forms.Button btnVerLugares;
     }
 }

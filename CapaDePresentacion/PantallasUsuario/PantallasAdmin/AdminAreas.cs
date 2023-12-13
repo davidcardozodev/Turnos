@@ -30,6 +30,7 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DatosTurnos(Areas);
         }
+
         private void DatosTurnos(List<FormatoArea> Areas)
         {
             foreach (FormatoArea Area in Areas)
@@ -51,6 +52,19 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         private void btnVolverAtras_Click(object sender, System.EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnBuscar_Click(object sender, System.EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            LimpiarAreas();
+
+            List<FormatoArea> Areas = new List<FormatoArea>();
+
+            Areas = admin.AdminCargarAreaItemBusqueda(txtBuscar.Text);
+
+            DatosTurnos(Areas);
         }
     }
 }

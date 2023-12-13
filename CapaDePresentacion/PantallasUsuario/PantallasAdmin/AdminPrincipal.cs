@@ -81,5 +81,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             AbrirFormulario<AdminAreas>();
         }
+
+        private void btnVerLugares_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminLugares>();
+        }
     }
 }

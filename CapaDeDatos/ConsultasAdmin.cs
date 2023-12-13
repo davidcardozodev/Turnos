@@ -14,6 +14,7 @@ namespace CapaDeDatos
         private SqlCommand _Comando = new SqlCommand();
         private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
         private List<FormatoArea> _Areas = new List<FormatoArea>();
+        private List<FormatoLugares> _Lugares = new List<FormatoLugares>();
         private List<DatosUsuarioItem> _Usuarios = new List<DatosUsuarioItem>();
         private DataTable _Tabla = new DataTable();
 
@@ -58,6 +59,7 @@ namespace CapaDeDatos
 
             return _Usuarios;
         }
+
 
 
         private void CamposUsuario()
@@ -277,6 +279,16 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminModificarLugar(int IdArea, string Nombre)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminModificarLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdLugar", IdArea);
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
 
         #endregion
 
@@ -363,5 +375,80 @@ namespace CapaDeDatos
 
             return _Areas;
         }
+
+        public List<FormatoArea> AdminCargarAreaItemBusqueda(string Busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarAreaItemBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Nombre = _Lector["Nombre"].ToString();
+
+                _Areas.Add(new FormatoArea
+                {
+                    Id = Id,
+                    Nombre = Nombre
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Areas;
+        }
+
+        public List<FormatoLugares> AdminCargarLugarItem()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarLugarItem";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Nombre = _Lector["Nombre"].ToString();
+
+                _Lugares.Add(new FormatoLugares
+                {
+                    Id = Id,
+                    Nombre = Nombre
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Lugares;
+        }
+
+        public List<FormatoLugares> AdminCargarLugarItemBusqueda(string Busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarLugarItem";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Nombre = _Lector["Nombre"].ToString();
+
+                _Lugares.Add(new FormatoLugares
+                {
+                    Id = Id,
+                    Nombre = Nombre
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Lugares;
+        }
+
     }
 }

@@ -142,6 +142,18 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.Designer.cs">
       <DependentUpon>AdminAsociarEstablecimientoArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminLugares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminLugares.Designer.cs">
+      <DependentUpon>AdminLugares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminLugarVistaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminLugarVistaDetalle.Designer.cs">
+      <DependentUpon>AdminLugarVistaDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminAreaItem.Designer.cs">
       <DependentUpon>AdminAreaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminLugarItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminLugarItem.Designer.cs">
+      <DependentUpon>AdminLugarItem.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminTurnoItem.cs">
       <SubType>UserControl</SubType>
@@ -294,6 +312,12 @@
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.resx">
       <DependentUpon>AdminAsociarEstablecimientoArea.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminLugares.resx">
+      <DependentUpon>AdminLugares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminLugarVistaDetalle.resx">
+      <DependentUpon>AdminLugarVistaDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminAreaItem.resx">
       <DependentUpon>AdminAreaItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminLugarItem.resx">
+      <DependentUpon>AdminLugarItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminTurnoItem.resx">
       <DependentUpon>AdminTurnoItem.cs</DependentUpon>
