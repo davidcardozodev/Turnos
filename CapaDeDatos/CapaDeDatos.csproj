@@ -57,7 +57,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Script\scriptDisenoTurnos.sql" />
+    <Content Include="Script\scriptTurnosDatosUsuario.sql" />
+    <Content Include="Script\scriptTurnosDiseno.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
