@@ -36,3 +36,7 @@ Turnos fue diseñado con el fin de poder automatizar los turnos generados en cen
 - Microsoft SQL Server 2014 o superior
 - SQL Server Management Studio
 - Visual Studio
+
+## Manual de instalacion:
+
+[Manual de instalacion.pdf](https://github.com/davidcardozodev/Turnos/files/13674723/Manual.de.instalacion.pdf)
