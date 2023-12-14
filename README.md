@@ -6,6 +6,7 @@ Turnos fue diseñado con el fin de poder automatizar los turnos generados en cen
 
 ### Administrador:
 
+- Agregar lugares, áreas y establecimientos
 - Mostrar los turnos agendados de los clientes
 - Modificar la fecha o proveedor de los turnos de los clientes
 - Mostrar Ver lista de usuarios registrados
@@ -37,7 +38,7 @@ Turnos fue diseñado con el fin de poder automatizar los turnos generados en cen
 - SQL Server Management Studio
 - Visual Studio
 
-## Manual de instalacion:
+## Manual de instalación:
 
 [Manual de instalacion.pdf](https://github.com/davidcardozodev/Turnos/files/13674723/Manual.de.instalacion.pdf)
 
