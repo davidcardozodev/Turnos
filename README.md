@@ -40,3 +40,6 @@ Turnos fue diseñado con el fin de poder automatizar los turnos generados en cen
 ## Manual de instalacion:
 
 [Manual de instalacion.pdf](https://github.com/davidcardozodev/Turnos/files/13674723/Manual.de.instalacion.pdf)
+
+## Framework
+Hecho con .NET Framework 4.7.2
