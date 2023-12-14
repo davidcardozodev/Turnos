@@ -29,18 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVerLugares = new System.Windows.Forms.Button();
             this.btnVerAreas = new System.Windows.Forms.Button();
             this.btnAsociarEstablecimientosAreas = new System.Windows.Forms.Button();
             this.btnAdministrarLugares = new System.Windows.Forms.Button();
             this.btnAgregarUsuario = new System.Windows.Forms.Button();
             this.btnListaUsuarios = new System.Windows.Forms.Button();
             this.btnTurnosClientes = new System.Windows.Forms.Button();
-            this.btnVerLugares = new System.Windows.Forms.Button();
+            this.btnRegistrarArea = new System.Windows.Forms.Button();
+            this.btnRegistrarLugar = new System.Windows.Forms.Button();
+            this.btnRegistrarEstablecimiento = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnRegistrarEstablecimiento);
+            this.panel1.Controls.Add(this.btnRegistrarLugar);
+            this.panel1.Controls.Add(this.btnRegistrarArea);
             this.panel1.Controls.Add(this.btnVerLugares);
             this.panel1.Controls.Add(this.btnVerAreas);
             this.panel1.Controls.Add(this.btnAsociarEstablecimientosAreas);
@@ -54,10 +60,21 @@
             this.panel1.Size = new System.Drawing.Size(1604, 744);
             this.panel1.TabIndex = 1;
             // 
+            // btnVerLugares
+            // 
+            this.btnVerLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerLugares.Location = new System.Drawing.Point(789, 446);
+            this.btnVerLugares.Name = "btnVerLugares";
+            this.btnVerLugares.Size = new System.Drawing.Size(310, 111);
+            this.btnVerLugares.TabIndex = 6;
+            this.btnVerLugares.Text = "Ver lugares";
+            this.btnVerLugares.UseVisualStyleBackColor = true;
+            this.btnVerLugares.Click += new System.EventHandler(this.btnVerLugares_Click);
+            // 
             // btnVerAreas
             // 
             this.btnVerAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerAreas.Location = new System.Drawing.Point(437, 571);
+            this.btnVerAreas.Location = new System.Drawing.Point(428, 446);
             this.btnVerAreas.Name = "btnVerAreas";
             this.btnVerAreas.Size = new System.Drawing.Size(310, 111);
             this.btnVerAreas.TabIndex = 5;
@@ -68,7 +85,7 @@
             // btnAsociarEstablecimientosAreas
             // 
             this.btnAsociarEstablecimientosAreas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsociarEstablecimientosAreas.Location = new System.Drawing.Point(798, 411);
+            this.btnAsociarEstablecimientosAreas.Location = new System.Drawing.Point(789, 286);
             this.btnAsociarEstablecimientosAreas.Name = "btnAsociarEstablecimientosAreas";
             this.btnAsociarEstablecimientosAreas.Size = new System.Drawing.Size(683, 111);
             this.btnAsociarEstablecimientosAreas.TabIndex = 4;
@@ -79,7 +96,7 @@
             // btnAdministrarLugares
             // 
             this.btnAdministrarLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrarLugares.Location = new System.Drawing.Point(437, 411);
+            this.btnAdministrarLugares.Location = new System.Drawing.Point(428, 286);
             this.btnAdministrarLugares.Name = "btnAdministrarLugares";
             this.btnAdministrarLugares.Size = new System.Drawing.Size(310, 111);
             this.btnAdministrarLugares.TabIndex = 3;
@@ -90,7 +107,7 @@
             // btnAgregarUsuario
             // 
             this.btnAgregarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(1171, 249);
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(1162, 124);
             this.btnAgregarUsuario.Name = "btnAgregarUsuario";
             this.btnAgregarUsuario.Size = new System.Drawing.Size(310, 111);
             this.btnAgregarUsuario.TabIndex = 2;
@@ -101,7 +118,7 @@
             // btnListaUsuarios
             // 
             this.btnListaUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaUsuarios.Location = new System.Drawing.Point(798, 249);
+            this.btnListaUsuarios.Location = new System.Drawing.Point(789, 124);
             this.btnListaUsuarios.Name = "btnListaUsuarios";
             this.btnListaUsuarios.Size = new System.Drawing.Size(310, 111);
             this.btnListaUsuarios.TabIndex = 1;
@@ -112,7 +129,7 @@
             // btnTurnosClientes
             // 
             this.btnTurnosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTurnosClientes.Location = new System.Drawing.Point(437, 249);
+            this.btnTurnosClientes.Location = new System.Drawing.Point(428, 124);
             this.btnTurnosClientes.Name = "btnTurnosClientes";
             this.btnTurnosClientes.Size = new System.Drawing.Size(310, 111);
             this.btnTurnosClientes.TabIndex = 0;
@@ -120,16 +137,38 @@
             this.btnTurnosClientes.UseVisualStyleBackColor = true;
             this.btnTurnosClientes.Click += new System.EventHandler(this.btnTurnosClientes_Click);
             // 
-            // btnVerLugares
+            // btnRegistrarArea
             // 
-            this.btnVerLugares.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerLugares.Location = new System.Drawing.Point(798, 571);
-            this.btnVerLugares.Name = "btnVerLugares";
-            this.btnVerLugares.Size = new System.Drawing.Size(310, 111);
-            this.btnVerLugares.TabIndex = 6;
-            this.btnVerLugares.Text = "Ver lugares";
-            this.btnVerLugares.UseVisualStyleBackColor = true;
-            this.btnVerLugares.Click += new System.EventHandler(this.btnVerLugares_Click);
+            this.btnRegistrarArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarArea.Location = new System.Drawing.Point(1162, 446);
+            this.btnRegistrarArea.Name = "btnRegistrarArea";
+            this.btnRegistrarArea.Size = new System.Drawing.Size(310, 111);
+            this.btnRegistrarArea.TabIndex = 7;
+            this.btnRegistrarArea.Text = "Registrar area";
+            this.btnRegistrarArea.UseVisualStyleBackColor = true;
+            this.btnRegistrarArea.Click += new System.EventHandler(this.btnRegistrarArea_Click);
+            // 
+            // btnRegistrarLugar
+            // 
+            this.btnRegistrarLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarLugar.Location = new System.Drawing.Point(428, 608);
+            this.btnRegistrarLugar.Name = "btnRegistrarLugar";
+            this.btnRegistrarLugar.Size = new System.Drawing.Size(310, 111);
+            this.btnRegistrarLugar.TabIndex = 8;
+            this.btnRegistrarLugar.Text = "Registrar lugar";
+            this.btnRegistrarLugar.UseVisualStyleBackColor = true;
+            this.btnRegistrarLugar.Click += new System.EventHandler(this.btnRegistrarLugar_Click);
+            // 
+            // btnRegistrarEstablecimiento
+            // 
+            this.btnRegistrarEstablecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarEstablecimiento.Location = new System.Drawing.Point(789, 608);
+            this.btnRegistrarEstablecimiento.Name = "btnRegistrarEstablecimiento";
+            this.btnRegistrarEstablecimiento.Size = new System.Drawing.Size(518, 111);
+            this.btnRegistrarEstablecimiento.TabIndex = 9;
+            this.btnRegistrarEstablecimiento.Text = "Registrar establecimiento";
+            this.btnRegistrarEstablecimiento.UseVisualStyleBackColor = true;
+            this.btnRegistrarEstablecimiento.Click += new System.EventHandler(this.btnRegistrarEstablecimiento_Click);
             // 
             // AdminPrincipal
             // 
@@ -155,5 +194,8 @@
         private System.Windows.Forms.Button btnAsociarEstablecimientosAreas;
         private System.Windows.Forms.Button btnVerAreas;
         private System.Windows.Forms.Button btnVerLugares;
+        private System.Windows.Forms.Button btnRegistrarArea;
+        private System.Windows.Forms.Button btnRegistrarEstablecimiento;
+        private System.Windows.Forms.Button btnRegistrarLugar;
     }
 }

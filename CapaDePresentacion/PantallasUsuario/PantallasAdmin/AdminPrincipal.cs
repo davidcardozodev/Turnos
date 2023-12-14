@@ -86,5 +86,20 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             AbrirFormulario<AdminLugares>();
         }
+
+        private void btnRegistrarArea_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminRegistrarArea>();
+        }
+
+        private void btnRegistrarLugar_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminRegistrarLugar>();
+        }
+
+        private void btnRegistrarEstablecimiento_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminRegistrarEstablecimiento>();
+        }
     }
 }

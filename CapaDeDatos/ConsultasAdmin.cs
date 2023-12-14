@@ -234,6 +234,39 @@ namespace CapaDeDatos
             _Comando.Parameters.Clear();
         }
 
+
+        public void AdminRegistrarArea(string Nombre)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminRegistrarArea";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            _Comando.ExecuteNonQuery();
+            _Comando.Parameters.Clear();
+        }
+
+
+        public void AdminRegistrarLugar(string Nombre)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminRegistrarLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            _Comando.ExecuteNonQuery();
+            _Comando.Parameters.Clear();
+        }
+
+
+        public void AdminRegistrarEstablecimiento(string Nombre)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminRegistrarEstablecimiento";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            _Comando.ExecuteNonQuery();
+            _Comando.Parameters.Clear();
+        }
+
         public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();

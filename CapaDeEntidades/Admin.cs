@@ -101,6 +101,21 @@ namespace CapaDeEntidades
             _ConsultasAdmin.AdminRegistrarUsuario(NombreUsuario, Clave, Nombre, Email, Rol, HorarioInicio, HorarioFin, TipoPlan);
         }
 
+        public void AdminRegistrarArea(string Nombre)
+        {
+            _ConsultasAdmin.AdminRegistrarArea(Nombre);
+        }
+
+        public void AdminRegistrarLugar(string Nombre)
+        {
+            _ConsultasAdmin.AdminRegistrarLugar(Nombre);
+        }
+
+        public void AdminRegistrarEstablecimiento(string Nombre)
+        {
+            _ConsultasAdmin.AdminRegistrarEstablecimiento(Nombre);
+        }
+
         public void AdminGuardarBajaNotificacion(int IdTurno, int IdAdmin, int IdCliente)
         {
             _ConsultasAdmin.AdminGuardarBajaNotificacion(IdTurno, IdAdmin, IdCliente);

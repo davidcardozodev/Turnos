@@ -160,6 +160,24 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.Designer.cs">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistrarArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistrarArea.Designer.cs">
+      <DependentUpon>AdminRegistrarArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistrarEstablecimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistrarEstablecimiento.Designer.cs">
+      <DependentUpon>AdminRegistrarEstablecimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistrarLugar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistrarLugar.Designer.cs">
+      <DependentUpon>AdminRegistrarLugar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminRegistroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +338,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminPrincipal.resx">
       <DependentUpon>AdminPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminRegistrarArea.resx">
+      <DependentUpon>AdminRegistrarArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminRegistrarEstablecimiento.resx">
+      <DependentUpon>AdminRegistrarEstablecimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminRegistrarLugar.resx">
+      <DependentUpon>AdminRegistrarLugar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminRegistroUsuario.resx">
       <DependentUpon>AdminRegistroUsuario.cs</DependentUpon>
