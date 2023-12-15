@@ -39,6 +39,7 @@
             this.lblPlan = new System.Windows.Forms.Label();
             this.lblPrioridad = new System.Windows.Forms.Label();
             this.lblAccion = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVolverAtras
@@ -149,11 +150,26 @@
             this.lblAccion.TabIndex = 21;
             this.lblAccion.Text = "Accion";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(1498, 132);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(246, 58);
+            this.btnActualizar.TabIndex = 75;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // ProveedorTurnosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1814, 857);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.lblAccion);
             this.Controls.Add(this.lblPrioridad);
             this.Controls.Add(this.lblPlan);
@@ -187,5 +203,6 @@
         private System.Windows.Forms.Label lblPlan;
         private System.Windows.Forms.Label lblPrioridad;
         private System.Windows.Forms.Label lblAccion;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

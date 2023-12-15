@@ -88,6 +88,9 @@
             this.lblFecha.Size = new System.Drawing.Size(93, 32);
             this.lblFecha.TabIndex = 15;
             this.lblFecha.Text = "Fecha";
+            this.lblFecha.Click += new System.EventHandler(this.AdminTurnoItem_Click);
+            this.lblFecha.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
+            this.lblFecha.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // lblHora
             // 
@@ -99,6 +102,9 @@
             this.lblHora.Size = new System.Drawing.Size(75, 32);
             this.lblHora.TabIndex = 16;
             this.lblHora.Text = "Hora";
+            this.lblHora.Click += new System.EventHandler(this.AdminTurnoItem_Click);
+            this.lblHora.MouseEnter += new System.EventHandler(this.AdminTurnoItem_MouseEnter);
+            this.lblHora.MouseLeave += new System.EventHandler(this.AdminTurnoItem_MouseLeave);
             // 
             // AdminTurnoItem
             // 

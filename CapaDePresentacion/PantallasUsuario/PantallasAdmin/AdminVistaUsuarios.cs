@@ -127,5 +127,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DatosUsuario(Usuarios);
         }
+
+        public void Actualizar()
+        {
+            Admin admin = new Admin();
+
+            LimpiarLista();
+
+            List<DatosUsuarioItem> Usuarios = new List<DatosUsuarioItem>();
+
+            Usuarios = admin.AdminCargarUsuarioBusqueda("");
+
+            DatosUsuario(Usuarios);
+        }
     }
 }

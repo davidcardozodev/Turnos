@@ -42,6 +42,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.lblMostrar = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.lblHora);
             this.panel1.Controls.Add(this.lblFecha);
             this.panel1.Controls.Add(this.lblEstado);
@@ -197,6 +199,20 @@
             this.lblMostrar.TabIndex = 5;
             this.lblMostrar.Text = "Filtrar";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(1296, 197);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(195, 58);
+            this.btnActualizar.TabIndex = 18;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // ClienteTurnosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -229,5 +245,6 @@
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

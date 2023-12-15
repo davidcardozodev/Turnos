@@ -48,13 +48,16 @@
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.Color.White;
             this.btnFinalizar.Location = new System.Drawing.Point(483, 34);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(246, 52);
             this.btnFinalizar.TabIndex = 7;
             this.btnFinalizar.Text = "Finalizar turno";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             this.btnFinalizar.MouseEnter += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseEnter);
             this.btnFinalizar.MouseLeave += new System.EventHandler(this.ProveedorTurnoLlamadorEnCurso_MouseLeave);

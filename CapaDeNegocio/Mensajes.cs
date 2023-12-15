@@ -17,6 +17,8 @@ namespace CapaDeNegocio
         public const string ErrorHorario = "Error: Debe seleccionar un horario";
         public const string AlertaBajaOpcion = "¿Quiere dar de baja el turno?";
         public const string AlertaBajaTitulo = "¿Quiere dar de baja el turno?";
+        public const string AlertaEliminacionTitulo = "Eliminacion";
+        public const string AlertaEliminacion = "Para confirmar la eliminacion haga click en si";
         public string AdministradorBaja = "Cancelado por" + Environment.NewLine + "el administrador";
     }
 }

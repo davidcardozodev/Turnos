@@ -46,14 +46,17 @@
             // 
             // btnDarDeBaja
             // 
+            this.btnDarDeBaja.BackColor = System.Drawing.Color.Firebrick;
             this.btnDarDeBaja.Enabled = false;
+            this.btnDarDeBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarDeBaja.ForeColor = System.Drawing.Color.White;
             this.btnDarDeBaja.Location = new System.Drawing.Point(683, 469);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
             this.btnDarDeBaja.Size = new System.Drawing.Size(204, 58);
             this.btnDarDeBaja.TabIndex = 24;
             this.btnDarDeBaja.Text = "Dar de baja";
-            this.btnDarDeBaja.UseVisualStyleBackColor = true;
+            this.btnDarDeBaja.UseVisualStyleBackColor = false;
             this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
             // 
             // label5

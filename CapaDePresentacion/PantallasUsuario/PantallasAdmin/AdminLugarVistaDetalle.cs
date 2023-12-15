@@ -33,5 +33,25 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             MessageBox.Show(Mensajes.GuardadoCambios);
         }
+
+        private void ActualizarPantalla()
+        {
+            (Application.OpenForms["AdminLugares"] as AdminLugares).Actualizar();
+        }
+
+        private void btnEliminar_Click(object sender, System.EventArgs e)
+        {
+            DialogResult Alerta = MessageBox.Show(Mensajes.AlertaEliminacion, Mensajes.AlertaEliminacionTitulo, MessageBoxButtons.YesNo);
+
+            if (Alerta == DialogResult.Yes)
+            {
+                Admin admin2 = new Admin();
+
+                admin2.AdminEliminarLugar(Id);
+
+                ActualizarPantalla();
+                this.Close();
+            }
+        }
     }
 }

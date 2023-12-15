@@ -33,6 +33,7 @@
             this.btnVolverAtras = new System.Windows.Forms.Button();
             this.lblLugar = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -85,11 +86,26 @@
             this.lblNombre.TabIndex = 54;
             this.lblNombre.Text = "Nombre";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(1330, 84);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(246, 58);
+            this.btnActualizar.TabIndex = 74;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // PantallaLlamadorEnCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1743, 942);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.lblLugar);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnVolverAtras);
@@ -111,5 +127,6 @@
         private System.Windows.Forms.Button btnVolverAtras;
         private System.Windows.Forms.Label lblLugar;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

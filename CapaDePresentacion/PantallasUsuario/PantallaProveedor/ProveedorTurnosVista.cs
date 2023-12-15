@@ -82,5 +82,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
         {
             flowLayoutPanel1.Controls.Clear();
         }
+
+        private void btnActualizar_Click(object sender, System.EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+
+            LimpiarLista();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = proveedor.ProveedorCargarTurnosBusqueda(DatosDisponibilidad.HorarioInicio, DatosDisponibilidad.HorarioFin, "");
+
+            DatosTurno(ListaTurnos);
+        }
     }
 }

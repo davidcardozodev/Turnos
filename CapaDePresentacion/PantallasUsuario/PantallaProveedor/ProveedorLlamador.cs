@@ -92,5 +92,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallaProveedor
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel2.Controls.Clear();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarTurnos();
+        }
     }
 }

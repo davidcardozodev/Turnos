@@ -171,5 +171,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasCliente
         {
             AbrirFormulario<ClienteCalendario>();
         }
+
+        private void btnActualizar_Click(object sender, System.EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+
+            LimpiarTurnos();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = cliente.ClienteCargarTurnoBusqueda(DatosUsuario.Id, "");
+
+            DatosTurno(ListaTurnos);
+        }
     }
 }

@@ -62,14 +62,17 @@
             // 
             // btnAsignar
             // 
+            this.btnAsignar.BackColor = System.Drawing.Color.DarkBlue;
             this.btnAsignar.Enabled = false;
+            this.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignar.ForeColor = System.Drawing.Color.White;
             this.btnAsignar.Location = new System.Drawing.Point(1345, 22);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(142, 57);
             this.btnAsignar.TabIndex = 21;
             this.btnAsignar.Text = "Asignar";
-            this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.UseVisualStyleBackColor = false;
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click);
             this.btnAsignar.MouseEnter += new System.EventHandler(this.ProveedorTurnoItem_MouseEnter);
             this.btnAsignar.MouseLeave += new System.EventHandler(this.ProveedorTurnoItem_MouseLeave);

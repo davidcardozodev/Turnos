@@ -70,11 +70,12 @@
             // 
             // linkPerfil
             // 
-            this.linkPerfil.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkPerfil.ActiveLinkColor = System.Drawing.Color.LightCyan;
             this.linkPerfil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkPerfil.AutoSize = true;
             this.linkPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkPerfil.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkPerfil.ForeColor = System.Drawing.Color.DarkBlue;
+            this.linkPerfil.LinkColor = System.Drawing.Color.Blue;
             this.linkPerfil.Location = new System.Drawing.Point(426, 9);
             this.linkPerfil.Name = "linkPerfil";
             this.linkPerfil.Size = new System.Drawing.Size(80, 32);
@@ -86,10 +87,11 @@
             // 
             // linkCerrarSesion
             // 
-            this.linkCerrarSesion.ActiveLinkColor = System.Drawing.Color.LightSkyBlue;
+            this.linkCerrarSesion.ActiveLinkColor = System.Drawing.Color.LightCyan;
             this.linkCerrarSesion.AutoSize = true;
             this.linkCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkCerrarSesion.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.linkCerrarSesion.ForeColor = System.Drawing.Color.DarkBlue;
+            this.linkCerrarSesion.LinkColor = System.Drawing.Color.Blue;
             this.linkCerrarSesion.Location = new System.Drawing.Point(16, 9);
             this.linkCerrarSesion.Name = "linkCerrarSesion";
             this.linkCerrarSesion.Size = new System.Drawing.Size(183, 32);

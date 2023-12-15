@@ -120,5 +120,18 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             DatosTurnos(ListaTurnos);
         }
+
+        private void btnActualizar_Click(object sender, System.EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            LimpiarTurnos();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = admin.AdminCargarTurnoBusqueda("");
+
+            DatosTurnos(ListaTurnos);
+        }
     }
 }

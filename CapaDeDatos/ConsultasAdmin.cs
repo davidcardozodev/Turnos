@@ -335,6 +335,44 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminEliminarArea(int IdArea)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminEliminarArea";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdArea", IdArea);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+        public void AdminEliminarLugar(int IdLugar)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminEliminarLugar";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdLugar", IdLugar);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+        public void AdminEliminarEstablecimiento(int IdEstablecimiento)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminEliminarEstablecimiento";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
+        public void AdminEliminarUsuario(int Id)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminEliminarUsuario";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Id", Id);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
         #endregion
 
         public DataTable AdminCargarProveedores()

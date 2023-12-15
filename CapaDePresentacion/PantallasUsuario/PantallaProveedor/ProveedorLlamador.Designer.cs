@@ -40,6 +40,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblAccion = new System.Windows.Forms.Label();
             this.lblAccion2 = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVolverAtras
@@ -56,7 +61,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(126, 307);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(28, 171);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(825, 518);
             this.flowLayoutPanel1.TabIndex = 9;
@@ -74,7 +79,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(991, 307);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(28, 169);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(802, 518);
             this.flowLayoutPanel2.TabIndex = 10;
@@ -83,7 +88,7 @@
             // 
             this.lblTurnosPendientes.AutoSize = true;
             this.lblTurnosPendientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosPendientes.Location = new System.Drawing.Point(127, 162);
+            this.lblTurnosPendientes.Location = new System.Drawing.Point(29, 26);
             this.lblTurnosPendientes.Name = "lblTurnosPendientes";
             this.lblTurnosPendientes.Size = new System.Drawing.Size(282, 37);
             this.lblTurnosPendientes.TabIndex = 11;
@@ -93,7 +98,7 @@
             // 
             this.lblTurnosCurso.AutoSize = true;
             this.lblTurnosCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnosCurso.Location = new System.Drawing.Point(984, 162);
+            this.lblTurnosCurso.Location = new System.Drawing.Point(21, 24);
             this.lblTurnosCurso.Name = "lblTurnosCurso";
             this.lblTurnosCurso.Size = new System.Drawing.Size(250, 37);
             this.lblTurnosCurso.TabIndex = 12;
@@ -103,7 +108,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(1003, 256);
+            this.lblNombre.Location = new System.Drawing.Point(40, 118);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(132, 37);
             this.lblNombre.TabIndex = 13;
@@ -113,7 +118,7 @@
             // 
             this.lblLugar.AutoSize = true;
             this.lblLugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLugar.Location = new System.Drawing.Point(1286, 256);
+            this.lblLugar.Location = new System.Drawing.Point(323, 118);
             this.lblLugar.Name = "lblLugar";
             this.lblLugar.Size = new System.Drawing.Size(100, 37);
             this.lblLugar.TabIndex = 14;
@@ -123,7 +128,7 @@
             // 
             this.lblPrioridad.AutoSize = true;
             this.lblPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrioridad.Location = new System.Drawing.Point(424, 256);
+            this.lblPrioridad.Location = new System.Drawing.Point(326, 120);
             this.lblPrioridad.Name = "lblPrioridad";
             this.lblPrioridad.Size = new System.Drawing.Size(146, 37);
             this.lblPrioridad.TabIndex = 16;
@@ -133,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(141, 256);
+            this.label3.Location = new System.Drawing.Point(43, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 37);
             this.label3.TabIndex = 15;
@@ -143,7 +148,7 @@
             // 
             this.lblAccion.AutoSize = true;
             this.lblAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccion.Location = new System.Drawing.Point(742, 256);
+            this.lblAccion.Location = new System.Drawing.Point(644, 120);
             this.lblAccion.Name = "lblAccion";
             this.lblAccion.Size = new System.Drawing.Size(114, 37);
             this.lblAccion.TabIndex = 17;
@@ -153,33 +158,70 @@
             // 
             this.lblAccion2.AutoSize = true;
             this.lblAccion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccion2.Location = new System.Drawing.Point(1550, 256);
+            this.lblAccion2.Location = new System.Drawing.Point(587, 118);
             this.lblAccion2.Name = "lblAccion2";
             this.lblAccion2.Size = new System.Drawing.Size(114, 37);
             this.lblAccion2.TabIndex = 18;
             this.lblAccion2.Text = "Accion";
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(1462, 91);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(246, 58);
+            this.btnActualizar.TabIndex = 74;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.lblTurnosPendientes);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblAccion);
+            this.panel1.Controls.Add(this.lblPrioridad);
+            this.panel1.Location = new System.Drawing.Point(72, 175);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(876, 713);
+            this.panel1.TabIndex = 75;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.lblTurnosCurso);
+            this.panel2.Controls.Add(this.flowLayoutPanel2);
+            this.panel2.Controls.Add(this.lblNombre);
+            this.panel2.Controls.Add(this.lblAccion2);
+            this.panel2.Controls.Add(this.lblLugar);
+            this.panel2.Location = new System.Drawing.Point(983, 175);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(857, 713);
+            this.panel2.TabIndex = 76;
             // 
             // ProveedorLlamador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1946, 776);
-            this.Controls.Add(this.lblAccion2);
-            this.Controls.Add(this.lblAccion);
-            this.Controls.Add(this.lblPrioridad);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblLugar);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblTurnosCurso);
-            this.Controls.Add(this.lblTurnosPendientes);
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnVolverAtras);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProveedorLlamador";
             this.Text = "ProveedorLlamador";
             this.Load += new System.EventHandler(this.ProveedorLlamador_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +241,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Label lblAccion2;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

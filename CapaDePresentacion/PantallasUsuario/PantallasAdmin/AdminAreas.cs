@@ -69,6 +69,11 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
         private void btnActualizar_Click(object sender, System.EventArgs e)
         {
+            Actualizar();
+        }
+
+        public void Actualizar()
+        {
             Admin admin = new Admin();
 
             LimpiarAreas();

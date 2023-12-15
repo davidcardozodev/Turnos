@@ -87,13 +87,16 @@
             // 
             // btnCrearTurno
             // 
+            this.btnCrearTurno.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCrearTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearTurno.ForeColor = System.Drawing.Color.White;
             this.btnCrearTurno.Location = new System.Drawing.Point(282, 370);
             this.btnCrearTurno.Name = "btnCrearTurno";
             this.btnCrearTurno.Size = new System.Drawing.Size(534, 58);
             this.btnCrearTurno.TabIndex = 8;
             this.btnCrearTurno.Text = "Crear turno";
-            this.btnCrearTurno.UseVisualStyleBackColor = true;
+            this.btnCrearTurno.UseVisualStyleBackColor = false;
             this.btnCrearTurno.Click += new System.EventHandler(this.btnCrearTurno_Click);
             // 
             // lblEstablecimiento

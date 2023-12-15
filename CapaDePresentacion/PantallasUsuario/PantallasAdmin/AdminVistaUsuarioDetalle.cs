@@ -165,5 +165,25 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             comboFin.SelectedItem = (int)comboInicio.SelectedItem + 1;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult Alerta = MessageBox.Show(Mensajes.AlertaEliminacion, Mensajes.AlertaEliminacionTitulo, MessageBoxButtons.YesNo);
+
+            if (Alerta == DialogResult.Yes)
+            {
+                Admin admin2 = new Admin();
+
+                admin2.AdminEliminarUsuario(Id);
+
+                ActualizarPantalla();
+                this.Close();
+            }
+        }
+
+        private void ActualizarPantalla()
+        {
+            (Application.OpenForms["AdminVistaUsuarios"] as AdminVistaUsuarios).Actualizar();
+        }
     }
 }

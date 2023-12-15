@@ -156,5 +156,25 @@ namespace CapaDeEntidades
             _ConsultasAdmin.AdminModificarEstablecimiento(IdEstablecimiento, Nombre);
         }
 
+        public void AdminEliminarArea(int IdArea)
+        {
+            _ConsultasAdmin.AdminEliminarArea(IdArea);
+        }
+
+        public void AdminEliminarLugar(int IdLugar)
+        {
+            _ConsultasAdmin.AdminEliminarLugar(IdLugar);
+        }
+
+        public void AdminEliminarEstablecimiento(int IdEstablecimiento)
+        {
+            _ConsultasAdmin.AdminEliminarEstablecimiento(IdEstablecimiento);
+        }
+
+        public void AdminEliminarUsuario(int Id)
+        {
+            _ConsultasAdmin.AdminEliminarUsuario(Id);
+        }
+
     }
 }

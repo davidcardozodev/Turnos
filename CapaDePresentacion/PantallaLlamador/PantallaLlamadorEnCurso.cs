@@ -52,5 +52,23 @@ namespace CapaDePresentacion.PantallaLlamador
         {
             this.Close();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Proveedor proveedor = new Proveedor();
+
+            Limpiar();
+
+            List<FormatoTurnos> ListaTurnos = new List<FormatoTurnos>();
+
+            ListaTurnos = proveedor.ProveedorCargarTurnoEnCurso(DatosUsuario.Id);
+
+            CamposTurno(ListaTurnos);
+        }
+
+        private void Limpiar()
+        {
+            flowLayoutPanel1.Controls.Clear();
+        }
     }
 }

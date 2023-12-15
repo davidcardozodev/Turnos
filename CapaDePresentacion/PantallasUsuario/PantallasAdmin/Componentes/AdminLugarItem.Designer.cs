@@ -41,6 +41,7 @@
             this.lblNombre.Size = new System.Drawing.Size(114, 32);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre";
+            this.lblNombre.Click += new System.EventHandler(this.AdminLugarItem_Click);
             this.lblNombre.MouseEnter += new System.EventHandler(this.lblNombre_MouseEnter);
             this.lblNombre.MouseLeave += new System.EventHandler(this.lblNombre_MouseLeave);
             // 
