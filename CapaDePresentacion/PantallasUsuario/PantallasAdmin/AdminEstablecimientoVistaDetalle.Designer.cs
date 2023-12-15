@@ -83,6 +83,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Name = "AdminEstablecimientoVistaDetalle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminEstablecimientoVistaDetalle";
             this.Load += new System.EventHandler(this.AdminEstablecimientoVistaDetalle_Load);
             this.ResumeLayout(false);
