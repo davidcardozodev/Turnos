@@ -74,6 +74,9 @@
             this.lblNombre.Size = new System.Drawing.Size(114, 32);
             this.lblNombre.TabIndex = 8;
             this.lblNombre.Text = "Nombre";
+            this.lblNombre.Click += new System.EventHandler(this.UsuarioItem_Click);
+            this.lblNombre.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
+            this.lblNombre.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
             // lblEmail
             // 
@@ -85,6 +88,9 @@
             this.lblEmail.Size = new System.Drawing.Size(86, 32);
             this.lblEmail.TabIndex = 9;
             this.lblEmail.Text = "Email";
+            this.lblEmail.Click += new System.EventHandler(this.UsuarioItem_Click);
+            this.lblEmail.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
+            this.lblEmail.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
             // lblRol
             // 
@@ -96,6 +102,9 @@
             this.lblRol.Size = new System.Drawing.Size(57, 32);
             this.lblRol.TabIndex = 10;
             this.lblRol.Text = "Rol";
+            this.lblRol.Click += new System.EventHandler(this.UsuarioItem_Click);
+            this.lblRol.MouseEnter += new System.EventHandler(this.UsuarioItem_MouseEnter);
+            this.lblRol.MouseLeave += new System.EventHandler(this.UsuarioItem_MouseLeave);
             // 
             // UsuarioItem
             // 

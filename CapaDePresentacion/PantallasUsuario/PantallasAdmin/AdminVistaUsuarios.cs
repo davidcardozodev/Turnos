@@ -115,5 +115,17 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
             DatosUsuario(Usuarios);
         }
 
+        private void btnActualizar_Click(object sender, System.EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            LimpiarLista();
+
+            List<DatosUsuarioItem> Usuarios = new List<DatosUsuarioItem>();
+
+            Usuarios = admin.AdminCargarUsuarioBusqueda("");
+
+            DatosUsuario(Usuarios);
+        }
     }
 }

@@ -44,8 +44,7 @@
     <Compile Include="DatosDisponibilidad.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="DatosUsuarioItem.cs" />
-    <Compile Include="FormatoArea.cs" />
-    <Compile Include="FormatoLugares.cs" />
+    <Compile Include="FormatoItem.cs" />
     <Compile Include="FormatoTurnos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

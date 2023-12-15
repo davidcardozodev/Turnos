@@ -40,6 +40,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblAccion = new System.Windows.Forms.Label();
             this.lblRol = new System.Windows.Forms.Label();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -161,11 +162,23 @@
             this.lblRol.TabIndex = 66;
             this.lblRol.Text = "Rol";
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(1395, 122);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(246, 58);
+            this.btnActualizar.TabIndex = 73;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // AdminVistaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1841, 941);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.lblRol);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblNombre);
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblAccion;
         private System.Windows.Forms.Label lblRol;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

@@ -41,24 +41,34 @@ namespace CapaDeEntidades
             return _ConsultasAdmin.AdminCargarUsuarioBusqueda(Busqueda);
         }
 
-        public List<FormatoArea> AdminCargarAreaItem()
+        public List<FormatoItem> AdminCargarAreaItem()
         {
             return _ConsultasAdmin.AdminCargarAreaItem();
         }
 
-        public List<FormatoArea> AdminCargarAreaItemBusqueda(string Busqueda)
+        public List<FormatoItem> AdminCargarAreaItemBusqueda(string Busqueda)
         {
             return _ConsultasAdmin.AdminCargarAreaItemBusqueda(Busqueda);
         }
 
-        public List<FormatoLugares> AdminCargarLugarItem()
+        public List<FormatoItem> AdminCargarLugarItem()
         {
             return _ConsultasAdmin.AdminCargarLugarItem();
         }
 
-        public List<FormatoLugares> AdminCargarLugarItemBusqueda(string Busqueda)
+        public List<FormatoItem> AdminCargarLugarItemBusqueda(string Busqueda)
         {
             return _ConsultasAdmin.AdminCargarLugarItemBusqueda(Busqueda);
+        }
+
+        public List<FormatoItem> AdminCargarEstablecimientoItem()
+        {
+            return _ConsultasAdmin.AdminCargarEstablecimientoItem();
+        }
+
+        public List<FormatoItem> AdminCargarEstablecimientoItemBusqueda(string Busqueda)
+        {
+            return _ConsultasAdmin.AdminCargarEstablecimientoItemBusqueda(Busqueda);
         }
 
         public void AdminModificarUsuario(int IdUsuario, string Usuario, string Clave, string Nombre, string Email, string Rol, string Plan)
@@ -139,6 +149,11 @@ namespace CapaDeEntidades
         public void AdminModificarLugar(int IdArea, string Nombre)
         {
             _ConsultasAdmin.AdminModificarLugar(IdArea, Nombre);
+        }
+
+        public void AdminModificarEstablecimiento(int IdEstablecimiento, string Nombre)
+        {
+            _ConsultasAdmin.AdminModificarEstablecimiento(IdEstablecimiento, Nombre);
         }
 
     }

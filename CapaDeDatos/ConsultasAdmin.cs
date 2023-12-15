@@ -13,8 +13,9 @@ namespace CapaDeDatos
         private SqlDataReader _Lector;
         private SqlCommand _Comando = new SqlCommand();
         private List<FormatoTurnos> _Valores = new List<FormatoTurnos>();
-        private List<FormatoArea> _Areas = new List<FormatoArea>();
-        private List<FormatoLugares> _Lugares = new List<FormatoLugares>();
+        private List<FormatoItem> _Areas = new List<FormatoItem>();
+        private List<FormatoItem> _Lugares = new List<FormatoItem>();
+        private List<FormatoItem> _Establecimientos = new List<FormatoItem>();
         private List<DatosUsuarioItem> _Usuarios = new List<DatosUsuarioItem>();
         private DataTable _Tabla = new DataTable();
 
@@ -323,6 +324,17 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
         }
 
+        public void AdminModificarEstablecimiento(int IdEstablecimiento, string Nombre)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminModificarEstablecimiento";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@IdEstablecimiento", IdEstablecimiento);
+            _Comando.Parameters.AddWithValue("@Nombre", Nombre);
+            _Comando.ExecuteNonQuery();
+            _Conexion.ConexionCerrar();
+        }
+
         #endregion
 
         public DataTable AdminCargarProveedores()
@@ -385,7 +397,7 @@ namespace CapaDeDatos
             return _Tabla;
         }
 
-        public List<FormatoArea> AdminCargarAreaItem()
+        public List<FormatoItem> AdminCargarAreaItem()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarAreaItem";
@@ -397,7 +409,7 @@ namespace CapaDeDatos
                 int Id = int.Parse(_Lector["Id"].ToString());
                 string Nombre = _Lector["Nombre"].ToString();
 
-                _Areas.Add(new FormatoArea
+                _Areas.Add(new FormatoItem
                 {
                     Id = Id,
                     Nombre = Nombre
@@ -409,7 +421,7 @@ namespace CapaDeDatos
             return _Areas;
         }
 
-        public List<FormatoArea> AdminCargarAreaItemBusqueda(string Busqueda)
+        public List<FormatoItem> AdminCargarAreaItemBusqueda(string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarAreaItemBusqueda";
@@ -422,7 +434,7 @@ namespace CapaDeDatos
                 int Id = int.Parse(_Lector["Id"].ToString());
                 string Nombre = _Lector["Nombre"].ToString();
 
-                _Areas.Add(new FormatoArea
+                _Areas.Add(new FormatoItem
                 {
                     Id = Id,
                     Nombre = Nombre
@@ -434,7 +446,7 @@ namespace CapaDeDatos
             return _Areas;
         }
 
-        public List<FormatoLugares> AdminCargarLugarItem()
+        public List<FormatoItem> AdminCargarLugarItem()
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
             _Comando.CommandText = "AdminCargarLugarItem";
@@ -446,7 +458,7 @@ namespace CapaDeDatos
                 int Id = int.Parse(_Lector["Id"].ToString());
                 string Nombre = _Lector["Nombre"].ToString();
 
-                _Lugares.Add(new FormatoLugares
+                _Lugares.Add(new FormatoItem
                 {
                     Id = Id,
                     Nombre = Nombre
@@ -458,10 +470,10 @@ namespace CapaDeDatos
             return _Lugares;
         }
 
-        public List<FormatoLugares> AdminCargarLugarItemBusqueda(string Busqueda)
+        public List<FormatoItem> AdminCargarLugarItemBusqueda(string Busqueda)
         {
             _Comando.Connection = _Conexion.ConexionAbrir();
-            _Comando.CommandText = "AdminCargarLugarItem";
+            _Comando.CommandText = "AdminCargarLugarItemBusqueda";
             _Comando.CommandType = CommandType.StoredProcedure;
             _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
             _Lector = _Comando.ExecuteReader();
@@ -471,7 +483,7 @@ namespace CapaDeDatos
                 int Id = int.Parse(_Lector["Id"].ToString());
                 string Nombre = _Lector["Nombre"].ToString();
 
-                _Lugares.Add(new FormatoLugares
+                _Lugares.Add(new FormatoItem
                 {
                     Id = Id,
                     Nombre = Nombre
@@ -481,6 +493,56 @@ namespace CapaDeDatos
             _Conexion.ConexionCerrar();
 
             return _Lugares;
+        }
+
+
+        public List<FormatoItem> AdminCargarEstablecimientoItem()
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarEstablecimientoItem";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Nombre = _Lector["Nombre"].ToString();
+
+                _Establecimientos.Add(new FormatoItem
+                {
+                    Id = Id,
+                    Nombre = Nombre
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Establecimientos;
+        }
+
+        public List<FormatoItem> AdminCargarEstablecimientoItemBusqueda(string Busqueda)
+        {
+            _Comando.Connection = _Conexion.ConexionAbrir();
+            _Comando.CommandText = "AdminCargarEstablecimientoItemBusqueda";
+            _Comando.CommandType = CommandType.StoredProcedure;
+            _Comando.Parameters.AddWithValue("@Busqueda", Busqueda);
+            _Lector = _Comando.ExecuteReader();
+
+            while (_Lector.Read())
+            {
+                int Id = int.Parse(_Lector["Id"].ToString());
+                string Nombre = _Lector["Nombre"].ToString();
+
+                _Establecimientos.Add(new FormatoItem
+                {
+                    Id = Id,
+                    Nombre = Nombre
+                });
+            }
+
+            _Conexion.ConexionCerrar();
+
+            return _Establecimientos;
         }
 
     }

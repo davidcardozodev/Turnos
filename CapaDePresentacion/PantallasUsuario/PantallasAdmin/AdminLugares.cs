@@ -25,16 +25,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             LimpiarItems();
 
-            List<FormatoLugares> Lugares = new List<FormatoLugares>();
+            List<FormatoItem> Lugares = new List<FormatoItem>();
 
             Lugares = admin.AdminCargarLugarItem();
 
             DatosItem(Lugares);
         }
 
-        private void DatosItem(List<FormatoLugares> Lugares)
+        private void DatosItem(List<FormatoItem> Lugares)
         {
-            foreach (FormatoLugares Lugar in Lugares)
+            foreach (FormatoItem Lugar in Lugares)
             {
                 AdminLugarItem adminLugarItem = new AdminLugarItem();
 
@@ -61,9 +61,22 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             LimpiarItems();
 
-            List<FormatoLugares> Lugares = new List<FormatoLugares>();
+            List<FormatoItem> Lugares = new List<FormatoItem>();
 
-            Lugares = admin.AdminCargarLugarItem();
+            Lugares = admin.AdminCargarLugarItemBusqueda(txtBuscar.Text);
+
+            DatosItem(Lugares);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            LimpiarItems();
+
+            List<FormatoItem> Lugares = new List<FormatoItem>();
+
+            Lugares = admin.AdminCargarLugarItemBusqueda("");
 
             DatosItem(Lugares);
         }

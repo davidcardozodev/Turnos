@@ -101,5 +101,10 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
         {
             AbrirFormulario<AdminRegistrarEstablecimiento>();
         }
+
+        private void btnVerEstablecimientos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<AdminEstablecimientos>();
+        }
     }
 }

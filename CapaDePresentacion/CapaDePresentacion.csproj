@@ -142,6 +142,18 @@
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.Designer.cs">
       <DependentUpon>AdminAsociarEstablecimientoArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminEstablecimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminEstablecimientos.Designer.cs">
+      <DependentUpon>AdminEstablecimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminEstablecimientoVistaDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\AdminEstablecimientoVistaDetalle.Designer.cs">
+      <DependentUpon>AdminEstablecimientoVistaDetalle.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\AdminLugares.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +225,12 @@
     </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminAreaItem.Designer.cs">
       <DependentUpon>AdminAreaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminEstablecimientoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminEstablecimientoItem.Designer.cs">
+      <DependentUpon>AdminEstablecimientoItem.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallasUsuario\PantallasAdmin\Componentes\AdminLugarItem.cs">
       <SubType>UserControl</SubType>
@@ -330,6 +348,12 @@
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminAsociarEstablecimientoArea.resx">
       <DependentUpon>AdminAsociarEstablecimientoArea.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminEstablecimientos.resx">
+      <DependentUpon>AdminEstablecimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminEstablecimientoVistaDetalle.resx">
+      <DependentUpon>AdminEstablecimientoVistaDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\AdminLugares.resx">
       <DependentUpon>AdminLugares.cs</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminAreaItem.resx">
       <DependentUpon>AdminAreaItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminEstablecimientoItem.resx">
+      <DependentUpon>AdminEstablecimientoItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallasUsuario\PantallasAdmin\Componentes\AdminLugarItem.resx">
       <DependentUpon>AdminLugarItem.cs</DependentUpon>

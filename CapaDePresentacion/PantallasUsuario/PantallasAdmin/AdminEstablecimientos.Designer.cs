@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 {
-    partial class AdminLugares
+    partial class AdminEstablecimientos
     {
         /// <summary>
         /// Required designer variable.
@@ -39,10 +39,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(221, 168);
+            this.btnBuscar.Location = new System.Drawing.Point(226, 185);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(139, 58);
-            this.btnBuscar.TabIndex = 66;
+            this.btnBuscar.TabIndex = 71;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -50,26 +50,26 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(374, 178);
+            this.txtBuscar.Location = new System.Drawing.Point(379, 195);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(344, 39);
-            this.txtBuscar.TabIndex = 65;
+            this.txtBuscar.TabIndex = 70;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(224, 329);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(229, 346);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1511, 598);
-            this.flowLayoutPanel1.TabIndex = 64;
+            this.flowLayoutPanel1.TabIndex = 69;
             // 
             // btnVolverAtras
             // 
             this.btnVolverAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverAtras.Location = new System.Drawing.Point(221, 36);
+            this.btnVolverAtras.Location = new System.Drawing.Point(226, 53);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(204, 58);
-            this.btnVolverAtras.TabIndex = 63;
+            this.btnVolverAtras.TabIndex = 68;
             this.btnVolverAtras.Text = "Volver atras";
             this.btnVolverAtras.UseVisualStyleBackColor = true;
             this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
@@ -78,28 +78,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(786, 26);
+            this.label1.Location = new System.Drawing.Point(791, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 37);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Lugares";
+            this.label1.Size = new System.Drawing.Size(258, 37);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Establecimientos";
             // 
             // btnActualizar
             // 
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(221, 251);
+            this.btnActualizar.Location = new System.Drawing.Point(229, 271);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(246, 58);
-            this.btnActualizar.TabIndex = 73;
+            this.btnActualizar.TabIndex = 72;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // AdminLugares
+            // AdminEstablecimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1707, 818);
+            this.ClientSize = new System.Drawing.Size(1685, 818);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -107,9 +107,9 @@
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminLugares";
-            this.Text = "AdminLugares";
-            this.Load += new System.EventHandler(this.AdminLugares_Load);
+            this.Name = "AdminEstablecimientos";
+            this.Text = "AdminEstablecimientos";
+            this.Load += new System.EventHandler(this.AdminEstablecimientos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

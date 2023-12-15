@@ -24,16 +24,16 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             LimpiarAreas();
 
-            List<FormatoArea> Areas = new List<FormatoArea>();
+            List<FormatoItem> Areas = new List<FormatoItem>();
 
             Areas = admin.AdminCargarAreaItem();
 
             DatosTurnos(Areas);
         }
 
-        private void DatosTurnos(List<FormatoArea> Areas)
+        private void DatosTurnos(List<FormatoItem> Areas)
         {
-            foreach (FormatoArea Area in Areas)
+            foreach (FormatoItem Area in Areas)
             {
                 AdminAreaItem adminAreaItem = new AdminAreaItem();
 
@@ -60,9 +60,22 @@ namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin
 
             LimpiarAreas();
 
-            List<FormatoArea> Areas = new List<FormatoArea>();
+            List<FormatoItem> Areas = new List<FormatoItem>();
 
             Areas = admin.AdminCargarAreaItemBusqueda(txtBuscar.Text);
+
+            DatosTurnos(Areas);
+        }
+
+        private void btnActualizar_Click(object sender, System.EventArgs e)
+        {
+            Admin admin = new Admin();
+
+            LimpiarAreas();
+
+            List<FormatoItem> Areas = new List<FormatoItem>();
+
+            Areas = admin.AdminCargarAreaItemBusqueda("");
 
             DatosTurnos(Areas);
         }

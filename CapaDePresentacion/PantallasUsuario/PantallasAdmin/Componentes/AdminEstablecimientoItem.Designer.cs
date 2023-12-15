@@ -1,6 +1,6 @@
 ﻿namespace CapaDePresentacion.PantallasUsuario.PantallasAdmin.Componentes
 {
-    partial class AdminLugarItem
+    partial class AdminEstablecimientoItem
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -36,25 +36,26 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(39, 39);
+            this.lblNombre.Location = new System.Drawing.Point(37, 41);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(114, 32);
-            this.lblNombre.TabIndex = 9;
+            this.lblNombre.TabIndex = 10;
             this.lblNombre.Text = "Nombre";
+            this.lblNombre.Click += new System.EventHandler(this.lblNombre_Click);
             this.lblNombre.MouseEnter += new System.EventHandler(this.lblNombre_MouseEnter);
             this.lblNombre.MouseLeave += new System.EventHandler(this.lblNombre_MouseLeave);
             // 
-            // AdminLugarItem
+            // AdminEstablecimientoItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblNombre);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Name = "AdminLugarItem";
-            this.Size = new System.Drawing.Size(388, 100);
-            this.Load += new System.EventHandler(this.AdminLugarItem_Load);
-            this.Click += new System.EventHandler(this.AdminLugarItem_Click);
+            this.Name = "AdminEstablecimientoItem";
+            this.Size = new System.Drawing.Size(470, 113);
+            this.Load += new System.EventHandler(this.AdminEstablecimientoItem_Load);
+            this.Click += new System.EventHandler(this.lblNombre_Click);
             this.MouseEnter += new System.EventHandler(this.lblNombre_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.lblNombre_MouseLeave);
             this.ResumeLayout(false);
